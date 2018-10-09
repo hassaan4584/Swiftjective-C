@@ -1,2 +1,132 @@
-.current {
-  color: green; }
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #FFFFFF;
+  color: #373A3C;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+/* Grid System
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Style the header */
+.gridHeader {
+  grid-area: header;
+  width: 60vw;
+  height: 4vh;
+  border-bottom: 2px solid #DDDDDD; }
+
+/* Style the middle column */
+.gridMiddle {
+  grid-area: middle;
+  width: 60vw;
+  height: 88vh; }
+
+/* Style the footer */
+.gridFooter {
+  grid-area: footer;
+  text-align: center;
+  width: 60vw;
+  height: 8vh; }
+
+/* Style the left column */
+.gridGutterLeft {
+  grid-area: padLeft;
+  width: 20vw;
+  height: 100vh; }
+
+/* Style the right column */
+.gridGutterRight {
+  grid-area: padRight;
+  width: 20vw;
+  height: 100vh; }
+
+/* The grid container */
+.gridContainer {
+  display: grid;
+  grid-template-areas: 'padLeft header header header header padRight' 'padLeft middle middle middle middle padRight' 'padLeft footer footer footer footer padRight'; }
+
+/* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 800px) {
+  .gridContainer {
+    grid-template-areas: 'header header header header' 'middle middle middle middle' 'footer footer footer footer'; }
+
+  .gridHeader,
+  .gridMiddle,
+  .gridFooter {
+    width: 96vw; }
+
+  .gridGutterLeft,
+  .gridGutterRight {
+    width: 2vw; }
+
+  .headerText h1 {
+    font-weight: bold;
+    font-size: 20vw !important; } }
+/* Header and Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vh; }
+
+.logoContainerImg {
+  max-width: 24px;
+  height: auto; }
+
+.appleIcon {
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  text-align: center;
+  padding-top: 8px;
+  display: inline;
+  background-color: #234f32; }
+
+ul {
+  list-style-type: none; }
+
+li {
+  display: inline; }
+
+.headerText {
+  padding-top: 22vh;
+  text-align: center; }
+
+.headerText h1 {
+  font-weight: bolder;
+  font-size: 10vh; }
+
+.headerText p {
+  margin-top: -4vh; }
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  text-decoration: none;
+  padding-left: 16px; }
+
+a:link {
+  color: #70A2F9; }
+
+/* visited link */
+a:visited {
+  color: #70A2F9; }
+
+/* mouse over link */
+a:hover {
+  color: #3F464B; }
+
+/* selected link */
+a:active {
+  color: #70A2F9; }
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footerText {
+  color: #202428;
+  font-weight: 300; }

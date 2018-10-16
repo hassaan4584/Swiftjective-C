@@ -1,17 +1,30 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1, viewport-fit=auto'>
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
     {% if jekyll.environment == "production" %}
-  		<script src=""></script>
-	{% endif %}
-  </head>
-  <body>
-  	{% include navigation.html %}
-    {{ content }}
-  </body>
+    <script src=""></script>
+    {% endif %}
+</head>
+
+<body>
+    <div class="gridContainer">
+        <header id="gridHeader">    
+            <h1>Swiftjective-C</h1>
+            <h2>is a periodical on the art of modern <mark>iOS software engineering</mark> & the business of <mark>indie app development</mark>.</h2>
+        </header>
+        <div class="gridGutterLeft"></div>
+        <main class="gridMiddle">
+            {{ content }}
+        </main>
+        <div class="gridGutterRight"></div>
+    </div>
+</body>
+
 </html>

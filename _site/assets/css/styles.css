@@ -4,7 +4,6 @@
 
 body {
   background-color: #FFFFFF;
-  color: #373A3C;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 /* Grid System
@@ -12,71 +11,43 @@ body {
 /* Style the header */
 #gridHeader {
   grid-area: header;
-  width: 60vw;
-  border-bottom: 2px solid #DDDDDD; }
-
-#gridHeader h1 {
-  font-weight: bolder;
-  font-size: 8vh;
-  margin-bottom: 0px;
-  margin-top: 16px; }
-
-#gridHeader h2 {
-  color: #415659;
-  margin-top: 16px; }
-
-mark {
-  background-color: #F9F183;
-  color: #415659; }
+  width: 100vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  height: auto; }
 
 /* Style the middle column */
-.gridMiddle {
+#gridMiddle {
   grid-area: middle;
-  width: 60vw; }
+  width: 100vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  height: auto;
+  margin-top: 32px; }
 
 /* Style the footer */
-.gridFooter {
+#gridFooter {
   grid-area: footer;
-  text-align: center;
-  width: 60vw;
-  height: 8vh; }
-
-/* Style the left column */
-.gridGutterLeft {
-  grid-area: padLeft;
-  width: 20vw;
-  height: 100vh; }
-
-/* Style the right column */
-.gridGutterRight {
-  grid-area: padRight;
-  width: 20vw;
-  height: 100vh; }
+  width: 100vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  height: auto; }
 
 /* The grid container */
-.gridContainer {
+#gridContainer {
   display: grid;
-  grid-template-areas: 'padLeft header header header header padRight' 'padLeft middle middle middle middle padRight' 'padLeft footer footer footer footer padRight'; }
+  grid-template-areas: 'header header header header' 'middle middle middle middle' 'footer footer footer footer'; }
 
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 800px) {
-  .gridContainer {
-    grid-template-areas: 'header header header header' 'middle middle middle middle' 'footer footer footer footer'; }
-
-  .gridHeader,
-  .gridMiddle,
-  .gridFooter {
-    width: 96vw; }
-
-  .gridGutterLeft,
-  .gridGutterRight {
-    width: 2vw; }
-
-  .headerText h1 {
-    font-weight: bold;
-    font-size: 20vw !important; } }
+  #gridHeader,
+  #gridMiddle,
+  #gridFooter {
+    width: 100vw;
+    padding-left: 32px;
+    padding-right: 32px; } }
 @media (prefers-dark-interface) {
   body {
     background-color: #2d2d2d;
@@ -84,12 +55,35 @@ mark {
 
   a:link {
     color: #1b89ef; } }
+/* Header 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#gridHeader h1 {
+  font-weight: bolder;
+  font-size: 4vh;
+  margin-bottom: 0px;
+  margin-top: 4vh;
+  color: #282A36; }
+
+#gridHeader h2 {
+  color: #615B5B;
+  margin-top: 16px;
+  margin-bottom: 32px; }
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.articleSection {
+  padding-top: 32px;
+  padding-bottom: 32px; }
+
+.articleSection h2 {
+  color: #615B5B; }
+
+#specialHeader {
+  font-size: 40px;
+  color: #282A36; }
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  text-decoration: none;
-  padding-left: 16px; }
-
 a:link {
   color: #70A2F9; }
 
@@ -105,8 +99,12 @@ a:hover {
 a:active {
   color: #70A2F9; }
 
-/* Footer
+/* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.footerText {
+hr {
+  color: #DDDDDD; }
+
+footer {
+  text-align: left;
   color: #202428;
   font-weight: 300; }

@@ -2,10 +2,6 @@
 * {
   box-sizing: border-box; }
 
-body {
-  background-color: #FFFFFF;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
-
 /* Grid System
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Style the header */
@@ -48,13 +44,13 @@ body {
     width: 100vw;
     padding-left: 32px;
     padding-right: 32px; } }
-@media (prefers-dark-interface) {
-  body {
-    background-color: #2d2d2d;
-    color: #dfdfdf; }
+* {
+  box-sizing: border-box; }
 
-  a:link {
-    color: #1b89ef; } }
+body {
+  background-color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
 /* Header 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #gridHeader h1 {
@@ -62,7 +58,7 @@ body {
   font-size: 4vh;
   margin-bottom: 0px;
   margin-top: 4vh;
-  color: #282A36; }
+  color: #314A4F; }
 
 #gridHeader h2 {
   color: #615B5B;
@@ -80,10 +76,12 @@ body {
 
 #specialHeader {
   font-size: 40px;
-  color: #282A36; }
+  color: #314A4F; }
 
 .houseSpecial {
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

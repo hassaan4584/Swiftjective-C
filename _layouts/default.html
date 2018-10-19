@@ -23,7 +23,7 @@
             <div class="articleSection">
                 <em>Introducing tonight's special...</em>
                 {% assign post = site.posts.first %}
-                <h2 id="specialHeader">{{ post.title }}</h2>
+                <a href="{{ post.url | prepend: site.baseurl }}""><h2 id="specialHeader">{{ post.title }}</h2></a>
                 <p>{{ post.excerpt }}</p>
                 <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
             </div>
@@ -34,7 +34,7 @@
                     {% include articleWell.html post=site.posts.first %}
                     {% include articleWell.html post=site.posts.first %}
                 </div>
-                 <div class="houseSpecial">
+                <div class="houseSpecial">
                     {% include articleWell.html post=site.posts.first %}
                     {% include articleWell.html post=site.posts.first %}
                 </div>
@@ -42,17 +42,18 @@
             <hr />
             <div class="articleSection">
                 <em>Hors d'oeuvres</em>
-                {% assign post = site.posts.first %}
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.excerpt }}</p>
+                {% for tag in site.tags %}
+                <h3>{{ tag[0] }}</h3>
+                <ul>
+                    {% for post in tag[1] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
             </div>
         </main>
         <footer id="gridFooter">
-            <code>//Written by <a href="https://www.twitter.com/jordanmorgan10" target="_blank">Jordan Morgan</a></code>
-            <ul>
-                <li>About</li>
-                <li>{% include contactObs.html %}</li>
-            </ul>
+            {% include footer.html %}
         </footer>
     </div>
 </body>

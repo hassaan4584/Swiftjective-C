@@ -1,4 +1,4 @@
-$header-color: #282A36;
+$header-color: #314A4F;
 $sub-header-color: #615B5B;
 $sub-sub-header-color: #DDDDDD;
 
@@ -12,69 +12,6 @@ $top-padding:32px;
 body {
     background-color: #FFFFFF;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-/* Grid System
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Style the header */
-#gridHeader {
-    grid-area: header;
-    width: 100vw;   
-    padding-left:25vw;
-    padding-right:25vw;
-    height:auto;
-}
-
-/* Style the middle column */
-#gridMiddle {
-    grid-area: middle;
-    width: 100vw;
-    padding-left:25vw;
-    padding-right:25vw;
-    height:auto;
-    margin-top:32px;
-}
-
-/* Style the footer */
-#gridFooter {
-    grid-area: footer;
-    width: 100vw;
-    padding-left:25vw;
-    padding-right:25vw;
-    height:auto;
-}
-
-/* The grid container */
-#gridContainer {
-    display: grid;
-    grid-template-areas: 'header header header header' 'middle middle middle middle' 'footer footer footer footer';
-}
-
-/* Media Breakpoints
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 800px) {
-
-    #gridHeader,
-    #gridMiddle,
-    #gridFooter {
-        width: 100vw;
-        padding-left:32px;
-        padding-right:32px;
-    }
-}
-
-@media (prefers-dark-interface) {
-    body {
-        background-color: #2d2d2d;
-        color: #dfdfdf;
-    }
-
-    a:link {
-        color: #1b89ef;
-    }
 }
 
 /* Header 
@@ -112,6 +49,8 @@ body {
 
 .houseSpecial {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 

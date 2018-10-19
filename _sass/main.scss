@@ -110,6 +110,10 @@ body {
     color: $header-color;
 }
 
+.houseSpecial {
+    display: flex;
+}
+
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -141,8 +145,19 @@ hr {
 }
 
 footer {
-    text-align:left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     color: #202428;
     font-weight: 300;
+}
+
+#gridFooter ul {
+    list-style-type: none;
+}
+
+#gridFooter li {
+    display: inline;
 }
 

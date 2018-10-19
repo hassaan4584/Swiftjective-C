@@ -15,14 +15,11 @@
 
 <body>
     <div id="gridContainer">
-        
         <header id="gridHeader">
             <h1>Swiftjective-C</h1>
             <h2>A periodical on the art of modern iOS software engineering.</h2>
         </header>
-
         <main id="gridMiddle">
-
             <div class="articleSection">
                 <em>Introducing tonight's special...</em>
                 {% assign post = site.posts.first %}
@@ -33,9 +30,34 @@
             <hr />
             <div class="articleSection">
                 <em>Classic House Favorites</em>
-                {% assign post = site.posts.first %}
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.excerpt }}</p>
+                <div class="houseSpecial">
+                    <div>
+                        {% assign post = site.posts.first %}
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
+                    </div>
+                    <div>
+                        {% assign post = site.posts.first %}
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
+                    </div>
+                </div>
+                 <div class="houseSpecial">
+                    <div>
+                        {% assign post = site.posts.first %}
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
+                    </div>
+                    <div>
+                        {% assign post = site.posts.first %}
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.excerpt }}</p>
+                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
+                    </div>
+                </div>
             </div>
             <hr />
             <div class="articleSection">
@@ -44,16 +66,15 @@
                 <h2>{{ post.title }}</h2>
                 <p>{{ post.excerpt }}</p>
             </div>
-            
         </main>
-
-
-
-            <footer id="gridFooter">
-                <p>A most magical footer</p>
-            </footer>
-      
-
+        <footer id="gridFooter">
+            <code>//Written by <a href="https://www.twitter.com/jordanmorgan10" target="_blank">Jordan Morgan</a></code>
+            <ul>
+                <li>About</li>
+                <li>{% include contactObs.html %}</li>
+            </ul>
+        </footer>
     </div>
 </body>
+
 </html>

@@ -82,6 +82,9 @@ body {
   font-size: 40px;
   color: #282A36; }
 
+.houseSpecial {
+  display: flex; }
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:link {
@@ -105,6 +108,15 @@ hr {
   color: #DDDDDD; }
 
 footer {
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   color: #202428;
   font-weight: 300; }
+
+#gridFooter ul {
+  list-style-type: none; }
+
+#gridFooter li {
+  display: inline; }

@@ -31,32 +31,12 @@
             <div class="articleSection">
                 <em>Classic House Favorites</em>
                 <div class="houseSpecial">
-                    <div>
-                        {% assign post = site.posts.first %}
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
-                    </div>
-                    <div>
-                        {% assign post = site.posts.first %}
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
-                    </div>
+                    {% include articleWell.html post=site.posts.first %}
+                    {% include articleWell.html post=site.posts.first %}
                 </div>
                  <div class="houseSpecial">
-                    <div>
-                        {% assign post = site.posts.first %}
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
-                    </div>
-                    <div>
-                        {% assign post = site.posts.first %}
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.excerpt }}</p>
-                        <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
-                    </div>
+                    {% include articleWell.html post=site.posts.first %}
+                    {% include articleWell.html post=site.posts.first %}
                 </div>
             </div>
             <hr />

@@ -1,0 +1,5 @@
+<div>
+    <h2>{{ include.post.title }}</h2>
+    <p>{{ include.post.excerpt }}</p>
+    <a href="{{ include.post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ include.post.title }})</code></a>
+</div>

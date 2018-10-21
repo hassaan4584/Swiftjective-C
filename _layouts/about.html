@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1, viewport-fit=auto'>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    {% feed_meta %}
+    {% seo %}
+    {% if jekyll.environment == "production" %}
+    <script src=""></script>
+    {% endif %}
+</head>
+
+<body>
+    <div id="gridContainer">
+        <header id="gridHeader">
+            <h1><a href="/index.html">Swiftjective-C</a></h1>
+            <h2>A periodical on the art of modern iOS software engineering.</h2>
+        </header>
+        <main id="gridMiddle">
+            <article>
+                {{ content }}
+            </article>
+        </main>
+        <footer id="gridFooter">
+            {% include footer.html %}
+        </footer>
+    </div>
+</body>
+
+</html>

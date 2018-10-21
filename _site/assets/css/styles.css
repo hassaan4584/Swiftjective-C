@@ -1,7 +1,11 @@
 @charset "UTF-8";
 body {
   background-color: #FFFFFF;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  border-bottom: 5px solid #70A2F9; }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -22,6 +26,14 @@ a:active {
 
 /* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1 {
+  color: #314A4F; }
+
+h2,
+h3,
+h3 {
+  color: #615B5B; }
+
 hr {
   color: #DDDDDD; }
 
@@ -32,6 +44,16 @@ footer {
   align-items: center;
   color: #202428;
   font-weight: 300; }
+
+img {
+  border-radius: 25px; }
+
+article {
+  font-weight: 400;
+  font-style: normal; }
+
+article p {
+  display: block; }
 
 * {
   box-sizing: border-box; }
@@ -83,11 +105,9 @@ footer {
   font-weight: bolder;
   font-size: 4vh;
   margin-bottom: 0px;
-  margin-top: 4vh;
-  color: #314A4F; }
+  margin-top: 4vh; }
 
 #gridHeader h2 {
-  color: #615B5B;
   margin-top: 16px;
   margin-bottom: 32px; }
 
@@ -95,9 +115,6 @@ footer {
 .articleSection {
   padding-top: 32px;
   padding-bottom: 32px; }
-
-.articleSection h2, h3 {
-  color: #615B5B; }
 
 .articleSection ul {
   list-style-type: none;
@@ -124,3 +141,10 @@ footer {
 
 #gridFooter li {
   display: inline; }
+
+#headerImg {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }

@@ -7,11 +7,9 @@ $top-padding:32px;
     font-size: 4vh;
     margin-bottom: 0px;
     margin-top: 4vh;
-    color: $header-color;
 }
 
 #gridHeader h2 {
-    color: $sub-header-color;
     margin-top: 16px;
     margin-bottom:32px;
 }
@@ -21,10 +19,6 @@ $top-padding:32px;
 .articleSection {
     padding-top: $top-padding;
     padding-bottom: 32px;
-}
-
-.articleSection h2, h3 {
-    color: $sub-header-color;
 }
 
 .articleSection ul {

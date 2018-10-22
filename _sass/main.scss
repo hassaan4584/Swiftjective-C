@@ -42,8 +42,8 @@ $top-padding:32px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
-
 
 /* Footer */
 
@@ -53,5 +53,20 @@ $top-padding:32px;
 
 #gridFooter li {
     display: inline;
+}
+
+/* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 800px) {
+
+    .houseSpecial {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 }
 

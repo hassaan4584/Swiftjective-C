@@ -15,10 +15,7 @@
 
 <body>
     <div id="gridContainer">
-        <header id="gridHeader">
-            <h1><a href="/index.html">Swiftjective-C</a></h1>
-            <h2>A periodical on the art of modern iOS software engineering.</h2>
-        </header>
+        {% include smallHeader.html %}
         <main id="gridMiddle">
             <article>
                 {{ content }}
@@ -28,6 +25,6 @@
             {% include footer.html %}
         </footer>
     </div>
+    {% include fathom.html %}
 </body>
-
 </html>

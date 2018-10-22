@@ -1,9 +1,19 @@
-collections:
-  authors:
-    output: true
 
+title: Swiftjective-C
+email: jordan@dreaminginbinary.co
+description: >
+  Swiftjective-C is a periodical over modern iOS software engineering. It
+  houses tactful discussions over Swift, Objective-C and developing high
+  quality apps while peering into various frameworks to see what makes
+  them tick.
+url: https://wwww.swiftjectivec.com 
 defaults:
   - scope:
       path: "assets/images"
     values:
       image: true
+twitter:
+  username: jordanmorgan10
+  site: https://wwww.swiftjectivec.com
+facebook:
+  authors: alpha10david

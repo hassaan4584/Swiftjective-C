@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
+    {% include ogData.html %}
     {% if jekyll.environment == "production" %}
     <script src=""></script>
     {% endif %}
@@ -16,10 +17,7 @@
 
 <body>
     <div id="gridContainer">
-        <header id="gridHeader">
-            <h1>Swiftjective-C</h1>
-            <h2>A periodical on the art of modern iOS software engineering.</h2>
-        </header>
+        {% include bigHeader.html %}
         <main id="gridMiddle">
             <div class="articleSection">
                 <em>Introducing tonight's special...</em>
@@ -57,6 +55,7 @@
             {% include footer.html %}
         </footer>
     </div>
+    {% include fathom.html %}
 </body>
 
 </html>

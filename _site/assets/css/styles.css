@@ -89,7 +89,7 @@ article p {
 /* The grid container */
 #gridContainer {
   display: grid;
-  grid-template-areas: 'header header header header' 'middle middle middle middle' 'footer footer footer footer'; }
+  grid-template-areas: "header header header header" "middle middle middle middle" "footer footer footer footer"; }
 
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -134,7 +134,8 @@ article p {
 .houseSpecial {
   display: flex;
   justify-content: space-between;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: nowrap; }
 
 /* Footer */
 #gridFooter ul {
@@ -143,6 +144,15 @@ article p {
 #gridFooter li {
   display: inline; }
 
+/* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 800px) {
+  .houseSpecial {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap; } }
 #headerImg {
   max-width: 50%;
   height: auto;

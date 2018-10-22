@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name='viewport' content='initial-scale=1, viewport-fit=auto'>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png?">
     <title>Apples</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
@@ -103,6 +104,21 @@
     <li><a href="/about.html">About</a></li>
     <li><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#114;&#100;&#97;&#110;&#64;&#100;&#114;&#101;&#97;&#109;&#105;&#110;&#103;&#105;&#110;&#98;&#105;&#110;&#97;&#114;&#121;&#46;&#99;&#111;">Contact</a></li>
 </ul>
+<!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+<script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//swiftjectivec.usesfathom.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'UGLPY');
+fathom('trackPageview');
+</script>
+<!-- / Fathom -->
         </footer>
     </div>
 </body>

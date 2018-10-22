@@ -1,0 +1,42 @@
+articles:
+  - title: NSHipster
+    link: https://nshipster.com/uifieldbehavior/
+  - title: Pluralsight
+    link: https://www.pluralsight.com/authors/jordan-morgan
+  - title: Overflow:Buffer Engineering Blog
+    link: https://overflow.buffer.com/author/jordan/
+  - title: The Initial Commit
+    link: https://theinitialcommit.com/2017/08/08/jordan-morgan/
+  - title: Buddy Build
+    link: https://www.buddybuild.com/blog/optimizing-your-swift-codebase
+  - title: Tuts +
+    link: https://tutsplus.com/authors/jordan-morgan
+  - title: Sitepoint
+    link: https://www.sitepoint.com/author/jordanmorgan/
+  - title: Sinch
+    link: https://www.sinch.com/tutorials/ios-push-notifications-tutorial/
+  - title: Webby Awards
+    link: https://www.webbyawards.com/winners/2018/mobile-sites-apps/features/best-practices/buffer/
+books:
+  - title: The Open Organization Guide to IT Culture Change
+    link: https://opensource.com/open-organization/resources/culture-change
+  - title: The Open Organization Workbook
+    link: https://opensource.com/open-organization/resources/workbook
+talks:
+  - title: Texture in 10
+    link: https://www.youtube.com/watch?v=Tzuz9usUpco
+  - title: Swift Initializers
+    link: https://forwardcourses.com/lectures/128
+  - title: Transitioning to Remote Devlopment
+    link: https://www.dropbox.com/s/t6hs9ezd3u1t4uz/Transition.key?dl=0
+  - title: Spend Stack Case Study
+    link: https://www.slideshare.net/alpha10david
+  - title: Introduction to Swift V1
+    link: https://www.slideshare.net/alpha10david
+online: 
+- title: LinkedIn
+  link: https://www.linkedin.com/in/jordanwmorgan/
+- title: Stack Overflow
+  link: https://stackoverflow.com/users/3983896/dreaming-in-binary
+- title: Github
+  link: https://github.com/DreamingInBinary

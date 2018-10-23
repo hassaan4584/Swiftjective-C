@@ -11,7 +11,7 @@ $top-padding:32px;
 
 #gridHeader h2 {
     margin-top: 16px;
-    margin-bottom:32px;
+    margin-bottom: 32px;
 }
 
 /* Middle Article Sections */
@@ -30,11 +30,11 @@ $top-padding:32px;
 
 .articleSection li {
     float: left;
-    padding-right:8px;
+    padding-right: 8px;
 }
 
 #specialHeader {
-    font-size:40px;
+    font-size: 40px;
     color: $header-color;
 }
 
@@ -62,11 +62,10 @@ $top-padding:32px;
 @media (max-width: 800px) {
 
     .houseSpecial {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
 }
-

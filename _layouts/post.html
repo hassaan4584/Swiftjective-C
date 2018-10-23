@@ -7,15 +7,32 @@
         {% include smallHeader.html %}
         <main id="gridMiddle">
             <article>
-                <em style="text-align: center; display: block;">Now serving...</em>
-                <h1 style="text-align: center; font-weight: bolder; font-size: 8vh; margin-top: 0;">{{ page.title }}</h1>
+                <em id="nowServing" >Now serving...</em>
+                <h1 id="postHeader">{{ page.title }}</h1>
                 <i>Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
                 {{ content }}
             </article>
+            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an issue or create a pull request for this article.</p>
             <hr />
+            <h4>Next article...</h4>
+            {% assign articles = site.posts %}
+            {% for article in articles %}
+            {% if article.title == page_title %}
+            {% assign currIndex = forloop.index0 %}
+            {% assign prevIndex = currIndex | minus: 1 %}
+            {% assign nextIndex = currIndex | plus: 1 %}
+            {% assign articleIndexLength = forloop.length | minus: 1 %}
             <div>
-                <p>Test</p>
+                {% if currIndex == 0 %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ articles[nextIndex].url }}">{{ articles[nextIndex].title }} &raquo;</a>
+                {% elsif currIndex < articleIndexLength and currIndex !=0 %} <a href="{{ site.url }}{{ site.baseurl }}{{ articles[prevIndex].url }}">&laquo; {{ articles[prevIndex].title }}</a>
+                <a href="{{ site.url }}{{ site.baseurl }}{{ articles[nextIndex].url }}">{{ articles[nextIndex].title }} &raquo;</a>
+                {% elsif currIndex == articleIndexLength %}
+                <a href="{{ site.url }}{{ site.baseurl }}{{ articles[prevIndex].url }}">&laquo; {{ articles[prevIndex].title }}</a>
+                {% endif %}
             </div>
+            {% endif %}
+            {% endfor %}
             <hr />
         </main>
         <footer id="gridFooter">

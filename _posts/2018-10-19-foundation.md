@@ -3,7 +3,7 @@ layout: post
 tags: [foundation]
 title: Foundation
 author: Jordan Morgan
-description: "Now is a great time to talk about Foundation. I love pickles and some delightful biscuits to go wih them."
+description: Now is a great time to talk about Foundation. I love pickles and some delightful biscuits to go wih them.
 image: /assets/images/logo.png
 ---
 ## Time to Chat

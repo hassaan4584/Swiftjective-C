@@ -17,7 +17,7 @@
             <h4>Next article...</h4>
             {% assign articles = site.posts %}
             {% for article in articles %}
-            {% if article.title == page_title %}
+            {% if article.title == page.title %}
             {% assign currIndex = forloop.index0 %}
             {% assign prevIndex = currIndex | minus: 1 %}
             {% assign nextIndex = currIndex | plus: 1 %}

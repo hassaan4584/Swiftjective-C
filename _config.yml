@@ -6,7 +6,7 @@ description: >
   houses tactful discussions over Swift, Objective-C and developing high
   quality apps while peering into various frameworks to see what makes
   them tick.
-url: https://wwww.swiftjectivec.com 
+url: swiftjectivec.com 
 defaults:
   - scope:
       path: "assets/images"
@@ -14,6 +14,15 @@ defaults:
       image: true
 twitter:
   username: jordanmorgan10
-  site: https://wwww.swiftjectivec.com
+  card: summary
 facebook:
-  authors: alpha10david
+  publisher: alpha10david
+logo: /assets/images/logo.png
+social:
+  name: Jordan Morgan
+  links:
+    - https://twitter.com/jordanmorgan10
+    - https://www.facebook.com/alpha10david
+    - https://www.linkedin.com/in/jordanwmorgan
+    - https://github.com/dreaminginbinary
+    - https://instagram.com/lookitsjordanmorgan

@@ -1,15 +1,28 @@
----
-layout: default
----
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }}</p>
-<p>{{ page.content | number_of_words }}</p>
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
+<!doctype html>
+<html>
+{% include head.html %}
 
-{{ content }}
+<body>
+    <div id="gridContainer">
+        {% include smallHeader.html %}
+        <main id="gridMiddle">
+            <article>
+                <em style="text-align: center; display: block;">Now serving...</em>
+                <h1 style="text-align: center; font-weight: bolder; font-size: 8vh; margin-top: 0;">{{ page.title }}</h1>
+                <i>Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
+                {{ content }}
+            </article>
+            <hr />
+            <div>
+                <p>Test</p>
+            </div>
+            <hr />
+        </main>
+        <footer id="gridFooter">
+            {% include footer.html %}
+        </footer>
+    </div>
+    {% include fathom.html %}
+</body>
+
+</html>

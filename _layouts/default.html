@@ -1,20 +1,6 @@
 <!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name='viewport' content='initial-scale=1, viewport-fit=auto'>
-    <link rel="shortcut icon" type="image/png" href="/favicon.png?">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    {% feed_meta %}
-    {% seo %}
-    {% include ogData.html %}
-    {% if jekyll.environment == "production" %}
-    <script src=""></script>
-    {% endif %}
-</head>
-
+{% include head.html %}
 <body>
     <div id="gridContainer">
         {% include bigHeader.html %}
@@ -23,7 +9,7 @@
                 <em>Introducing tonight's special...</em>
                 {% assign post = site.posts.first %}
                 <a href="{{ post.url | prepend: site.baseurl }}""><h2 id="specialHeader">{{ post.title }}</h2></a>
-                <p>{{ post.excerpt }}</p>
+                <p>{{ post.description }}</p>
                 <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
             </div>
             <hr />
@@ -57,5 +43,4 @@
     </div>
     {% include fathom.html %}
 </body>
-
 </html>

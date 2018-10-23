@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Swiftjective-C",
+    "description": "Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.\n",
+    "home_page_url": "http://localhost:4000/",
+    "feed_url": "http://localhost:4000/feed.json",
+    "items": [
+      {
+            "id": "http://localhost:4000/2018/10/19/foundation",
+            "url": "http://localhost:4000/2018/10/19/foundation.html",
+            "title": "Foundation",
+            "content_html": "<h2 id=\"time-to-chat\">Time to Chat</h2>\n<p>I sing lover come back, lover come back to me. Won’t you ever come back, ever come back to me?</p>\n\n<div class=\"language-swift highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code><span class=\"k\">let</span> <span class=\"nv\">t</span> <span class=\"o\">=</span> <span class=\"mi\">42</span>\n<span class=\"k\">if</span> <span class=\"n\">t</span> <span class=\"o\">&gt;</span> <span class=\"mi\">32</span>\n<span class=\"p\">{</span>\n    <span class=\"nf\">print</span><span class=\"p\">(\\(</span><span class=\"n\">t</span><span class=\"p\">))</span>\n<span class=\"p\">}</span>\n</code></pre></div></div>",
+            "summary": "Time to Chat I sing lover come back, lover come back to me. Won’t you ever come back, ever come back to me?",
+            "image": "http://localhost:4000/assets/images/logo.png",
+            "date_published": "2018-10-19T00:00:00-05:00",
+            "date_modified": "2018-10-19T00:00:00-05:00",
+            "author": {
+              "name": "Jordan Morgan"},
+            "tags": ["foundation"]}]
+}

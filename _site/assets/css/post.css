@@ -128,6 +128,10 @@ article {
   text-align: center;
   padding: 8px 16px 8px 16px; }
 
+div.highlight {
+  border-radius: 8px;
+  overflow: auto; }
+
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -135,9 +139,13 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-  padding: 16px 16px 16px 16px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin-top: 32px;
   margin-bottom: 32px; }
+
+pre code {
+  font-size: 18px; }
 
 article p,
 ul,

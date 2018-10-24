@@ -10,10 +10,11 @@ title: post
         {% include smallHeader.html %}
         <main id="gridMiddle">
             <article>
-                <em id="nowServing" >Now serving...</em>
-                <h1 id="postHeader">{{ page.title }}</h1>
-                <i>Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
-                <br />
+                <section id="articleHeaderSection">
+                    <em id="nowServing" >Now serving...</em>
+                    <h1 id="postHeader">{{ page.title }}</h1>
+                    <i>Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
+                </section>
                 {{ content }}
             </article>
             <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an issue or create a pull request for this article.</p>

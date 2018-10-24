@@ -7,7 +7,7 @@ body {
   letter-spacing: -.003em;
   border-bottom: 5px solid #70A2F9; }
 
-/* Links
+ /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:link {
   color: #70A2F9; }
@@ -24,7 +24,7 @@ a:hover {
 a:active {
   color: #70A2F9; }
 
-/* Selectors
+ /* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1 {
   color: #314A4F; }
@@ -51,7 +51,12 @@ img {
 
 article {
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+  letter-spacing: .01rem;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em; }
 
 article p {
   display: block; }
@@ -116,22 +121,31 @@ article p {
 #postHeader {
   text-align: center;
   font-weight: bolder;
-  font-size: 8vh;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto; }
+  font-size: 4vw;
+  margin-top: 0px;
+  padding-bottom: 10px; }
 
 #pullsWelcome {
   color: #615B5B;
   text-align: center;
   padding: 8px 16px 8px 16px; }
 
-/*
-article p {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  padding: 16px 16px 16px 16px;
+  margin-top: 32px;
+  margin-bottom: 32px; }
 
-article h1,h2,h3,h4 {
-    margin-top: 32px;
-}
-*/
+article p, ul, li {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+
+article h1,
+h2,
+h3,
+h4 {
+  margin-top: 64px; }

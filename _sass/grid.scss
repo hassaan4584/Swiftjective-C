@@ -47,6 +47,18 @@ $top-padding:32px;
     grid-template-areas: 'header header header header''middle middle middle middle''footer footer footer footer';
 }
 
+/* Grid Specific
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#gridFooter ul {
+    list-style-type: none;
+}
+
+#gridFooter li {
+    display: inline;
+}
+
+
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 

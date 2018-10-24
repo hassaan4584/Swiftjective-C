@@ -91,53 +91,8 @@ article p {
   display: grid;
   grid-template-areas: "header header header header" "middle middle middle middle" "footer footer footer footer"; }
 
-/* Media Breakpoints
+/* Grid Specific
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 800px) {
-  #gridHeader,
-  #gridMiddle,
-  #gridFooter {
-    width: 100vw;
-    padding-left: 32px;
-    padding-right: 32px; } }
-/* Header */
-#gridHeader h1 {
-  font-weight: bolder;
-  font-size: 4vh;
-  margin-bottom: 0px;
-  margin-top: 4vh; }
-
-#gridHeader h2 {
-  margin-top: 16px;
-  margin-bottom: 32px; }
-
-/* Middle Article Sections */
-.articleSection {
-  padding-top: 32px;
-  padding-bottom: 32px; }
-
-.articleSection ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; }
-
-.articleSection li {
-  float: left;
-  padding-right: 8px; }
-
-#specialHeader {
-  font-size: 40px;
-  color: #314A4F; }
-
-.houseSpecial {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap; }
-
-/* Footer */
 #gridFooter ul {
   list-style-type: none; }
 
@@ -148,18 +103,12 @@ article p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 800px) {
-  .houseSpecial {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap; } }
-#headerImg {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
+  #gridHeader,
+  #gridMiddle,
+  #gridFooter {
+    width: 100vw;
+    padding-left: 32px;
+    padding-right: 32px; } }
 #nowServing {
   text-align: center;
   display: block; }
@@ -168,9 +117,21 @@ article p {
   text-align: center;
   font-weight: bolder;
   font-size: 8vh;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto; }
 
 #pullsWelcome {
   color: #615B5B;
   text-align: center;
   padding: 8px 16px 8px 16px; }
+
+/*
+article p {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+article h1,h2,h3,h4 {
+    margin-top: 32px;
+}
+*/

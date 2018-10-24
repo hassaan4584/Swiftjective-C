@@ -58,9 +58,6 @@ article {
   line-height: 1.58;
   letter-spacing: -.003em; }
 
-article p {
-  display: block; }
-
 * {
   box-sizing: border-box; }
 
@@ -114,6 +111,9 @@ article p {
     width: 100vw;
     padding-left: 32px;
     padding-right: 32px; } }
+#articleHeaderSection {
+  display: flex; }
+
 #nowServing {
   text-align: center;
   display: block; }
@@ -121,9 +121,7 @@ article p {
 #postHeader {
   text-align: center;
   font-weight: bolder;
-  font-size: 4vw;
-  margin-top: 0px;
-  padding-bottom: 10px; }
+  font-size: 4vw; }
 
 #pullsWelcome {
   color: #615B5B;
@@ -141,7 +139,9 @@ pre {
   margin-top: 32px;
   margin-bottom: 32px; }
 
-article p, ul, li {
+article p,
+ul,
+li {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
 
 article h1,
@@ -149,3 +149,9 @@ h2,
 h3,
 h4 {
   margin-top: 64px; }
+
+article h3 {
+  font-size: 43px;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  margin-bottom: -8px; }

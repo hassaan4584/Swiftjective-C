@@ -160,7 +160,9 @@ article p {
 
 div.highlight {
   border-radius: 8px;
-  overflow: auto; }
+  overflow: auto;
+  margin-top: 32px;
+  margin-bottom: 32px; }
 
 pre {
   overflow-x: auto;
@@ -170,9 +172,7 @@ pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word;
   padding-left: 16px;
-  padding-right: 16px;
-  margin-top: 32px;
-  margin-bottom: 32px; }
+  padding-right: 16px; }
 
 pre code {
   font-size: 18px; }

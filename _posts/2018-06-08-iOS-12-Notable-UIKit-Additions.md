@@ -3,7 +3,7 @@ layout: post
 tags: ["UIKit"]
 title: "iOS 12: Notable UIKit Additions"
 author: Jordan Morgan
-description: "Our favorite framework for user interface creations becomes faster and more nimble with iOS 12."
+description: "Our favorite framework for user interface creations becomes faster and a bit more nimble with iOS 12."
 image: /assets/images/logo.png
 ---
 And here we are. We've finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.
@@ -27,8 +27,9 @@ createNewPasswordTextField.passwordRules = newPasswordReqs
 ```
 The pertinent information here is the descriptor parameter, which is a plain string that follows a certain syntax, à la the visual format language:
     
-    
-    "key: value;"
+```swift    
+"key: value;"
+```
 
 Think of it a dictionary entry that always is followed by semicolon. It's quite close to CSS declarations. With it, you can specify the following items:
 
@@ -40,14 +41,15 @@ And character classes to match against those rules:
 
 * `upper` : A-Z
 * `lower` : a-z
-* `special: `-~!@#$%^&*_+=`|(){}[:;"'<>,.? ] and space
+* `special` : -~!@#$%^&*_+=`|(){}[:;"'<>,.? ] and space
 * `ascii-printable` : All ACII printable
 * `unicode` : All unicode
 
 To further things a little, suppose you only wanted to allow the letters "j,o,r,d,a,n" because you want the strongest password that I'll never, ever most definitely guess, then you could do this:
     
-    
-    UITextInputPasswordRules(descriptor: "required: [j,o,r,d,a,n]; max-consecutive: 2; minlength: 12;")
+```swift
+UITextInputPasswordRules(descriptor: "required: [j,o,r,d,a,n]; max-consecutive: 2; minlength: 12;")
+```
 
 Be aware that the framework has some validation against your supplied validation, resulting in some form of validationception.
 
@@ -62,9 +64,10 @@ As a bonus, you can do the same thing in HTML by using the `passwordrules` attri
 In one of my favorite "It just works" APIs that Apple supplies to developers, it's hard to argue that there's something more trivial to implement in iOS development that simultaneously brings real value to users than setting a text content type.
 
 The powerful heuristics of iOS sucks in passwords and phone numbers, can suggest a relevant address and more. And now, that more is TFA codes, accomplished by doing nothing more than choosing `oneTimeCode`:
-    
-    
-    aTFAtextField.textContentType = .oneTimeCode
+
+```swift    
+aTFAtextField.textContentType = .oneTimeCode
+```
 
 This also joins the new value, `newPassword`, which would enable the password creation prompts touched on above. The usual restrictions (if you can even call them that) is that the element accepting the password must be a text field, text view or a view that adopts the `UITextInput` protocol.
 
@@ -80,23 +83,24 @@ The cost savings is significant, in the [What's New in Cocoa Touch][1] session, 
 
 As aforementioned, views get this out of the box. If you draw into offscreen bitmaps using `UIGraphicsImageRenderer`, though, iOS won't be able to predict the developer's intentions with the resulting image. As such, a configurable buffer backing store style has been introduced so one can take part in the memory savings:
     
-    
-    let rendererFormat = UIGraphicsImageRendererFormat.default()  
-    rendererFormat.preferredRange = .extended // For an extended range image
-    
-    
-    let renderer = UIGraphicsImageRenderer(size: CGSize(width: 100, height: 100), format: rendererFormat)
+```swift 
+let rendererFormat = UIGraphicsImageRendererFormat.default()  
+rendererFormat.preferredRange = .extended // For an extended range image
+
+let renderer = UIGraphicsImageRenderer(size: CGSize(width: 100, height: 100), format: rendererFormat)
+```
 
 Above, we indicated our intention to utilize an extended range image. Though, we can also indicate that its unspecified, automatic or standard.
 
 ### The Small Quick Win
 
 Detecting user interface orientations is traditionally frowned upon via Apple's official stance. And though trait collections offer us most of what we need, it's still refreshing to see Apple come full circle on all the edge cases with two new additions here:
-    
-    
-    let device = UIDevice.current  
-    let isFlat = device.orientation.isFlat  
-    let isValid = device.orientation.isValidInterfaceOrientation
+
+```swift    
+let device = UIDevice.current  
+let isFlat = device.orientation.isFlat  
+let isValid = device.orientation.isValidInterfaceOrientation
+```
 
 ### Darkness for Days
 
@@ -106,17 +110,18 @@ Err…shoot, no wait — we just have API support for it. But it doesn't off
 
 I don't know. I'm just telling you that trait collections now know about it:
     
-    
-    let darkTraitCollection = UITraitCollection(userInterfaceStyle: .dark)
-
+```swift    
+let darkTraitCollection = UITraitCollection(userInterfaceStyle: .dark)
+```
 …there's obviously enumerations for it:
-    
-    
-    @available(iOS 12.0, *) public enum UIUserInterfaceStyle : Int {  
+
+```swift      
+@available(iOS 12.0, *) public enum UIUserInterfaceStyle : Int {  
     case unspecified  
     case light  
     case dark  
-    }
+}
+```
 
 …but they only apply to CarPlay on iOS 12 beta 1.
 
@@ -147,8 +152,6 @@ Personally, I came away more impressed than I thought I would be with iOS 12. In
 But, as is typical, W.W.D.C. brought some new stuff we weren't expecting, hardening updates and most importantly the new APIs. Exciting times, plus — our apps are just better by virtue of simply running on the new OS. UIKit will always be at the forefront, and this year was no exception as there's still plenty of discussions left to be had around this year's improvements.
 
 Saddle up 📱
-
-> Missed iOS 11's notable additions from last WWDC? Got you covered [here][3].
 
 [1]: https://developer.apple.com/videos/play/wwdc2018/202/
 [2]: https://twitter.com/_inside/status/1003831980025372673

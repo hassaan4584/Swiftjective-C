@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-25T15:24:09-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-25T16:31:24-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/2018/08/01/uigraphicsimagerenderer.html" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/2018/08/01/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/2018/08/01/uigraphicsimagerenderer.html">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
 
 &lt;p&gt;The translation from the analog to the digital was an inflection point. We’ve experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;.&lt;/p&gt;
@@ -201,27 +201,23 @@
 
 &lt;p&gt;Each year, I dive in on the latest version of iOS and try to bring up some of the new APIs that our favorite framework, UIKit, has brought to the table. In no particular order, let’s dig in on some of the enhancements that caught my eye.&lt;/p&gt;
 
-&lt;h4 id=&quot;uitextinputtraits&quot;&gt;UITextInputTraits&lt;/h4&gt;
+&lt;h3 id=&quot;uitextinputtraits&quot;&gt;UITextInputTraits&lt;/h3&gt;
 
 &lt;p&gt;Apple continues its push towards keeping its user’s data private and secure, so it’s no surprise to see Cupertino &amp;amp; Friends© extend the password autofill APIs.&lt;/p&gt;
 
 &lt;p&gt;New this year is the ability to suggest a new password for your users, &lt;em&gt;and&lt;/em&gt; supply your password parameters dictated by business requirements to iOS when suggesting such a password. This is done via the &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInputPasswordRules&lt;/code&gt; class:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let createNewPasswordTextField = UITextField()
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;createNewPasswordTextField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITextField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;newPasswordReqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITextInputPasswordRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;descriptor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;required: lower; required: digit; max-consecutive: 3; minlength: 12;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-let newPasswordReqs = UITextInputPasswordRules(descriptor: &quot;required: lower; required: digit; max-consecutive: 3; minlength: 12;&quot;)
+&lt;span class=&quot;n&quot;&gt;createNewPasswordTextField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;passwordRules&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newPasswordReqs&lt;/span&gt;
 
-
-createNewPasswordTextField.passwordRules = newPasswordReqs
-
-
-// Now, when iOS suggests a new password - these rules will be used to generate it
+&lt;span class=&quot;c1&quot;&gt;// Now, when iOS suggests a new password - these rules will be used to generate it&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;The pertinent information here is the descriptor parameter, which is a plain string that follows a certain syntax, à la the visual format language:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;key: value;&quot;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;key: value;&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Think of it a dictionary entry that always is followed by semicolon. It’s quite close to CSS declarations. With it, you can specify the following items:&lt;/p&gt;
@@ -241,7 +237,7 @@ createNewPasswordTextField.passwordRules = newPasswordReqs
     &lt;table&gt;
       &lt;tbody&gt;
         &lt;tr&gt;
-          &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;special: &lt;/code&gt;-~!@#$%^&amp;amp;*_+=`&lt;/td&gt;
+          &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;special&lt;/code&gt; : -~!@#$%^&amp;amp;*_+=`&lt;/td&gt;
           &lt;td&gt;(){}[:;”’&amp;lt;&amp;gt;,.? ] and space&lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
@@ -253,7 +249,7 @@ createNewPasswordTextField.passwordRules = newPasswordReqs
 
 &lt;p&gt;To further things a little, suppose you only wanted to allow the letters “j,o,r,d,a,n” because you want the strongest password that I’ll never, ever most definitely guess, then you could do this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;UITextInputPasswordRules(descriptor: &quot;required: [j,o,r,d,a,n]; max-consecutive: 2; minlength: 12;&quot;)
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;UITextInputPasswordRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;descriptor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;required: [j,o,r,d,a,n]; max-consecutive: 2; minlength: 12;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Be aware that the framework has some validation against your supplied validation, resulting in some form of validationception.&lt;/p&gt;
@@ -264,13 +260,13 @@ createNewPasswordTextField.passwordRules = newPasswordReqs
 
 &lt;p&gt;As a bonus, you can do the same thing in HTML by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;passwordrules&lt;/code&gt; attribute in your input element.&lt;/p&gt;
 
-&lt;h4 id=&quot;one-time-tfa-codes&quot;&gt;One Time TFA Codes&lt;/h4&gt;
+&lt;h3 id=&quot;one-time-tfa-codes&quot;&gt;One Time TFA Codes&lt;/h3&gt;
 
 &lt;p&gt;In one of my favorite “It just works” APIs that Apple supplies to developers, it’s hard to argue that there’s something more trivial to implement in iOS development that simultaneously brings real value to users than setting a text content type.&lt;/p&gt;
 
 &lt;p&gt;The powerful heuristics of iOS sucks in passwords and phone numbers, can suggest a relevant address and more. And now, that more is TFA codes, accomplished by doing nothing more than choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;oneTimeCode&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;aTFAtextField.textContentType = .oneTimeCode
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;aTFAtextField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textContentType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oneTimeCode&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This also joins the new value, &lt;code class=&quot;highlighter-rouge&quot;&gt;newPassword&lt;/code&gt;, which would enable the password creation prompts touched on above. The usual restrictions (if you can even call them that) is that the element accepting the password must be a text field, text view or a view that adopts the &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInput&lt;/code&gt; protocol.&lt;/p&gt;
@@ -279,7 +275,7 @@ createNewPasswordTextField.passwordRules = newPasswordReqs
 
 &lt;p&gt;Text content type is powerful, but also the definition of lightweight, simple and WYSIWYG. Sometimes what you aren’t is just as important as what you are. That’s also true with framework design.&lt;/p&gt;
 
-&lt;h4 id=&quot;graphics-rendering&quot;&gt;Graphics Rendering&lt;/h4&gt;
+&lt;h3 id=&quot;graphics-rendering&quot;&gt;Graphics Rendering&lt;/h3&gt;
 
 &lt;p&gt;As we’ll briefly discuss later on, iOS 12 has automatic backing store support for views. The depth of their content drives this. So, for example, if you are rendering a grey scale image on the screen iOS will employ an 8 bit per pixel backing store instead of the usual 64 bit per pixel backing store a portrait image would incur.&lt;/p&gt;
 
@@ -287,25 +283,24 @@ createNewPasswordTextField.passwordRules = newPasswordReqs
 
 &lt;p&gt;As aforementioned, views get this out of the box. If you draw into offscreen bitmaps using &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;, though, iOS won’t be able to predict the developer’s intentions with the resulting image. As such, a configurable buffer backing store style has been introduced so one can take part in the memory savings:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let rendererFormat = UIGraphicsImageRendererFormat.default()  
-rendererFormat.preferredRange = .extended // For an extended range image
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;rendererFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIGraphicsImageRendererFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;rendererFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preferredRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extended&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// For an extended range image&lt;/span&gt;
 
-
-let renderer = UIGraphicsImageRenderer(size: CGSize(width: 100, height: 100), format: rendererFormat)
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;renderer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIGraphicsImageRenderer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rendererFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Above, we indicated our intention to utilize an extended range image. Though, we can also indicate that its unspecified, automatic or standard.&lt;/p&gt;
 
-&lt;h4 id=&quot;the-small-quick-win&quot;&gt;The Small Quick Win&lt;/h4&gt;
+&lt;h3 id=&quot;the-small-quick-win&quot;&gt;The Small Quick Win&lt;/h3&gt;
 
 &lt;p&gt;Detecting user interface orientations is traditionally frowned upon via Apple’s official stance. And though trait collections offer us most of what we need, it’s still refreshing to see Apple come full circle on all the edge cases with two new additions here:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let device = UIDevice.current  
-let isFlat = device.orientation.isFlat  
-let isValid = device.orientation.isValidInterfaceOrientation
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;device&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isFlat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orientation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isFlat&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isValid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orientation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isValidInterfaceOrientation&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;darkness-for-days&quot;&gt;Darkness for Days&lt;/h4&gt;
+&lt;h3 id=&quot;darkness-for-days&quot;&gt;Darkness for Days&lt;/h3&gt;
 
 &lt;p&gt;Also, we have dark mode on iOS, finally! Mojave doesn’t get all the fun!&lt;/p&gt;
 
@@ -313,23 +308,22 @@ let isValid = device.orientation.isValidInterfaceOrientation
 
 &lt;p&gt;I don’t know. I’m just telling you that trait collections now know about it:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;let darkTraitCollection = UITraitCollection(userInterfaceStyle: .dark)
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;darkTraitCollection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITraitCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;userInterfaceStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;p&gt;…there’s obviously enumerations for it:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@available(iOS 12.0, *) public enum UIUserInterfaceStyle : Int {  
-case unspecified  
-case light  
-case dark  
-}
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@available(iOS 12.0, *)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIUserInterfaceStyle&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unspecified&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;light&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;…but they only apply to CarPlay on iOS 12 beta 1.&lt;/p&gt;
 
 &lt;p&gt;So there you go 🤷🏻‍♂️.&lt;/p&gt;
 
-&lt;h4 id=&quot;notifications&quot;&gt;Notifications&lt;/h4&gt;
+&lt;h3 id=&quot;notifications&quot;&gt;Notifications&lt;/h3&gt;
 
 &lt;p&gt;Technically not part of UIKit, but I did have to highlight one welcome change aside from the new grouping capabilities. Look, dealing with notifications is often a pain from a developer perspective. While not a forgone conclusion, the more notification offerings we have to support, generally the issues that could arise grow exponentially.&lt;/p&gt;
 
@@ -339,7 +333,7 @@ case dark
 
 &lt;p&gt;🕺!&lt;/p&gt;
 
-&lt;h4 id=&quot;-and-the-free-ones-&quot;&gt;… And The Free Ones 🙌&lt;/h4&gt;
+&lt;h3 id=&quot;-and-the-free-ones-&quot;&gt;… And The Free Ones 🙌&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/_inside/status/1003831980025372673&quot;&gt;iOS 12 is fast&lt;/a&gt;. A lot of the improvements we’ll enjoy come from deep within the framework itself. Here, I’ve chosen to highlight API changes you’ll need to put some time into to reap benefits.&lt;/p&gt;
 
@@ -347,14 +341,10 @@ case dark
 
 &lt;p&gt;The reasons why range from smarter cell prefetching via the API scheduling things serially, smarter CPU diversification, more intelligent backing stores for &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; and Auto Layout (quite impressively) hitting O(n) instead of O(n²) for multiple common layout scenarios, to name a few.&lt;/p&gt;
 
-&lt;h4 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h4&gt;
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
 
 &lt;p&gt;Personally, I came away more impressed than I thought I would be with iOS 12. Initially, it appeared that a lot of the chatter preemptively declared that iOS 12 would be a day late and dollar short. Last year, we were treated to some marquee features within UIKit like drag and drop — so what could they throw down for us this year?&lt;/p&gt;
 
 &lt;p&gt;But, as is typical, W.W.D.C. brought some new stuff we weren’t expecting, hardening updates and most importantly the new APIs. Exciting times, plus — our apps are just better by virtue of simply running on the new OS. UIKit will always be at the forefront, and this year was no exception as there’s still plenty of discussions left to be had around this year’s improvements.&lt;/p&gt;
 
-&lt;p&gt;Saddle up 📱&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Missed iOS 11’s notable additions from last WWDC? Got you covered &lt;a href=&quot;https://medium.com/the-traveled-ios-developers-guide/ios-11-notable-uikit-additions-92e5eb421c3b&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Saddle up 📱&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

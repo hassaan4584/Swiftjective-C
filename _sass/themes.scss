@@ -1,75 +1,92 @@
-$header-color: #314A4F;
-$sub-header-color: #615B5B;
-$sub-sub-header-color: #DDDDDD;
-$secondary-color: #70A2F9;
+ $header-color: #314A4F;
+ $sub-header-color: #615B5B;
+ $sub-sub-header-color: #DDDDDD;
+ $secondary-color: #70A2F9;
 
-body {
-    background-color: #FFFFFF;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 21px;
-    line-height: 1.58;
-    letter-spacing: -.003em;
-    border-bottom: 5px solid $secondary-color;
-}
+ body {
+     background-color: #FFFFFF;
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+     font-size: 21px;
+     line-height: 1.58;
+     letter-spacing: -.003em;
+     border-bottom: 5px solid $secondary-color;
+ }
 
-/* Links
+ /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-a:link {
-    color: #70A2F9;
-}
+ a:link {
+     color: #70A2F9;
+ }
 
-/* visited link */
-a:visited {
-    color: #70A2F9;
-}
+ /* visited link */
+ a:visited {
+     color: #70A2F9;
+ }
 
-/* mouse over link */
-a:hover {
-    color: #3F464B;
-}
+ /* mouse over link */
+ a:hover {
+     color: #3F464B;
+ }
 
-/* selected link */
-a:active {
-    color: #70A2F9;
-}
+ /* selected link */
+ a:active {
+     color: #70A2F9;
+ }
 
-/* Selectors
+ /* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-h1 {
-    color: $header-color;
-}
+ h1 {
+     color: $header-color;
+ }
 
-h2,
-h3,
-h3,
-h4 {
-    color: $sub-header-color;
-}
+ h2,
+ h3,
+ h3,
+ h4 {
+     color: $sub-header-color;
+ }
 
-hr {
-    color: $sub-sub-header-color;
-}
+ hr {
+     color: $sub-sub-header-color;
+ }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: #202428;
-    font-weight: 300;
-}
+ footer {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     color: #202428;
+     font-weight: 300;
+     margin-top: 32px;
+     margin-bottom: 16px;
+ }
 
-img {
-    border-radius: 25px;
-}
+ img {
+     border-radius: 25px;
+ }
 
-article {
-    font-weight: 400;
-    font-style: normal;
-}
+ article h2,
+ h3,
+ h4 {
+     margin-top: 64px;
+ }
 
-article p {
-    display: block;
-}
+ article h3 {
+     font-size: 43px;
+     line-height: 1.15;
+     letter-spacing: -.015em;
+     margin-bottom: 8px;
+ }
+
+ article p {
+     margin-top: 8px;
+ }
+
+ @media (prefers-color-scheme: dark) {
+     body {
+         background: #2c2d2f !important;
+         color: white !important;
+     }
+ }

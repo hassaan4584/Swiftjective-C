@@ -1,5 +1,8 @@
 <code>//Written by <a href="https://www.twitter.com/jordanmorgan10" target="_blank">Jordan Morgan</a></code>
-<ul>
-    <li><a href="/about.html">About</a></li>
-    <li>{% include contactObs.html %}</li>
-</ul>
+<nav>
+	{% if page.title != 'Swiftjective-C' %}
+	<a href="/index.html">Home</a>
+	{% endif %}
+    <a href="/about.html">About</a>
+    {% include contactObs.html %}
+</nav>

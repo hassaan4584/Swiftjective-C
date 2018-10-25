@@ -12,9 +12,7 @@ title: default
             <div class="articleSection">
                 <em>Introducing tonight's special...</em>
                 {% assign post = site.posts.first %}
-                <a href="{{ post.url | prepend: site.baseurl }}""><h2 id="specialHeader">{{ post.title }}</h2></a>
-                <p>{{ post.description }}</p>
-                <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
+                {% include articleWellLatest.html %}
             </div>
             <hr />
             <div class="articleSection">

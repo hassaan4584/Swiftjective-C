@@ -124,9 +124,29 @@ article {
   margin-bottom: 0px;
   margin-top: 4vh; }
 
-#gridHeader h2 {
-  margin-top: 16px;
+#gridHeader h3 {
+  margin-top: 0px;
   margin-bottom: 32px; }
+
+#articleWellLatest h2 {
+  font-size: 56px;
+  color: #314A4F;
+  margin-top: 8px;
+  margin-bottom: 0px; }
+
+#articleWellLatest p {
+  margin-top: 8px;
+  margin-bottom: 4px; }
+
+.articleWell {
+  margin-top: 16px; }
+
+.articleWell h2 {
+  margin-bottom: 0px; }
+
+.articleWell p {
+  margin-top: 8px;
+  margin-bottom: 4px; }
 
 /* Middle Article Sections */
 .articleSection {
@@ -142,10 +162,6 @@ article {
 .articleSection li {
   float: left;
   padding-right: 8px; }
-
-#specialHeader {
-  font-size: 40px;
-  color: #314A4F; }
 
 .houseSpecial {
   display: flex;

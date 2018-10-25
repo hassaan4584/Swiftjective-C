@@ -14,7 +14,7 @@ title: post
                 <section id="articleHeaderSection">
                     <i>Now serving...</i>
                     <h1 id="postHeader">{{ page.title }}</h1>
-                    <i id="miniphon">Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
+                    <small id="miniphon">Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</small>
                 </section>
                 {{ content }}
             </article>

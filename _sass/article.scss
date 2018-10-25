@@ -12,11 +12,11 @@
     font-weight: bolder;
     font-size: calc(36px + 1.5vw);
     margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 #miniphon {
-    color:  green;
+    color:  $sub-header-color;
 }
 
 #pullsWelcome {

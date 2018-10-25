@@ -79,7 +79,6 @@ UIColor.blue.setFill()
 }
 
 let imageJPEGData = renderer.jpegData(withCompressionQuality: 1, actions: actions)
-
 let imagePNGData = renderer.pngData(actions: actions)
 ```
 
@@ -87,11 +86,11 @@ In each code sample, the typealiased `DrawingActions` closure returns to us an i
     
 ```swift  
 let image = renderer.image { (ctx) in  
-UIColor.blue.setFill()  
-ctx.fill(CGRect(x: 1, y: 1, width: 140, height: 140))
+    UIColor.blue.setFill()  
+    ctx.fill(CGRect(x: 1, y: 1, width: 140, height: 140))
 
-UIColor.yellow.setFill()  
-ctx.fill(CGRect(x: 60, y: 60, width: 140, height: 140), blendMode: .luminosity)  
+    UIColor.yellow.setFill()  
+    ctx.fill(CGRect(x: 60, y: 60, width: 140, height: 140), blendMode: .luminosity)  
 }
 ```
 
@@ -196,20 +195,17 @@ let anImageView = myExistingView.circleImageView()
 A quick sidebar to mention that the PDF variant of the abstract `UIGraphicsRenderer` class is very similar to its image rendering sibling. In fact, their method declarations are almost interchangeable, save `UIImage` vs `Data`:
     
 ```swift  
-    let renderer = UIGraphicsPDFRenderer(bounds: view.bounds)  
-    let pdf = renderer.pdfData { (ctx) in  
-    ctx.beginPage()
-    
-    
-        let header = "Welcome to TTIDG!" as NSString  
+let renderer = UIGraphicsPDFRenderer(bounds: view.bounds)  
+let pdf = renderer.pdfData { (ctx) in  
+ctx.beginPage()
+    let header = "Welcome to TTIDG!" as NSString  
     let attributes = [  
-    NSAttributedStringKey.font : UIFont.preferredFont(forTextStyle: .body),  
-    NSAttributedStringKey.foregroundColor : UIColor.blue  
+        NSAttributedStringKey.font : UIFont.preferredFont(forTextStyle: .body),  
+        NSAttributedStringKey.foregroundColor : UIColor.blue  
     ]
-    
-    
-        header.draw(in: CGRect(x: 0, y: 0, width: ctx.pdfContextBounds.width, height: ctx.pdfContextBounds.height), withAttributes: attributes)  
-    }
+
+    header.draw(in: CGRect(x: 0, y: 0, width: ctx.pdfContextBounds.width, height: ctx.pdfContextBounds.height), withAttributes: attributes)  
+}
 ```
 
 ### Wrapping Up

@@ -21,6 +21,12 @@ $top-padding:32px;
     color: $header-color;
     margin-top: 8px;
     margin-bottom: 0px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 #articleWellLatest p {
@@ -32,9 +38,14 @@ $top-padding:32px;
     margin-top: 16px;
 }
 
-
 .articleWell h2 {
     margin-bottom: 0px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 .articleWell p {

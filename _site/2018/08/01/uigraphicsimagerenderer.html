@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name='viewport' content='initial-scale=1, viewport-fit=cover  '>
+    <meta name='viewport' content='initial-scale=1, viewport-fit=auto'>
     <meta name="revisit-after" content="7 days" />
     <meta name="msapplication-TileColor" content="#70A2F9" />
     <meta name="theme-color" content="#70A2F9" />
@@ -124,18 +124,17 @@
 <span class="p">}</span>
 
 <span class="k">let</span> <span class="nv">imageJPEGData</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="nf">jpegData</span><span class="p">(</span><span class="nv">withCompressionQuality</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">actions</span><span class="p">:</span> <span class="n">actions</span><span class="p">)</span>
-
 <span class="k">let</span> <span class="nv">imagePNGData</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="nf">pngData</span><span class="p">(</span><span class="nv">actions</span><span class="p">:</span> <span class="n">actions</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>In each code sample, the typealiased <code class="highlighter-rouge">DrawingActions</code> closure returns to us an instance of <code class="highlighter-rouge">UIGraphicsImageRendererContext</code>. Using it we gain access high-level drawing functions. Though Apple clearly states “higher level” drawing functions, don’t think of it as a crutch. There is support for most drawing tasks, such as utilizing blend modes by leveraging <code class="highlighter-rouge">CGBlendValue</code>:</p>
 
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">image</span> <span class="p">{</span> <span class="p">(</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>  
-<span class="kt">UIColor</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="nf">setFill</span><span class="p">()</span>  
-<span class="n">ctx</span><span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">140</span><span class="p">))</span>
+    <span class="kt">UIColor</span><span class="o">.</span><span class="n">blue</span><span class="o">.</span><span class="nf">setFill</span><span class="p">()</span>  
+    <span class="n">ctx</span><span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">140</span><span class="p">))</span>
 
-<span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span><span class="o">.</span><span class="nf">setFill</span><span class="p">()</span>  
-<span class="n">ctx</span><span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">140</span><span class="p">),</span> <span class="nv">blendMode</span><span class="p">:</span> <span class="o">.</span><span class="n">luminosity</span><span class="p">)</span>  
+    <span class="kt">UIColor</span><span class="o">.</span><span class="n">yellow</span><span class="o">.</span><span class="nf">setFill</span><span class="p">()</span>  
+    <span class="n">ctx</span><span class="o">.</span><span class="nf">fill</span><span class="p">(</span><span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">140</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">140</span><span class="p">),</span> <span class="nv">blendMode</span><span class="p">:</span> <span class="o">.</span><span class="n">luminosity</span><span class="p">)</span>  
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -234,20 +233,17 @@
 <h3 id="pdfs-ftw">PDFs FTW</h3>
 <p>A quick sidebar to mention that the PDF variant of the abstract <code class="highlighter-rouge">UIGraphicsRenderer</code> class is very similar to its image rendering sibling. In fact, their method declarations are almost interchangeable, save <code class="highlighter-rouge">UIImage</code> vs <code class="highlighter-rouge">Data</code>:</p>
 
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">let</span> <span class="nv">renderer</span> <span class="o">=</span> <span class="kt">UIGraphicsPDFRenderer</span><span class="p">(</span><span class="nv">bounds</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>  
-    <span class="k">let</span> <span class="nv">pdf</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">pdfData</span> <span class="p">{</span> <span class="p">(</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>  
-    <span class="n">ctx</span><span class="o">.</span><span class="nf">beginPage</span><span class="p">()</span>
-    
-    
-        <span class="k">let</span> <span class="nv">header</span> <span class="o">=</span> <span class="s">"Welcome to TTIDG!"</span> <span class="k">as</span> <span class="kt">NSString</span>  
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="nv">renderer</span> <span class="o">=</span> <span class="kt">UIGraphicsPDFRenderer</span><span class="p">(</span><span class="nv">bounds</span><span class="p">:</span> <span class="n">view</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>  
+<span class="k">let</span> <span class="nv">pdf</span> <span class="o">=</span> <span class="n">renderer</span><span class="o">.</span><span class="n">pdfData</span> <span class="p">{</span> <span class="p">(</span><span class="n">ctx</span><span class="p">)</span> <span class="k">in</span>  
+<span class="n">ctx</span><span class="o">.</span><span class="nf">beginPage</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">header</span> <span class="o">=</span> <span class="s">"Welcome to TTIDG!"</span> <span class="k">as</span> <span class="kt">NSString</span>  
     <span class="k">let</span> <span class="nv">attributes</span> <span class="o">=</span> <span class="p">[</span>  
-    <span class="kt">NSAttributedStringKey</span><span class="o">.</span><span class="nv">font</span> <span class="p">:</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">preferredFont</span><span class="p">(</span><span class="nv">forTextStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">body</span><span class="p">),</span>  
-    <span class="kt">NSAttributedStringKey</span><span class="o">.</span><span class="nv">foregroundColor</span> <span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">blue</span>  
+        <span class="kt">NSAttributedStringKey</span><span class="o">.</span><span class="nv">font</span> <span class="p">:</span> <span class="kt">UIFont</span><span class="o">.</span><span class="nf">preferredFont</span><span class="p">(</span><span class="nv">forTextStyle</span><span class="p">:</span> <span class="o">.</span><span class="n">body</span><span class="p">),</span>  
+        <span class="kt">NSAttributedStringKey</span><span class="o">.</span><span class="nv">foregroundColor</span> <span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">blue</span>  
     <span class="p">]</span>
-    
-    
-        <span class="n">header</span><span class="o">.</span><span class="nf">draw</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">pdfContextBounds</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">pdfContextBounds</span><span class="o">.</span><span class="n">height</span><span class="p">),</span> <span class="nv">withAttributes</span><span class="p">:</span> <span class="n">attributes</span><span class="p">)</span>  
-    <span class="p">}</span>
+
+    <span class="n">header</span><span class="o">.</span><span class="nf">draw</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">pdfContextBounds</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="n">ctx</span><span class="o">.</span><span class="n">pdfContextBounds</span><span class="o">.</span><span class="n">height</span><span class="p">),</span> <span class="nv">withAttributes</span><span class="p">:</span> <span class="n">attributes</span><span class="p">)</span>  
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h3 id="wrapping-up">Wrapping Up</h3>
@@ -259,7 +255,7 @@
 
 
             </article>
-            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="https://github.com/DreamingInBinary/Swiftjective-C/issues">issue</a> or create a <a href="https://github.com/DreamingInBinary/Swiftjective-C/tree/master/_posts/2018-08-01-uigraphicsimagerenderer.md">pull request</a> for this article.</p>
+            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="https://github.com/DreamingInBinary/Swiftjective-C/issues" target="_blank">issue</a> or create a <a href="https://github.com/DreamingInBinary/Swiftjective-C/tree/master/_posts/2018-08-01-uigraphicsimagerenderer.md target="_blank"">pull request</a> for this article.</p>
             <div id="next">
                 <hr />
                 <h4>Next article...</h4>

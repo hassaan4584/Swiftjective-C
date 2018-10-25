@@ -138,7 +138,13 @@ article p {
   font-size: 56px;
   color: #314A4F;
   margin-top: 8px;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
 
 #articleWellLatest p {
   margin-top: 8px;
@@ -148,7 +154,13 @@ article p {
   margin-top: 16px; }
 
 .articleWell h2 {
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
 
 .articleWell p {
   margin-top: 8px;

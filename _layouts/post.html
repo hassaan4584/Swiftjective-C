@@ -4,6 +4,7 @@ title: post
 <!doctype html>
 <html>
 {% include head.html %}
+{% assign githubURL='https://github.com/DreamingInBinary/Swiftjective-C/' %}
 
 <body>
     <div id="gridContainer">
@@ -17,27 +18,16 @@ title: post
                 </section>
                 {{ content }}
             </article>
-            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an issue or create a pull request for this article.</p>
+            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="{{ githubURL | append:'issues' }}">issue</a> or create a <a href="{{ githubURL | append: 'tree/master/_posts/'}}{{ page.path | remove_first:'_posts/' }}">pull request</a> for this article.</p>
             <hr />
-            <h4>Next article...</h4>
-            {% assign articles = site.posts %}
-            {% for article in articles %}
-            {% if article.title == page.title %}
-            {% assign currIndex = forloop.index0 %}
-            {% assign prevIndex = currIndex | minus: 1 %}
-            {% assign nextIndex = currIndex | plus: 1 %}
-            {% assign articleIndexLength = forloop.length | minus: 1 %}
+            {% assign next_post = site.posts | shuffle | first %}
+            {% if next_post %}
             <div>
-                {% if currIndex == 0 %}
-                <a href="{{ site.url }}{{ site.baseurl }}{{ articles[nextIndex].url }}">{{ articles[nextIndex].title }} &raquo;</a>
-                {% elsif currIndex < articleIndexLength and currIndex !=0 %} <a href="{{ site.url }}{{ site.baseurl }}{{ articles[prevIndex].url }}">&laquo; {{ articles[prevIndex].title }}</a>
-                <a href="{{ site.url }}{{ site.baseurl }}{{ articles[nextIndex].url }}">{{ articles[nextIndex].title }} &raquo;</a>
-                {% elsif currIndex == articleIndexLength %}
-                <a href="{{ site.url }}{{ site.baseurl }}{{ articles[prevIndex].url }}">&laquo; {{ articles[prevIndex].title }}</a>
-                {% endif %}
+                <h4>Next article...</h4>
+                <h1 class="title"><a href="{{ next_post.url }}" title="{{ next_post.title }}" rel="next">{{ next_post.title | camel_break }}</a></h1>
+                {{ next_post.excerpt | markdownify }}
             </div>
             {% endif %}
-            {% endfor %}
             <hr />
         </main>
         <footer id="gridFooter">

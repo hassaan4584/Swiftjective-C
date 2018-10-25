@@ -51,14 +51,19 @@ footer {
 img {
   border-radius: 25px; }
 
-article {
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: .01rem;
-  font-style: normal;
-  font-size: 21px;
-  line-height: 1.58;
-  letter-spacing: -.003em; }
+article h2,
+h3,
+h4 {
+  margin-top: 64px; }
+
+article h3 {
+  font-size: 43px;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+  margin-bottom: 8px; }
+
+article p {
+  margin-top: 8px; }
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -128,6 +133,7 @@ article {
   margin-top: 0px;
   margin-bottom: 32px; }
 
+/* Top Article Section */
 #articleWellLatest h2 {
   font-size: 56px;
   color: #314A4F;
@@ -168,6 +174,11 @@ article {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap; }
+
+/* Bottom Tag Sections */
+.tagHeader {
+  margin-bottom: 0px;
+  margin-top: 32px; }
 
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -14,6 +14,8 @@ $top-padding:32px;
     margin-bottom: 32px;
 }
 
+/* Top Article Section */
+
 #articleWellLatest h2 {
     font-size: 56px;
     color: $header-color;
@@ -29,6 +31,7 @@ $top-padding:32px;
 .articleWell {
     margin-top: 16px;
 }
+
 
 .articleWell h2 {
     margin-bottom: 0px;
@@ -63,6 +66,13 @@ $top-padding:32px;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
+}
+
+/* Bottom Tag Sections */
+
+.tagHeader {
+    margin-bottom:0px;
+    margin-top:32px;
 }
 
 /* Media Breakpoints

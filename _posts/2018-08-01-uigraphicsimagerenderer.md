@@ -12,7 +12,6 @@ The history of photography is rife with interesting stories of how the medium de
 The translation from the analog to the digital was an inflection point. We've experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — `UIGraphicsImageRenderer`.
 
 ### Setting the (CG)Context
-
 Core Graphics, based on the Quartz drawing engine, has provided iOS developers with lightweight 2D rendering capabilities since iOS 2. Its utility knows almost no bounds, as image masking, PDF document creation, parsing, and other similar functions are baked right in making it a no nonsense choice for any sort of drawing task.
 
 For that and many other reasons, if one hits the Googles on how to create an image from something on screen they'll likely end up with something like this:
@@ -104,23 +103,21 @@ Take note of the last two lines, where the `cgContext` allows us to fill out the
 
 ```swift
 let img = renderer.image { (ctx) in  
-let size = ctx.format.bounds.size
+    let size = ctx.format.bounds.size
 
-UIColor.darkGray.setStroke()  
-ctx.stroke(renderer.format.bounds)
-
+    UIColor.darkGray.setStroke()  
+    ctx.stroke(renderer.format.bounds)
 
     UIColor.blue.setFill()  
-ctx.fill(CGRect(x: 1, y: 1, width: size.width - 1, height: size.height - 1))
+    ctx.fill(CGRect(x: 1, y: 1, width: size.width - 1, height: size.height - 1))
 
-UIColor.yellow.setFill()  
-ctx.cgContext.fillEllipse(in: CGRect(x: 51, y: 51, width: size.width/2, height: size.width/2))  
-ctx.cgContext.rotate(by: 100)  
+    UIColor.yellow.setFill()  
+    ctx.cgContext.fillEllipse(in: CGRect(x: 51, y: 51, width: size.width/2, height: size.width/2))  
+    ctx.cgContext.rotate(by: 100)  
 }
 ```
 
 ### Giving a Renderer More (CG)Context
-
 I really need to stop with the (CG)Context bit, but I feel too invested at this point so please just excuse me 🤠.
 
 You have noticed that a graphics renderer will also accept a `UIGraphicsImageRendererFormat`object into two of its four available initializers:
@@ -135,11 +132,11 @@ This rendering format has a few options to aid in further specifying the intent 
 For example, `CALayer` and its A8 backing store format was introduced in iOS 12 and provides developers with free memory optimizations. If you're certain, for example, that you're drawing wide color content _using_ sRGB colors, you can have the renderer optimize for that since the backing store would otherwise be larger to accommodate a larger color range rather than just 0 to 1:
     
 ```swift
-// iOS 10/11  
+// iOS 10/11
 let format = UIGraphicsImageRendererFormat()  
 format.prefersExtendedRange = false
 
-// iOS 12  
+// iOS 12
 let format = UIGraphicsImageRendererFormat()  
 format.preferredRange = .standard // Turn off iOS 12 optimization
 ```
@@ -150,7 +147,6 @@ No need to mince in my own words here, Apple's documentation explains this very 
 
 ```swift
 // Returns a format optimized for the specified trait collection, taking into account properties such as displayScale and displayGamut.
-
 // Traits that are not specified will be ignored, with their corresponding format properties defaulting to the values in preferredFormat.  
 public convenience init(for traitCollection: UITraitCollection)
 ```
@@ -164,49 +160,39 @@ All of this hopefully should remind you how extensible and flexible an image ren
 ```swift
 private var rendererKey: UInt8 = 0
 
-
 extension UIView {
+var renderer: UIGraphicsImageRenderer! {  
+    get {  
+        guard let rendererInstance = objc_getAssociatedObject(self, &rendererKey) as? UIGraphicsImageRenderer else {  
+        self.renderer = UIGraphicsImageRenderer(bounds: bounds)  
+            return self.renderer  
+        }
 
-
-    var renderer: UIGraphicsImageRenderer! {  
-get {  
-guard let rendererInstance = objc_getAssociatedObject(self, &rendererKey) as? UIGraphicsImageRenderer else {  
-self.renderer = UIGraphicsImageRenderer(bounds: bounds)  
-return self.renderer  
+        return rendererInstance
+    }  
+    set(newValue) {  
+        objc_setAssociatedObject(self, &rendererKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)  
+    }  
 }
-
-
-             return rendererInstance
-
-
-        }  
-set(newValue) {  
-objc_setAssociatedObject(self, &rendererKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)  
-}  
-}
-
 
     func circleImageView() -> UIImageView {  
-let img:UIImage = renderer.image { ctx in  
-layer.render(in: ctx.cgContext)  
-}
-
+        let img:UIImage = renderer.image { ctx in  
+            layer.render(in: ctx.cgContext)  
+        }
 
         let imageView:UIImageView = UIImageView(image: img)  
-imageView.frame = renderer.format.bounds  
-imageView.clipsToBounds = true  
-imageView.layer.cornerRadius =(renderer.format.bounds.width/2).rounded()  
-return imageView  
-}  
+        imageView.frame = renderer.format.bounds  
+        imageView.clipsToBounds = true  
+        imageView.layer.cornerRadius =(renderer.format.bounds.width/2).rounded()  
+        return imageView  
+    }  
 }
-
 
 // Generate a circle image and image view of any view instance  
 let anImageView = myExistingView.circleImageView()
 ```
 
 ### PDFs FTW
-
 A quick sidebar to mention that the PDF variant of the abstract `UIGraphicsRenderer` class is very similar to its image rendering sibling. In fact, their method declarations are almost interchangeable, save `UIImage` vs `Data`:
     
 ```swift  
@@ -227,7 +213,6 @@ A quick sidebar to mention that the PDF variant of the abstract `UIGraphicsRende
 ```
 
 ### Wrapping Up
-
 Replacing the code that kinda just works with the code that's more recent and supports more relevant formats is typically not high on the proverbial list.
 
 Maybe it should be, as is the case with `UIGraphicsImageRenderer`. You likely won't have to twist many arms to persuade iOS engineers to make the switch, "No ✋ — I don't want block based, automatically color managed, extensible drawing code that already manages its context lifetime — that's awful" said…..nobody?

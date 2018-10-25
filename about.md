@@ -5,7 +5,7 @@ title: About
 
 <img id="headerImg" alt="headshot" src="/assets/images/about/headshot.jpeg" />
 
-## About Me
+### About Me
 Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanmorgan10){:target="_blank"}. I'm an iOS engineer from Ozark, Missouri where I live with my [wife](https://www.instagram.com/jmorgan){:target="_blank"} and three kids. Currently, I work remotely on the iOS team at [Buffer](https://www.buffer.com){:target="_blank"}, where we build a suite of social media tools.
 
 #### Articles 
@@ -36,7 +36,7 @@ Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanm
   {% endfor %}
 </ul>
 
-## Site History
+### Site History
 This journal originally started on Medium in 2013 and was called "[The Traveled iOS Developer's Guide](https://medium.com/the-traveled-ios-developers-guide){:target="_blank"}". I enjoyed several years writing there, and to the best of my knowledge, I was lucky enough to grow it into one of the largest iOS blogs on the platform with around 13,000 subscribers when I had left.
 
 I eventually opted to move things over here for a few reasons:
@@ -53,7 +53,7 @@ Movtivation to write about iOS development and create a dedicated space for it s
 
 Tonally, I opt for much more of an "open journal" style of writing. My hope is that each post feels more like you and I having a conversation that it does reading a tutorial on how to do X or Y.
 
-## Colophon
+### Colophon
 [Jekyll](https://jekyllrb.com){:target="_blank"}, a robust static site generator, is used to manage and create Swiftjective-C. It uses no existing theme and is rolled from scratch.
 
 [Sublime](https://www.sublimetext.com){:target="_blank"} is my text editor of choice for web development. 

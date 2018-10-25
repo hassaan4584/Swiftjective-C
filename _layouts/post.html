@@ -19,16 +19,13 @@ title: post
                 {{ content }}
             </article>
             <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="{{ githubURL | append:'issues' }}">issue</a> or create a <a href="{{ githubURL | append: 'tree/master/_posts/'}}{{ page.path | remove_first:'_posts/' }}">pull request</a> for this article.</p>
-            <hr />
-            {% assign next_post = site.posts | shuffle | first %}
-            {% if next_post %}
-            <div>
+            <div id="next">
+                <hr />
                 <h4>Next article...</h4>
-                <h1 class="title"><a href="{{ next_post.url }}" title="{{ next_post.title }}" rel="next">{{ next_post.title | camel_break }}</a></h1>
-                {{ next_post.excerpt | markdownify }}
+                <a title="next" href=""><h1>Foundation: A Look</h1></a>
+                <p>This is a great test description.</p>
+                <hr />
             </div>
-            {% endif %}
-            <hr />
         </main>
         <footer id="gridFooter">
             {% include footer.html %}

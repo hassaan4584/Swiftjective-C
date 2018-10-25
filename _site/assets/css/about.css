@@ -58,6 +58,10 @@ article {
   line-height: 1.58;
   letter-spacing: -.003em; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #2c2d2f !important;
+    color: white !important; } }
 * {
   box-sizing: border-box; }
 

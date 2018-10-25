@@ -11,9 +11,9 @@ title: post
         <main id="gridMiddle">
             <article>
                 <section id="articleHeaderSection">
-                    <em id="nowServing" >Now serving...</em>
+                    <i>Now serving...</i>
                     <h1 id="postHeader">{{ page.title }}</h1>
-                    <i>Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
+                    <i id="miniphon">Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</i>
                 </section>
                 {{ content }}
             </article>

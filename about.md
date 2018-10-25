@@ -56,11 +56,15 @@ Tonally, I opt for much more of an "open journal" style of writing. My hope is t
 ## Colophon
 [Jekyll](https://jekyllrb.com){:target="_blank"}, a robust static site generator, is used to manage and create Swiftjective-C. It uses no existing theme and is rolled from scratch.
 
-[Sublime](https://www.sublimetext.com){:target="_blank"} is my text editor of choice for web development. Additionally, I also write each blog post using markdown in it as well.
+[Sublime](https://www.sublimetext.com){:target="_blank"} is my text editor of choice for web development. 
+
+[Kramdown](https://kramdown.gettalong.org){:target="_blank"} is used for authoring each article.
+
+[Pygments](http://pygments.org){:target="_blank"}, specifically the Monokai theme, is utilized for all code syntax highlighting.
 
 [Netlify](https://www.netlify.com){:target="_blank"} handles domain management and all deployment of its source code. Without it, I'm not sure this site would exist. It's easily the most inuitive way I've found to get a website up and rolling.
 
-[Github](https://www.github.com){:target="_blank"} is used for source control, and each article and the entire source code for this site is available there for collobaration and learning purposes. It's free to use and to change however you wish.
+[Github](https://www.github.com){:target="_blank"} is used for source control, and each article and the entire [source code for this site](https://github.com/DreamingInBinary/Swiftjective-C){:target="_blank"} is available there for collobaration and learning purposes. It's free to use and to change however you wish.
 
 [Fathom](https://usefathom.com){:target="_blank"} is used for analytics, and it has an emphasis on respecting user privacy. It shows just what I need, and nothing more.
 

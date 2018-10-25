@@ -1,17 +1,22 @@
 #articleHeaderSection {
     display: flex;
-
-}
-
-#nowServing {
-    text-align: center;
-    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 64px;
 }
 
 #postHeader {
-    text-align: center;
     font-weight: bolder;
-    font-size: 4vw;
+    font-size: calc(36px + 1.5vw);
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#miniphon {
+    color:  green;
 }
 
 #pullsWelcome {
@@ -48,8 +53,7 @@ li {
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-article h1,
-h2,
+article h2,
 h3,
 h4 {
     margin-top: 64px;
@@ -60,4 +64,16 @@ article h3 {
     line-height: 1.15;
     letter-spacing: -.015em;
     margin-bottom: -8px;
+}
+
+/* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 800px) {
+
+    #postHeader {
+        font-size: calc(22px + 1.5vw);
+    }
+
 }

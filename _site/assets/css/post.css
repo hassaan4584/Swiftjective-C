@@ -58,6 +58,10 @@ article {
   line-height: 1.58;
   letter-spacing: -.003em; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #2c2d2f !important;
+    color: white !important; } }
 * {
   box-sizing: border-box; }
 
@@ -112,16 +116,22 @@ article {
     padding-left: 32px;
     padding-right: 32px; } }
 #articleHeaderSection {
-  display: flex; }
-
-#nowServing {
-  text-align: center;
-  display: block; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: auto;
+  margin-bottom: 64px; }
 
 #postHeader {
-  text-align: center;
   font-weight: bolder;
-  font-size: 4vw; }
+  font-size: calc(36px + 1.5vw);
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+#miniphon {
+  color: green; }
 
 #pullsWelcome {
   color: #615B5B;
@@ -152,8 +162,7 @@ ul,
 li {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
 
-article h1,
-h2,
+article h2,
 h3,
 h4 {
   margin-top: 64px; }
@@ -163,3 +172,10 @@ article h3 {
   line-height: 1.15;
   letter-spacing: -.015em;
   margin-bottom: -8px; }
+
+/* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 800px) {
+  #postHeader {
+    font-size: calc(22px + 1.5vw); } }

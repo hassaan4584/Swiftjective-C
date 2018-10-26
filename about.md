@@ -37,7 +37,7 @@ Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanm
 </ul>
 
 ### Site History
-This journal originally started on Medium in 2013 and was called "[The Traveled iOS Developer's Guide](https://medium.com/the-traveled-ios-developers-guide){:target="_blank"}". I enjoyed several years writing there, and to the best of my knowledge, I was lucky enough to grow it into one of the largest iOS blogs on the platform with around 13,000 subscribers when I had left.
+This journal originally started on Medium in 2015 and was called "[The Traveled iOS Developer's Guide](https://medium.com/the-traveled-ios-developers-guide){:target="_blank"}". I enjoyed several years writing there, and to the best of my knowledge, I was lucky enough to grow it into one of the largest iOS blogs on the platform with around 13,000 subscribers when I had left.
 
 I eventually opted to move things over here for a few reasons:
 

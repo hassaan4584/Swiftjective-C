@@ -160,6 +160,15 @@ a:active {
 
  /* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+blockquote {
+  border-left: 6px solid #615B5B;
+  padding: 0.5em 10px;
+  color: #615B5B; }
+
+blockquote p {
+  display: inline;
+  font-style: italic; }
+
 h1 {
   color: #314A4F; }
 

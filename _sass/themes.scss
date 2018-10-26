@@ -32,6 +32,17 @@
  /* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+ blockquote {
+     border-left: 6px solid $sub-header-color;
+     padding: 0.5em 10px;
+     color: $sub-header-color;
+ }
+
+ blockquote p {
+     display: inline;
+     font-style: italic;
+ }
+
  h1 {
      color: $header-color;
  }

@@ -6,7 +6,6 @@ description: >
   houses tactful discussions over Swift, Objective-C and developing high
   quality apps while peering into various frameworks to see what makes
   them tick.
-url: swiftjectivec.com
 permalink: /:title/ 
 defaults:
   - scope:

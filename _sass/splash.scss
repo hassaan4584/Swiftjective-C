@@ -36,6 +36,7 @@ $top-padding:32px;
 
 .articleWell {
     margin-top: 16px;
+    width: 50%;
 }
 
 .articleWell h2 {
@@ -82,8 +83,8 @@ $top-padding:32px;
 /* Bottom Tag Sections */
 
 .tagHeader {
-    margin-bottom:0px;
-    margin-top:32px;
+    margin-bottom: 0px;
+    margin-top: 32px;
 }
 
 /* Media Breakpoints
@@ -91,6 +92,14 @@ $top-padding:32px;
 
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 800px) {
+
+    #articleWellLatest h2 {
+        font-size: 36px;
+    }
+
+    .articleWell {
+        width: 100%;
+    }
 
     .houseSpecial {
         display: flex;

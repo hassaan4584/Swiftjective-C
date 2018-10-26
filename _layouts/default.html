@@ -17,13 +17,17 @@ title: default
             <hr />
             <div class="articleSection">
                 <em>Classic House Favorites</em>
-                <div class="houseSpecial">
-                    {% include articleWell.html post=site.posts.first %}
-                    {% include articleWell.html post=site.posts.first %}
+                {% assign popular = site.posts | where: "special", "true" | slice:0,2 %}
+                <div class="houseSpecial"> 
+                    {% for firstTwo in popular %}
+                    {% include articleWell.html post=firstTwo  %}
+                    {% endfor %}
                 </div>
+                {% assign popularTwo = site.posts | where: "special", "true" | slice:2,4 %}
                 <div class="houseSpecial">
-                    {% include articleWell.html post=site.posts.first %}
-                    {% include articleWell.html post=site.posts.first %}
+                    {% for lastTwo in popularTwo %}
+                    {% include articleWell.html post=lastTwo  %}
+                    {% endfor %}
                 </div>
             </div>
             <hr />

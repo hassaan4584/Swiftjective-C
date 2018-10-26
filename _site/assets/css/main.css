@@ -65,6 +65,22 @@ article h3 {
 article p {
   margin-top: 8px; }
 
+ /* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Extra small devices (phones, 800px and down) */
+@media (max-width: 800px) {
+  #gridHeader,
+  #gridMiddle,
+  #gridFooter {
+    width: 100vw;
+    padding-left: 32px;
+    padding-right: 32px; }
+
+  body {
+    font-size: 100%; }
+
+  article h3 {
+    font-size: 33px; } }
 @media (prefers-color-scheme: dark) {
   body {
     background: #2c2d2f !important;
@@ -109,7 +125,7 @@ article p {
 
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 800px and down) */
 @media (max-width: 800px) {
   #gridHeader,
   #gridMiddle,
@@ -146,7 +162,8 @@ article p {
   margin-bottom: 4px; }
 
 .articleWell {
-  margin-top: 16px; }
+  margin-top: 16px;
+  width: 50%; }
 
 .articleWell h2 {
   margin-bottom: 0px;
@@ -191,6 +208,12 @@ article p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 800px) {
+  #articleWellLatest h2 {
+    font-size: 36px; }
+
+  .articleWell {
+    width: 100%; }
+
   .houseSpecial {
     display: flex;
     justify-content: space-between;

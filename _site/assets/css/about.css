@@ -65,6 +65,22 @@ article h3 {
 article p {
   margin-top: 8px; }
 
+ /* Media Breakpoints
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Extra small devices (phones, 800px and down) */
+@media (max-width: 800px) {
+  #gridHeader,
+  #gridMiddle,
+  #gridFooter {
+    width: 100vw;
+    padding-left: 32px;
+    padding-right: 32px; }
+
+  body {
+    font-size: 100%; }
+
+  article h3 {
+    font-size: 33px; } }
 @media (prefers-color-scheme: dark) {
   body {
     background: #2c2d2f !important;
@@ -109,7 +125,7 @@ article p {
 
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 800px and down) */
 @media (max-width: 800px) {
   #gridHeader,
   #gridMiddle,

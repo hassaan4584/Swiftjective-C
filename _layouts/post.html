@@ -19,11 +19,15 @@ title: post
                 {{ content }}
             </article>
             <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="{{ githubURL | append:'issues' }}" target="_blank">issue</a> or create a <a href="{{ githubURL | append: 'tree/master/_posts/'}}{{ page.path | remove_first:'_posts/' }} target="_blank"">pull request</a> for this article.</p>
+            {% assign next_post = page.next %}
+            {% if next_post == null %}
+            {% assign next_post = site.posts | slice:1, 2 | first  %}
+            {% endif %}
             <div id="next">
                 <hr />
                 <h4>Next article...</h4>
-                <a title="next" href=""><h1>Foundation: A Look</h1></a>
-                <p>This is a great test description.</p>
+                <a href="{{ next_post.url }}"><h1>{{ next_post.title }}</h1></a>
+                {{ next_post.excerpt | markdownify }}
                 <hr />
             </div>
         </main>

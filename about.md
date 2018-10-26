@@ -44,15 +44,17 @@ I eventually opted to move things over here for a few reasons:
 
 - I wanted to change the name to something much shorter than "The Traveled iOS Developer's Guide".
 - I wanted to host and truly own my own content.
-- And I had the itch to do some web development.
+- And I wanted to dip back into some web development.
 
-Movtivation to write about iOS development and create a dedicated space for it stemmed from a few things: 
+Motivation to write about iOS development and create a dedicated space for it stemmed from a few things: 
 
 - I have a natural love of writing, and doing so scratches an itch that's otherwise left untouched. 
 - Sharing knowledge, what I know and what I hope to learn is also built into my ethos. It's rewarding, I get to meet other developers and hopefully it's helpful. 
 - Finally, with three kids - I've found it extremely challenging to attend or speak at conferences anymore. I'm naturally extroverted so I miss this; Swiftjective-C acts as a creative outlet to participate in the conversation at large that's always happening in our industry.
 
 Tonally, I opt for much more of an "open journal" style of writing. My hope is that each post feels more like you and I having a conversation that it does reading a tutorial on how to do X or Y.
+
+The name itself is a mash up of the two predominant languages used to create iOS, macOS, tvOS, and watchOS software. Swift and Objective-C. Additionally, the logo contains callbacks to both languages. The two brackets around the "SC" representing Objective-C and the trailing "()"" representing Swift.
 
 ### Colophon
 [Jekyll](https://jekyllrb.com){:target="_blank"}, a robust static site generator, is used to manage and create Swiftjective-C. It uses no existing theme and is rolled from scratch.
@@ -63,10 +65,10 @@ Tonally, I opt for much more of an "open journal" style of writing. My hope is t
 
 [Pygments](http://pygments.org){:target="_blank"}, specifically the Monokai theme, is utilized for all code syntax highlighting.
 
-[Netlify](https://www.netlify.com){:target="_blank"} handles domain management and all deployment of its source code. Without it, I'm not sure this site would exist. It's easily the most inuitive way I've found to get a website up and rolling.
+[Netlify](https://www.netlify.com){:target="_blank"} handles domain management and all deployment of its source code. Without it, I'm not sure this site would exist. It's easily the most intuitive way I've found to get a website up and rolling.
 
-[Github](https://www.github.com){:target="_blank"} is used for source control, and each article and the entire [source code for this site](https://github.com/DreamingInBinary/Swiftjective-C){:target="_blank"} is available there for collobaration and learning purposes. It's free to use and to change however you wish.
+[Github](https://www.github.com){:target="_blank"} is used for source control, and each article and the entire [source code for this site](https://github.com/DreamingInBinary/Swiftjective-C){:target="_blank"} is available there for collaboration and learning purposes. It's free to use and to change however you wish.
 
 [Fathom](https://usefathom.com){:target="_blank"} is used for analytics, and it has an emphasis on respecting user privacy. It shows just what I need, and nothing more.
 
-Finally, accessibility is extremely important to me. If you spot anything off or have any suggestions to improve this site's accessbility, please get in touch. Additionally, feel free to open an issue or create a pull request.
+Finally, accessibility is extremely important to me. If you spot anything off or have any suggestions to improve this site's accessibility, please get in touch. Additionally, feel free to open an issue or create a pull request.

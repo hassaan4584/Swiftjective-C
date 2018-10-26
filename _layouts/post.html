@@ -27,7 +27,7 @@ title: post
                 <hr />
                 <h4>Next article...</h4>
                 <a href="{{ next_post.url }}"><h1>{{ next_post.title }}</h1></a>
-                {{ next_post.excerpt | markdownify }}
+                {{ next_post.description | markdownify }}
                 <hr />
             </div>
         </main>

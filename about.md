@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+permalink: /about
 ---
 
 <img id="headerImg" alt="headshot" src="/assets/images/about/headshot.jpeg" />

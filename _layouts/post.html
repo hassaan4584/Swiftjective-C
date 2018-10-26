@@ -18,7 +18,7 @@ title: post
                 </section>
                 {{ content }}
             </article>
-            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="{{ githubURL | append:'issues' }}" target="_blank">issue</a> or create a <a href="{{ githubURL | append: 'tree/master/_posts/'}}{{ page.path | remove_first:'_posts/' }} target="_blank"">pull request</a> for this article.</p>
+            <p id="pullsWelcome">Spot any corrections or have anything to add?<br />Feel free to open an <a href="{{ githubURL | append:'issues' }}" target="_blank">issue</a> or create a <a href="{{ githubURL | append: 'tree/master/_posts/'}}{{ page.path | remove_first:'_posts/' }}" target="_blank"">pull request</a> for this article.</p>
             {% assign next_post = page.next %}
             {% if next_post == null %}
             {% assign next_post = site.posts | slice:1, 2 | first  %}

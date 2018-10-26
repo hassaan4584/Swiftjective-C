@@ -1,8 +1,8 @@
 ---
 layout: post
-tags: ["UIKit"]
-title: "UIStackView Field Guide"
+tags: ["Swift"]
+title: "NS_SWIFT_NAME"
 author: Jordan Morgan
-description: "Stack View has been pushed heavily by Apple, but sometimes its complexity overshadows its utility. A few simple tips can help ease that burden."
+description: "Interop is required in the world we live in. Here's an attribute in Swift that can help make things easier."
 image: /assets/images/logo.png
 ---

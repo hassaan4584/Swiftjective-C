@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-26T15:30:18-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-26T16:02:18-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
 
 &lt;p&gt;The translation from the analog to the digital was an inflection point. We’ve experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;.&lt;/p&gt;
@@ -883,4 +883,516 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;And in so many cases, that’s all a developer needs. So next time you feel yourself reaching for a spacer view, opt to embrace the simplicity and safety of &lt;code class=&quot;highlighter-rouge&quot;&gt;UILayoutGuide&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with their Websites.</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with their Websites." /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/"></content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSMeasurement</title><link href="http://localhost:4000/NSMeasurement/" rel="alternate" type="text/html" title="NSMeasurement" /><published>2017-12-17T00:00:00-06:00</published><updated>2017-12-17T00:00:00-06:00</updated><id>http://localhost:4000/NSMeasurement</id><content type="html" xml:base="http://localhost:4000/NSMeasurement/"></content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Copy on Write</title><link href="http://localhost:4000/Copy-on-Write-in-iOS-11/" rel="alternate" type="text/html" title="Copy on Write" /><published>2017-11-07T00:00:00-06:00</published><updated>2017-11-07T00:00:00-06:00</updated><id>http://localhost:4000/Copy-on-Write-in-iOS-11</id><content type="html" xml:base="http://localhost:4000/Copy-on-Write-in-iOS-11/"></content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Device Check Overview</title><link href="http://localhost:4000/The-DeviceCheck-API/" rel="alternate" type="text/html" title="Device Check Overview" /><published>2017-10-06T00:00:00-05:00</published><updated>2017-10-06T00:00:00-05:00</updated><id>http://localhost:4000/The-DeviceCheck-API</id><content type="html" xml:base="http://localhost:4000/The-DeviceCheck-API/"></content><author><name>Jordan Morgan</name></author><category term="Device Check" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Dealing with Home Indicator</title><link href="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/" rel="alternate" type="text/html" title="Dealing with Home Indicator" /><published>2017-09-13T00:00:00-05:00</published><updated>2017-09-13T00:00:00-05:00</updated><id>http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator</id><content type="html" xml:base="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/"></content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with their Websites.</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with their Websites." /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/">&lt;p&gt;Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.&lt;/p&gt;
+
+&lt;p&gt;Though I’ve &lt;a href=&quot;http://localhost:4000/swift-javascript&quot;&gt;mentioned web related things here before&lt;/a&gt;, the last time I did any meaningful web development in a professional context, I was using JQuery v4.x.&lt;/p&gt;
+
+&lt;p&gt;So, yeah — it’s been a few years and (seemingly) several thousand Javascript frameworks later. I don’t venture into that ecosystem much, and my last trips were on account of the things I’m about to mention here.&lt;/p&gt;
+
+&lt;p&gt;Which is, there are some incredibly trivial things one can do on their website to couple it to their iOS app counterpart. If you have the next thirty minutes free, I’d wager you could do all of them listed here.&lt;/p&gt;
+
+&lt;p&gt;Let’s rock 🤘&lt;/p&gt;
+
+&lt;h3 id=&quot;give-your-saas-some-sass&quot;&gt;Give your SaaS some sass&lt;/h3&gt;
+
+&lt;p&gt;First, what’s the end game here? To simply leverage some hosted .json files on your server and put meta tags in your markup to allow users to jump straight into your app or display information about it more effectively. That’s it.&lt;/p&gt;
+
+&lt;p&gt;This stuff is typically key for SaaS business’ or solopreneurs because in the world we live in, where there is a SaaS website a (hopefully) native app will follow. We want to help them dance together.&lt;/p&gt;
+
+&lt;p&gt;It helps that iOS 11 built features specifically for this. Open up your camera, point it at a QR code. Boom — iOS shows us the actionable details. Share a link in messages. Get a rich text preview. The list goes on.&lt;/p&gt;
+
+&lt;h3 id=&quot;qr-code-detection&quot;&gt;QR Code Detection&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with everyone’s favorite technology, quick response codes.&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//TODO: (insert QR code joke here)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Creating a QR code that users can point to and then be prompted to download, open or route to a part of your app can be useful. Doing so can be accomplished by setting up an &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; JSON file with an “applinks” key value pair and hosting it. You may already have this file for hand off support.&lt;/p&gt;
+
+&lt;p&gt;For this purpose, it looks like this:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The appID key simply must be your team or app ID,(.), followed by your bundle ID.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An easy place for the JSON file to live is typically in the .well-known subdirectory:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//wwww.anExample.com/.well-known/apple-app-site-association&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Additionally, planting it at the root of your server works just fine too.&lt;/p&gt;
+
+&lt;p&gt;If you host such a file, the end result is that your app will immediately show to open via a notification when the user points at the QR code. The only metadata your QR code needs is the URL for your website.&lt;/p&gt;
+
+&lt;p&gt;No external QR code download, no more taps — nothing. It just happens.&lt;/p&gt;
+
+&lt;p&gt;If the user doesn’t have your app, Safari will kick in instead, taking them to your website.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-particular&quot;&gt;Getting Particular&lt;/h3&gt;
+
+&lt;p&gt;You have the ability to specify a few things within your applinks key-value pairs. Let’s look at what’s available:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;apps&lt;/strong&gt; — You supply an empty array here. I would tell you why, but I would be making it up because Apple literally says nothing else about it besides that so…¯(°_o)/¯&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;details&lt;/strong&gt; — An array of dictionaries, one for each app that your site ultimately supports. Ordering matters in the array, as iOS look up links according to it. This allows you to specify an app to handle a certain part of your website.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;details[appid]&lt;/strong&gt; — The team ID or app ID with a period, and your app’s bundle ID tacked on.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;details[paths] &lt;/strong&gt;— An array or strings that determine which parts of your website are supported by the app. Additionally, you can say which parts **aren’t **supported.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first three entries don’t merit much more discussion. The paths entry does have some nifty options for excluding content where applicable.&lt;/p&gt;
+
+&lt;p&gt;For example, including “NOT “ at the beginning of the path will basically blacklist that content from being used as a universal link:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/posts/iOS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;NOT /oldPosts/outdated/*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This works much like regex, with support for wildcards:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/posts/iOS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/oldPosts/201?/*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A few random words of advice:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Keep in mind these matches are case sensitive.&lt;/li&gt;
+  &lt;li&gt;If you’re rocking a few domains, you’ll need to roll an&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file for each one that your app supports. Example: apple.com would have different motives than someProducts.apple.com&lt;/li&gt;
+  &lt;li&gt;One doesn’t actually need to appended “.json” to the JSON file. Don’t ask me how I know this, or how much hypothetical time was lost to it.&lt;/li&gt;
+  &lt;li&gt;If you associate several apps within one &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file, iOS will handle it by presenting an alert showing each one to determine which is opened. The next time this happens, iOS will suggest the last choice as a default — but users can still switch this via a force touch or by pulling down on the notification.&lt;/li&gt;
+  &lt;li&gt;Safari handles all of this as well. If you hosted the QR code as an image, and an iOS user 3D touches on it — this exact same flows happens.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;associated-domains&quot;&gt;Associated Domains&lt;/h3&gt;
+
+&lt;p&gt;As an iOS developer, you’ve got some duties too. Chief among them is to let Xcode know you’re expecting this to happen. This is done by the “Associated Domains” capability for your app binary.&lt;/p&gt;
+
+&lt;p&gt;Flip it on within Xcode and add some entries for each one you wish to support. Again, you might’ve spent time here already if you’ve developed for hand off capabilities.&lt;/p&gt;
+
+&lt;p&gt;For this particular type of routing, though, it would look like this:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;i.e.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;applinks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;applinks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;anExample.com&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;As we’ll see later, this creates a handshake of sorts that confirms both the app and website trust one another. Xcode will generate an entitlement to reconcile the security aspect and apply it on your app’s behalf. Spoiler alert, this opens up the door for quick credential retrieval too, as we’ll see later.&lt;/p&gt;
+
+&lt;p&gt;Of course, this means you’ll need to handle the user activity passed to you within your app delegate. But, that’s a blog post for another day.&lt;/p&gt;
+
+&lt;p&gt;Using universal app links is great, and I hope more apps use it as time goes on. They can happen outside of a QR code context too. They enjoy certain advantages over custom URL schemes in that they are more secure due to the handshake, they can’t be hijacked or claimed by any other app and the only party who can associate one to your app, is you.&lt;/p&gt;
+
+&lt;h3 id=&quot;web-credentials&quot;&gt;Web Credentials&lt;/h3&gt;
+
+&lt;p&gt;This nifty trick is absolutely essential for you if your app has a log in mechanism or any user portal system online. By employing password autofill, users can tap on the lock icon in the quicktype bar that appears over the keyboard, authenticate and then have their information automatically filled out.&lt;/p&gt;
+
+&lt;p&gt;It’s beautiful, and I use it daily.&lt;/p&gt;
+
+&lt;p&gt;To allow for this to happen, there is minor housekeeping that you need to do for the text fields or text views representing your log in. Simply assign the correct values added in iOS 11 to their textContentType property so iOS knows what goes where:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;loginField.textContentType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.username&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;passwordField.textContentType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;That’s all it takes from a coding standpoint — nothing more than assigning to a property (if you don’t, you leave it up to iOS’ heuristics to make the assumptions). There’s nothing left other than to respond accordingly to the incoming “did change” delegate methods or notifications that’ll be fired off with the credentials.&lt;/p&gt;
+
+&lt;p&gt;Technically, you could stop here and things would work….&lt;em&gt;ish&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Users would just get the quick type bar, but your site’s credentials wouldn’t be offered up within it. They’d just see the lock icon, then have to auth up, search for it and select it.&lt;/p&gt;
+
+&lt;p&gt;Amateur hour. Obviously, we’d prefer the user’s credentials to show up immediately once either one of those text controls becomes first responder.&lt;/p&gt;
+
+&lt;h3 id=&quot;establishing-trust-again&quot;&gt;Establishing Trust, Again&lt;/h3&gt;
+
+&lt;p&gt;Which brings us back to our &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;Going deeper into the same thought above, a signed entitlement tells iOS which sites you are associated with. The secure, two way link is established in particular when your app is installed or updated. At that point iOS does a wellness check by traversing your domains listed within your Associated Domains (which we mentioned above) and pings each one to see if it gets a valid association file.&lt;/p&gt;
+
+&lt;p&gt;If the app points to the website and the website points to the app — we’re cooking.&lt;/p&gt;
+
+&lt;p&gt;The entry under Associated Domains for password autofill looks a bit different than the above app links we entered before, as it’s prefixed with “webcredentials”:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;webcredentials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;anExample.com&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;XCode gonna’ Xcode. If you’re still seeing an error at this point, you might need to hop over to the developer portal and enable Associated Domains for your app ID.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As you’ve likely keyed in on, the Associated Domains entries follow the same pattern of including a service (i.e. activitycontinuation, applinks, etc) and domain:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;:[:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;From there, it’s a case of adding that to your association file:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/posts/iOS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/oldPosts/201?/*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webcredentials&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The only key to worry about is “apps”, which is just an array of strings (their value constructed the same way as above with app links) that represent the apps your site provides log in information for.&lt;/p&gt;
+
+&lt;p&gt;Once you throw that up on your site — the entire web credentials and password autofill pipeline is all set. I can’t tell you how much times this saves from a user perspective. It goes up by an order of magnitude if one uses Safari’s password suggestions as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;image-links&quot;&gt;Image Links&lt;/h3&gt;
+
+&lt;p&gt;Sharing links within Messages is a ubiquitous practice among iOS users. Nothing is more rewarding than tapping on the link cards, with their inviting .png hero images sitting there beckoning us to load up a website within Safari.&lt;/p&gt;
+
+&lt;p&gt;Except when that doesn’t happen, and it’s just plain text 😬.&lt;/p&gt;
+
+&lt;p&gt;This is so easy to avoid, though, as you easily can control the title, icon, image and even video that displays. Using the &lt;a href=&quot;http://ogp.me&quot;&gt;open graph protocol&lt;/a&gt;, you can supply all of this stuff inside your site’s  tag.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Title (if this isn’t present, it’ll take your site’s title):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Just in case, Javascript isn't run when generating rich links - so the value needs to be in the source. They can't be created dynamically.
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The Title&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Icons (derived from a favicon or apple touch icon if it’s there. If not, you can roll with something like this):&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Image (replaces the icon if present, but still provide both because sometimes Messages prefers the icon over an image in situations like poor networking conditions)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/image.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Video (of note, you can supply a URL to a YouTube video, which is the only video player network that’ll work if you don’t use a file iOS can natively play)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:video&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/video.mp4&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s all it takes to get the pretty, informational rich links when your website is shared within Messages. Nice.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-you-probably-are-already-doing-this-but-ill-add-it-anyways-paragraph&quot;&gt;The “You probably are already doing this but I’ll add it anyways” Paragraph&lt;/h3&gt;
+
+&lt;p&gt;Smart banners. At this point, you’re probably using them.&lt;/p&gt;
+
+&lt;p&gt;But just in case you aren’t, add a meta tag with your app ID to take care of it. When potential users visit your site, they’ll get that call to action banner at the top to download it.&lt;/p&gt;
+
+&lt;p&gt;If you’re wanting to hunt down your app ID quickly, just visit &lt;a href=&quot;http://itunes.apple.com/linkmaker/&quot;&gt;iTunes Link Maker&lt;/a&gt;. The entire meta tag can be as simple as this:&lt;/p&gt;
+
+&lt;p&gt;If you need to, you can also include an iTunes affiliate string and app argument parameter to deep link to a specific controller to keep context consistent with where a user might be on your website.&lt;/p&gt;
+
+&lt;p&gt;Generally, though, this is tacked on your landing page and that’s good enough to serve its purpose. Now, go forth and take back what could’ve been just an ephemeral thought about your app and convert it to an install 💪.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+
+&lt;p&gt;The lot of us craft software for our 9–5 and craft software to scratch our own creative itch. Eventually, all roads lead to a website talking about one or the other. Do them both justice, step away from Xcode and throw up a json file or two or include some simple meta tags that could help slip users right into your beautiful code.&lt;/p&gt;
+
+&lt;p&gt;Things like this are almost like the chore list for iOS engineers. We may not think about them first, we may not wake up to crank out config files — but hey, they can help our endgame and move the needle towards exposure. So why not?&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html">Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSMeasurement</title><link href="http://localhost:4000/NSMeasurement/" rel="alternate" type="text/html" title="NSMeasurement" /><published>2017-12-17T00:00:00-06:00</published><updated>2017-12-17T00:00:00-06:00</updated><id>http://localhost:4000/NSMeasurement</id><content type="html" xml:base="http://localhost:4000/NSMeasurement/">&lt;p&gt;Measuring units, things or items in software won’t always be the most glamorous job for software engineers. Though not as thrilling as writing performant user interface libraries nor as fulfilling as conjuring up networking code that weaves concurrent execution with ease, measuring units in iOS is still done more often than not, wrong.&lt;/p&gt;
+
+&lt;p&gt;How can one author such code in an internationlized manner and not in a precipitous one? Foundation, as is so often the case, holds the answer. And it has since iOS 10.&lt;/p&gt;
+
+&lt;p&gt;This week, let’s look at NSMeasurement and friends.&lt;/p&gt;
+
+&lt;h3 id=&quot;more-common-than-you-think&quot;&gt;More Common than You Think&lt;/h3&gt;
+
+&lt;p&gt;Software has always had situations that crop up which present users with several things that are either measurable or generally quanitifiable. And when that software (iOS) runs on billions of devices across the globe, the need to represent internationalized values of those things becomes not only more important, but quite key.&lt;/p&gt;
+
+&lt;p&gt;Getting such measurements and units right isn’t a baseline experience, you should just expect it of your software.&lt;/p&gt;
+
+&lt;p&gt;So with that- these APIs aid not only just with the obvious “converter” apps, but also with games, shopping lists and everything else in between:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Are you representing a measurement of time ⌚️?&lt;/li&gt;
+  &lt;li&gt;A distance traveled 🚙?&lt;/li&gt;
+  &lt;li&gt;The rate at which we traveled 🗺?&lt;/li&gt;
+  &lt;li&gt;The weight of an object ⚖️?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As such, the temptation to use a simple double type makes sense on the surface level and simply breaks apart anywhere else:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//Technically we even set up the variable name for failure  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;milesTraveled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;nsmeasurement-and-all-his-units&quot;&gt;NSMeasurement and all his Units&lt;/h3&gt;
+
+&lt;p&gt;Following the previous example, what we really need is an accurate, bonafide construct to represent a measurement. And while miles is certainly a measurement, it’s only one that generally makes sense within the context of Murica’ 🇺🇸. As such, Foundation’s support for a measurement is tactfully generic:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Note that within the text, for stylistic purposes and because I code in Objective-C daily, I’ll refer to the frameworks with their NS prefix. All of these objects are properly bridged over to Swift as value types and structs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It provides a way to provide a generic &lt;em&gt;unit&lt;/em&gt; of measurement and also a value that corresponds to it. Its initializer will ask for both:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UnitType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Every unit will always have a symbol, though not every unit has a dimension nor will they always be equivalent to one another. It’s something to note, sure, but one will most likely work with dimensional units. But, it’s for this reason that NSUnit’s designated initializer will require only a symbol:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCopying&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;  
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;When it comes to NSMeasurement, this unit type drives the majority of the work, and you can define which to use via its initializer, but more commonly you’ll use an NSDimension (which subclasses NSUnit) provided to us by Apple. Each dimensional unit will then drive down further into a given dimension that exists within the unit.&lt;/p&gt;
+
+&lt;p&gt;For example, say we wanted to measure time. Our unit would be duration, but we’ve got several ways to represent duration such as the second, minute and hour:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;abstractValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 1 second  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 1 minute  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 1 hour  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;hours&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hours&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Foundation includes a truckload of dimensional units, everything from electrical currents to pressure. Though you are free to subclass and create your own units, in fact — there is quite robust support for that, I’m not sure you’ll ever need to.&lt;/p&gt;
+
+&lt;p&gt;Here are some common dimensional units baked in for free:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;UnitLength : Base Unit is meters (m)&lt;/li&gt;
+  &lt;li&gt;UnitMass : Base unit is kilograms (kg)&lt;/li&gt;
+  &lt;li&gt;UnitDuration : Base unit is seconds (sec)&lt;/li&gt;
+  &lt;li&gt;UnitArea : Base unit is square meters (m²)&lt;/li&gt;
+  &lt;li&gt;UnitAcceleration : Base unit is meters per second squared (m/s²)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are about 170 dimensional unit types and it’s likely Foundation has thought of your use case.&lt;/p&gt;
+
+&lt;h3 id=&quot;operating-on-measurements&quot;&gt;Operating on Measurements&lt;/h3&gt;
+
+&lt;p&gt;Working with measurements is trivial due to the fact that they conform to equatable out of the box, so comparisons are carried out uniformly:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;abstractValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 61.0 seconds, measured in the dimension's base unit  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 30.5 seconds  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;halfTheTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;totalTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The entire measurement API does all of the heavy lifting for you. This is true when you operate on units of the same dimension but in different forms. The result of the operation will simply provide the base unit type:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5280.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;metricLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilometers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 2229.344 meters  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metricLength&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Extending the usefulness is NSUnitConverter, which is an abstract class that converts a unit to and from the base unit of its given dimension. For most cases, that’s going to be units that adhere to a linear equation or a scale factor. As such, UnitConverterLinear will be supplied:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5280.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;metricLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilometers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 2229.344 meters  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metricLength&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 1.385 miles  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;justMiles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;totalLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;miles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Don’t worry about creating conversions that don’t relate to one another. These will produce build time errors due to each type’s conversion requiring its generic unit type:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Build error  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nonsense&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;totalLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitTemperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;celsius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;user-facing-values&quot;&gt;User Facing Values&lt;/h3&gt;
+
+&lt;p&gt;Making these values show up in your user interface is going to be quite familiar if you’ve ventured into NSNumberFormatter’s waters. Its close cousin, NSMeasurementFormatter, use is essentially identical.&lt;/p&gt;
+
+&lt;p&gt;This is quite ideal, as writing these types of strings on our own time would quickly become a chore.&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isCanada&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;c1&quot;&gt;// kilometers 👌  &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isChinese&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;c1&quot;&gt;// Translate the unit 😐  &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isArabic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;c1&quot;&gt;// Translate the unit, number representation AND make it right to left 😱  &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Of course, Foundation and friends nails it:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;miles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frenchDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;frenchDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;chineseDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;chineseDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;zh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arabicDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;arabicDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 🇫🇷** **-&amp;gt; 16,093 km  &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇫🇷 -&amp;gt; (frenchDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 🇨🇳** **-&amp;gt; 16.093公里  &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇨🇳 -&amp;gt; (chineseDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 🇯🇴** **-&amp;gt; ١٦٫٠٩٣** كم**  &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇯🇴 -&amp;gt; (arabicDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Since measurements tie in closely with numbers, it’s also possible to pair a measurement formatter with a number formatter to specify digits, for example:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;miles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frenchDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;frenchDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 🇫🇷** **-&amp;gt; 0,322 km  &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇫🇷 -&amp;gt; (frenchDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;digitFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NumberFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;digitFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minimumSignificantDigits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;frenchDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numberFormatter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitFormat&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 🇫🇷** **-&amp;gt; 0.321868 km  &lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇫🇷 -&amp;gt; (frenchDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There are several configurations that the measurement formatter affords to you. Be sure to glance over its &lt;a href=&quot;https://developer.apple.com/documentation/foundation/measurementformatter&quot;&gt;documentation&lt;/a&gt;. Also note that the formatter will takes its default system locale when initialized, so it’s typically unnecessary to directly assign to its locale property as we’ve done here.&lt;/p&gt;
+
+&lt;h3 id=&quot;testing-localesthe-easy-way&quot;&gt;Testing Locales — The .easy Way&lt;/h3&gt;
+
+&lt;p&gt;A quick foot note. Part of the magic of utilizing Foundation’s measurement and unit APIs is that they are locale aware. If you’re currently changing the location within the iOS simualtor to see how things shake out, there is another way you might prefer.&lt;/p&gt;
+
+&lt;p&gt;Just dupe your scheme, and pick the desired locale:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Edit Scheme&lt;/li&gt;
+  &lt;li&gt;Hit “Duplicate Scheme”, it’s in the bottom left in Xcode 9&lt;/li&gt;
+  &lt;li&gt;Name it&lt;/li&gt;
+  &lt;li&gt;Under Run -&amp;gt; Options -&amp;gt; Application Region, then choose the region to test with&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is nice, because it’s a no fuss and deliberate approach. It requires no code changes or mucking around with the (always reliable 🤞) iOS simulator.&lt;/p&gt;
+
+&lt;p&gt;Additionally, you can use the same approach to test string localizations within your interface by editing the “Application Language” in the same manner you edited the region.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+
+&lt;p&gt;It wasn’t until I started working on an international team that I truly began to appreciate accurate measurements within iOS. Or — even the correct unit of measurement &lt;em&gt;period&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;While the rest of the world embraces the metric system, here I am sticking out like a sore thumb while communicating distances via the imperial system. Siri has a soul, and I know this because she is sick of answering how many miles equals 1 kilometer. I hear it in her cold, hard, digital voice when she answers it for 144th time for me 🤖.&lt;/p&gt;
+
+&lt;p&gt;Let’s all aspire to not be that app that delivers the wrong units, or incorrect measurements, in our own software. Foundation has us covered.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Measuring units, things or items in software won’t always be the most glamorous job for software engineers. Though not as thrilling as writing performant user interface libraries nor as fulfilling as conjuring up networking code that weaves concurrent execution with ease, measuring units in iOS is still done more often than not, wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Copy on Write</title><link href="http://localhost:4000/Copy-on-Write-in-iOS-11/" rel="alternate" type="text/html" title="Copy on Write" /><published>2017-11-07T00:00:00-06:00</published><updated>2017-11-07T00:00:00-06:00</updated><id>http://localhost:4000/Copy-on-Write-in-iOS-11</id><content type="html" xml:base="http://localhost:4000/Copy-on-Write-in-iOS-11/">&lt;p&gt;Foundation is the unsung hero of iOS development. Powerful due in part to its maturity and ubiquity — it boasts all of six major implementations, it treats engineers to everything from the basic object to annual optimizations under the hood at WWDC. And the best optimizations are the ones I don’t even have to make. They just happen.&lt;/p&gt;
+
+&lt;p&gt;With copy on write semantics for Foundation collections, this week’s topic, that’s exactly what we get.&lt;/p&gt;
+
+&lt;h3 id=&quot;cow-primer&quot;&gt;C.o.W Primer&lt;/h3&gt;
+
+&lt;p&gt;Both the amatuear and the veteran programmer know that we don’t go far without embracing collections, yet by and large there isn’t much thought or questioning that occurs as to what their doing behind the scenes or how exactly they work beyond our CompSci 101 course.&lt;/p&gt;
+
+&lt;p&gt;It can sometimes serve as intimidating subject matter, but luckily copy on write is both a simple concept and, as such, is easy to conceptualize. The elevator pitch is that instances pointing to the same object shouldn’t need to employ full copies unless one of them, does in fact, mutate:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;TTIDG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Pizza&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
+&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Here, both variables hold the same data. So why create a full copy unless it’s actually needed? This means that instead of creating the full copy, we can just utilize pointers to the same backing store and enjoy a much more efficient O(1) operation.&lt;/p&gt;
+
+&lt;p&gt;All we’re talking about here is an optimization strategy. Even better, the whole technique is all in the name. We shouldn’t copy data unless it’s written to, in which case — we have a reason to carry forward the actual copy. Copy on write.&lt;/p&gt;
+
+&lt;p&gt;So, TL;DR — copies are super cheap now. In fact, they are almost downright free for defensive copying code. In the past, they were typically linear at best.&lt;/p&gt;
+
+&lt;h3 id=&quot;foundation-implications&quot;&gt;Foundation Implications&lt;/h3&gt;
+
+&lt;p&gt;This means that our good friends NSSet, NSDictionary and NSArray will all benefit from the optimization made by the folks maintaining the Foundation Framework. Going back to our previous example:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;TTIDG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Pizza&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
+&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Currently, both arrays point to the same backing store&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Now a mutation occurred, with CoW - this is where the copy actually takes place  &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;removeLastItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A large number of application flows might not ever reach a mutated state, thus the copy operation was effectively wasted effort. If it doesn’t occur, the only hit we’ll take with CoW is the allocation of the second collection — which likely won’t be much.&lt;/p&gt;
+
+&lt;p&gt;But — be mindful of what it isn’t:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;TTIDG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Pizza&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
+&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This isn’t the same at all, and copy on write doesn’t apply. Here we’re pointing to the exact same reference in memory. Remember that this particular optimization is all about efficient copies. Even though pointing to a reference and copying data deals with sharing said data, they are much different in implentation.&lt;/p&gt;
+
+&lt;h3 id=&quot;applications&quot;&gt;Applications&lt;/h3&gt;
+
+&lt;p&gt;Even though copy on write is a performance optimization, it shouldn’t soley be thought as one in pragmatic terms. It’s great that it’s there, we’ll benefit from it without having lifted a finger — but how we can leverage it to do things we maybe couldn’t before?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2017/244/&quot;&gt;Session 244 at WWDC 17&lt;/a&gt; offered a few great examples. Suppose we have an array property:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The intention of the declaration implies that it shouldn’t have mutable state. But hey — life comes at you fast:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Trolling  &lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Now, consider this:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copiedArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+&lt;span class=&quot;kd&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stongArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copiedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strongArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Logs out 'No'  &lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copiedArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isKindOfClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Yes&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;No&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Logs out 'Yes'  &lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strongArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isKindOfClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Yes&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;No&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The copy attribute has been around since the beginning — and it’s commonly put to great use with class clusters. What’s happening here is that sending a copy message to something that is mutable (i.e. the NSMutableArray here) will still return an immutable copy. Copy on write makes life even faster in such a scenario.&lt;/p&gt;
+
+&lt;p&gt;Continuing on with Objective-Cisms — mutable collections are often used to build something up. This is a common technique found within many functions, where the author will then declare the return type as immutable. Yet, since a mutable array is a kind of array, this is perfectly legal:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allEmployees&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//build up container with employees...  &lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//i.e. [container addObject:anEmployee]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;And innocently enough, we’ve sharing mutable state again. The method header deceives any caller now, the 🍰 is a lie.&lt;/p&gt;
+
+&lt;p&gt;Since we’ve got copy on write, we don’t even need to bother with such a qundary since copies are cheap. We can do the right thing and sleep easy on performance hits:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allEmployees&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//build up container with employees...  &lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;//i.e. [container addObject:anEmployee]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Also — Swift 👋?&lt;/p&gt;
+
+&lt;p&gt;Think about the bridging process. If you, or perhaps another framework, have a foundation collection returned to you that one has to use in Swift code — you’re getting the value type of the collection since the language employs value type semantics.&lt;/p&gt;
+
+&lt;p&gt;How does one enforce that 🤔?&lt;/p&gt;
+
+&lt;p&gt;…with a copy on the reference type during the bridging process. So now if that bridged data was never mutated, the whole bridging operation’s efficiency is greatly improved. Which, I suppose, is a nice seque to wrap things up.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+
+&lt;p&gt;As I positied in one of &lt;a href=&quot;http://localhost:4000/objective-c-in-2015&quot;&gt;my more popular articles a few years ago&lt;/a&gt;, Objective-C has become stronger and more capable due to Swift’s presence alone. The sea of apps using Objective-C runs deep, and now their collections run faster. It’s not surprising, as copy on write semantics have been with Swift developers since the beginning.&lt;/p&gt;
+
+&lt;p&gt;And now, here we are, with Objective-C getting in on the fun now. #DinosaurNotDead, am I right?&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Foundation is the unsung hero of iOS development. Powerful due in part to its maturity and ubiquity — it boasts all of six major implementations, it treats engineers to everything from the basic object to annual optimizations under the hood at WWDC. And the best optimizations are the ones I don’t even have to make. They just happen.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Device Check Overview</title><link href="http://localhost:4000/The-DeviceCheck-API/" rel="alternate" type="text/html" title="Device Check Overview" /><published>2017-10-06T00:00:00-05:00</published><updated>2017-10-06T00:00:00-05:00</updated><id>http://localhost:4000/The-DeviceCheck-API</id><content type="html" xml:base="http://localhost:4000/The-DeviceCheck-API/"></content><author><name>Jordan Morgan</name></author><category term="Device Check" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Dealing with Home Indicator</title><link href="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/" rel="alternate" type="text/html" title="Dealing with Home Indicator" /><published>2017-09-13T00:00:00-05:00</published><updated>2017-09-13T00:00:00-05:00</updated><id>http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator</id><content type="html" xml:base="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/"></content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

@@ -73,9 +73,9 @@ The renderer also exposes convenient access to getting a hold of `NSData` of res
     
 ```swift    
 let actions:(UIGraphicsImageRendererContext) -> Void = { (ctx) in  
-let size = ctx.format.bounds.size  
-UIColor.blue.setFill()  
-    ctx.fill(CGRect(x: 1, y: 1, width: size.width - 1, height: size.height - 1))  
+    let size = ctx.format.bounds.size  
+    UIColor.blue.setFill()  
+        ctx.fill(CGRect(x: 1, y: 1, width: size.width - 1, height: size.height - 1))  
 }
 
 let imageJPEGData = renderer.jpegData(withCompressionQuality: 1, actions: actions)

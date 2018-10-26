@@ -9,8 +9,6 @@ image: /assets/images/logo.png
 
 The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It's still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.
 
-> Now here's something next.
-
 The translation from the analog to the digital was an inflection point. We've experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — `UIGraphicsImageRenderer`.
 
 ### Setting the (CG)Context

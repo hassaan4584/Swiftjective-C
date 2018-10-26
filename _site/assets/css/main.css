@@ -243,17 +243,10 @@ article p {
   code {
     color: white !important; }
 
-  a:link {
+  blockquote {
+    border-left: 6px solid white !important;
+    padding: 0.5em 10px;
     color: white !important; }
 
-  /* visited link */
-  a:visited {
-    color: white !important; }
-
-  /* mouse over link */
-  a:hover {
-    color: white !important; }
-
-  /* selected link */
-  a:active {
-    color: white !important; } }
+  blockquote p {
+    opacity: 0.5 !important; } }

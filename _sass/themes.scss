@@ -4,6 +4,10 @@
      font-size: 21px;
      line-height: 1.58;
      letter-spacing: -.003em;
+     text-rendering: optimizeLegibility;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     -moz-font-feature-settings: "liga"on;
      border-bottom: 5px solid $secondary-color;
  }
 
@@ -80,7 +84,8 @@
  }
 
  article h3 {
-     font-size: 43px;
+    font-weight:700;
+     font-size: 32px;
      line-height: 1.15;
      letter-spacing: -.015em;
      margin-bottom: 16px;
@@ -109,7 +114,7 @@
      }
 
      article h3 {
-         font-size: 33px;
+         font-size: 26px;
      }
 
  }

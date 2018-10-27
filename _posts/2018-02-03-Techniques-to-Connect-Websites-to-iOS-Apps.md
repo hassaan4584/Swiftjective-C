@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: ["Misc"]
-title: "Connecting iOS Apps with their Websites."
+title: "Connecting iOS Apps with Their Websites"
 author: Jordan Morgan
 description: "As developers, marketing often escapes the lot of us. Fortnuately, Apple has made a few quick wins available to create meanginful connections between your app and its web site."
 image: /assets/images/logo.png
@@ -104,7 +104,7 @@ This works much like regex, with support for wildcards:
 A few random words of advice:
 
 * Keep in mind these matches are case sensitive.
-* If you're rocking a few domains, you'll need to roll an`apple-app-site-association` file for each one that your app supports. Example: apple.com would have different motives than someProducts.apple.com
+* If you're rocking a few domains, you'll need to roll an `apple-app-site-association` file for each one that your app supports. Example: apple.com would have different motives than someProducts.apple.com
 * One doesn't actually need to appended ".json" to the JSON file. Don't ask me how I know this, or how much hypothetical time was lost to it.
 * If you associate several apps within one `apple-app-site-association` file, iOS will handle it by presenting an alert showing each one to determine which is opened. The next time this happens, iOS will suggest the last choice as a default — but users can still switch this via a force touch or by pulling down on the notification.
 * Safari handles all of this as well. If you hosted the QR code as an image, and an iOS user 3D touches on it — this exact same flows happens.
@@ -161,7 +161,7 @@ webcredentials:anExample.com
 
 As you've likely keyed in on, the Associated Domains entries follow the same pattern of including a service (i.e. activitycontinuation, applinks, etc) and domain:
 ```json
-:[:port number]
+<service>:<fully qualified domain>[:port number]
 ```
 From there, it's a case of adding that to your association file:
 ```json   
@@ -223,6 +223,10 @@ Smart banners. At this point, you're probably using them.
 But just in case you aren't, add a meta tag with your app ID to take care of it. When potential users visit your site, they'll get that call to action banner at the top to download it.
 
 If you're wanting to hunt down your app ID quickly, just visit [iTunes Link Maker][3]. The entire meta tag can be as simple as this:
+
+```html
+<meta name="apple-iunes-app" content="app-id=123456789">
+```
 
 If you need to, you can also include an iTunes affiliate string and app argument parameter to deep link to a specific controller to keep context consistent with where a user might be on your website.
 

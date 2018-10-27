@@ -123,6 +123,10 @@ body {
   font-size: 21px;
   line-height: 1.58;
   letter-spacing: -.003em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
   border-bottom: 5px solid #70A2F9; }
 
  /* Links
@@ -184,7 +188,8 @@ h4 {
   margin-top: 64px; }
 
 article h3 {
-  font-size: 43px;
+  font-weight: 700;
+  font-size: 32px;
   line-height: 1.15;
   letter-spacing: -.015em;
   margin-bottom: 16px; }
@@ -207,7 +212,7 @@ article p {
     font-size: 100%; }
 
   article h3 {
-    font-size: 33px; } }
+    font-size: 26px; } }
 @media (prefers-color-scheme: dark) {
   h1,
   h2,

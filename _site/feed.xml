@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-26T16:05:05-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-27T14:30:03-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
 
 &lt;p&gt;The translation from the analog to the digital was an inflection point. We’ve experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;.&lt;/p&gt;
@@ -64,9 +64,9 @@
 &lt;p&gt;The renderer also exposes convenient access to getting a hold of &lt;code class=&quot;highlighter-rouge&quot;&gt;NSData&lt;/code&gt; of resulting images as well:&lt;/p&gt;
 
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;actions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIGraphicsImageRendererContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bounds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-    &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bounds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;  
+    &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+        &lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CGRect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;imageJPEGData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;renderer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;jpegData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withCompressionQuality&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;actions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;actions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -431,7 +431,36 @@ The iPhone’s revolutionary multitouch interface was prototyped by a team, coll
 &lt;p&gt;John Carmack, long a pioneer of the games industry, went toe to toe with Steve Jobs in advocating that which framework should be adopted as the Mac’s 3D Graphics API?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-Though the iPhone’s touchscreen has made the paradigm commonplace in today’s world — Eric Arthur Johnson is believed to have invented the world’s very first touch screen as an engineer at England’s Royal Radar Establishment in 1965. What instrument did he create a touchscreen for?&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSPredicate</title><link href="http://localhost:4000/NSPredicate-Objective-C/" rel="alternate" type="text/html" title="NSPredicate" /><published>2018-05-18T00:00:00-05:00</published><updated>2018-05-18T00:00:00-05:00</updated><id>http://localhost:4000/NSPredicate-Objective-C</id><content type="html" xml:base="http://localhost:4000/NSPredicate-Objective-C/">&lt;p&gt;When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.&lt;/p&gt;
+Though the iPhone’s touchscreen has made the paradigm commonplace in today’s world — Eric Arthur Johnson is believed to have invented the world’s very first touch screen as an engineer at England’s Royal Radar Establishment in 1965. What instrument did he create a touchscreen for?&lt;/p&gt;
+
+&lt;h3 id=&quot;answer-key&quot;&gt;Answer Key&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Round 1:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://asciiwwdc.com/2015/sessions/408&quot;&gt;A protocol oriented programming language&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The WWDC App, this was confirmed in their Platforms State of the Union address during WWDC of that year.&lt;/li&gt;
+  &lt;li&gt;Good ol’ performSelector:&lt;/li&gt;
+  &lt;li&gt;Codable&lt;/li&gt;
+  &lt;li&gt;Wildcard: 
+&lt;a href=&quot;https://www.youtube.com/watch?reload=9&amp;amp;v=MO7Ta0DvEWA&quot;&gt;The variable “s” was declared as a string set equal to “Hello WWDC!”, showing off Swift’s vastly superior string interpolation API.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Round 2:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS5.html#//apple_ref/doc/uid/TP30915195-SW62&quot;&gt;Core Image&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;SQLite&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://localhost:4000/ios-simulator-power-ups&quot;&gt;simctl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;__builtin_trap();&lt;/li&gt;
+  &lt;li&gt;Wildcard: &lt;a href=&quot;https://developer.apple.com/documentation/sirikit/insetclimatesettingsincarintent/2102611-init&quot;&gt;SiriKit&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Round 3:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Halo&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/2007/06/wwdc_2007_keynote&quot;&gt;Web Apps&lt;/a&gt; (Yikes)&lt;/li&gt;
+  &lt;li&gt;To “Explore new rich interactions”, hence ENRI&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=17067129&quot;&gt;OpenGL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wildcard: An instrument to help operators improve handling air traffic control.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jordan Morgan</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSPredicate</title><link href="http://localhost:4000/NSPredicate-Objective-C/" rel="alternate" type="text/html" title="NSPredicate" /><published>2018-05-18T00:00:00-05:00</published><updated>2018-05-18T00:00:00-05:00</updated><id>http://localhost:4000/NSPredicate-Objective-C</id><content type="html" xml:base="http://localhost:4000/NSPredicate-Objective-C/">&lt;p&gt;When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.&lt;/p&gt;
 
 &lt;p&gt;And true — those things are great tools and have superb use cases. But I sense they are often lifted up as silver bullets without the necessary amount of thought that should probably be given to architectural decisions.&lt;/p&gt;
 
@@ -487,7 +516,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 &lt;span class=&quot;c1&quot;&gt;// New instance returned  &lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutableArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filteredArrayUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*NSPredicate*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Though predicates can be instantiated from [&lt;code class=&quot;highlighter-rouge&quot;&gt;NSExpression][1]&lt;/code&gt; , [&lt;code class=&quot;highlighter-rouge&quot;&gt;NSCompoundPredicate][1]&lt;/code&gt; or [&lt;code class=&quot;highlighter-rouge&quot;&gt;NSComparisonPredicate][1]&lt;/code&gt; — it can also be created using a string syntax. This is similar to the Visual Format Language that one can use to define layout constraints.&lt;/p&gt;
+&lt;p&gt;Though predicates can be instantiated from &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nspredicate?language=objc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSExpression&lt;/code&gt;&lt;/a&gt; , &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nspredicate?language=objc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSCompoundPredicate&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nspredicate?language=objc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSComparisonPredicate&lt;/code&gt;&lt;/a&gt; — it can also be created using a string syntax. This is similar to the Visual Format Language that one can use to define layout constraints.&lt;/p&gt;
 
 &lt;p&gt;We’ll be focusing on the utility of using the string syntax method.&lt;/p&gt;
 
@@ -661,6 +690,13 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;You could switch our the @avg for:&lt;/p&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;@sum&lt;/li&gt;
+  &lt;li&gt;@max&lt;/li&gt;
+  &lt;li&gt;@min&lt;/li&gt;
+  &lt;li&gt;@count&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;When you consider the amount of, albeit trivial, code that you might’ve had to author to achieve the same things outside of a predicate, these types of techniques can begin to become part of your regular toolchain.&lt;/p&gt;
 
 &lt;h3 id=&quot;digging-deeper-into-arrays&quot;&gt;Digging Deeper into Arrays&lt;/h3&gt;
@@ -694,10 +730,10 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 &lt;p&gt;Going even further, you get gain even more power by using either of the following:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;@distinctUnionOfArrays&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;@unionOfArrays&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;@&lt;strong&gt;unionOfObjects&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;@distinctUnionOfObjects&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;@distinctUnionOfArrays&lt;/li&gt;
+  &lt;li&gt;@unionOfArrays&lt;/li&gt;
+  &lt;li&gt;@unionOfObjects&lt;/li&gt;
+  &lt;li&gt;@distinctUnionOfObjects&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Hang with me, but assume we had an array of arrays containing Person objects, and all that we needed were the unique identifiers of the Person instances among them:&lt;/p&gt;
@@ -883,7 +919,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;And in so many cases, that’s all a developer needs. So next time you feel yourself reaching for a spacer view, opt to embrace the simplicity and safety of &lt;code class=&quot;highlighter-rouge&quot;&gt;UILayoutGuide&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with their Websites.</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with their Websites." /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/">&lt;p&gt;Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with Their Websites</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with Their Websites" /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/">&lt;p&gt;Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.&lt;/p&gt;
 
 &lt;p&gt;Though I’ve &lt;a href=&quot;http://localhost:4000/swift-javascript&quot;&gt;mentioned web related things here before&lt;/a&gt;, the last time I did any meaningful web development in a professional context, I was using JQuery v4.x.&lt;/p&gt;
 
@@ -981,7 +1017,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;ul&gt;
   &lt;li&gt;Keep in mind these matches are case sensitive.&lt;/li&gt;
-  &lt;li&gt;If you’re rocking a few domains, you’ll need to roll an&lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file for each one that your app supports. Example: apple.com would have different motives than someProducts.apple.com&lt;/li&gt;
+  &lt;li&gt;If you’re rocking a few domains, you’ll need to roll an &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file for each one that your app supports. Example: apple.com would have different motives than someProducts.apple.com&lt;/li&gt;
   &lt;li&gt;One doesn’t actually need to appended “.json” to the JSON file. Don’t ask me how I know this, or how much hypothetical time was lost to it.&lt;/li&gt;
   &lt;li&gt;If you associate several apps within one &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file, iOS will handle it by presenting an alert showing each one to determine which is opened. The next time this happens, iOS will suggest the last choice as a default — but users can still switch this via a force touch or by pulling down on the notification.&lt;/li&gt;
   &lt;li&gt;Safari handles all of this as well. If you hosted the QR code as an image, and an iOS user 3D touches on it — this exact same flows happens.&lt;/li&gt;
@@ -1037,7 +1073,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 &lt;/blockquote&gt;
 
 &lt;p&gt;As you’ve likely keyed in on, the Associated Domains entries follow the same pattern of including a service (i.e. activitycontinuation, applinks, etc) and domain:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;:[:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;service&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;fully&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;qualified&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;domain&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;From there, it’s a case of adding that to your association file:&lt;/p&gt;
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
@@ -1094,6 +1130,9 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 &lt;p&gt;But just in case you aren’t, add a meta tag with your app ID to take care of it. When potential users visit your site, they’ll get that call to action banner at the top to download it.&lt;/p&gt;
 
 &lt;p&gt;If you’re wanting to hunt down your app ID quickly, just visit &lt;a href=&quot;http://itunes.apple.com/linkmaker/&quot;&gt;iTunes Link Maker&lt;/a&gt;. The entire meta tag can be as simple as this:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple-iunes-app&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;app-id=123456789&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If you need to, you can also include an iTunes affiliate string and app argument parameter to deep link to a specific controller to keep context consistent with where a user might be on your website.&lt;/p&gt;
 

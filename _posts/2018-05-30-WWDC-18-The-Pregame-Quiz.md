@@ -91,6 +91,36 @@ John Carmack, long a pioneer of the games industry, went toe to toe with Steve J
 **Wildcard:**  
 Though the iPhone's touchscreen has made the paradigm commonplace in today's world — Eric Arthur Johnson is believed to have invented the world's very first touch screen as an engineer at England's Royal Radar Establishment in 1965. What instrument did he create a touchscreen for?
 
+### Answer Key
+<b>Round 1:</b>
+1. [A protocol oriented programming language][4]
+2. The WWDC App, this was confirmed in their Platforms State of the Union address during WWDC of that year.
+3. Good ol’ performSelector:
+4. Codable
+5. Wildcard: 
+[The variable “s” was declared as a string set equal to “Hello WWDC!”, showing off Swift’s vastly superior string interpolation API.][5]
+
+<b>Round 2:</b>
+1. [Core Image][6]
+2. SQLite
+3. [simctl][7]
+4. __builtin_trap();
+5. Wildcard: [SiriKit][8]
+
+<b>Round 3:</b>
+1. Halo
+2. [Web Apps][9] (Yikes)
+3. To “Explore new rich interactions”, hence ENRI
+4. [OpenGL][10]
+5. Wildcard: An instrument to help operators improve handling air traffic control.
+
 [1]: {{ site.url | append:"/WWDC-2015-The-Pregame-Quiz" }}
 [2]: {{ site.url | append:"/WWDC-2016-The-Pregame-Quiz" }}
 [3]: {{ site.url | append:"/WWDC-2017-The-Pregame-Quiz" }}
+[4]: http://asciiwwdc.com/2015/sessions/408
+[5]: https://www.youtube.com/watch?reload=9&v=MO7Ta0DvEWA
+[6]: https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS5.html#//apple_ref/doc/uid/TP30915195-SW62
+[7]: {{ site.url | append:"/ios-simulator-power-ups" }}
+[8]: https://developer.apple.com/documentation/sirikit/insetclimatesettingsincarintent/2102611-init
+[9]: https://daringfireball.net/2007/06/wwdc_2007_keynote
+[10]: https://news.ycombinator.com/item?id=17067129

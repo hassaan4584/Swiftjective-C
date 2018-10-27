@@ -64,7 +64,7 @@ As it's used to sift through collections, you can expect Foundation classes to s
 // New instance returned  
 [mutableArray filteredArrayUsingPredicate:/*NSPredicate*/]
 ```
-Though predicates can be instantiated from [`NSExpression][1]` , [`NSCompoundPredicate][1]` or [`NSComparisonPredicate][1]` — it can also be created using a string syntax. This is similar to the Visual Format Language that one can use to define layout constraints.
+Though predicates can be instantiated from [`NSExpression`][1] , [`NSCompoundPredicate`][1] or [`NSComparisonPredicate`][1] — it can also be created using a string syntax. This is similar to the Visual Format Language that one can use to define layout constraints.
 
 We'll be focusing on the utility of using the string syntax method.
 
@@ -237,6 +237,11 @@ NSPredicate *previousPayOverTen = [NSPredicate predicateWithFormat:predicateForm
 ```
 You could switch our the @avg for:
 
+* @sum
+* @max
+* @min
+* @count
+
 When you consider the amount of, albeit trivial, code that you might've had to author to achieve the same things outside of a predicate, these types of techniques can begin to become part of your regular toolchain.
 
 ### Digging Deeper into Arrays
@@ -269,10 +274,10 @@ NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat];
 ```
 Going even further, you get gain even more power by using either of the following:
 
-* **@distinctUnionOfArrays**
-* **@unionOfArrays**
-* @**unionOfObjects**
-* **@distinctUnionOfObjects**
+* @distinctUnionOfArrays
+* @unionOfArrays
+* @unionOfObjects
+* @distinctUnionOfObjects
 
 Hang with me, but assume we had an array of arrays containing Person objects, and all that we needed were the unique identifiers of the Person instances among them:
 ```swift

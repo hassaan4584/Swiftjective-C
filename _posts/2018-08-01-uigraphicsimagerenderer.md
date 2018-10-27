@@ -160,19 +160,19 @@ All of this hopefully should remind you how extensible and flexible an image ren
 private var rendererKey: UInt8 = 0
 
 extension UIView {
-var renderer: UIGraphicsImageRenderer! {  
-    get {  
-        guard let rendererInstance = objc_getAssociatedObject(self, &rendererKey) as? UIGraphicsImageRenderer else {  
-        self.renderer = UIGraphicsImageRenderer(bounds: bounds)  
-            return self.renderer  
-        }
+    var renderer: UIGraphicsImageRenderer! {  
+        get {  
+            guard let rendererInstance = objc_getAssociatedObject(self, &rendererKey) as? UIGraphicsImageRenderer else {  
+                self.renderer = UIGraphicsImageRenderer(bounds: bounds)  
+                return self.renderer  
+            }
 
-        return rendererInstance
-    }  
-    set(newValue) {  
-        objc_setAssociatedObject(self, &rendererKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)  
-    }  
-}
+            return rendererInstance
+        }  
+        set(newValue) {  
+            objc_setAssociatedObject(self, &rendererKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)  
+        }  
+    }
 
     func circleImageView() -> UIImageView {  
         let img:UIImage = renderer.image { ctx in  

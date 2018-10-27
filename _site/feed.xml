@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-27T14:30:03-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-27T15:05:22-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
 
 &lt;p&gt;The translation from the analog to the digital was an inflection point. We’ve experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;.&lt;/p&gt;
@@ -1434,4 +1434,333 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;And now, here we are, with Objective-C getting in on the fun now. #DinosaurNotDead, am I right?&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Foundation is the unsung hero of iOS development. Powerful due in part to its maturity and ubiquity — it boasts all of six major implementations, it treats engineers to everything from the basic object to annual optimizations under the hood at WWDC. And the best optimizations are the ones I don’t even have to make. They just happen.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Device Check Overview</title><link href="http://localhost:4000/The-DeviceCheck-API/" rel="alternate" type="text/html" title="Device Check Overview" /><published>2017-10-06T00:00:00-05:00</published><updated>2017-10-06T00:00:00-05:00</updated><id>http://localhost:4000/The-DeviceCheck-API</id><content type="html" xml:base="http://localhost:4000/The-DeviceCheck-API/"></content><author><name>Jordan Morgan</name></author><category term="Device Check" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Dealing with Home Indicator</title><link href="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/" rel="alternate" type="text/html" title="Dealing with Home Indicator" /><published>2017-09-13T00:00:00-05:00</published><updated>2017-09-13T00:00:00-05:00</updated><id>http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator</id><content type="html" xml:base="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/"></content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Foundation is the unsung hero of iOS development. Powerful due in part to its maturity and ubiquity — it boasts all of six major implementations, it treats engineers to everything from the basic object to annual optimizations under the hood at WWDC. And the best optimizations are the ones I don’t even have to make. They just happen.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Device Check Overview</title><link href="http://localhost:4000/The-DeviceCheck-API/" rel="alternate" type="text/html" title="Device Check Overview" /><published>2017-10-06T00:00:00-05:00</published><updated>2017-10-06T00:00:00-05:00</updated><id>http://localhost:4000/The-DeviceCheck-API</id><content type="html" xml:base="http://localhost:4000/The-DeviceCheck-API/">&lt;p&gt;Each WWDC, there is always the obscure API that finds its way into the annual “word bubble” slide of new toys for developers to use. Faintly sitting there, it stands to reason that Apple considers it a useful addition that only the few, and not the many, will use.&lt;/p&gt;
+
+&lt;p&gt;DeviceCheck fits that bill, and then some. You might consider it a necessity from Cupertino &amp;amp; Friends&lt;strong&gt;™&lt;/strong&gt;, something they had to make or face the reality that engineers would find another way to do thing X or Y resulting in shady means to the same end. Because developers don’t do shady things, &lt;a href=&quot;https://daringfireball.net/2017/04/uber_identifying_and_tagging_iphones&quot;&gt;like ever&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, DeviceCheck is kinda what happens when most devs want to do things for perfectly valid business reasons, but there aren’t really any good ways to do it. It’s a curious little API, our topic of discussion this week.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-what-is-it&quot;&gt;So, What Is It?&lt;/h3&gt;
+
+&lt;p&gt;The TL;DR is nothing more than this: It’s an Apple approved, and guaranteed way, to identify your app as running on a valid Apple device while maintaining absolute user privacy.&lt;/p&gt;
+
+&lt;p&gt;That’s not the most interesting of news, I suppose. The real discussion here lies within the &lt;em&gt;why&lt;/em&gt; part of things. And the why spectrum, in this case, could range from toggling promotional offers on a certain device, linking purchases to accounts or auditing a device for fraudulent activity. For example, who here in the room has made two different usernames or profiles to extend a free trial of some sort?&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;…..&lt;/p&gt;
+
+&lt;p&gt;……..&lt;/p&gt;
+
+&lt;p&gt;🙋🏻‍♂️.&lt;/p&gt;
+
+&lt;p&gt;That’s really it. We’re simply taking about helping one associate some given state for any given iOS (or tvOS) device in particular.&lt;/p&gt;
+
+&lt;p&gt;To get your creative juices flowing, consider that you have two apps released. If they open App One, you could assign the device to state 01 — and when they open App Two, you can query the state as it will be persisted in the same fashion and then unlock some content, discount or reward.&lt;/p&gt;
+
+&lt;p&gt;It’s an app-agnostic API, so leverage it as such if the occasion calls for it. But, also be aware if that presents a design constraint to you. Again, we’re talking about two bits &lt;em&gt;per device&lt;/em&gt; — not two bits per app.&lt;/p&gt;
+
+&lt;p&gt;So — how does it work?&lt;/p&gt;
+
+&lt;h3 id=&quot;the-api&quot;&gt;The API&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/privacy-and-single-sign-on&quot;&gt;I’ve always appreciated “just get to the point” type of APIs&lt;/a&gt;, and that’s exactly what we get here. The setup allows a developer to store two bits of information (along with a timestamp) per one device. So, instead of peeking behind several doors that Apple would rather you leave shut to identify a device, you can simply get a few bits back and be done with it:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;curDevice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DCDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isSupported&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;curDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;generateToken&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;completionHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tokenData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Received token (tokenData)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+            &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hit error: (error!.localizedDescription)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Note that the simulator won’t pass isSupported, so if you want to test it out— I guess do what we should be doing anyways and use the real thing 📱.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With that code you’re on your first step (more to follow) to be able to store either:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;00&lt;/li&gt;
+  &lt;li&gt;01&lt;/li&gt;
+  &lt;li&gt;10&lt;/li&gt;
+  &lt;li&gt;11&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you set that information, it remains valid and stored by Apple until you as the developer manually reset it or until you update it. That means you don’t have to code your way through tricky things like reinstallation, nuking all contents and settings or straight up deletion. It’s also worth noting that these values are unique per team ID.&lt;/p&gt;
+
+&lt;p&gt;Also, be aware that like most tokens, it’s intended for single use. As you’ll see in just a minute, you likely use this token outside of your app and on your server. It will stay valid long enough if you need to retry a request, but the big Apple just recommends invoking the same method to generate another one.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-closer-look&quot;&gt;A Closer Look&lt;/h3&gt;
+
+&lt;p&gt;You may be looking at the previous code sample and wondering how that really helps us at all. How are the bits assigned? How do you set state? All we’re doing so far is getting a token. You might’ve expected something like this:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;curDevice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DCDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;  
+&lt;span class=&quot;n&quot;&gt;curDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setFirstBitState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;as&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// or&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;curDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;secondBitState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;c1&quot;&gt;// Do something  &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It’s a fair question, and it’s because the client API (iOS or tvOS) only handles half of the transaction. On iOS, we’re given an ephemeral token which we send to our own servers. That validates authenticity, then we can either set the bit state or query it and fire a request off to Apple. Then Apple gives us the state we’re after.&lt;/p&gt;
+
+&lt;p&gt;It looks like this:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Client uses DeviceCheck to get a token&lt;/li&gt;
+  &lt;li&gt;It sends that over to our servers and we decide state&lt;/li&gt;
+  &lt;li&gt;We pass the token and state to Apple, and done&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And then to query it later:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Client uses DeviceCheck to get a token&lt;/li&gt;
+  &lt;li&gt;Your server queries the state of the device with Apple&lt;/li&gt;
+  &lt;li&gt;It gets the response and your app takes the appropriate action&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This is not as heavy handed as it sounds. A simple POST and wrapping up your authentication key as a JSON Web Token gets you all the way there. A request to query bit state would just need to include a JSON payload like this:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;device_token&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;anAmazingUniqueToken&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0934423486434&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;transaction_id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;you come up with this&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;And then Apple would respond with:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bit0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bit1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;last_update_time&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2017-10&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Coming back the other way, if one needs to update it - the payload is exactly the same except you include one, or both, of the bits you wish to update:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;device_token&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;anAmazingUniqueToken&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;transaction_id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;you come up with this&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0934423486434&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bit0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bit1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;In saying all of this, I assume you are aware of the other logistical trappings one must take to send web requests. For example, follow the Base 64 URL encoded JSON web token format and ensure that your authentication key employs the ES256 algorithm. Otherwise, you’ll be met with no helpful bits to use for state and instead get a nice BAD_AUTHENTICATION_TOKEN http error 🙈.&lt;/p&gt;
+
+&lt;p&gt;For more on how to set these requests up, what data types to use and even some example requests using curl — &lt;a href=&quot;https://developer.apple.com/documentation/devicecheck/accessing_and_modifying_per_device_data&quot;&gt;be sure to hit the docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;being-a-good-devicecheck-citizen&quot;&gt;Being a Good DeviceCheck Citizen&lt;/h3&gt;
+
+&lt;p&gt;As with any API, there are right and wrong ways to go about things. With DeviceCheck, simple though it may seem, there are a few choice scenarios to be cognizant of.&lt;/p&gt;
+
+&lt;p&gt;For starters, recall that time stamp that Apple gives us during our query:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bit0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;bit1&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;last_update_time&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;2017-10&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;That update time is rounded to the nearest month. This could help you solve some problems that could arise from things like devices being sold to someone else. For example, if the bit state says they’ve done something they should only do once, but it’s been a year since they’ve tried that — pair that fact with other business logic to avoid locking a new customer away from content.&lt;/p&gt;
+
+&lt;p&gt;That directly leads us to the next tip Apple recommends, which is that this is a &lt;em&gt;supplementary&lt;/em&gt; source to help solve these specific problems. That is, it should be paired with your business logic. Getting the bit state is a great start and certainly welcome help, but pair it with logical checks that help you ensure you’re not stonewalling new users.&lt;/p&gt;
+
+&lt;p&gt;It’s also mentioned that this shouldn’t affect your user interface much. I think this is fairly obvious, but an additional nudge never hurts. Most of us have several ways of knowing when to toss up your “first run” modal that introduces your app. Querying a bit state that requires at least three trips across the wire shouldn’t be one.&lt;/p&gt;
+
+&lt;p&gt;Lastly, Apple gave us this API for a reason. In the &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2017/702/?time=1530&quot;&gt;WWDC chat&lt;/a&gt; over the topic, they straight up say that they will continue to remove sources of entropy outright or at least make sure they are under user control. Read: “If you abuse our ecosystem to tag phones we will find you and eliminate your methods.”&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+
+&lt;p&gt;UDID querying is out. Linking back via an IP address is hacky and easily dodged. So now the act of uniquely identifying an iOS device, nefarious reasons or not, has first class support in iOS 11. I, for one, applaud Apple’s decision to include a safe and pragmatic way to do this. Because somewhere out there is a dev with a business requirement that needs to do something like this.&lt;/p&gt;
+
+&lt;p&gt;Now, they can. And they don’t have to do any funky dances to do it.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Device Check" /><summary type="html">Each WWDC, there is always the obscure API that finds its way into the annual “word bubble” slide of new toys for developers to use. Faintly sitting there, it stands to reason that Apple considers it a useful addition that only the few, and not the many, will use.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Dealing with Home Indicator</title><link href="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/" rel="alternate" type="text/html" title="Dealing with Home Indicator" /><published>2017-09-13T00:00:00-05:00</published><updated>2017-09-13T00:00:00-05:00</updated><id>http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator</id><content type="html" xml:base="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/">&lt;p&gt;In a move that, well, &lt;a href=&quot;https://daringfireball.net/linked/2017/09/10/bbc-confirmation&quot;&gt;everyone saw coming&lt;/a&gt; — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button.&lt;/p&gt;
+
+&lt;p&gt;To consumers it means a beautiful new marvel of both hardware and software to throw some dollars at come pre order time. To a lot of developers, it meant _what am I supposed do what that thing? _The answer, thankfully, is quite simple.&lt;/p&gt;
+
+&lt;p&gt;This week, we’ll look at what Apple has supplied us with to handle the home indicator.&lt;/p&gt;
+
+&lt;h3 id=&quot;but-first&quot;&gt;But First&lt;/h3&gt;
+
+&lt;p&gt;It’s not everyday we get new videos alongside a hardware announcement, and yet that’s exactly what happened shortly thereafter:&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;14 NEW Apple Developer Videos 📲 LIVE NOW &lt;a href=&quot;https://twitter.com/hashtag/WWDCApp?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#WWDCApp&lt;/a&gt; and &lt;a href=&quot;https://t.co/4rSiM9gd1W&quot;&gt;https://t.co/4rSiM9gd1W&lt;/a&gt; 👈 &lt;a href=&quot;https://twitter.com/hashtag/AppleTV4K?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AppleTV4K&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/iOS11?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#iOS11&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/AppleWatchSeries3?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AppleWatchSeries3&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ARKit?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ARKit&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/AppleEvent?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AppleEvent&lt;/a&gt; &lt;a href=&quot;https://t.co/KkurLDxKNm&quot;&gt;pic.twitter.com/KkurLDxKNm&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lauren Strehlow (@laurenstrehlow) &lt;a href=&quot;https://twitter.com/laurenstrehlow/status/907683394485575680?ref_src=twsrc%5Etfw&quot;&gt;September 12, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In “&lt;a href=&quot;https://developer.apple.com/videos/play/fall2017/801/&quot;&gt;Designing for iPhone X&lt;/a&gt;”, long tenured Apple design guru Mike Stern lays down some ground rules. All things being equal, before you utilize the new functions below it’s incumbent that you pump the brakes first to see if your use case fits the bill.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Try to avoid interactive controls near the home indicator, especially those driven via gesture recognizers.&lt;/li&gt;
+  &lt;li&gt;Don’t hide the indicator, add any adornments around it or generally attempt to change its appearance. Same goes for the camera bezel that’s planted at the top of iPhone X.&lt;/li&gt;
+  &lt;li&gt;Typically you don’t want to hide the home indicator unless you’ve got a passive viewing experience (i.e. videos, photo slideshow, etc.).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; — Apple says leave the poor indicator alone. Most of the time.&lt;/p&gt;
+
+&lt;p&gt;But, this post is about the other times 😉.&lt;/p&gt;
+
+&lt;h3 id=&quot;uiviewcontroller-additions&quot;&gt;UIViewController Additions&lt;/h3&gt;
+
+&lt;p&gt;Whether you adore handling the status bar on a per controller basis or it was pure anathema to you, Apple has continued the trend of making such decisions on an instance by instance basis rather than opting for a global catch all design.&lt;/p&gt;
+
+&lt;p&gt;Hiding the home indicator works essentially the same way status bar handling does:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prefersHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;As mentioned, such scenarios are meant to be the outlier, and as such the default implementation returns false. There is, however, a particular comment in the documentation:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The system takes your preference into account, but returning &lt;code class=&quot;highlighter-rouge&quot;&gt;YES&lt;/code&gt; is not a guarantee that an indicator will be hidden.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There doesn’t appear to be any mention of why or when UIKit would not respect your chosen preference, though it stands to reason that Apple will enforce what it thinks is best, when it thinks it’s best — boolean values regardless. So, that should make for some fun Stack Overflow posts.&lt;/p&gt;
+
+&lt;p&gt;¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
+
+&lt;p&gt;Also, this may seem obvious but could be a source of initial confusion. Take particular mention to the fact that the function’s name ends with &lt;em&gt;autoHidden&lt;/em&gt; and not &lt;em&gt;hidden&lt;/em&gt;, which is to say that returning true from here means that UIKit will hide the indicator when it’s good and ready (normally, if the controller doesn’t receive any touch events across the span of a few seconds), &lt;em&gt;not&lt;/em&gt; immediately.&lt;/p&gt;
+
+&lt;h3 id=&quot;signaling-uikit&quot;&gt;Signaling UIKit&lt;/h3&gt;
+
+&lt;p&gt;Continuing with the status bar API parallels, simply overriding, or assigning to a variable conditionally controlling the overriden function, is not enough. We’ve yet another new addition to view controller’s robust family of setNeedsSomethingDone functions:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;shouldHideHomeIndicator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prefersHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shouldHideHomeIndicator&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shouldHideHomeIndicator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This acts as a pass through function, as it simply signals to UIKit that we’ve changed the previous value selected for home indicator visibility. Unlike the status bar, though, this isn’t &lt;em&gt;technically&lt;/em&gt; animatable since UIKit hides it on its own accord. So, code like this has no effect:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
+    &lt;span class=&quot;kt&quot;&gt;DispatchQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;asyncAfter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;deadline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;               
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shouldHideHomeIndicator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
+        &lt;span class=&quot;kt&quot;&gt;UIView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;animate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+            &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;  
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A simple assignment and a call to &lt;code class=&quot;highlighter-rouge&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden()&lt;/code&gt; will perform a slight alpha fade regardless of whether or not its included within an animation block.&lt;/p&gt;
+
+&lt;h3 id=&quot;container-controllers&quot;&gt;Container Controllers&lt;/h3&gt;
+
+&lt;p&gt;The last new addition to view controller is a mechanism to inform UIKit if a child view controller should dictate home indicator’s visibility or not. If you’ve been around iOS long enough, you’ve likely harnessed container view controllers to better promote abstractions and encapsulation patterns.&lt;/p&gt;
+
+&lt;p&gt;These contained controllers might find themselves well near the bottom of the screen, and if so — you may want the home indicator to leave you alone. A simple override returning the instance that’s obscured, or is doing the obscuring, addresses the issue:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;childViewControllerForHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myChildController&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If you do indicate that a child controller should dictate visibility, it’s also its responsibility to override the function we previously discussed:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MyChildViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prefersHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function’s signature allows for a nil return value. If that’s the case, UIKit will look to the current controller to make decisions here — and if you’ve opted to not override that function, that decision will be “Show the home indicator”.&lt;/p&gt;
+
+&lt;p&gt;As this can also be a runtime decision, UIKit will again request that you invoke its pass through function we just touched on to inform the framework it should query &lt;code class=&quot;highlighter-rouge&quot;&gt;prefersHomeIndicatorAutoHidden()&lt;/code&gt; once more:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;childViewControllerForHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myChildController&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initializeChildController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;myChildController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MyChildController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;And that’s it.&lt;/p&gt;
+
+&lt;p&gt;Though one could view this as more thought process that will need to be applied to an everyday iOS occurrence (i.e. handling controllers), you’ll find the API nearly identical to existing UIKit functions that handle similar problems.&lt;/p&gt;
+
+&lt;h3 id=&quot;update-answers-to-reader-questions&quot;&gt;Update: Answers to Reader Questions&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@fabiankuenzel&quot;&gt;&lt;strong&gt;Fabian Kuenzel&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;asks:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Will the new home indicator also be laying on top of the bottom navigation of websites?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Answers to that are detailed &lt;a href=&quot;https://webkit.org/blog/7929/designing-websites-for-iphone-x/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’m not a web dev afifcionado these days, but there appears to be a meta tag that handles automatic insets:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'viewport'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'initial-scale=1, viewport-fit=auto'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The default value is &lt;em&gt;auto&lt;/em&gt;, which should inset content — though you can override it to &lt;em&gt;cover&lt;/em&gt; which covers the whole viewport. Though, if you should opt to take the whole screen, a new CSS function, constant(), allows you to use pre-defined constants to put padding around elements that respect the safe area. This is akin to iOS’ safeAreaLayoutGuide API.&lt;/p&gt;
+
+&lt;p&gt;An example from their post:&lt;/p&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.post {  
+    padding: 12px;  
+    padding-left: constant(safe-area-inset-left);  
+    padding-right: constant(safe-area-inset-right);  
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@x0054&quot;&gt;&lt;strong&gt;Bogdan&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;had more of a philosophical observation:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I don’t understand why Apple didn’t just leave the home indicator off by default, or at least give the user an option to turn it off. It’s a nice feature to introduce new users to the phone, but eventually (like 10 minutes into using the phone) everyone will remember how to switch apps, and then it’s just an annoying and distracting bar. Am I missing something?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That’s a great point.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://marco.org/2017/09/18/courage&quot;&gt;Much like how the notch is more than a notch&lt;/a&gt;, and almost closer to part of the hardware and iPhone brand recognition, I think the software equivlant of that is the home indicator. It’s part of its DNA, and additionally I’m betting Apple’s thinking is that its prescence instills user confidence in the UX. It avoids the “Wait why is that gone now? When does it show? When does it hide? Can I still go back home now that it’s now showing?” kind of things.&lt;/p&gt;
+
+&lt;p&gt;That said, I do agree with you — it’s constant prescence seems a bit much, but I’ve yet to use an iPhone X in person so I’ll reserve judgement until then 🙂.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@willikampmann&quot;&gt;&lt;strong&gt;Will Kampmann&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;asks:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Do you know what will happen in full-screen apps like games? Will this home handle be invoked by two swipes like the notification and control centers are on normal iPhones?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There is an API to override this behavior, but Apple would really, really, &lt;em&gt;really&lt;/em&gt; like you not to. The one use case they mention where you might? Full screen games. Here’s the Human Interface Guidelines on the matter:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In rare cases, immersive apps like games might require custom screen-edge gestures that take priority over the system’s gestures — the first swipe invokes the app-specific gesture and a second-swipe invokes the system gesture.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s a simple override on any view controller:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;preferredScreenEdgesDeferringSystemGestures&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIRectEdge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+
+&lt;p&gt;Ah, iPhone X considerations.&lt;/p&gt;
+
+&lt;p&gt;Is it solely giggles and smiles for iOS engineers, or yet another view controller consideration to maintain and code against? Possibly a mix of the two. If time has taught us anything in the continuum of software development, it’s that time elapsed + an ecosystem = new APIs. In today’s smartphone landscape, it’s a little more realistic to say time elapsed + Apple’s ecosystem = new hardware = new APIs.&lt;/p&gt;
+
+&lt;p&gt;We made it through a taller iPhone. We pushed on through different resolutions. We can handle a small camera nub in navigation bars and a little 2 point bar near the bottom bezel too 💪.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html">In a move that, well, everyone saw coming — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

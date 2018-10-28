@@ -43,15 +43,17 @@
 }
 
 div.highlight {
-    overflow-x:scroll;
     border-radius: 8px;
+    overflow: auto;
     margin-top: 32px;
     margin-bottom: 32px;
-    marign-left:16px;
-    margin-right:16px;
 }
 
 pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
     padding-left: 16px;
     padding-right: 16px;
 }

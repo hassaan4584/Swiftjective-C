@@ -162,8 +162,6 @@ It's quite exciting, and once you get that Swift 2 codebase to play nice and jui
 
 Until next time ✌️.
 
-[Jordan Morgan][7] is an iOS software engineer who runs [Dreaming In Binary][8]
-
 [1]: https://github.com/apple/swift-evolution/blob/master/proposals/0007-remove-c-style-for-loops.md
 [2]: https://twitter.com/clattner_llvm?lang=en
 [3]: {{ site.url | append:"/a-swift-refactor"}}
@@ -171,4 +169,3 @@ Until next time ✌️.
 [5]: https://s-media-cache-ak0.pinimg.com/originals/59/ea/ee/59eaee788c31463b70e6e3d4fca5508f.jpg
 [6]: https://github.com/apple/swift-evolution#implemented-proposals-for-swift-3
 [7]: https://twitter.com/jordanmorgan10
-[8]: http://www.dreaminginbinary.co

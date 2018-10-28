@@ -43,19 +43,15 @@
 }
 
 div.highlight {
+    overflow-x:scroll;
     border-radius: 8px;
-    overflow: auto;
     margin-top: 32px;
     margin-bottom: 32px;
+    marign-left:16px;
+    margin-right:16px;
 }
 
 pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
     padding-left: 16px;
     padding-right: 16px;
 }
@@ -72,10 +68,11 @@ li {
 
 div.jekyll-twitter-plugin {
     margin: 0 auto;
-    padding-top:16px;
-    padding-bottom:16px;
-     width: 500px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 500px;
 }
+
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -90,4 +87,7 @@ div.jekyll-twitter-plugin {
         font-size: 100%;
     }
 
+    div.jekyll-twitter-plugin {
+        width: 100%;
+    }
 }

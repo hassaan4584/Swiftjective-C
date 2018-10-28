@@ -228,7 +228,10 @@ article p {
     font-size: 100%; }
 
   article h3 {
-    font-size: 26px; } }
+    font-size: 26px; }
+
+  blockquote {
+    padding: 0; } }
 @media (prefers-color-scheme: dark) {
   h1,
   h2,

@@ -135,7 +135,7 @@ let constraintsEffectingVertical:[NSLayoutConstraint] = bottomLeftGuide.constrai
 ```
 Lastly, the boolean property acts exactly how it's named. It's utility lies in the fact that you can easily check for ambigious constraints on _just _the layout guide using a symbolic breakpoint. If you are like me, sometimes you want the show to come to a total halt if something like this happens. I sometimes wrap this in an `NSAssert()` in my own side projects so I have to deal with the issue right away.
 
-### Winding Down
+### Wrapping Up
 
 If brevity is the source of wit, then the layout guide may be the sharpest of them all nesteled inside UIKit. It's insanely simple — just a plain old thing that looks like a view, smells like a view, acts like a view and….isn't a view. It's just a rectangular region that loves Auto Layout.
 

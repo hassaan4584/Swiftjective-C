@@ -18,7 +18,7 @@ Participants — time to add the quiz operation to your queues⚡️!
 
 There are three rounds, and the point break down is as follows:
 
-* **Round 1** –1 point each answer
+* **Round 1** – 1 point each answer
 * **Round 2** - 2 points each answer
 * **Round 3** - 3 points each answer
 

@@ -190,7 +190,7 @@ What a little emotional rollercoaster gave us free passes to. They cold clocked 
 
 But then they hit us back with a mea culpa on beta 3, dropping an API that makes OAuth easier on us and effortless for the end user. Bravo.
 
-Until next time, as our NSHipster alum used to say — may your code continue to compile and inspire ✌️.
+Until next time ✌️.
 
 [1]: https://twitter.com/rmondello/status/884508720516014081
 [2]: https://tools.ietf.org/html/rfc6749

@@ -327,7 +327,7 @@ You can burn through Objective-C collections with sugary syntax. You can drill d
 
 While Swift has first class language support to slice and dice collections, it's really not much of a bother to utilize an object created to do much of the same things. Should you find yourself in a mature codebase or a newly minted one sporting The Dino (Objective-C), let the predicates flow freely.
 
-Until next time✌️.
+Until next time ✌️.
 
 [1]: https://developer.apple.com/documentation/foundation/nspredicate?language=objc
 

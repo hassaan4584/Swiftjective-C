@@ -70,5 +70,3 @@ The name itself is a mash up of the two predominant languages used to create iOS
 [Github](https://www.github.com){:target="_blank"} is used for source control, and each article and the entire [source code for this site](https://github.com/DreamingInBinary/Swiftjective-C){:target="_blank"} is available there for collaboration and learning purposes. It's free to use and to change however you wish.
 
 [Fathom](https://usefathom.com){:target="_blank"} is used for analytics, and it has an emphasis on respecting user privacy. It shows just what I need, and nothing more.
-
-Finally, accessibility is extremely important to me. If you spot anything off or have any suggestions to improve this site's accessibility, please get in touch. Additionally, feel free to open an issue or create a pull request.

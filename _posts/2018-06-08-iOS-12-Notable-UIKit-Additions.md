@@ -151,7 +151,7 @@ Personally, I came away more impressed than I thought I would be with iOS 12. In
 
 But, as is typical, W.W.D.C. brought some new stuff we weren't expecting, hardening updates and most importantly the new APIs. Exciting times, plus — our apps are just better by virtue of simply running on the new OS. UIKit will always be at the forefront, and this year was no exception as there's still plenty of discussions left to be had around this year's improvements.
 
-Saddle up 📱
+Until next time ✌️.
 
 [1]: https://developer.apple.com/videos/play/wwdc2018/202/
 [2]: https://twitter.com/_inside/status/1003831980025372673

@@ -113,7 +113,7 @@ As I positied in one of [my more popular articles a few years ago][2], Objective
 
 And now, here we are, with Objective-C getting in on the fun now. #DinosaurNotDead, am I right?
 
-Until next time ✌️
+Until next time ✌️.
 
 [1]: https://developer.apple.com/videos/play/wwdc2017/244/
 [2]: {{ site.url | append:"/objective-c-in-2015"}}

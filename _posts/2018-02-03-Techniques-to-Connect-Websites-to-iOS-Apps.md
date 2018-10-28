@@ -238,7 +238,7 @@ The lot of us craft software for our 9–5 and craft software to scratch our own
 
 Things like this are almost like the chore list for iOS engineers. We may not think about them first, we may not wake up to crank out config files — but hey, they can help our endgame and move the needle towards exposure. So why not?
 
-Until next time ✌️
+Until next time ✌️.
 
 [1]: {{ site.url | append:"/swift-javascript" }}
 [2]: http://ogp.me

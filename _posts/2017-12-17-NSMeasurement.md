@@ -201,7 +201,7 @@ While the rest of the world embraces the metric system, here I am sticking out l
 
 Let's all aspire to not be that app that delivers the wrong units, or incorrect measurements, in our own software. Foundation has us covered.
 
-Until next time ✌️
+Until next time ✌️.
 
 [1]: https://developer.apple.com/documentation/foundation/measurementformatter
 

@@ -185,9 +185,12 @@ Of note, Bash alias' don't have the luxury of accepting parameters. If you yearn
 
 While command line utilities aren't the heroes of iOS development, it cannot be argued that they are indeed useful. Bolstering our tool belt as software engineers cannot be understated. Much like buying insurance, it's not so incredible day in and day out — until the day comes when you really need it.
 
-Until next time friends, I'm off to…
+Now, if you'll excuse me, I'm off to…
 ```swift
 xcrun simctl openurl N789YE9Q-3TSV-9083-B314-A3NBS64GOP90 http://bit.ly/weekend_planz
 ```
+
+Until next time ✌️.
+
 [1]: https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html
 [2]: http://ericasadun.com/2014/06/18/ios-8-building-custom-simulators/

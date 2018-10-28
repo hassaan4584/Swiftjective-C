@@ -213,6 +213,6 @@ Replacing the code that kinda just works with the code that's more recent and su
 
 Maybe it should be, as is the case with `UIGraphicsImageRenderer`. You likely won't have to twist many arms to persuade iOS engineers to make the switch, "No ✋ — I don't want block based, automatically color managed, extensible drawing code that already manages its context lifetime — that's awful" said…..nobody?
 
-Until next time, may your drawing exploits with `UIGraphicsImageRenderer` be many and productive 📸.
+Until next time ✌️.
 
   

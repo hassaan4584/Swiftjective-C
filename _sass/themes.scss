@@ -9,6 +9,7 @@
      -moz-osx-font-smoothing: grayscale;
      -moz-font-feature-settings: "liga"on;
      border-bottom: 5px solid $secondary-color;
+     margin:0;
  }
 
  /* Links
@@ -118,7 +119,7 @@
      }
 
      blockquote {
-         padding: 0;
+         margin: 0;
      }
 
  }

@@ -46,7 +46,7 @@ I eventually opted to move things over here for a few reasons:
 - I wanted to host and truly own my own content.
 - And I wanted to dip back into some web development.
 
-Motivation to write about iOS development and create a dedicated space for it stemmed from a few things: 
+In terms of my motivation to write about iOS development and create a dedicated space for it:
 
 - I have a natural love of writing, and doing so scratches an itch that's otherwise left untouched. 
 - Sharing knowledge, what I know and what I hope to learn is also built into my ethos. It's rewarding, I get to meet other developers and hopefully it's helpful. 

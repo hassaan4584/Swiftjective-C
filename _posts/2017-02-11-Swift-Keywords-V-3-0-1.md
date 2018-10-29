@@ -15,7 +15,7 @@ Some are obvious, some are obscure and some are sorta(ish) recognizable but they
 
 Lets.Dance(.rightNow)
 
-#### Declaration Keywords
+### Declaration Keywords
 
 **`associatedtype`**: Gives a placeholder name to a type that is used as part of a protocol. The type is not specified until the protocol is adopted.
 ```swift
@@ -258,7 +258,7 @@ func parseJSON(_ deserializedData:JSONDictionary){}
 var mutableString = ""  
 mutableString = "Mutated"
 ```
-#### Keywords in Statements
+### Keywords in Statements
 
 **`break`** : Ends program execution of a loop, an `if` statement, or a `switch` statement.
 ```swift
@@ -463,7 +463,7 @@ while foo != bar
     print("Keeps going until the foo == bar")  
 }
 ```
-#### Expressions and Types Keywords
+### Expressions and Types Keywords
 
 **`Any`** : Can be used to represent an instance of any type at all, including function types.
 ```swift
@@ -675,7 +675,7 @@ let aResult = try dangerousFunction() //Handle it, or propagate it
 let aResult = try! dangerousFunction() //This could trap  
 if let aResult = try? dangerousFunction() //Unwrap the optional
 ```
-#### Keywords Using Patterns
+### Keywords Using Patterns
 
 **_** : A wilcard pattern that matches and ignores any value.
 ```swift
@@ -688,7 +688,7 @@ another use
 ```swift
 let _ = Singleton() //Ignore value or unused variable
 ```
-#### Keywords Using #
+### Keywords Using #
 
 **#available**: A condition of an `if`, `while`, and `guard` statement to query the availability of APIs at runtime, based on specified platforms arguments.
 ```swift
@@ -808,7 +808,7 @@ print(#line)
 print(#file)  
 print(#line)
 ```
-#### Keywords For Specific Context(s)
+### Keywords For Specific Context(s)
 
 > These keywords can actually be used as identifiers if they are used outside of their respective contexts.
 

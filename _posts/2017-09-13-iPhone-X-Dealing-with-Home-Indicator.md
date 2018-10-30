@@ -1,13 +1,13 @@
 ---
 layout: post
-tags: ["Misc"]
+tags: ["UIKit"]
 title: "Dealing with Home Indicator"
 author: Jordan Morgan
 description: "View Controllers are notorious for the amount of responsibilities they have, but get ready for one more. Here's how to handle the home indicator."
 image: /assets/images/logo.png
 special: "true"
 ---
-In a move that, well, [everyone saw coming][1] — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button.
+In a move that, well, [everyone saw coming][1] — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button. Not long after, almost every modern iOS device released afterwards also followed suit.
 
 To consumers it means a beautiful new marvel of both hardware and software to throw some dollars at come pre order time. To a lot of developers, it meant _what am I supposed do what that thing? _The answer, thankfully, is quite simple.
 
@@ -22,7 +22,7 @@ It's not everyday we get new videos alongside a hardware announcement, and yet t
 In "[Designing for iPhone X][2]", long tenured Apple design guru Mike Stern lays down some ground rules. All things being equal, before you utilize the new functions below it's incumbent that you pump the brakes first to see if your use case fits the bill.
 
 * Try to avoid interactive controls near the home indicator, especially those driven via gesture recognizers.
-* Don't hide the indicator, add any adornments around it or generally attempt to change its appearance. Same goes for the camera bezel that's planted at the top of iPhone X.
+* Don't hide the indicator, add any adornments around it or generally attempt to change its appearance. Same goes for the camera bezel that's planted at the top of iPhone X, iPhone XS, etc.
 * Typically you don't want to hide the home indicator unless you've got a passive viewing experience (i.e. videos, photo slideshow, etc.).
 
 **TL;DR** — Apple says leave the poor indicator alone. Most of the time.
@@ -160,8 +160,6 @@ That's a great point.
 
 [Much like how the notch is more than a notch][5], and almost closer to part of the hardware and iPhone brand recognition, I think the software equivlant of that is the home indicator. It's part of its DNA, and additionally I'm betting Apple's thinking is that its prescence instills user confidence in the UX. It avoids the "Wait why is that gone now? When does it show? When does it hide? Can I still go back home now that it's now showing?" kind of things.
 
-That said, I do agree with you — it's constant prescence seems a bit much, but I've yet to use an iPhone X in person so I'll reserve judgement until then 🙂.
-
 [**Will Kampmann**][6] **asks:**
 
 > Do you know what will happen in full-screen apps like games? Will this home handle be invoked by two swipes like the notification and control centers are on normal iPhones?
@@ -178,7 +176,7 @@ override func preferredScreenEdgesDeferringSystemGestures() -> UIRectEdge {
 ```
 ### Wrapping Up
 
-Ah, iPhone X considerations.
+Ah, notch considerations.
 
 Is it solely giggles and smiles for iOS engineers, or yet another view controller consideration to maintain and code against? Possibly a mix of the two. If time has taught us anything in the continuum of software development, it's that time elapsed + an ecosystem = new APIs. In today's smartphone landscape, it's a little more realistic to say time elapsed + Apple's ecosystem = new hardware = new APIs.
 

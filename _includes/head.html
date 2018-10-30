@@ -5,20 +5,20 @@
     <meta name="revisit-after" content="7 days" />
     <meta name="msapplication-TileColor" content="#70A2F9" />
     <meta name="theme-color" content="#70A2F9" />
-    <meta name="description" content="{{ site.config.description }}"/>
     <link rel="shortcut icon" type="image/png" href="{{ site.url | append:/favicon.ico}}">
-    <title>{{ page.title }}</title>
     {% if layout.title == 'default' %}
-        <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     {% elsif layout.title == 'about' %}
-        <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="stylesheet" href="/assets/css/about.css">
     {% elsif layout.title == 'post' %}
-        <link rel="stylesheet" href="/assets/css/post.css">
-        <link rel="stylesheet" href="/assets/css/monokai.css">
+    <meta name="twitter:data1" content="Read Time" />
+    <meta name="twitter:label1" content="{% include readTime.html %}" />
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/monokai.css">
     {% endif %}
     {% feed_meta %}
     {% json_feed_meta %}
     {% seo %}
-    <meta name="twitter:title" content="{{ page.title }}"/>
-    <meta name="twitter:description" content="{{ page.description }}"/>
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.description }}" />
 </head>

@@ -7,9 +7,9 @@ description: "View Controllers are notorious for the amount of responsibilities 
 image: /assets/images/logo.png
 special: "true"
 ---
-In a move that, well, [everyone saw coming][1] — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button. Not long after, almost every modern iOS device released afterwards also followed suit.
+In a move that, well, [everyone saw coming][1] — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button. Less than a year later, almost every modern iOS device released post iPhone X also followed suit.
 
-To consumers it means a beautiful new marvel of both hardware and software to throw some dollars at come pre order time. To a lot of developers, it meant _what am I supposed do what that thing? _The answer, thankfully, is quite simple.
+To consumers each new "notched" iOS device announced means a beautiful new marvel of both hardware and software to throw some dollars at come pre order time. But to a lot of developers, it initially meant _what am I supposed do what that thing_? The answer, thankfully, is quite simple.
 
 This week, we'll look at what Apple has supplied us with to handle the home indicator.
 

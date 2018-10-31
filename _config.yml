@@ -14,7 +14,7 @@ defaults:
       image: true
 twitter:
   username: jordanmorgan10
-  card: summary
+  card: summary_large_image
 facebook:
   publisher: alpha10david
 logo: /assets/images/logo.png

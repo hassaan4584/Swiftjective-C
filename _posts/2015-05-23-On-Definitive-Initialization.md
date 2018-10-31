@@ -3,7 +3,7 @@ layout: post
 tags: ["Swift"]
 title: "Definitive Initialization"
 author: Jordan Morgan
-description: "Now that WWDC is here, let's start a new annual tradition. It's time for the very first WWDC Pregame Quiz."
+description: "Swift goes to great lengths to ensure values are initialized before they are used. The reasons how vary from API design to the way LLVM works - let's chat about this process called definitive initialization."
 image: /assets/images/logo.png
 ---
 Swift might as well proclaim that phrase within its documentation. Optionals and the enforcement of assignment in the name of safety is a departure from Objective-C. If there is not a value for a variable — you make one.

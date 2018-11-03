@@ -6,7 +6,11 @@ description: >
   houses tactful discussions over Swift, Objective-C and developing high
   quality apps while peering into various frameworks to see what makes
   them tick.
+url: https://SwiftjectiveC.com
 permalink: /:title/ 
+author:
+  twitter: jordanmorgan10
+  picture: /assets/images/about/headshot.jpeg
 defaults:
   - scope:
       path: "assets/images"

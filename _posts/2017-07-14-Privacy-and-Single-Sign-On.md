@@ -46,7 +46,7 @@ public typealias CompletionHandler = (URL?, Error?) -> Swift.Void
 public struct SFAuthenticationError
 ```
 
-Easily understanding it from nothing more than a glimpse is an accomplishment in of itself, as its [masking quite a workflow][2] under the hood for iOS developers. Further, there's _only _a few places OAuth is used, as outlined by [OAuthSwift][3]'s readme…
+Easily understanding it from nothing more than a glimpse is an accomplishment in of itself, as its [masking quite a workflow][2] under the hood for iOS developers. Further, there's _only_ a few places OAuth is used, as outlined by [OAuthSwift][3]'s readme…
 
 - Twitter
 - Flickr
@@ -186,7 +186,7 @@ Lastly, it's worth noting that SFAuthenticationSession conforms to Equatable, Ha
 
 ### Wrapping Up
 
-What a little emotional rollercoaster gave us free passes to. They cold clocked us by taking away one of safari view controller's best parts, and then led us to believe that was it. Apple gon' Apple.
+What a little emotional rollercoaster Apple gave us free passes to. They cold clocked us by taking away one of safari view controller's best parts, and then led us to believe that was it. Apple gon' Apple.
 
 But then they hit us back with a mea culpa on beta 3, dropping an API that makes OAuth easier on us and effortless for the end user. Bravo.
 

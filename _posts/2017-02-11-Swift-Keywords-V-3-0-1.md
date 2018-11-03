@@ -233,7 +233,8 @@ Person.assignRandomName(somePerson)
 
 * Use inheritance.
 * Allow type casting at runtime.
-* Have, or use, deinitializers.
+* Have, or use, deinitializers.<br />
+
 ```swift
 struct Person  
 {  
@@ -248,11 +249,13 @@ var postMetrics = ["Likes":422, "ReadPercentage":0.58, "Views":3409]
 let postLikes = postMetrics["Likes"]
 ```
 **`typealias`** : Introduces a named alias of an existing type into your program.
+
 ```swift
 typealias JSONDictionary = [String: AnyObject]
 
 func parseJSON(_ deserializedData:JSONDictionary){}
 ```
+
 **`var`** : Defines a variable as mutable.
 ```swift
 var mutableString = ""  

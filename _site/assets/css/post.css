@@ -112,6 +112,15 @@ div.jekyll-twitter-plugin {
   padding-bottom: 16px;
   width: 500px; }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  margin-bottom: 32px; }
+
 /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 600px and down) */

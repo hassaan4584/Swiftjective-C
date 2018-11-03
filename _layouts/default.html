@@ -37,7 +37,8 @@ permalink: /
                 {% for tag in site.tags %}
                 <h3 class="tagHeader">{{ tag[0] }}</h3>
                 <ul>
-                    {% for post in tag[1] %}
+                    {% assign alphaPosts = tag[1] | sort_natural: "title" %}
+                    {% for post in alphaPosts %}
                     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
                 </ul>

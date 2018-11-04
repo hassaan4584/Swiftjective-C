@@ -1,5 +1,191 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-02T21:19:20-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-03T22:44:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Supporting External Displays</title><link href="http://localhost:4000/supporting-external-displays/" rel="alternate" type="text/html" title="Supporting External Displays" /><published>2018-11-03T00:00:00-05:00</published><updated>2018-11-03T00:00:00-05:00</updated><id>http://localhost:4000/supporting-external-displays</id><content type="html" xml:base="http://localhost:4000/supporting-external-displays/">&lt;p&gt;Cupertino &amp;amp; Friends© are, if anything, purposeful.&lt;/p&gt;
+
+&lt;p&gt;When ensuring iOS icons would be nothing short of flawless, it’s been said that Scott Forstall kept a jeweler’s loupe in his office to check that each pixel on &lt;em&gt;every&lt;/em&gt; icon was exemplary. Talk about “pixel perfect”. The man himself apparently even &lt;a href=&quot;https://www.businessinsider.com/steve-jobs-attention-to-detail-2011-10#when-he-was-hospitalized-he-rejected-masks-because-they-were-ugly-8&quot;&gt;debated the shade of grey&lt;/a&gt; that should be used for the Apple Store’s…..&lt;em&gt;bathroom signs&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If we are to believe that no one single act is executed without astute purpose from Apple, we then must pay attention to the once puzzling introduction to WWDC 18’s session, &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2018/233/&quot;&gt;“Adding Delight to your iOS App”&lt;/a&gt;, which began covering supporting external displays. Why spend time going over an API that hasn’t seen significant changes circa 2011?&lt;/p&gt;
+
+&lt;p&gt;It seemed like the session was being conducted by a preacher with no pulpit. However, with the recently announced iPad Pro sporting USB-C and Thunderbolt 3 capabilities, the missing context is now present. Today, let’s talk about supporting external displays in our iOS apps.&lt;/p&gt;
+
+&lt;h3 id=&quot;window-quotes&quot;&gt;Window Quotes&lt;/h3&gt;
+&lt;p&gt;It all begins with a homologically titled object in UIKit, the &lt;code class=&quot;highlighter-rouge&quot;&gt;UIWindow&lt;/code&gt;, and respecting the responsibilities that it represents. At its core, a window acts as a container for anything that should be on screen. We often don’t think of it much beyond its initial setup within the app delegate:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIApplication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;didFinishLaunchingWithOptions&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;launchOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIApplicationLaunchOptionsKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]?)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;controller&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;makeKeyAndVisible&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If your app uses storyboards, the above is done for you. This is one reason why Xcode templates its app delegate objects with a &lt;code class=&quot;highlighter-rouge&quot;&gt;UIWindow&lt;/code&gt; property.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With that, we end up with a hierarchy that is stacked up like so, from bottom to top:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Device&lt;/li&gt;
+  &lt;li&gt;Window&lt;/li&gt;
+  &lt;li&gt;View (from the window’s root controller)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Typically, it’s fine to move on and not think much about it. A window won’t do anything more than pass on any relevant events to its root controller (which in turn travels the down responder chain with its associated views). It provides no visible content of its own, merely acting as a harbinger of sorts for things happenings that would affect its root controller.&lt;/p&gt;
+
+&lt;p&gt;But its utility lies in the fact that your iOS app can break free from the confines of an any iPhone or iPad (…or iPod touch, I guess) by way of being connected to another display.&lt;/p&gt;
+
+&lt;p&gt;And Apple &lt;em&gt;really&lt;/em&gt; wants us to know that the new iPad Pro is ready for such occasions. By default, when iOS detects another screen UIKit will mirror the key window’s contents. But, look at the marketing for the Pro:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/lookNewScreen.jpg&quot; alt=&quot;External Display&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you inspect the image closer you’ll notice that what’s showing on the monitor versus what’s on the iPad are &lt;em&gt;different&lt;/em&gt;. &lt;strong&gt;This&lt;/strong&gt; is the opportunity Apple wants developers to be aware of. Let’s walk through it.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-setup&quot;&gt;The Setup&lt;/h3&gt;
+&lt;p&gt;When thinking about how to be a first class citizen for supporting external displays, there really isn’t much involved from an engineering perspective. In the aforementioned WWDC session, three main concerns are laid out:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Connectivity: Handling the presence of another display.&lt;/li&gt;
+  &lt;li&gt;Behavior: How your app should respond to that connection.&lt;/li&gt;
+  &lt;li&gt;Connection Transitions: Handling the removal of another display.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;connectivity&quot;&gt;Connectivity&lt;/h3&gt;
+&lt;p&gt;The first logical step is to be aware of when one should prepare interfaces for an external display. UIKit offers us two discrete responsibilities to consider. The first is the &lt;code class=&quot;highlighter-rouge&quot;&gt;UIScreen&lt;/code&gt; singleton, which has an array of screens the app is tracking:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;screens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScreen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is where we can snag a reference to the screen we need. In addition to housing a controller and its views, &lt;code class=&quot;highlighter-rouge&quot;&gt;UIWindow&lt;/code&gt; also has an assignable &lt;code class=&quot;highlighter-rouge&quot;&gt;UIScreen&lt;/code&gt; property. With it, we can control which screen each window should display its contents on.&lt;/p&gt;
+
+&lt;p&gt;The process looks similar to the following:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;externalScreen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIScreen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screens&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;last&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;externalWindow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;externalWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;externalScreen&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;externalWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;externalWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isHidden&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;By default, a window’s screen property is set to the hardware’s current screen. For a window that’ll show unique content on an external display, set it before you show the window as switching screens on an already displayed window carries significant performance costs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s at this point that you’d want to supply the relevant content to the new window’s &lt;code class=&quot;highlighter-rouge&quot;&gt;rootViewController&lt;/code&gt; property. So, for the image above showing the iPad Pro, Apple has created a controller that just shows the primary content and not the editing tools below it (as on the iPad’s screen).&lt;/p&gt;
+
+&lt;p&gt;The execution is easy to follow, but knowing when to do the work above is accomplished by way of Cocoa Touch’s oldest broadcasting network - &lt;code class=&quot;highlighter-rouge&quot;&gt;NSNotification&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In particular, there are two:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSNotification.Name.UIScreenDidConnect&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSNotification.Name.UIScreenDidDisconnect&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you were wondering why we set the &lt;code class=&quot;highlighter-rouge&quot;&gt;screen&lt;/code&gt; property on the window to the last instance in the array, this is why. That code should be responding to first notification above, thus indicating to us that the last screen is the external display we’re after:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScreenDidConnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connectNotice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;extScreen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as!&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIScreen&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;extScreenBounds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extScreen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bounds&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// Our unique content&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extScreenBounds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extScreen&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rootViewController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isHidden&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The flip side looks about the same, except undoing all of the fine work you did above:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScreenDidDisconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disconnectNotice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;extScreen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as!&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIScreen&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extScreen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt; 
+   &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hidden&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Disconnects are trivial to handle, due to the fact that UIKit bears most of the burden. Simply assigning &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; to your window’s &lt;code class=&quot;highlighter-rouge&quot;&gt;hidden&lt;/code&gt; hidden property and nilifying (nillifying, nil-lify, nillin’?) the instance tears everything down. No other tomfoolery required.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus Points - Screen Resolution&lt;/strong&gt; &lt;br /&gt;
+It’s not too uncommon for screens, especially external ones, to change their resolution. Consider dual monitors connected to a mac; I often pop into display preferences to make things look just how I want. The process of doing so always ensures that the scale, transforms and general look of every interface currently open immediately looks like they just dropped 14 pounds of acid.&lt;/p&gt;
+
+&lt;p&gt;To ensure a drug free interface, opt to respond to &lt;code class=&quot;highlighter-rouge&quot;&gt;UIScreenModeDidChangeNotification&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScreenModeDidChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modeNotice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;extScreen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;modeNotice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIScreen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extScreen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extWindow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screen&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;layoutSubviews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;behavior&quot;&gt;Behavior&lt;/h3&gt;
+&lt;p&gt;It’s important to note that whatever you’re planning on displaying on the screen won’t be directly interactive. All of that interactivity will still be driven by the iOS device. This means that you’ll want to set things up accordingly, likely reserving all this new screen real estate to display the marquee parts of your content.&lt;/p&gt;
+
+&lt;p&gt;The reason why is simple - the external display likely won’t have touch controls. I say likely because, to wit, the only way I suppose it &lt;em&gt;could&lt;/em&gt; is if it’s another iOS device using external display software.&lt;/p&gt;
+
+&lt;p&gt;Unlikely edge case notwithstanding, the main idea is that it’s a giant projected display, so treat it like one:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;extDisplayShowing&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;presentContentOnExternalDisplay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentDisplayController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIContentDisplayViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pushViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentDisplayController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The paradigm is different. This is your chance to show off the most important, public components of your content while ensuring control of said content stays snuggly nestled within the iOS device.&lt;/p&gt;
+
+&lt;h3 id=&quot;connection-transitions&quot;&gt;Connection Transitions&lt;/h3&gt;
+&lt;p&gt;The last piece laid out by the fine engineers of Cupertino during the session was this idea of “connection transitions”, but really it’s chiefly concerned with the first step.&lt;/p&gt;
+
+&lt;p&gt;Essentially, as iOS engineers there is one thing we must always strive to keep for users: context.&lt;/p&gt;
+
+&lt;p&gt;It’s incredibly frustrating to use an app that doesn’t respect it. Tap a row with a disclosure indicator, and instead of pushing onto the navigation stack you get some off beat modal transition. Or if there is a side menu, tapping it &lt;em&gt;does&lt;/em&gt; do a push. It’s weird, and you know it when you see it. Ambiguity in software is inherently taxing to the end user, so it’s best to avoid it.&lt;/p&gt;
+
+&lt;p&gt;When you receive a connect or disconnect notice, strive to keep the current context and flow of your app maintained. For our example above, it might look  something like this :&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScreenDidDisconnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;disconnectNotice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentDisplayController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIContentDisplayViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pushViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentDisplayController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;NotificationCenter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addObserver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScreenDidConnect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connectNotice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;nf&quot;&gt;presentContentOnExternalDisplay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If your app is suspended when a notification arrives, UIKit delivers it when your app begins running again.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s about thinking of any context that &lt;em&gt;could&lt;/em&gt; be lost from any of these transitions that should later be restored. So, be thinking about currently selected index paths, selected content or view hierarchies that you might need to do some bookkeeping for to later restore.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-and-why&quot;&gt;When, and Why&lt;/h3&gt;
+&lt;p&gt;To me, real craftsmanship shows through when external display support is provided in a way that, forgive my stereotypical phrase - truly enhances the app’s experience.&lt;/p&gt;
+
+&lt;p&gt;Think of Keynote. The iOS app can turn into a clicker to present the slides, or a game that houses controls locally on the phone but projects meaningful game play on your giant TV. External display support really shines here - whereas an app like &lt;a href=&quot;https://www.streaksworkout.com&quot; target=&quot;_blank&quot;&gt;Streaks Workout&lt;/a&gt; does just fine with mirroring its contents. It doesn’t stand to gain anything by providing any other support to external displays.&lt;/p&gt;
+
+&lt;p&gt;It’s a matter of real life access control. Public or private. Your iOS device is almost always private. All of us get a little nervous when projecting it onto a huge screen in the office to show just that &lt;em&gt;one&lt;/em&gt; picture. But like programming, we must consider context. The external display is public - so ask yourself what your app might stand to gain, if anything, by making content publicly shown that’s entirely unique to its display.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;If hipster culture has taught us anything, perhaps its unintentional wisdom shows us that sometimes what’s old is new again. Supporting external windows doesn’t require any shiny new API, and the process of how to do it isn’t lighting up your Twitter feed.&lt;/p&gt;
+
+&lt;p&gt;But the core ethos of iOS development is marrying hardware with software, and promoting their tight coupling with startlingly efficient execution. So I would submit to you, supporting and coding against external display support is absolutely nothing new - but it is more &lt;em&gt;relevant&lt;/em&gt; to us than it was before &lt;a href=&quot;https://www.apple.com/newsroom/2018/10/new-ipad-pro-with-all-screen-design-is-most-advanced-powerful-ipad-ever/&quot;&gt;Apple’s event&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">Cupertino &amp;amp; Friends© are, if anything, purposeful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
 
 &lt;p&gt;The translation from the analog to the digital was an inflection point. We’ve experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;.&lt;/p&gt;
 
@@ -1581,184 +1767,4 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;Now, they can. And they don’t have to do any funky dances to do it.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Device Check" /><summary type="html">Each WWDC, there is always the obscure API that finds its way into the annual “word bubble” slide of new toys for developers to use. Faintly sitting there, it stands to reason that Apple considers it a useful addition that only the few, and not the many, will use.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Dealing with Home Indicator</title><link href="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/" rel="alternate" type="text/html" title="Dealing with Home Indicator" /><published>2017-09-13T00:00:00-05:00</published><updated>2017-09-13T00:00:00-05:00</updated><id>http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator</id><content type="html" xml:base="http://localhost:4000/iPhone-X-Dealing-with-Home-Indicator/">&lt;p&gt;In a move that, well, &lt;a href=&quot;https://daringfireball.net/linked/2017/09/10/bbc-confirmation&quot;&gt;everyone saw coming&lt;/a&gt; — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button. Less than a year later, almost every modern iOS device released post iPhone X also followed suit.&lt;/p&gt;
-
-&lt;p&gt;To consumers each new “notched” iOS device announced means a beautiful new marvel of both hardware and software to throw some dollars at come pre order time. But to a lot of developers, it initially meant &lt;em&gt;what am I supposed do what that thing&lt;/em&gt;? The answer, thankfully, is quite simple.&lt;/p&gt;
-
-&lt;p&gt;This week, we’ll look at what Apple has supplied us with to handle the home indicator.&lt;/p&gt;
-
-&lt;h3 id=&quot;but-first&quot;&gt;But First&lt;/h3&gt;
-
-&lt;p&gt;It’s not everyday we get new videos alongside a hardware announcement, and yet that’s exactly what happened shortly thereafter:&lt;/p&gt;
-
-&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;14 NEW Apple Developer Videos 📲 LIVE NOW &lt;a href=&quot;https://twitter.com/hashtag/WWDCApp?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#WWDCApp&lt;/a&gt; and &lt;a href=&quot;https://t.co/4rSiM9gd1W&quot;&gt;https://t.co/4rSiM9gd1W&lt;/a&gt; 👈 &lt;a href=&quot;https://twitter.com/hashtag/AppleTV4K?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AppleTV4K&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/iOS11?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#iOS11&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/AppleWatchSeries3?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AppleWatchSeries3&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/ARKit?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ARKit&lt;/a&gt; &lt;a href=&quot;https://twitter.com/hashtag/AppleEvent?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#AppleEvent&lt;/a&gt; &lt;a href=&quot;https://t.co/KkurLDxKNm&quot;&gt;pic.twitter.com/KkurLDxKNm&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lauren Strehlow (@laurenstrehlow) &lt;a href=&quot;https://twitter.com/laurenstrehlow/status/907683394485575680?ref_src=twsrc%5Etfw&quot;&gt;September 12, 2017&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In “&lt;a href=&quot;https://developer.apple.com/videos/play/fall2017/801/&quot;&gt;Designing for iPhone X&lt;/a&gt;”, long tenured Apple design guru Mike Stern lays down some ground rules. All things being equal, before you utilize the new functions below it’s incumbent that you pump the brakes first to see if your use case fits the bill.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Try to avoid interactive controls near the home indicator, especially those driven via gesture recognizers.&lt;/li&gt;
-  &lt;li&gt;Don’t hide the indicator, add any adornments around it or generally attempt to change its appearance. Same goes for the camera bezel that’s planted at the top of iPhone X, iPhone XS, etc.&lt;/li&gt;
-  &lt;li&gt;Typically you don’t want to hide the home indicator unless you’ve got a passive viewing experience (i.e. videos, photo slideshow, etc.).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt; — Apple says leave the poor indicator alone. Most of the time.&lt;/p&gt;
-
-&lt;p&gt;But, this post is about the other times 😉.&lt;/p&gt;
-
-&lt;h3 id=&quot;uiviewcontroller-additions&quot;&gt;UIViewController Additions&lt;/h3&gt;
-
-&lt;p&gt;Whether you adore handling the status bar on a per controller basis or it was pure anathema to you, Apple has continued the trend of making such decisions on an instance by instance basis rather than opting for a global catch all design.&lt;/p&gt;
-
-&lt;p&gt;Hiding the home indicator works essentially the same way status bar handling does:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prefersHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;As mentioned, such scenarios are meant to be the outlier, and as such the default implementation returns false. There is, however, a particular comment in the documentation:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The system takes your preference into account, but returning &lt;code class=&quot;highlighter-rouge&quot;&gt;YES&lt;/code&gt; is not a guarantee that an indicator will be hidden.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There doesn’t appear to be any mention of why or when UIKit would not respect your chosen preference, though it stands to reason that Apple will enforce what it thinks is best, when it thinks it’s best — boolean values regardless. So, that should make for some fun Stack Overflow posts.&lt;/p&gt;
-
-&lt;p&gt;¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯.&lt;/p&gt;
-
-&lt;p&gt;Also, this may seem obvious but could be a source of initial confusion. Take particular mention to the fact that the function’s name ends with &lt;em&gt;autoHidden&lt;/em&gt; and not &lt;em&gt;hidden&lt;/em&gt;, which is to say that returning true from here means that UIKit will hide the indicator when it’s good and ready (normally, if the controller doesn’t receive any touch events across the span of a few seconds), &lt;em&gt;not&lt;/em&gt; immediately.&lt;/p&gt;
-
-&lt;h3 id=&quot;signaling-uikit&quot;&gt;Signaling UIKit&lt;/h3&gt;
-
-&lt;p&gt;Continuing with the status bar API parallels, simply overriding, or assigning to a variable conditionally controlling the overriden function, is not enough. We’ve yet another new addition to view controller’s robust family of setNeedsSomethingDone functions:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;shouldHideHomeIndicator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prefersHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shouldHideHomeIndicator&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    
-    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shouldHideHomeIndicator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This acts as a pass through function, as it simply signals to UIKit that we’ve changed the previous value selected for home indicator visibility. Unlike the status bar, though, this isn’t &lt;em&gt;technically&lt;/em&gt; animatable since UIKit hides it on its own accord. So, code like this has no effect:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidAppear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-    &lt;span class=&quot;kt&quot;&gt;DispatchQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;asyncAfter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;deadline&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;               
-        &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shouldHideHomeIndicator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
-        &lt;span class=&quot;kt&quot;&gt;UIView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;animate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withDuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-            &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-            &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;  
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;A simple assignment and a call to &lt;code class=&quot;highlighter-rouge&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden()&lt;/code&gt; will perform a slight alpha fade regardless of whether or not its included within an animation block.&lt;/p&gt;
-
-&lt;h3 id=&quot;container-controllers&quot;&gt;Container Controllers&lt;/h3&gt;
-
-&lt;p&gt;The last new addition to view controller is a mechanism to inform UIKit if a child view controller should dictate home indicator’s visibility or not. If you’ve been around iOS long enough, you’ve likely harnessed container view controllers to better promote abstractions and encapsulation patterns.&lt;/p&gt;
-
-&lt;p&gt;These contained controllers might find themselves well near the bottom of the screen, and if so — you may want the home indicator to leave you alone. A simple override returning the instance that’s obscured, or is doing the obscuring, addresses the issue:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;childViewControllerForHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myChildController&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;If you do indicate that a child controller should dictate visibility, it’s also its responsibility to override the function we previously discussed:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MyChildViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;prefersHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The function’s signature allows for a nil return value. If that’s the case, UIKit will look to the current controller to make decisions here — and if you’ve opted to not override that function, that decision will be “Show the home indicator”.&lt;/p&gt;
-
-&lt;p&gt;As this can also be a runtime decision, UIKit will again request that you invoke its pass through function we just touched on to inform the framework it should query &lt;code class=&quot;highlighter-rouge&quot;&gt;prefersHomeIndicatorAutoHidden()&lt;/code&gt; once more:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;childViewControllerForHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myChildController&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initializeChildController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;n&quot;&gt;myChildController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MyChildController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setNeedsUpdateOfHomeIndicatorAutoHidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And that’s it.&lt;/p&gt;
-
-&lt;p&gt;Though one could view this as more thought process that will need to be applied to an everyday iOS occurrence (i.e. handling controllers), you’ll find the API nearly identical to existing UIKit functions that handle similar problems.&lt;/p&gt;
-
-&lt;h3 id=&quot;update-answers-to-reader-questions&quot;&gt;Update: Answers to Reader Questions&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@fabiankuenzel&quot;&gt;&lt;strong&gt;Fabian Kuenzel&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;asks:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Will the new home indicator also be laying on top of the bottom navigation of websites?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Answers to that are detailed &lt;a href=&quot;https://webkit.org/blog/7929/designing-websites-for-iphone-x/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;I’m not a web dev afifcionado these days, but there appears to be a meta tag that handles automatic insets:&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'viewport'&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'initial-scale=1, viewport-fit=auto'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The default value is &lt;em&gt;auto&lt;/em&gt;, which should inset content — though you can override it to &lt;em&gt;cover&lt;/em&gt; which covers the whole viewport. Though, if you should opt to take the whole screen, a new CSS function, constant(), allows you to use pre-defined constants to put padding around elements that respect the safe area. This is akin to iOS’ safeAreaLayoutGuide API.&lt;/p&gt;
-
-&lt;p&gt;An example from their post:&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.post {  
-    padding: 12px;  
-    padding-left: constant(safe-area-inset-left);  
-    padding-right: constant(safe-area-inset-right);  
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@x0054&quot;&gt;&lt;strong&gt;Bogdan&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;had more of a philosophical observation:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I don’t understand why Apple didn’t just leave the home indicator off by default, or at least give the user an option to turn it off. It’s a nice feature to introduce new users to the phone, but eventually (like 10 minutes into using the phone) everyone will remember how to switch apps, and then it’s just an annoying and distracting bar. Am I missing something?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That’s a great point.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://marco.org/2017/09/18/courage&quot;&gt;Much like how the notch is more than a notch&lt;/a&gt;, and almost closer to part of the hardware and iPhone brand recognition, I think the software equivlant of that is the home indicator. It’s part of its DNA, and additionally I’m betting Apple’s thinking is that its prescence instills user confidence in the UX. It avoids the “Wait why is that gone now? When does it show? When does it hide? Can I still go back home now that it’s now showing?” kind of things.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@willikampmann&quot;&gt;&lt;strong&gt;Will Kampmann&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;asks:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Do you know what will happen in full-screen apps like games? Will this home handle be invoked by two swipes like the notification and control centers are on normal iPhones?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There is an API to override this behavior, but Apple would really, really, &lt;em&gt;really&lt;/em&gt; like you not to. The one use case they mention where you might? Full screen games. Here’s the Human Interface Guidelines on the matter:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In rare cases, immersive apps like games might require custom screen-edge gestures that take priority over the system’s gestures — the first swipe invokes the app-specific gesture and a second-swipe invokes the system gesture.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It’s a simple override on any view controller:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;preferredScreenEdgesDeferringSystemGestures&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIRectEdge&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;top&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;Ah, notch considerations.&lt;/p&gt;
-
-&lt;p&gt;Is it solely giggles and smiles for iOS engineers, or yet another view controller consideration to maintain and code against? Possibly a mix of the two. If time has taught us anything in the continuum of software development, it’s that time elapsed + an ecosystem = new APIs. In today’s smartphone landscape, it’s a little more realistic to say time elapsed + Apple’s ecosystem = new hardware = new APIs.&lt;/p&gt;
-
-&lt;p&gt;We made it through a taller iPhone. We pushed on through different resolutions. We can handle a small camera nub in navigation bars and a little 2 point bar near the bottom bezel too 💪.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">In a move that, well, everyone saw coming — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button. Less than a year later, almost every modern iOS device released post iPhone X also followed suit.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Device Check" /><summary type="html">Each WWDC, there is always the obscure API that finds its way into the annual “word bubble” slide of new toys for developers to use. Faintly sitting there, it stands to reason that Apple considers it a useful addition that only the few, and not the many, will use.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

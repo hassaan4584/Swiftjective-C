@@ -54,7 +54,7 @@ In terms of my motivation to write about iOS development and create a dedicated 
 
 Tonally, I opt for much more of an "open journal" style of writing. My hope is that each post feels more like you and I having a conversation that it does reading a tutorial on how to do X or Y.
 
-The name itself is a mash up of the two predominant languages used to create iOS, macOS, tvOS, and watchOS software. Swift and Objective-C. Additionally, the logo contains callbacks to both languages. The two brackets around the "SC" representing Objective-C and the trailing "()" representing Swift.
+Finally, the name itself is a mash up of the two predominant languages used to create iOS, macOS, tvOS, and watchOS software. Swift and Objective-C. Additionally, the logo contains callbacks to both languages. The two brackets around the "SC" representing Objective-C and the trailing "()" representing Swift.
 
 ### Colophon
 [Jekyll](https://jekyllrb.com){:target="_blank"}, a robust static site generator, is used to manage and create Swiftjective-C. It uses no existing theme and is rolled from scratch.

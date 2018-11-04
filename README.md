@@ -23,7 +23,7 @@ cd swiftjective-c
 bundle exec jekyll serve
 ```
 
-Then open up your browser, and Swiftjective-C should be available at `Now browse to http://localhost:4000`.
+Then open up your browser, and Swiftjective-C should be available at `http://localhost:4000`.
 
 ## Get in Touch
 Please reach out on [Twitter](https://www.twitter.com/jordanmorgan10).

@@ -13,7 +13,7 @@ When ensuring iOS icons would be nothing short of flawless, it's been said that 
 
 If we are to believe that no one single act is executed without astute purpose from Apple, we then must pay attention to the once puzzling introduction to WWDC 18's session, ["Adding Delight to your iOS App"](https://developer.apple.com/videos/play/wwdc2018/233/), which began covering supporting external displays. Why spend time going over an API that hasn't seen significant changes circa 2011? 
 
-It seemed like the session was being conducted by a preacher with no pulpit. However, with the recently announced iPad Pro sporting USB-C and Thunderbolt 3 capabilities, the missing context is now present. Today, let's talk about supporting external displays in our iOS apps.
+It seemed like the session was being conducted by a preacher with no pulpit. However, with the recently announced iPad Pro sporting USB-C 3.1 capabilities, the missing context is now present. Today, let's talk about supporting external displays in our iOS apps.
 
 
 ### Window Quotes

@@ -129,7 +129,6 @@ NotificationCenter.default.addObserver(forName: .UIScreenModeDidChange, object: 
         self.view.setNeedsLayout()
         self.view.layoutSubviews()
     }
-
 }
 ```
 

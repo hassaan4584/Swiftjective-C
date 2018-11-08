@@ -50,7 +50,7 @@ In terms of my motivation to write about iOS development and create a dedicated 
 
 - I have a natural love of writing, and doing so scratches an itch that's otherwise left untouched. 
 - Sharing knowledge, what I know and what I hope to learn is also built into my ethos. It's rewarding, I get to meet other developers and hopefully it's helpful. 
-- Finally, with three kids - I've found it extremely challenging to attend or speak at conferences anymore. I'm naturally extroverted so I miss this; Swiftjective-C acts as a creative outlet to participate in the conversation at large that's always happening in our industry.
+- And now with three kids - I've found it extremely challenging to attend or speak at conferences anymore. I'm naturally extroverted so I miss this; Swiftjective-C acts as a creative outlet to participate in the conversation at large that's always happening in our industry.
 
 Tonally, I opt for much more of an "open journal" style of writing. My hope is that each post feels more like you and I having a conversation that it does reading a tutorial on how to do X or Y.
 

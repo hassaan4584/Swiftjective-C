@@ -69,4 +69,3 @@ Finally, the name itself is a mash up of the two predominant languages used to c
 
 [Github](https://www.github.com){:target="_blank"} is used for source control, and each article and the entire [source code for this site](https://github.com/DreamingInBinary/Swiftjective-C){:target="_blank"} is available there for collaboration and learning purposes. It's free to use and to change however you wish.
 
-[Fathom](https://usefathom.com){:target="_blank"} is used for analytics, and it has an emphasis on respecting user privacy. It shows just what I need, and nothing more.

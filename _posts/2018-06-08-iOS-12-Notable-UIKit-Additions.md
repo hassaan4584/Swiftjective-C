@@ -155,5 +155,5 @@ Until next time ✌️.
 
 [1]: https://developer.apple.com/videos/play/wwdc2018/202/
 [2]: https://twitter.com/_inside/status/1003831980025372673
-[3]: https://medium.com/the-traveled-ios-developers-guide/ios-11-notable-uikit-additions-92e5eb421c3b
+[3]: {{ site.url | append:"/iOS-11-notable-uikit-additions" }}
 

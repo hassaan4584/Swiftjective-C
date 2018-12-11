@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T14:41:19-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-11T15:51:00-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
 
 &lt;p&gt;On a vacation? It didn’t happen if it’s not documented on your Instagram story with several candid shots.&lt;/p&gt;
@@ -7,7 +7,7 @@
 
 &lt;p&gt;Etcetera.&lt;/p&gt;
 
-&lt;p&gt;But for all of their ubiquity on the platform, the act of showing them in a performant and memory conservative manner is often a mismanaged endeavor. With a little know how as to what’s happening in UIKit and why in regards to how it treats images, one can gain some massive savings and forgo the unrelenting wrath of jetsam.&lt;/p&gt;
+&lt;p&gt;But for all of their ubiquity on the platform, the act of showing them in a performant and memory conservative manner can easily turn into a mismanaged endeavor. With a little know how as to what’s happening in UIKit and why in regards to how it treats images, one can gain some massive savings and forgo the unrelenting wrath of jetsam.&lt;/p&gt;
 
 &lt;h3 id=&quot;in-theory&quot;&gt;In Theory&lt;/h3&gt;
 &lt;p&gt;Pop quiz - how much memory will this 266 kilobyte (and quite dashing) photo of my beautiful daughter require in an iOS app?&lt;/p&gt;
@@ -18,9 +18,9 @@
 
 &lt;p&gt;Why?&lt;/p&gt;
 
-&lt;p&gt;iOS essentially derives its memory hit from images from their &lt;em&gt;dimensions&lt;/em&gt; - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2018 pixels tall. Each pixel will cost us four bytes:&lt;/p&gt;
+&lt;p&gt;iOS essentially derives its memory hit from an image’s &lt;em&gt;dimensions&lt;/em&gt; - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2018 pixels tall. Assuming each pixel will cost us four bytes:&lt;/p&gt;
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mf&quot;&gt;1718*2048*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;14.07&lt;/span&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mf&quot;&gt;1718*2048*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;14.07&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;megabytes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;give&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Imagine if you’ve got a table view with a list of users, and each row shows the now pervasive circle avatar of their photo to the left. If you’re thinking things are kosher because each one has been packed up nice and tight from ImageOptim or something similar, that might not be the case. If each one is a conservative 256x256 you could still be taking quite a hit on memory.&lt;/p&gt;
 
@@ -141,7 +141,7 @@
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UIImage&lt;/code&gt; becomes an issue here primarily because it will decompress the &lt;em&gt;original image&lt;/em&gt; into memory as we discussed when looking at the rendering pipeline. We need a way to reduce the size of our image buffer, ideally.&lt;/p&gt;
 
-&lt;p&gt;Thankfully, it’s possible to resize the images at the cost of the actual resized image only, which is likely what some engineers assume is happening already when it isn’t.&lt;/p&gt;
+&lt;p&gt;Thankfully, it’s possible to resize the images at the cost of the actual resized image only, which is likely what some engineers assume might be happening already when it typically isn’t.&lt;/p&gt;
 
 &lt;p&gt;Let’s try dropping down into a lower level API to downsample it instead:&lt;/p&gt;
 
@@ -163,7 +163,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Display wise, we’ve got the exact same result as before. The source of truth will lie within &lt;code class=&quot;highlighter-rouge&quot;&gt;vmmap&lt;/code&gt; once more (again, truncated for brevity):&lt;/p&gt;
+&lt;p&gt;Display wise, we’ve got the exact same result as before. But here, we’re using &lt;code class=&quot;highlighter-rouge&quot;&gt;CGImageSourceCreateThumbnailAtIndex()&lt;/code&gt; instead of just putting the vanilla image into the image view. The source of truth will lie within &lt;code class=&quot;highlighter-rouge&quot;&gt;vmmap&lt;/code&gt; once more to see if our optimizations have paid off (again, truncated for brevity):&lt;/p&gt;
 
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;vmmap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;baylorOptimized&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memgraph&lt;/span&gt;
 

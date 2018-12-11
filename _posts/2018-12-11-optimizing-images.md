@@ -15,7 +15,7 @@ Breaking nows? Check Twitter and see what outlets are reporting on by peeping th
 
 Etcetera.
 
-But for all of their ubiquity on the platform, the act of showing them in a performant and memory conservative manner is often a mismanaged endeavor. With a little know how as to what's happening in UIKit and why in regards to how it treats images, one can gain some massive savings and forgo the unrelenting wrath of jetsam.
+But for all of their ubiquity on the platform, the act of showing them in a performant and memory conservative manner can easily turn into a mismanaged endeavor. With a little know how as to what's happening in UIKit and why in regards to how it treats images, one can gain some massive savings and forgo the unrelenting wrath of jetsam.
 
 ### In Theory
 Pop quiz - how much memory will this 266 kilobyte (and quite dashing) photo of my beautiful daughter require in an iOS app?
@@ -26,10 +26,10 @@ Spoiler alert - it's not 266 kilobytes. It's not 2.66 megabytes. It's around _14
 
 Why?
 
-iOS essentially derives its memory hit from images from their *dimensions* - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2018 pixels tall. Each pixel will cost us four bytes:
+iOS essentially derives its memory hit from an image's *dimensions* - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2018 pixels tall. Assuming each pixel will cost us four bytes:
 
 ```swift
-1718*2048*4/1000000 = 14.07
+1718*2048*4/1000000 = 14.07 megabytes give or take
 ```
 Imagine if you've got a table view with a list of users, and each row shows the now pervasive circle avatar of their photo to the left. If you're thinking things are kosher because each one has been packed up nice and tight from ImageOptim or something similar, that might not be the case. If each one is a conservative 256x256 you could still be taking quite a hit on memory.
 
@@ -153,7 +153,7 @@ The issue is that some engineers might think (and, logically so) that simply dow
 
 `UIImage` becomes an issue here primarily because it will decompress the _original image_ into memory as we discussed when looking at the rendering pipeline. We need a way to reduce the size of our image buffer, ideally.
 
-Thankfully, it's possible to resize the images at the cost of the actual resized image only, which is likely what some engineers assume is happening already when it isn't.
+Thankfully, it's possible to resize the images at the cost of the actual resized image only, which is likely what some engineers assume might be happening already when it typically isn't.
 
 Let's try dropping down into a lower level API to downsample it instead:
 
@@ -176,7 +176,7 @@ if let scaledImage = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, options
 }
 ```
 
-Display wise, we've got the exact same result as before. The source of truth will lie within `vmmap` once more (again, truncated for brevity):
+Display wise, we've got the exact same result as before. But here, we're using `CGImageSourceCreateThumbnailAtIndex()` instead of just putting the vanilla image into the image view. The source of truth will lie within `vmmap` once more to see if our optimizations have paid off (again, truncated for brevity):
 
 ```swift
 vmmap -summary baylorOptimized.memgraph

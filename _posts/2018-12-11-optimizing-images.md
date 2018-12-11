@@ -249,6 +249,8 @@ Cover your eyes, Objective-C code sample from my side project incoming:
 }
 ```
 
+> Take care to use asset catalogs for the lion's share of your raw image assets, since it already manages buffer sizes (and a lot more) for you already.
+
 For more inspiration on how to be a first class citizen of all things memory and images, be sure to catch these particularly informative sessions from WWDC 18:
 
 - [iOS Memory Deep Dive][2]{:target="_blank"}

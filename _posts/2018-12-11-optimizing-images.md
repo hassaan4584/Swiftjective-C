@@ -225,9 +225,11 @@ Cover your eyes, Objective-C code sample from my side project incoming:
 // Use your own queue instead of a global async one to avoid potential thread explosion
 - (void)tableView:(UITableView *)tableView prefetchRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths
 {
-    if (self.downsampledImage != nil || self.listItem.mediaAssetData == nil) return;
+    if (self.downsampledImage != nil || 
+        self.listItem.mediaAssetData == nil) return;
     
-    NSIndexPath *mediaIndexPath = [NSIndexPath indexPathForRow:0 inSection:SECTION_MEDIA];
+    NSIndexPath *mediaIndexPath = [NSIndexPath indexPathForRow:0
+                                                     inSection:SECTION_MEDIA];
     if ([indexPaths containsObject:mediaIndexPath])
     {
         CGFloat scale = tableView.traitCollection.displayScale;
@@ -236,8 +238,8 @@ Cover your eyes, Objective-C code sample from my side project incoming:
         dispatch_async(self.downsampleQueue, ^{
             // Downsample
             self.downsampledImage = [UIImage downsampledImageFromData:self.listItem.mediaAssetData
-                                                                scale:scale
-                                                         maxPixelSize:maxPixelSize];
+                               scale:scale
+                        maxPixelSize:maxPixelSize];
             
             dispatch_async(dispatch_get_main_queue(), ^ {
                 self.listItem.downsampledMediaImage = self.downsampledImage;

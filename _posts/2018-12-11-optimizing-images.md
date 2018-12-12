@@ -11,7 +11,7 @@ They say the best camera is the one you have with you. If that adage holds any w
 
 On a vacation? It didn't happen if it's not documented on your Instagram story with several candid shots.
 
-Breaking nows? Check Twitter and see what outlets are reporting on by peeping their photos of an event unfolding in real time.
+Breaking news? Check Twitter and see what outlets are reporting on by peeping their photos of an event unfolding in real time.
 
 Etcetera.
 

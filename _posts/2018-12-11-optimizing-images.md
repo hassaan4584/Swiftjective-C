@@ -149,11 +149,11 @@ let circleImage = renderer.image{ ctx in
 ### Downscaling vs Downsampling
 Moving past simple drawing scenarios - a lot of the issues with images and their impact on memory originate from the typical photos that we associate with the actual art of photography. Think portraits, landscape shots and more. 
 
-The issue is that some engineers might think (and, logically so) that simply downscaling them via `UIImage` will suffice. But it typically won't due to the reasons above, and it's also not as performant due to internal coordinate space transforms according to Apple's Kyle Howarth.
+It stands to reason that some engineers might assume (and, logically so) that simply downscaling them via `UIImage` will suffice. But it typically won't due to the reasons above, and it's also not as performant due to internal coordinate space transforms according to Apple's Kyle Howarth.
 
 `UIImage` becomes an issue here primarily because it will decompress the _original image_ into memory as we discussed when looking at the rendering pipeline. We need a way to reduce the size of our image buffer, ideally.
 
-Thankfully, it's possible to resize the images at the cost of the actual resized image only, which is likely what some engineers assume might be happening already when it typically isn't.
+Thankfully, it's possible to resize the images at the cost of the actual resized image only, which is what one might assume is happening already when it typically isn't.
 
 Let's try dropping down into a lower level API to downsample it instead:
 

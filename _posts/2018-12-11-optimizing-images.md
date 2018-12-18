@@ -26,7 +26,7 @@ Spoiler alert - it's not 266 kilobytes. It's not 2.66 megabytes. It's around _14
 
 Why?
 
-iOS essentially derives its memory hit from an image's *dimensions* - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2018 pixels tall. Assuming each pixel will cost us four bytes:
+iOS essentially derives its memory hit from an image's *dimensions* - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2048 pixels tall. Assuming each pixel will cost us four bytes:
 
 ```swift
 1718*2048*4/1000000 = 14.07 megabytes give or take

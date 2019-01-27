@@ -82,7 +82,7 @@ Is releasing something that you can feel proud to put your name on key to you? D
 
 Fantastic! Let's have coffee together! 
 
-We can wax poetic about which H.I.G. rules to follow religiously and which to toss aside. Let's chat about the myriad of possibilities this wonderful world opens up for us to create. We can hammer home that the things we painfully left out of our software was equally as important as the parts we left in.
+We can wax poetic about which H.I.G. rules to follow religiously and which to toss aside. Let's chat about the myriad of possibilities this wonderful world opens up for us to create. We can hammer home that the things we painfully left out of our software were equally as important as the parts we left in.
 
 But devs like us, we _really_ have to be cognizant of the chart that lies. As times goes on, we start believing in it and consider the time we've spent will breed success instead of the real, tangible reasons that make an app work. I'd urge you to think realistically about it. If you chart the same path I'm on with your app, realize you're riding off a lot of assumptions. 
 

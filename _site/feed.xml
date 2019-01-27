@@ -1,5 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-23T13:16:06-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-26T22:38:52-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">The Chart That Lies</title><link href="http://localhost:4000/the-chart-that-lies/" rel="alternate" type="text/html" title="The Chart That Lies" /><published>2019-01-24T00:00:00-06:00</published><updated>2019-01-24T00:00:00-06:00</updated><id>http://localhost:4000/the-chart-that-lies</id><content type="html" xml:base="http://localhost:4000/the-chart-that-lies/">&lt;p&gt;There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stay up late coding.&lt;/li&gt;
+  &lt;li&gt;Get up early designing.&lt;/li&gt;
+  &lt;li&gt;Finding any ounce of free time to squash a bug.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To her, the whole thing is quite admirable. The undeniable grip that takes hold over developers when they hatch a side project is a cosmic force that requires a first hand account to be adequately understood.&lt;/p&gt;
+
+&lt;p&gt;As such, they might view our side project’s shot at success a little something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/col.jpg&quot; alt=&quot;The Chart of Lies&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In theory, that seems reasonable. In practice, it’s nothing but smoke and mirrors.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-we-hope-for&quot;&gt;What We Hope For&lt;/h3&gt;
+&lt;p&gt;People are creatures of habit. We’ve grown up applying a certain formula for success that doesn’t transcend over to software development. That formula looks a little like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;effortPutIn + experience + talent = success&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s ingrained into our D.N.A. early on, as well it should be. I even tell my oldest son, who is obsessed with basketball, that all of his hard work will pay off. And it likely will, too.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Practice shooting daily? Make the shot in the game.&lt;/li&gt;
+  &lt;li&gt;Studied for the test? Get a good grade.&lt;/li&gt;
+  &lt;li&gt;Ate less pizza and worked out more? Get a fit body.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But in the world of apps, we know this doesn’t hold water:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Spend years on an app? Get a million downloads.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For indie developers, hard work can very well mean close to nothing in terms of downloads.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-we-get&quot;&gt;What We Get&lt;/h3&gt;
+&lt;p&gt;I don’t say any of this to discourage you. Hang with me, though. We’re trying to create and release software in a place where:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Exposure means everything, but it’s far from guaranteed.&lt;/li&gt;
+  &lt;li&gt;The biggest names in publishing are manning marketing machines to accomplish the very same goals that you are.&lt;/li&gt;
+  &lt;li&gt;Consumers have been taught (by us, no doubt) that they really don’t need to pay us anything to gain value from the things we make.&lt;/li&gt;
+  &lt;li&gt;The apps that they &lt;em&gt;did&lt;/em&gt; take a chance on &lt;a href=&quot;https://techcrunch.com/2018/10/15/sneaky-subscriptions-are-plaguing-the-app-store/&quot; target=&quot;_blank&quot;&gt;possibly left a terrible taste in their mouth.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;And of course, the store you’re putting your creation in has 1,000s of new entries daily.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That description doesn’t exactly make for a good one sheet, does it? The point is that the time I’m spending developing my app, commercially speaking - could be time wasted.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-realistic-chart&quot;&gt;The Realistic Chart&lt;/h3&gt;
+&lt;p&gt;There is reason for optimism though, and at this point I think it’s only fair to lay a little bit of sunshine down. Time spent on your app, certainly, is part of your path to success.&lt;/p&gt;
+
+&lt;p&gt;And if I’ve done one thing, I haven I given it time.&lt;/p&gt;
+
+&lt;p&gt;I joke that my side project is &lt;em&gt;kids&lt;/em&gt; years old. I first envisioned and released the first version when my oldest, Bennett, arrived (he’s now 5), I was redesigning it when Remy was born (he’s two) and I’m gearing up to it release now that my youngest (Baylor) is 5 months old. &lt;strong&gt;My app is three kids years old.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Having a side project while being married, a parent of three and having a full time career is akin to undertaking concurrent programming blindfolded. You’re hoping to achieve all these tasks in anything but a synchronous queue - while knowing full well you’re going to deadlock anyways. No matter what.&lt;/p&gt;
+
+&lt;p&gt;The good part is that a lot of little things help make an app great, of which time is only an ancillary component. Here is the chart that keeps me cracking away:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/cot.jpg&quot; alt=&quot;A More Realistic Chart&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s a thousand little things, some happenstance, lucky breaks and market fit that will make your app succeed.&lt;/p&gt;
+
+&lt;h3 id=&quot;know-your-why&quot;&gt;Know Your “Why”&lt;/h3&gt;
+&lt;p&gt;The part that makes me incredibly excited, though - is that &lt;em&gt;you&lt;/em&gt; get to define what success looks like. It’s mutable, and typically it means something a little bit different to all of us with some evergreen themes attached to each of the definitions we hold. Though the playful charts show a dollar sign to signify success, it doesn’t have to look like that for you.&lt;/p&gt;
+
+&lt;p&gt;So, what’s success in your case?&lt;/p&gt;
+
+&lt;h4 id=&quot;are-you-trying-to-be-commercially-successful-are-you-actively-trying-to-make-something-that-could-take-hold-of-the-market&quot;&gt;Are you trying to be commercially successful? Are you actively trying to make something that could take hold of the market?&lt;/h4&gt;
+
+&lt;p&gt;It’s probably wise to release quickly and learn. You’re acutely aware of the chart that lies, and the speed with which you approach the App Store is your primary weapon to wield against it. You know there’s nothing wrong with wanting to make a buck, and you believe it can still be done in the market while carving out a space for yourself to earn some of the annual record breaking dollars consumers are spending within it.&lt;/p&gt;
+
+&lt;p&gt;Conversely, maybe you’re closer to how I think about developing an app:&lt;/p&gt;
+
+&lt;h4 id=&quot;are-you-a-hobbyist-who-might-be-obsessed-with-the-details-do-you-consider-your-app-an-open-canvas-and-yourself-the-craftsmen&quot;&gt;Are you a hobbyist who might be obsessed with the details? Do you consider your app an open canvas, and yourself the craftsmen?&lt;/h4&gt;
+
+&lt;p&gt;Is releasing something that you can feel proud to put your name on key to you? Do you want it to be so intricately woven and tactfully integrated into the iOS platform that it wouldn’t feel out of place alongside the best in the business? Would you consider tuning data source updates carefully to perform batch animations anything but a vapid endeavor?&lt;/p&gt;
+
+&lt;p&gt;Fantastic! Let’s have coffee together!&lt;/p&gt;
+
+&lt;p&gt;We can wax poetic about which H.I.G. rules to follow religiously and which to toss aside. Let’s chat about the myriad of possibilities this wonderful world opens up for us to create. We can hammer home that the things we painfully left out of our software was equally as important as the parts we left in.&lt;/p&gt;
+
+&lt;p&gt;But devs like us, we &lt;em&gt;really&lt;/em&gt; have to be cognizant of the chart that lies. As times goes on, we start believing in it and consider the time we’ve spent will breed success instead of the real, tangible reasons that make an app work. I’d urge you to think realistically about it. If you chart the same path I’m on with your app, realize you’re riding off a lot of assumptions.&lt;/p&gt;
+
+&lt;p&gt;All of the time spent is great, it means something - but it owes us absolutely nothing.&lt;/p&gt;
+
+&lt;h3 id=&quot;that-money-thing&quot;&gt;That Money Thing&lt;/h3&gt;
+&lt;p&gt;Regardless of the path you choose, it doesn’t have to be squarely about the money, but you do need to make &lt;em&gt;some&lt;/em&gt; money to truly care about it. At least I do. Tell me how motivated you’d truly be if week after week you keep showing a movie that nobody wants to see.&lt;/p&gt;
+
+&lt;p&gt;Plus, the almighty dollar is an adroit motivator. But, it can be but a small facet of why you develop an app. I think I’ve found this middle ground where I’m certainly not going full-on lean startup, but I’m not eschewing the reality of what users in the market will think or how they’ll react when they get my app in their hands.&lt;/p&gt;
+
+&lt;p&gt;I want them to love it. But the only way I’ll ever know if they will is if I actually release it.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;If you find yourself hanging your hat on the chart of lies, don’t feel embarrassed. It’s only natural that as time passes, you become more attached to your “baby”. As such, it couldn’t possibly end up as anything other than great, &lt;em&gt;right&lt;/em&gt;?&lt;/p&gt;
+
+&lt;p&gt;The App Store tells us a different story. Does your app resonate with the audience you’re after or will it be coldly ushered into non-existence without so much as a download? Take care to not let that thought discourage you, but be aware that it exists.&lt;/p&gt;
+
+&lt;p&gt;Savor developing your creation, but remember that time doesn’t necessarily breed success. Only a great app does.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
 
 &lt;p&gt;On a vacation? It didn’t happen if it’s not documented on your Instagram story with several candid shots.&lt;/p&gt;
 
@@ -18,7 +120,7 @@
 
 &lt;p&gt;Why?&lt;/p&gt;
 
-&lt;p&gt;iOS essentially derives its memory hit from an image’s &lt;em&gt;dimensions&lt;/em&gt; - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2018 pixels tall. Assuming each pixel will cost us four bytes:&lt;/p&gt;
+&lt;p&gt;iOS essentially derives its memory hit from an image’s &lt;em&gt;dimensions&lt;/em&gt; - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2048 pixels tall. Assuming each pixel will cost us four bytes:&lt;/p&gt;
 
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mf&quot;&gt;1718*2048*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;14.07&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;megabytes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;give&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1774,103 +1876,4 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;Let’s all aspire to not be that app that delivers the wrong units, or incorrect measurements, in our own software. Foundation has us covered.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Measuring units, things or items in software won’t always be the most glamorous job for software engineers. Though not as thrilling as writing performant user interface libraries nor as fulfilling as conjuring up networking code that weaves concurrent execution with ease, measuring units in iOS is still done more often than not, wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Copy on Write</title><link href="http://localhost:4000/Copy-on-Write-in-iOS-11/" rel="alternate" type="text/html" title="Copy on Write" /><published>2017-11-07T00:00:00-06:00</published><updated>2017-11-07T00:00:00-06:00</updated><id>http://localhost:4000/Copy-on-Write-in-iOS-11</id><content type="html" xml:base="http://localhost:4000/Copy-on-Write-in-iOS-11/">&lt;p&gt;Foundation is the unsung hero of iOS development. Powerful due in part to its maturity and ubiquity — it boasts all of six major implementations, it treats engineers to everything from the basic object to annual optimizations under the hood at WWDC. And the best optimizations are the ones I don’t even have to make. They just happen.&lt;/p&gt;
-
-&lt;p&gt;With copy on write semantics for Foundation collections, this week’s topic, that’s exactly what we get.&lt;/p&gt;
-
-&lt;h3 id=&quot;cow-primer&quot;&gt;C.o.W Primer&lt;/h3&gt;
-
-&lt;p&gt;Both the amatuear and the veteran programmer know that we don’t go far without embracing collections, yet by and large there isn’t much thought or questioning that occurs as to what their doing behind the scenes or how exactly they work beyond our CompSci 101 course.&lt;/p&gt;
-
-&lt;p&gt;It can sometimes serve as intimidating subject matter, but luckily copy on write is both a simple concept and, as such, is easy to conceptualize. The elevator pitch is that instances pointing to the same object shouldn’t need to employ full copies unless one of them, does in fact, mutate:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;TTIDG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Pizza&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Here, both variables hold the same data. So why create a full copy unless it’s actually needed? This means that instead of creating the full copy, we can just utilize pointers to the same backing store and enjoy a much more efficient O(1) operation.&lt;/p&gt;
-
-&lt;p&gt;All we’re talking about here is an optimization strategy. Even better, the whole technique is all in the name. We shouldn’t copy data unless it’s written to, in which case — we have a reason to carry forward the actual copy. Copy on write.&lt;/p&gt;
-
-&lt;p&gt;So, TL;DR — copies are super cheap now. In fact, they are almost downright free for defensive copying code. In the past, they were typically linear at best.&lt;/p&gt;
-
-&lt;h3 id=&quot;foundation-implications&quot;&gt;Foundation Implications&lt;/h3&gt;
-
-&lt;p&gt;This means that our good friends NSSet, NSDictionary and NSArray will all benefit from the optimization made by the folks maintaining the Foundation Framework. Going back to our previous example:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;TTIDG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Pizza&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mutableCopy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Currently, both arrays point to the same backing store&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now a mutation occurred, with CoW - this is where the copy actually takes place  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;removeLastItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;A large number of application flows might not ever reach a mutated state, thus the copy operation was effectively wasted effort. If it doesn’t occur, the only hit we’ll take with CoW is the allocation of the second collection — which likely won’t be much.&lt;/p&gt;
-
-&lt;p&gt;But — be mindful of what it isn’t:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;TTIDG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Pizza&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ar2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ar1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This isn’t the same at all, and copy on write doesn’t apply. Here we’re pointing to the exact same reference in memory. Remember that this particular optimization is all about efficient copies. Even though pointing to a reference and copying data deals with sharing said data, they are much different in implentation.&lt;/p&gt;
-
-&lt;h3 id=&quot;applications&quot;&gt;Applications&lt;/h3&gt;
-
-&lt;p&gt;Even though copy on write is a performance optimization, it shouldn’t soley be thought as one in pragmatic terms. It’s great that it’s there, we’ll benefit from it without having lifted a finger — but how we can leverage it to do things we maybe couldn’t before?&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2017/244/&quot;&gt;Session 244 at WWDC 17&lt;/a&gt; offered a few great examples. Suppose we have an array property:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The intention of the declaration implies that it shouldn’t have mutable state. But hey — life comes at you fast:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Trolling  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Now, consider this:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copiedArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-&lt;span class=&quot;kd&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stongArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copiedArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strongArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Logs out 'No'  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;copiedArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isKindOfClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Yes&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;No&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Logs out 'Yes'  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSLog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strongArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isKindOfClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Yes&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;No&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The copy attribute has been around since the beginning — and it’s commonly put to great use with class clusters. What’s happening here is that sending a copy message to something that is mutable (i.e. the NSMutableArray here) will still return an immutable copy. Copy on write makes life even faster in such a scenario.&lt;/p&gt;
-
-&lt;p&gt;Continuing on with Objective-Cisms — mutable collections are often used to build something up. This is a common technique found within many functions, where the author will then declare the return type as immutable. Yet, since a mutable array is a kind of array, this is perfectly legal:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allEmployees&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;//build up container with employees...  &lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//i.e. [container addObject:anEmployee]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;container&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And innocently enough, we’ve sharing mutable state again. The method header deceives any caller now, the 🍰 is a lie.&lt;/p&gt;
-
-&lt;p&gt;Since we’ve got copy on write, we don’t even need to bother with such a qundary since copies are cheap. We can do the right thing and sleep easy on performance hits:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allEmployees&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;//build up container with employees...  &lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;//i.e. [container addObject:anEmployee]&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;container&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Also — Swift 👋?&lt;/p&gt;
-
-&lt;p&gt;Think about the bridging process. If you, or perhaps another framework, have a foundation collection returned to you that one has to use in Swift code — you’re getting the value type of the collection since the language employs value type semantics.&lt;/p&gt;
-
-&lt;p&gt;How does one enforce that 🤔?&lt;/p&gt;
-
-&lt;p&gt;…with a copy on the reference type during the bridging process. So now if that bridged data was never mutated, the whole bridging operation’s efficiency is greatly improved. Which, I suppose, is a nice seque to wrap things up.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-
-&lt;p&gt;As I positied in one of &lt;a href=&quot;http://localhost:4000/objective-c-in-2015&quot;&gt;my more popular articles a few years ago&lt;/a&gt;, Objective-C has become stronger and more capable due to Swift’s presence alone. The sea of apps using Objective-C runs deep, and now their collections run faster. It’s not surprising, as copy on write semantics have been with Swift developers since the beginning.&lt;/p&gt;
-
-&lt;p&gt;And now, here we are, with Objective-C getting in on the fun now. #DinosaurNotDead, am I right?&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Foundation is the unsung hero of iOS development. Powerful due in part to its maturity and ubiquity — it boasts all of six major implementations, it treats engineers to everything from the basic object to annual optimizations under the hood at WWDC. And the best optimizations are the ones I don’t even have to make. They just happen.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Measuring units, things or items in software won’t always be the most glamorous job for software engineers. Though not as thrilling as writing performant user interface libraries nor as fulfilling as conjuring up networking code that weaves concurrent execution with ease, measuring units in iOS is still done more often than not, wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

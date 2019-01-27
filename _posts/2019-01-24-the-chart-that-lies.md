@@ -4,7 +4,7 @@ tags: ["The Indie Dev Diaries"]
 title: "The Chart That Lies"
 author: Jordan Morgan
 description: "On being realistic about the things we make, and the relationship that times has with them."
-image: /assets/images/logo.png
+image: /assets/images/col.jpg
 picture: /assets/images/col.jpg
 ---
 
@@ -59,14 +59,14 @@ I joke that my side project is _kids_ years old. I first envisioned and released
 
 Having a side project while being married, a parent of three and having a full time career is akin to undertaking concurrent programming blindfolded. You're hoping to achieve all these tasks in anything but a synchronous queue - while knowing full well you’re going to deadlock anyways. No matter what. 
 
-The good part is that a lot of little things help make an app great, of which time is only an ancillary component. Here is the chart that keeps me cracking away:
+The good part is that a lot of little things help make an app great, of which time is only an ancillary component. Here is a chart that more closely relays the truth:
 
 ![A More Realistic Chart](../assets/images/cot.jpg)
 
-It's a thousand little things, some happenstance, lucky breaks and market fit that will make your app succeed. 
+It's a thousand little things, a high degree of quality, a problem worth solving having been solved, some happenstance, lucky breaks and market fit that will make your app succeed. 
 
 ### Know Your "Why"
-The part that makes me incredibly excited, though - is that _you_ get to define what success looks like. It's mutable, and typically it means something a little bit different to all of us with some evergreen themes attached to each of the definitions we hold. Though the playful charts show a dollar sign to signify success, it doesn't have to look like that for you.
+The part that keeps me motivated, though - is that _you_ get to define what success looks like. It's mutable, and typically it means something a little bit different to all of us with some evergreen themes attached to each of the definitions we hold. Though the playful charts show a dollar sign to signify success, it doesn't have to look like that for you.
 
 So, what's success in your case?
 

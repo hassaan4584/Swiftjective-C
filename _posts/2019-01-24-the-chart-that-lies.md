@@ -55,7 +55,7 @@ There is reason for optimism though, and at this point I think it's only fair to
 
 And if I've done one thing, I have given it time. 
 
-I joke that my side project is _kids_ years old. I initially envisioned and released the first version when my oldest, Bennett, arrived (he's now 5), I was redesigning it when Remy was born (he's two) and I'm gearing up to it release now that my youngest (Baylor) is 5 months old. **My app is three kids years old.**
+I joke that my side project is _kids_ years old. I initially envisioned and released the first version when my oldest, Bennett, arrived (he's now 5), I was redesigning it when Remy was born (he's two) and I'm gearing up for release now that my youngest (Baylor) is 5 months old. **My app is three kids years old.**
 
 Having a side project while being married, a parent of three and having a full time career is akin to undertaking concurrent programming blindfolded. You're hoping to achieve all these tasks in anything but a synchronous queue - while knowing full well you’re going to deadlock anyways. No matter what. 
 

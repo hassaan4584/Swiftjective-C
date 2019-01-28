@@ -53,7 +53,7 @@ That description doesn't exactly make for a good one sheet, does it? The point i
 ### The Realistic Chart
 There is reason for optimism though, and at this point I think it's only fair to lay a little bit of sunshine down. Time spent on your app, certainly, is part of your path to success. 
 
-And if I've done one thing, I haven I given it time. 
+And if I've done one thing, I have given it time. 
 
 I joke that my side project is _kids_ years old. I first envisioned and released the first version when my oldest, Bennett, arrived (he's now 5), I was redesigning it when Remy was born (he's two) and I'm gearing up to it release now that my youngest (Baylor) is 5 months old. **My app is three kids years old.**
 

@@ -54,7 +54,7 @@ In terms of my motivation to write about iOS development and create a dedicated 
 
 Tonally, I opt for much more of an "open journal" style of writing. My hope is that each post feels more like you and I having a conversation that it does reading a tutorial on how to do X or Y.
 
-In addition to my technical articles, in January of 2019 I started my series over my indie development journey, "The Indie Dev Diaries". These are open letters to myself dealing with every component of creating your own iOS app as an indie developer. The business side, the questions, the launches, etc.
+In addition to my technical articles, in January of 2019 I started a series, "The Indie Dev Diaries", which explores the human side of indie development. These are open letters to myself dealing with every component of creating your own iOS app as an indie; the business side, the questions, the launches, etc.
 
 Finally, the name itself is a mash up of the two predominant languages used to create iOS, macOS, tvOS, and watchOS software. Swift and Objective-C. Additionally, the logo contains callbacks to both languages. The two brackets around the "SC" representing Objective-C and the trailing "()" representing Swift.
 

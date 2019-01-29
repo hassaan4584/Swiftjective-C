@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-26T22:38:52-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-28T21:15:27-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">The Chart That Lies</title><link href="http://localhost:4000/the-chart-that-lies/" rel="alternate" type="text/html" title="The Chart That Lies" /><published>2019-01-24T00:00:00-06:00</published><updated>2019-01-24T00:00:00-06:00</updated><id>http://localhost:4000/the-chart-that-lies</id><content type="html" xml:base="http://localhost:4000/the-chart-that-lies/">&lt;p&gt;There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?&lt;/p&gt;
 
 &lt;ul&gt;
@@ -52,20 +52,20 @@
 &lt;h3 id=&quot;the-realistic-chart&quot;&gt;The Realistic Chart&lt;/h3&gt;
 &lt;p&gt;There is reason for optimism though, and at this point I think it’s only fair to lay a little bit of sunshine down. Time spent on your app, certainly, is part of your path to success.&lt;/p&gt;
 
-&lt;p&gt;And if I’ve done one thing, I haven I given it time.&lt;/p&gt;
+&lt;p&gt;And if I’ve done one thing, I have given it time.&lt;/p&gt;
 
-&lt;p&gt;I joke that my side project is &lt;em&gt;kids&lt;/em&gt; years old. I first envisioned and released the first version when my oldest, Bennett, arrived (he’s now 5), I was redesigning it when Remy was born (he’s two) and I’m gearing up to it release now that my youngest (Baylor) is 5 months old. &lt;strong&gt;My app is three kids years old.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I joke that my side project is &lt;em&gt;kids&lt;/em&gt; years old. I initially envisioned and released the first version when my oldest, Bennett, arrived (he’s now 5), I was redesigning it when Remy was born (he’s two) and I’m gearing up for release now that my youngest (Baylor) is 5 months old. &lt;strong&gt;My app is three kids years old.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Having a side project while being married, a parent of three and having a full time career is akin to undertaking concurrent programming blindfolded. You’re hoping to achieve all these tasks in anything but a synchronous queue - while knowing full well you’re going to deadlock anyways. No matter what.&lt;/p&gt;
 
-&lt;p&gt;The good part is that a lot of little things help make an app great, of which time is only an ancillary component. Here is the chart that keeps me cracking away:&lt;/p&gt;
+&lt;p&gt;The good part is that a lot of little things help make an app great, of which time is only an ancillary component. Here is a chart that more closely relays the truth:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/cot.jpg&quot; alt=&quot;A More Realistic Chart&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It’s a thousand little things, some happenstance, lucky breaks and market fit that will make your app succeed.&lt;/p&gt;
+&lt;p&gt;It’s a thousand little things, a high degree of quality, a problem worth solving having been solved, some happenstance, lucky breaks and market fit that will make your app succeed.&lt;/p&gt;
 
 &lt;h3 id=&quot;know-your-why&quot;&gt;Know Your “Why”&lt;/h3&gt;
-&lt;p&gt;The part that makes me incredibly excited, though - is that &lt;em&gt;you&lt;/em&gt; get to define what success looks like. It’s mutable, and typically it means something a little bit different to all of us with some evergreen themes attached to each of the definitions we hold. Though the playful charts show a dollar sign to signify success, it doesn’t have to look like that for you.&lt;/p&gt;
+&lt;p&gt;The part that keeps me motivated, though - is that &lt;em&gt;you&lt;/em&gt; get to define what success looks like. It’s mutable, and typically it means something a little bit different to all of us with some evergreen themes attached to each of the definitions we hold. Though the playful charts show a dollar sign to signify success, it doesn’t have to look like that for you.&lt;/p&gt;
 
 &lt;p&gt;So, what’s success in your case?&lt;/p&gt;
 
@@ -81,7 +81,7 @@
 
 &lt;p&gt;Fantastic! Let’s have coffee together!&lt;/p&gt;
 
-&lt;p&gt;We can wax poetic about which H.I.G. rules to follow religiously and which to toss aside. Let’s chat about the myriad of possibilities this wonderful world opens up for us to create. We can hammer home that the things we painfully left out of our software was equally as important as the parts we left in.&lt;/p&gt;
+&lt;p&gt;We can wax poetic about which H.I.G. rules to follow religiously and which to toss aside. Let’s chat about the myriad of possibilities this wonderful world opens up for us to create. We can hammer home that the things we painfully left out of our software were equally as important as the parts we left in.&lt;/p&gt;
 
 &lt;p&gt;But devs like us, we &lt;em&gt;really&lt;/em&gt; have to be cognizant of the chart that lies. As times goes on, we start believing in it and consider the time we’ve spent will breed success instead of the real, tangible reasons that make an app work. I’d urge you to think realistically about it. If you chart the same path I’m on with your app, realize you’re riding off a lot of assumptions.&lt;/p&gt;
 
@@ -101,7 +101,7 @@
 
 &lt;p&gt;Savor developing your creation, but remember that time doesn’t necessarily breed success. Only a great app does.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/col.jpg" /></entry><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
 
 &lt;p&gt;On a vacation? It didn’t happen if it’s not documented on your Instagram story with several candid shots.&lt;/p&gt;
 

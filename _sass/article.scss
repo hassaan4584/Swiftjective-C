@@ -9,11 +9,23 @@
     text-align: center;
 }
 
-#mc_embed_signup {
-    margin-top: 32px;
-    font:14px !important; 
+ /* Sign Up 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#mc_embed_signup input.button {
+    background-color:#70A2F9;
 }
 
+#mc_embed_signup input.button:hover {
+    background-color:$sub-header-color;
+}
+
+#mc_embed_signup {
+    background:#fff; 
+    clear:left; 
+    font:14px -apple-system,Helvetica,Arial,sans-serif; 
+    width:100%;
+}
 
 #postHeader {
     font-weight: bolder;

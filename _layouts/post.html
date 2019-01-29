@@ -34,6 +34,9 @@ title: post
                 {{ next_post.description | markdownify }}
                 <hr />
             </div>
+            <div>
+                {% include mailingList.html %}
+            </div>
         </main>
         <footer id="gridFooter">
             {% include footer.html %}

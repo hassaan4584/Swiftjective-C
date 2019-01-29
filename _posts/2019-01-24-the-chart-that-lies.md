@@ -3,7 +3,7 @@ layout: post
 tags: ["The Indie Dev Diaries"]
 title: "The Chart That Lies"
 author: Jordan Morgan
-description: "On being realistic about the things we make, and the relationship that times has with them."
+description: "On being realistic about the things we make, and the relationship that time has with them."
 image: /assets/images/col.jpg
 picture: /assets/images/col.jpg
 ---

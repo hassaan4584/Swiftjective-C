@@ -24,11 +24,21 @@
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    display: inline;
 }
 
 #articleWellLatest p {
     margin-top: 8px;
     margin-bottom: 4px;
+}
+
+#articleWellLatest small {
+    background-color: $secondary-color;
+    color: white;
+    padding: 4px 6px 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-left: 16px;
 }
 
 .articleWell {
@@ -92,6 +102,11 @@
 
     #articleWellLatest h2 {
         font-size: 36px;
+        display: block;
+    }
+
+    #articleWellLatest small {
+        margin-left: 0px;
     }
 
     .articleWell {

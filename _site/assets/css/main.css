@@ -69,11 +69,20 @@
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  display: inline; }
 
 #articleWellLatest p {
   margin-top: 8px;
   margin-bottom: 4px; }
+
+#articleWellLatest small {
+  background-color: #70A2F9;
+  color: white;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 16px; }
 
 .articleWell {
   margin-top: 16px;
@@ -123,7 +132,11 @@
 /* Extra small devices (phones, 600px and down) */
 @media (max-width: 800px) {
   #articleWellLatest h2 {
-    font-size: 36px; }
+    font-size: 36px;
+    display: block; }
+
+  #articleWellLatest small {
+    margin-left: 0px; }
 
   .articleWell {
     width: 100%; }

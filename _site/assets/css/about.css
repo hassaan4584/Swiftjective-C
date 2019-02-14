@@ -67,6 +67,17 @@ body {
   border-bottom: 5px solid #70A2F9;
   margin: 0; }
 
+ /* Tag
+
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.articleTag {
+  background-color: #70A2F9;
+  color: white;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 16px; }
+
  /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:link {
@@ -148,6 +159,9 @@ article p {
 
   body {
     font-size: 100%; }
+
+  .articleTag {
+    margin-left: 0px; }
 
   article h3 {
     font-size: 26px; }

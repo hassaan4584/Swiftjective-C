@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "NS_SWIFT_NAME"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Interop is required in the world we live in. Here's an attribute in Swift that can help make things easier."
 image: /assets/images/logo.png
 ---

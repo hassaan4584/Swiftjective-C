@@ -2,7 +2,8 @@
 layout: post
 tags: ["UIKit"]
 title: "UIGraphicsImageRenderer"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "For years, we've used Core Graphics to draw. Let's turn the page to modern drawing on iOS."
 image: /assets/images/logo.png
 ---

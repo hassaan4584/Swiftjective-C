@@ -2,7 +2,8 @@
 layout: post
 tags: ["UIKit"]
 title: "Global Functions"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "UIKit has everything to splash out eye candy. But it also houses several helpful utilities to help get you there."
 image: /assets/images/logo.png
 ---

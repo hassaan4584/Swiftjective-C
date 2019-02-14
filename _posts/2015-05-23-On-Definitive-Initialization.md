@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "Definitive Initialization"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Swift goes to great lengths to ensure values are initialized before they are used. The reasons how vary from API design to the way LLVM works - let's chat about this process called definitive initialization."
 image: /assets/images/logo.png
 ---

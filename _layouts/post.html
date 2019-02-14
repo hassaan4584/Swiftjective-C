@@ -18,7 +18,7 @@ title: post
                         <i>Now serving...</i>
                     {% endif %}
                     <h1 id="postHeader">{{ page.title }}</h1>
-                    <small id="miniphon">Written by {{ page.author }} &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</small>
+                    <small id="miniphon">Written by <a href={{ page.writtenByTwitter }} target="_blank">{{ page.writtenBy }}</a> &#8226; {{ page.date | date_to_string: "ordinal", "US" }}</small>
                 </section>
                 {{ content }}
             </article>

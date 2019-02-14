@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "Looping and Iteration"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "It's one of the first thing green programmers learn - looping and iteration. Swift has made it easy and versatile."
 image: /assets/images/logo.png
 ---

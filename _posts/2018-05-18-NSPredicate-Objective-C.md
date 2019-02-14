@@ -2,7 +2,8 @@
 layout: post
 tags: ["Foundation"]
 title: "NSPredicate"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Twist and turn your way through collections and data sets with ease."
 image: /assets/images/logo.png
 ---

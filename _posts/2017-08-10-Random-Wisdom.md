@@ -2,7 +2,8 @@
 layout: post
 tags: ["Series"]
 title: "Random Wisdom: Part 1"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "In our first edition of random wisdom, let's poke around around some Objective-C. Inline blocks, how selectors work and more."
 image: /assets/images/logo.png
 ---

@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "Protocol Extensions"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "It's possible to enhance a wide family of objects with protocol extensions. Today we'll try and see how its possible."
 image: /assets/images/logo.png
 ---

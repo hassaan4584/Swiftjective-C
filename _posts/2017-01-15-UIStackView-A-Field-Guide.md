@@ -2,7 +2,8 @@
 layout: post
 tags: ["UIKit"]
 title: "UIStackView: A Field Guide"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Stack View has been pushed heavily by Apple, but sometimes its complexity overshadows its utility. A few simple tips can help ease that burden."
 image: /assets/images/logo.png
 special: "true"

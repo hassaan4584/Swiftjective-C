@@ -2,7 +2,8 @@
 layout: post
 tags: ["Series"]
 title: "iOS Architecture Patterns: Part 2"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Our second discussion on iOS architecture patterns. Here's how delegation is imprinted across Cocoa Touch."
 image: /assets/images/logo.png
 ---

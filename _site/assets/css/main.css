@@ -76,14 +76,6 @@
   margin-top: 8px;
   margin-bottom: 4px; }
 
-#articleWellLatest small {
-  background-color: #70A2F9;
-  color: white;
-  padding: 4px 6px 4px 6px;
-  border-radius: 6px;
-  font-size: 12px;
-  margin-left: 16px; }
-
 .articleWell {
   margin-top: 16px;
   width: 50%; }
@@ -135,9 +127,6 @@
     font-size: 36px;
     display: block; }
 
-  #articleWellLatest small {
-    margin-left: 0px; }
-
   .articleWell {
     width: 100%; }
 
@@ -158,6 +147,17 @@ body {
   -moz-font-feature-settings: "liga" on;
   border-bottom: 5px solid #70A2F9;
   margin: 0; }
+
+ /* Tag
+
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.articleTag {
+  background-color: #70A2F9;
+  color: white;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 16px; }
 
  /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -240,6 +240,9 @@ article p {
 
   body {
     font-size: 100%; }
+
+  .articleTag {
+    margin-left: 0px; }
 
   article h3 {
     font-size: 26px; }

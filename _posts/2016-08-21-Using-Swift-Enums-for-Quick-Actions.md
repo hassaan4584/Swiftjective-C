@@ -2,7 +2,8 @@
 layout: post
 tags: ["UIKit"]
 title: "Leveraging Swift Enums for Quick Actions"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Quick Actions are a staple component of a first class 3D Touch experience. Implementing them using Swift's enumerations makes for a pragmatic approach."
 image: /assets/images/logo.png
 ---

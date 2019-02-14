@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "#keyPath"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Selectors are a part of iOS development daily. They can also be a common source of frustrating bugs, but #keyPath is here to help."
 image: /assets/images/logo.png
 ---

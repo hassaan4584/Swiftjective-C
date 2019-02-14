@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "Protocol Oriented Programming"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "The infamous WWDC session introduced us to 'Protocol Oriented Programming'. Really, though - what is it?"
 image: /assets/images/logo.png
 ---

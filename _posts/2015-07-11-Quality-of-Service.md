@@ -2,7 +2,8 @@
 layout: post
 tags: ["Foundation"]
 title: "Quality of Service"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Threading, concurrency and parallelism can be a sticky subject. Thankfully, Foundation has an API to make everything safer."
 image: /assets/images/logo.png
 ---

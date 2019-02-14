@@ -2,7 +2,8 @@
 layout: post
 tags: ["Misc"]
 title: "Connecting iOS Apps with Their Websites"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "As developers, marketing often escapes the lot of us. Fortnuately, Apple has made a few quick wins available to create meanginful connections between your app and its web site."
 image: /assets/images/logo.png
 ---

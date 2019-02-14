@@ -12,6 +12,19 @@
      margin:0;
  }
  
+ /* Tag
+
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ .articleTag {
+    background-color: $secondary-color;
+    color: white;
+    padding: 4px 6px 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    margin-left: 16px;
+ }
+
  /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -112,6 +125,10 @@
 
      body {
          font-size: 100%;
+     }
+
+     .articleTag {
+        margin-left: 0px;
      }
 
      article h3 {

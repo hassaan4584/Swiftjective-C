@@ -2,7 +2,8 @@
 layout: post
 tags: ["Series"]
 title: "iOS Citizenship: Reacting to Low Power Mode"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "It's a term you've likely heard in the development community - being a good citizen. What does it mean, and how can we do just that?"
 image: /assets/images/logo.png
 ---

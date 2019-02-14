@@ -2,7 +2,8 @@
 layout: post
 tags: ["Swift"]
 title: "Attributes in Swift"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Attributes can keep code clean and conscise without much effort. Today, let's cover some common, and uncommon, use cases."
 image: /assets/images/logo.png
 ---

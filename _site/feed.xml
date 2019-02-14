@@ -1,5 +1,213 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-28T22:01:59-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">The Chart That Lies</title><link href="http://localhost:4000/the-chart-that-lies/" rel="alternate" type="text/html" title="The Chart That Lies" /><published>2019-01-24T00:00:00-06:00</published><updated>2019-01-24T00:00:00-06:00</updated><id>http://localhost:4000/the-chart-that-lies</id><content type="html" xml:base="http://localhost:4000/the-chart-that-lies/">&lt;p&gt;There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-14T09:51:23-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">NS_CLOSED_ENUM</title><link href="http://localhost:4000/NS_CLOSED_ENUM/" rel="alternate" type="text/html" title="NS_CLOSED_ENUM" /><published>2019-01-31T00:00:00-06:00</published><updated>2019-01-31T00:00:00-06:00</updated><id>http://localhost:4000/NS_CLOSED_ENUM</id><content type="html" xml:base="http://localhost:4000/NS_CLOSED_ENUM/">&lt;p&gt;There is but one constant in software engineering: change.&lt;/p&gt;
+
+&lt;p&gt;New versions. Additional frameworks. Mutating requirements. Indecisive clients. Nascent patterns for emerging platforms.&lt;/p&gt;
+
+&lt;p&gt;The outside factors will always pile in, and yet sitting within stark juxtaposition of this notion is that some code might not &lt;em&gt;ever&lt;/em&gt; change. A prime candidate for such immutability? Enumerations.&lt;/p&gt;
+
+&lt;p&gt;And now, thanks to the Swift compiler and Xcode 10.2, we can broadcast the future of any Objective-C enumeration with a higher degree of clarity.&lt;/p&gt;
+
+&lt;h3 id=&quot;frozen-and-unfrozen&quot;&gt;Frozen and Unfrozen&lt;/h3&gt;
+&lt;p&gt;Far from moribund, Objective-C appears to gain new gadgets on an annual basis. However, a closer inspection reveals that all good things happening to the thirty-plus year old language are a direct result of bettering the Swift programming experience. So, it should come as no surprise that this macro was born primarily from &lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md&quot; target=&quot;_blank&quot;&gt;Swift evolution proposal 0192&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The TL;DR is that the Swift community were considering how to effectively handle enumerations that would change, and those that wouldn’t. In programming parlance we consider this distinction as &lt;em&gt;frozen&lt;/em&gt; and &lt;em&gt;unfrozen&lt;/em&gt; enumerations.&lt;/p&gt;
+
+&lt;p&gt;For an unfrozen enumeration (likely the lot of them), additional cases are likely coming in future API changes:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Later on, another case could be added&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeMigrated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Whereas other situations call for a certain degree of finality, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;FloatingPointSign&lt;/code&gt; from within the Swift Standard Library:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;FloatingPointSign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minus&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sign&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;minus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;swiftly-business&quot;&gt;Swiftly Business&lt;/h3&gt;
+&lt;p&gt;The differences in approach between the two languages are vast and wide when dealing with enumerations. Recall that Objective-C supports storing any value in an enumeration, so as long as it matches the underlying type:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Later on, assignment...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;934&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Or control flow...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;243&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// It's all totally legal&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Swift, that’s no fly zone territory:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Cannot assign value of type 'Int' to type 'AccountType'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;934&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// This errs as well, unless one initializes an Int with the enum's rawValue.    &lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But where things really become tightened up in Swift is within a &lt;code class=&quot;highlighter-rouge&quot;&gt;switch&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// If we omit default, we'll err since the switch isn't exhaustive. Or leave out a break.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;existing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, Swift is the straight A student who buckles their seat belt before starting their engine. Objective-C wouldn’t mind driving blindfolded:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Really anything goes. Leave out a break. Don't use all the cases. Just whatever with a side of YOLO.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And you can see where the issues come into play. Though we can’t do much in terms of safety with Objective-C, we can vend more intent to Swift consumers of their enumerations by marking them as either frozen or unfrozen. Doing so yields a subtle but welcome change for Swift API consumers.&lt;/p&gt;
+
+&lt;p&gt;Enter NS_CLOSED_ENUM.&lt;/p&gt;
+
+&lt;h3 id=&quot;freezing-enumerations&quot;&gt;Freezing Enumerations&lt;/h3&gt;
+&lt;p&gt;Though our account type example enumeration is ripe for future mutations, let’s consider one that isn’t:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_CLOSED_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountStandingStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusFreeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusPaid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusOwes&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Here, our business needs dictated that an account will ever only be in one of three states. Forever. When bridged over to Swift, usage might look like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountStanding&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;owes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;@unknown&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Note that a default case can’t alert the compiler that a particular enumeration has elements that aren’t explicitly handled in the switch. For this reason, Swift added a new attribute in Swift 4 for switches, @unknown. Using it will act as a huge safety net, a catch-all. A key difference is that a warning will still be produced to let developers know they’ve missed a case.&lt;/p&gt;
+
+&lt;p&gt;That being said, intent is the most valued prize to engineers both from a maintainer’s perspective as well as a consumer’s one. Though @unknown is useful for letting one know they’ve missed a case; even better is to communicate that they don’t need a default case at all. YAGNI.&lt;/p&gt;
+
+&lt;p&gt;We can use NS_CLOSED_ENUM here to signify things will, and forever more, stay the same:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_CLOSED_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountStandingStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusFreeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusPaid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusOwes&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now Swift can guarantee that the additional &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; is unnecessary, but notice how no warning is generated for our unfrozen enumeration, &lt;code class=&quot;highlighter-rouge&quot;&gt;AccountType&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;existing&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountStanding&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paid&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;existing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;unknown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;@unknown&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Still useful, because new types could later be added&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountStanding&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;owes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;@unknown&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Case is already handled by previous patterns; consider removing it&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Though this clearly enhances life with Swift, I’d argue this can be a valuable addition to any Objective-C exclusive code base. If you’re browsing a header, the intent of the enumeration’s status (both current and future) are clear by either the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;NS_ENUM&lt;/code&gt; versus &lt;code class=&quot;highlighter-rouge&quot;&gt;NS_CLOSED_ENUM&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;choices&quot;&gt;Choices&lt;/h3&gt;
+&lt;p&gt;It’s worth considering which type of enumeration to use with Objective-C at this point. We’ve got enum, ENUM or NS_CLOSED_ENUM. Fortunately, the answer is much simpler than you  might think.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NS_OPTIONS is also a choice, but is more suited towards bitmasks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The old C way of defining an enumeration, which by proxy Objective-C gained by virtue of being a superset, could lead to confusion. Look to &lt;a href=&quot;https://nshipster.com/ns_enum-ns_options/&quot; target=&quot;_blank&quot;&gt;NSHipster’s&lt;/a&gt; excellent post over the topic, but to jog your memory:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// There's no type. Only Integer values&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// or a specified type&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// or Apple's old way of doing things,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSInteger&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To provide explicit hints to the compiler, one should always opt for NS_ENUM as we’ve done in the previous examples. We’ll get switch case completeness along with our type checking.&lt;/p&gt;
+
+&lt;p&gt;Now, with NS_CLOSED_ENUM, the only &lt;em&gt;additional&lt;/em&gt; question you’ve got ask yourself is if this enumeration is frozen or not. That’s it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Don’t use enum&lt;/li&gt;
+  &lt;li&gt;If it’s unfrozen, opt for NS_ENUM&lt;/li&gt;
+  &lt;li&gt;If it’s frozen, use NS_CLOSED_ENUM&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It should be noted that the choice to use a frozen enumeration is final. The header for a closed enumeration communicates this plainly:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Once an enum is marked as closed, it is a binary and source incompatible change to add a new value. If there is any doubt about an enum gaining a private or additional public case in the future, use NS_ENUM instead.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;If Objective-C was “deprecated” tomorrow, the traveled software developer knows that in programming there is but one truth: what is dead never truly dies.&lt;/p&gt;
+
+&lt;p&gt;Interop with old faithful (Objective-C) isn’t going away anytime soon, as much as the prevailing narrative may have you believe. Sure, the Swift only frameworks are en route, no doubt, but so long as Foundation holds its firm grip in the iOS ecosystem - we can bet the dinosaur will still roam its plains.&lt;/p&gt;
+
+&lt;p&gt;As such, we should take care to integrate the changing of the guard in delightful ways, and NS_CLOSED_ENUM is an indefectible definition in that regard.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Swift" /><summary type="html">There is but one constant in software engineering: change.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">The Chart That Lies</title><link href="http://localhost:4000/the-chart-that-lies/" rel="alternate" type="text/html" title="The Chart That Lies" /><published>2019-01-24T00:00:00-06:00</published><updated>2019-01-24T00:00:00-06:00</updated><id>http://localhost:4000/the-chart-that-lies</id><content type="html" xml:base="http://localhost:4000/the-chart-that-lies/">&lt;p&gt;There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Stay up late coding.&lt;/li&gt;
@@ -101,7 +309,7 @@
 
 &lt;p&gt;Savor developing your creation, but remember that time doesn’t necessarily breed success. Only a great app does.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/col.jpg" /></entry><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">There is a certain optimism that surrounds your side project to others in your immediate circle. Take my wife, for example. What has she seen me do for the past several years?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/col.jpg" /></entry><entry><title type="html">Optimizing Images</title><link href="http://localhost:4000/optimizing-images/" rel="alternate" type="text/html" title="Optimizing Images" /><published>2018-12-11T00:00:00-06:00</published><updated>2018-12-11T00:00:00-06:00</updated><id>http://localhost:4000/optimizing-images</id><content type="html" xml:base="http://localhost:4000/optimizing-images/">&lt;p&gt;They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.&lt;/p&gt;
 
 &lt;p&gt;On a vacation? It didn’t happen if it’s not documented on your Instagram story with several candid shots.&lt;/p&gt;
 
@@ -355,7 +563,7 @@
 
 &lt;p&gt;But dance with the devil long enough, and he’s bound to rear his horns. Don’t let jetsam pluck you from existence because a selfie took up 1 gigabyte of memory. Hopefully, this knowledge and these techniques can you save you a trip down the crash logs.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Supporting External Displays</title><link href="http://localhost:4000/supporting-external-displays/" rel="alternate" type="text/html" title="Supporting External Displays" /><published>2018-11-03T00:00:00-05:00</published><updated>2018-11-03T00:00:00-05:00</updated><id>http://localhost:4000/supporting-external-displays</id><content type="html" xml:base="http://localhost:4000/supporting-external-displays/">&lt;p&gt;Cupertino &amp;amp; Friends© are, if anything, purposeful.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">They say the best camera is the one you have with you. If that adage holds any weight, then without question - stem to stern the iPhone is the most important camera on the planet. And our industry shows it, too.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Supporting External Displays</title><link href="http://localhost:4000/supporting-external-displays/" rel="alternate" type="text/html" title="Supporting External Displays" /><published>2018-11-03T00:00:00-05:00</published><updated>2018-11-03T00:00:00-05:00</updated><id>http://localhost:4000/supporting-external-displays</id><content type="html" xml:base="http://localhost:4000/supporting-external-displays/">&lt;p&gt;Cupertino &amp;amp; Friends© are, if anything, purposeful.&lt;/p&gt;
 
 &lt;p&gt;When ensuring iOS icons would be nothing short of flawless, it’s been said that Scott Forstall kept a jeweler’s loupe in his office to check that each pixel on &lt;em&gt;every&lt;/em&gt; icon was exemplary. Talk about “pixel perfect”. The man himself apparently even &lt;a href=&quot;https://www.businessinsider.com/steve-jobs-attention-to-detail-2011-10#when-he-was-hospitalized-he-rejected-masks-because-they-were-ugly-8&quot;&gt;debated the shade of grey&lt;/a&gt; that should be used for the Apple Store’s…..&lt;em&gt;bathroom signs&lt;/em&gt;.&lt;/p&gt;
 
@@ -540,7 +748,7 @@ It’s not too uncommon for screens, especially external ones, to change their r
 
 &lt;p&gt;But the core ethos of iOS development is marrying hardware with software, and promoting their tight coupling with startlingly efficient execution. So I would submit to you, supporting and coding against external display support is absolutely nothing new - but it is more &lt;em&gt;relevant&lt;/em&gt; to us than it was before &lt;a href=&quot;https://www.apple.com/newsroom/2018/10/new-ipad-pro-with-all-screen-design-is-most-advanced-powerful-ipad-ever/&quot;&gt;Apple’s event&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">Cupertino &amp;amp; Friends© are, if anything, purposeful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">Cupertino &amp;amp; Friends© are, if anything, purposeful.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">UIGraphicsImageRenderer</title><link href="http://localhost:4000/uigraphicsimagerenderer/" rel="alternate" type="text/html" title="UIGraphicsImageRenderer" /><published>2018-08-01T00:00:00-05:00</published><updated>2018-08-01T00:00:00-05:00</updated><id>http://localhost:4000/uigraphicsimagerenderer</id><content type="html" xml:base="http://localhost:4000/uigraphicsimagerenderer/">&lt;p&gt;The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.&lt;/p&gt;
 
 &lt;p&gt;The translation from the analog to the digital was an inflection point. We’ve experienced a similar shift on iOS starting with iOS 10, though many engineers have yet to discover or adopt the latest innovation for drawing images — &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;.&lt;/p&gt;
 
@@ -738,7 +946,7 @@ It’s not too uncommon for screens, especially external ones, to change their r
 
 &lt;p&gt;Maybe it should be, as is the case with &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;. You likely won’t have to twist many arms to persuade iOS engineers to make the switch, “No ✋ — I don’t want block based, automatically color managed, extensible drawing code that already manages its context lifetime — that’s awful” said…..nobody?&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">iOS 12: Notable UIKit Additions</title><link href="http://localhost:4000/iOS-12-Notable-UIKit-Additions/" rel="alternate" type="text/html" title="iOS 12: Notable UIKit Additions" /><published>2018-06-08T00:00:00-05:00</published><updated>2018-06-08T00:00:00-05:00</updated><id>http://localhost:4000/iOS-12-Notable-UIKit-Additions</id><content type="html" xml:base="http://localhost:4000/iOS-12-Notable-UIKit-Additions/">&lt;p&gt;And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">iOS 12: Notable UIKit Additions</title><link href="http://localhost:4000/iOS-12-Notable-UIKit-Additions/" rel="alternate" type="text/html" title="iOS 12: Notable UIKit Additions" /><published>2018-06-08T00:00:00-05:00</published><updated>2018-06-08T00:00:00-05:00</updated><id>http://localhost:4000/iOS-12-Notable-UIKit-Additions</id><content type="html" xml:base="http://localhost:4000/iOS-12-Notable-UIKit-Additions/">&lt;p&gt;And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.&lt;/p&gt;
 
 &lt;p&gt;Each year, I dive in on the latest version of iOS and try to bring up some of the new APIs that our favorite framework, UIKit, has brought to the table. In no particular order, let’s dig in on some of the enhancements that caught my eye.&lt;/p&gt;
 
@@ -888,7 +1096,7 @@ It’s not too uncommon for screens, especially external ones, to change their r
 
 &lt;p&gt;But, as is typical, W.W.D.C. brought some new stuff we weren’t expecting, hardening updates and most importantly the new APIs. Exciting times, plus — our apps are just better by virtue of simply running on the new OS. UIKit will always be at the forefront, and this year was no exception as there’s still plenty of discussions left to be had around this year’s improvements.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">WWDC 2018: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-18-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2018: The Pregame Quiz" /><published>2018-05-30T00:00:00-05:00</published><updated>2018-05-30T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-18-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-18-The-Pregame-Quiz/">&lt;p&gt;It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">WWDC 2018: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-18-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2018: The Pregame Quiz" /><published>2018-05-30T00:00:00-05:00</published><updated>2018-05-30T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-18-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-18-The-Pregame-Quiz/">&lt;p&gt;It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?&lt;/p&gt;
 
 &lt;p&gt;Time will soon tell, but until then it’s time for the fourth annual T.T.I.D.G. WWDC Pregame Quiz!&lt;/p&gt;
 
@@ -1001,7 +1209,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
   &lt;li&gt;To “Explore new rich interactions”, hence ENRI&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=17067129&quot;&gt;OpenGL&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Wildcard: An instrument to help operators improve handling air traffic control.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jordan Morgan</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSPredicate</title><link href="http://localhost:4000/NSPredicate-Objective-C/" rel="alternate" type="text/html" title="NSPredicate" /><published>2018-05-18T00:00:00-05:00</published><updated>2018-05-18T00:00:00-05:00</updated><id>http://localhost:4000/NSPredicate-Objective-C</id><content type="html" xml:base="http://localhost:4000/NSPredicate-Objective-C/">&lt;p&gt;When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSPredicate</title><link href="http://localhost:4000/NSPredicate-Objective-C/" rel="alternate" type="text/html" title="NSPredicate" /><published>2018-05-18T00:00:00-05:00</published><updated>2018-05-18T00:00:00-05:00</updated><id>http://localhost:4000/NSPredicate-Objective-C</id><content type="html" xml:base="http://localhost:4000/NSPredicate-Objective-C/">&lt;p&gt;When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.&lt;/p&gt;
 
 &lt;p&gt;And true — those things are great tools and have superb use cases. But I sense they are often lifted up as silver bullets without the necessary amount of thought that should probably be given to architectural decisions.&lt;/p&gt;
 
@@ -1322,7 +1530,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;While Swift has first class language support to slice and dice collections, it’s really not much of a bother to utilize an object created to do much of the same things. Should you find yourself in a mature codebase or a newly minted one sporting The Dino (Objective-C), let the predicates flow freely.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">UILayoutGuide</title><link href="http://localhost:4000/UILayoutGuide/" rel="alternate" type="text/html" title="UILayoutGuide" /><published>2018-04-15T00:00:00-05:00</published><updated>2018-04-15T00:00:00-05:00</updated><id>http://localhost:4000/UILayoutGuide</id><content type="html" xml:base="http://localhost:4000/UILayoutGuide/">&lt;p&gt;It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and &lt;code class=&quot;highlighter-rouge&quot;&gt;CGRectMake()&lt;/code&gt; ruled the lands of user interface development for quite some time.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">UILayoutGuide</title><link href="http://localhost:4000/UILayoutGuide/" rel="alternate" type="text/html" title="UILayoutGuide" /><published>2018-04-15T00:00:00-05:00</published><updated>2018-04-15T00:00:00-05:00</updated><id>http://localhost:4000/UILayoutGuide</id><content type="html" xml:base="http://localhost:4000/UILayoutGuide/">&lt;p&gt;It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and &lt;code class=&quot;highlighter-rouge&quot;&gt;CGRectMake()&lt;/code&gt; ruled the lands of user interface development for quite some time.&lt;/p&gt;
 
 &lt;p&gt;But as Apple’s devices started stacking up various point sizes, it was obvious that developers would either languish in the pit of misery that can result from too many frame calculations or embrace the power of describing relationships. The latter, obviously, won out.&lt;/p&gt;
 
@@ -1460,7 +1668,7 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;And in so many cases, that’s all a developer needs. So next time you feel yourself reaching for a spacer view, opt to embrace the simplicity and safety of &lt;code class=&quot;highlighter-rouge&quot;&gt;UILayoutGuide&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with Their Websites</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with Their Websites" /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/">&lt;p&gt;Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with Their Websites</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with Their Websites" /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/">&lt;p&gt;Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.&lt;/p&gt;
 
 &lt;p&gt;Though I’ve &lt;a href=&quot;http://localhost:4000/swift-javascript&quot;&gt;mentioned web related things here before&lt;/a&gt;, the last time I did any meaningful web development in a professional context, I was using JQuery v4.x.&lt;/p&gt;
 
@@ -1685,195 +1893,4 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;Things like this are almost like the chore list for iOS engineers. We may not think about them first, we may not wake up to crank out config files — but hey, they can help our endgame and move the needle towards exposure. So why not?&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Misc" /><summary type="html">Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSMeasurement</title><link href="http://localhost:4000/NSMeasurement/" rel="alternate" type="text/html" title="NSMeasurement" /><published>2017-12-17T00:00:00-06:00</published><updated>2017-12-17T00:00:00-06:00</updated><id>http://localhost:4000/NSMeasurement</id><content type="html" xml:base="http://localhost:4000/NSMeasurement/">&lt;p&gt;Measuring units, things or items in software won’t always be the most glamorous job for software engineers. Though not as thrilling as writing performant user interface libraries nor as fulfilling as conjuring up networking code that weaves concurrent execution with ease, measuring units in iOS is still done more often than not, wrong.&lt;/p&gt;
-
-&lt;p&gt;How can one author such code in an internationlized manner and not in a precipitous one? Foundation, as is so often the case, holds the answer. And it has since iOS 10.&lt;/p&gt;
-
-&lt;p&gt;This week, let’s look at NSMeasurement and friends.&lt;/p&gt;
-
-&lt;h3 id=&quot;more-common-than-you-think&quot;&gt;More Common than You Think&lt;/h3&gt;
-
-&lt;p&gt;Software has always had situations that crop up which present users with several things that are either measurable or generally quanitifiable. And when that software (iOS) runs on billions of devices across the globe, the need to represent internationalized values of those things becomes not only more important, but quite key.&lt;/p&gt;
-
-&lt;p&gt;Getting such measurements and units right isn’t a baseline experience, you should just expect it of your software.&lt;/p&gt;
-
-&lt;p&gt;So with that- these APIs aid not only just with the obvious “converter” apps, but also with games, shopping lists and everything else in between:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Are you representing a measurement of time ⌚️?&lt;/li&gt;
-  &lt;li&gt;A distance traveled 🚙?&lt;/li&gt;
-  &lt;li&gt;The rate at which we traveled 🗺?&lt;/li&gt;
-  &lt;li&gt;The weight of an object ⚖️?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As such, the temptation to use a simple double type makes sense on the surface level and simply breaks apart anywhere else:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//Technically we even set up the variable name for failure  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;milesTraveled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;nsmeasurement-and-all-his-units&quot;&gt;NSMeasurement and all his Units&lt;/h3&gt;
-
-&lt;p&gt;Following the previous example, what we really need is an accurate, bonafide construct to represent a measurement. And while miles is certainly a measurement, it’s only one that generally makes sense within the context of Murica’ 🇺🇸. As such, Foundation’s support for a measurement is tactfully generic:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Note that within the text, for stylistic purposes and because I code in Objective-C daily, I’ll refer to the frameworks with their NS prefix. All of these objects are properly bridged over to Swift as value types and structs.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It provides a way to provide a generic &lt;em&gt;unit&lt;/em&gt; of measurement and also a value that corresponds to it. Its initializer will ask for both:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Double&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UnitType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Every unit will always have a symbol, though not every unit has a dimension nor will they always be equivalent to one another. It’s something to note, sure, but one will most likely work with dimensional units. But, it’s for this reason that NSUnit’s designated initializer will require only a symbol:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCopying&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;  
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;symbol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;When it comes to NSMeasurement, this unit type drives the majority of the work, and you can define which to use via its initializer, but more commonly you’ll use an NSDimension (which subclasses NSUnit) provided to us by Apple. Each dimensional unit will then drive down further into a given dimension that exists within the unit.&lt;/p&gt;
-
-&lt;p&gt;For example, say we wanted to measure time. Our unit would be duration, but we’ve got several ways to represent duration such as the second, minute and hour:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;abstractValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 1 second  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 1 minute  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 1 hour  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;hours&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hours&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Foundation includes a truckload of dimensional units, everything from electrical currents to pressure. Though you are free to subclass and create your own units, in fact — there is quite robust support for that, I’m not sure you’ll ever need to.&lt;/p&gt;
-
-&lt;p&gt;Here are some common dimensional units baked in for free:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;UnitLength : Base Unit is meters (m)&lt;/li&gt;
-  &lt;li&gt;UnitMass : Base unit is kilograms (kg)&lt;/li&gt;
-  &lt;li&gt;UnitDuration : Base unit is seconds (sec)&lt;/li&gt;
-  &lt;li&gt;UnitArea : Base unit is square meters (m²)&lt;/li&gt;
-  &lt;li&gt;UnitAcceleration : Base unit is meters per second squared (m/s²)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are about 170 dimensional unit types and it’s likely Foundation has thought of your use case.&lt;/p&gt;
-
-&lt;h3 id=&quot;operating-on-measurements&quot;&gt;Operating on Measurements&lt;/h3&gt;
-
-&lt;p&gt;Working with measurements is trivial due to the fact that they conform to equatable out of the box, so comparisons are carried out uniformly:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;abstractValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;minutes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;abstractValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitDuration&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 61.0 seconds, measured in the dimension's base unit  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minutes&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 30.5 seconds  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;halfTheTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;totalTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The entire measurement API does all of the heavy lifting for you. This is true when you operate on units of the same dimension but in different forms. The result of the operation will simply provide the base unit type:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5280.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;metricLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilometers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 2229.344 meters  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metricLength&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Extending the usefulness is NSUnitConverter, which is an abstract class that converts a unit to and from the base unit of its given dimension. For most cases, that’s going to be units that adhere to a linear equation or a scale factor. As such, UnitConverterLinear will be supplied:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;5280.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;metricLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kilometers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 2229.344 meters  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;totalLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imperialLength&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metricLength&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 1.385 miles  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;justMiles&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;totalLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;miles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Don’t worry about creating conversions that don’t relate to one another. These will produce build time errors due to each type’s conversion requiring its generic unit type:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Build error  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;nonsense&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;totalLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;converted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitTemperature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;celsius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;user-facing-values&quot;&gt;User Facing Values&lt;/h3&gt;
-
-&lt;p&gt;Making these values show up in your user interface is going to be quite familiar if you’ve ventured into NSNumberFormatter’s waters. Its close cousin, NSMeasurementFormatter, use is essentially identical.&lt;/p&gt;
-
-&lt;p&gt;This is quite ideal, as writing these types of strings on our own time would quickly become a chore.&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isCanada&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;c1&quot;&gt;// kilometers 👌  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isChinese&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;c1&quot;&gt;// Translate the unit 😐  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isArabic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;c1&quot;&gt;// Translate the unit, number representation AND make it right to left 😱  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Of course, Foundation and friends nails it:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;miles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frenchDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;frenchDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;chineseDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;chineseDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;zh&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arabicDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;arabicDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;ar&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 🇫🇷** **-&amp;gt; 16,093 km  &lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇫🇷 -&amp;gt; (frenchDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 🇨🇳** **-&amp;gt; 16.093公里  &lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇨🇳 -&amp;gt; (chineseDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 🇯🇴** **-&amp;gt; ١٦٫٠٩٣** كم**  &lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇯🇴 -&amp;gt; (arabicDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Since measurements tie in closely with numbers, it’s also possible to pair a measurement formatter with a number formatter to specify digits, for example:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Measurement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;unit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UnitLength&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;miles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;frenchDistance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MeasurementFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;frenchDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;fr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 🇫🇷** **-&amp;gt; 0,322 km  &lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇫🇷 -&amp;gt; (frenchDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;digitFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NumberFormatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;digitFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minimumSignificantDigits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;frenchDistance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;numberFormatter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;digitFormat&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// 🇫🇷** **-&amp;gt; 0.321868 km  &lt;/span&gt;
-&lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;🇫🇷 -&amp;gt; (frenchDistance.string(from: distance))&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;There are several configurations that the measurement formatter affords to you. Be sure to glance over its &lt;a href=&quot;https://developer.apple.com/documentation/foundation/measurementformatter&quot;&gt;documentation&lt;/a&gt;. Also note that the formatter will takes its default system locale when initialized, so it’s typically unnecessary to directly assign to its locale property as we’ve done here.&lt;/p&gt;
-
-&lt;h3 id=&quot;testing-localesthe-easy-way&quot;&gt;Testing Locales — The .easy Way&lt;/h3&gt;
-
-&lt;p&gt;A quick foot note. Part of the magic of utilizing Foundation’s measurement and unit APIs is that they are locale aware. If you’re currently changing the location within the iOS simualtor to see how things shake out, there is another way you might prefer.&lt;/p&gt;
-
-&lt;p&gt;Just dupe your scheme, and pick the desired locale:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Edit Scheme&lt;/li&gt;
-  &lt;li&gt;Hit “Duplicate Scheme”, it’s in the bottom left in Xcode 9&lt;/li&gt;
-  &lt;li&gt;Name it&lt;/li&gt;
-  &lt;li&gt;Under Run -&amp;gt; Options -&amp;gt; Application Region, then choose the region to test with&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is nice, because it’s a no fuss and deliberate approach. It requires no code changes or mucking around with the (always reliable 🤞) iOS simulator.&lt;/p&gt;
-
-&lt;p&gt;Additionally, you can use the same approach to test string localizations within your interface by editing the “Application Language” in the same manner you edited the region.&lt;/p&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;It wasn’t until I started working on an international team that I truly began to appreciate accurate measurements within iOS. Or — even the correct unit of measurement &lt;em&gt;period&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;While the rest of the world embraces the metric system, here I am sticking out like a sore thumb while communicating distances via the imperial system. Siri has a soul, and I know this because she is sick of answering how many miles equals 1 kilometer. I hear it in her cold, hard, digital voice when she answers it for 144th time for me 🤖.&lt;/p&gt;
-
-&lt;p&gt;Let’s all aspire to not be that app that delivers the wrong units, or incorrect measurements, in our own software. Foundation has us covered.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Foundation" /><summary type="html">Measuring units, things or items in software won’t always be the most glamorous job for software engineers. Though not as thrilling as writing performant user interface libraries nor as fulfilling as conjuring up networking code that weaves concurrent execution with ease, measuring units in iOS is still done more often than not, wrong.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Misc" /><summary type="html">Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

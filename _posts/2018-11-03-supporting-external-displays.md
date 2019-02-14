@@ -2,7 +2,8 @@
 layout: post
 tags: ["UIKit"]
 title: "Supporting External Displays"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "With the iPad Pro's USB-C support, the opportunity to support external displays in a first class manner has never been more pertinent. Doing so doesn't require much work, and the potential value add is high."
 image: /assets/images/logo.png
 ---

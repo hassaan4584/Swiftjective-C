@@ -2,10 +2,10 @@
 layout: post
 tags: ["UIKit"]
 title: "UILayoutGuide"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Spacer views often make user interface creation more palatable, but with significant drawbacks. There's a more pragmatic way."
 image: /assets/images/logo.png
-special: "true"
 ---
 It's astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and `CGRectMake()` ruled the lands of user interface development for quite some time.
 

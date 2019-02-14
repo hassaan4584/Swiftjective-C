@@ -1,11 +1,7 @@
 {% assign post = site.posts.first %}
 <div id="articleWellLatest">
     <a href="{{ post.url | prepend: site.baseurl }}"><h2>{{ post.title }}</h2></a>
-    {% if post.tags[0] == "The Indie Dev Diaries" %}
-    <small>Indie Dev Diaries</small>
-    {% else %}
-    <small>Technical Article</small>
-    {% endif %}
+    {% include articleTag.html %}
     <p>{{ post.description }}</p>
     <a href="{{ post.url | prepend: site.baseurl }}"><code>continue.reading(with: {{ post.title }})</code></a>
 </div>

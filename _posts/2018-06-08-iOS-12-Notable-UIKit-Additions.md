@@ -2,7 +2,8 @@
 layout: post
 tags: ["UIKit"]
 title: "iOS 12: Notable UIKit Additions"
-author: Jordan Morgan
+writtenBy: Jordan Morgan
+writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Our favorite framework for user interface creations becomes faster and a bit more nimble with iOS 12."
 image: /assets/images/logo.png
 ---

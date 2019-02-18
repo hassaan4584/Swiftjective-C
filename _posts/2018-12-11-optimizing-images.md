@@ -31,7 +31,7 @@ Why?
 iOS essentially derives its memory hit from an image's *dimensions* - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2048 pixels tall. Assuming each pixel will cost us four bytes:
 
 ```swift
-1718*2048*4/1000000 = 14.07 megabytes give or take
+1718 * 2048 * 4 / 1024 / 1024 = 13.42 megabytes give or take
 ```
 Imagine if you've got a table view with a list of users, and each row shows the now pervasive circle avatar of their photo to the left. If you're thinking things are kosher because each one has been packed up nice and tight from ImageOptim or something similar, that might not be the case. If each one is a conservative 256x256 you could still be taking quite a hit on memory.
 

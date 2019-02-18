@@ -171,7 +171,7 @@ case .paid:break
 Though this clearly enhances life with Swift, I'd argue this can be a valuable addition to any Objective-C exclusive code base. If you're browsing a header, the intent of the enumeration's status (both current and future) are clear by either the use of `NS_ENUM` versus `NS_CLOSED_ENUM`. 
 
 ### Choices
-It's worth considering which type of enumeration to use with Objective-C at this point. We've got enum, ENUM or NS_CLOSED_ENUM. Fortunately, the answer is much simpler than you  might think.
+It's worth considering which type of enumeration to use with Objective-C at this point. We've got enum, NS_ENUM or NS_CLOSED_ENUM. Fortunately, the answer is much simpler than you  might think.
 
 > NS_OPTIONS is also a choice, but is more suited towards bitmasks.
 

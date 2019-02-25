@@ -8,7 +8,7 @@ description: "What is a best in class iOS app? How are they built, and can we qu
 image: /assets/images/logo.png
 ---
 
-For as long as I've been a part of this industry, I've watched incredible, well-deserving apps takes home an Apple Design Award. And _that's_ my endgame. 
+For as long as I've been a part of this industry, I've watched incredible, well-deserving apps take home an Apple Design Award. And _that's_ my endgame. 
 
 So, years ago, I set out to create a list that succinctly answers only one question:
 

@@ -1,5 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-14T10:28:50-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">NS_CLOSED_ENUM</title><link href="http://localhost:4000/NS_CLOSED_ENUM/" rel="alternate" type="text/html" title="NS_CLOSED_ENUM" /><published>2019-02-14T00:00:00-06:00</published><updated>2019-02-14T00:00:00-06:00</updated><id>http://localhost:4000/NS_CLOSED_ENUM</id><content type="html" xml:base="http://localhost:4000/NS_CLOSED_ENUM/">&lt;p&gt;There is but one constant in software engineering: change.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-25T13:05:46-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">A Best in Class iOS App</title><link href="http://localhost:4000/A-Best-in-Class-App/" rel="alternate" type="text/html" title="A Best in Class iOS App" /><published>2019-02-25T00:00:00-06:00</published><updated>2019-02-25T00:00:00-06:00</updated><id>http://localhost:4000/A-Best-in-Class-App</id><content type="html" xml:base="http://localhost:4000/A-Best-in-Class-App/">&lt;p&gt;For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps takes home an Apple Design Award. And &lt;em&gt;that’s&lt;/em&gt; my endgame.&lt;/p&gt;
+
+&lt;p&gt;So, years ago, I set out to create a list that succinctly answers only one question:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What things can I quantify that help make an app great?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I believe I’ve created such a list that helps answer that question. Yours might look different, but this one is mine. It attempts to takes all of the emotion and (mostly) opinions out of it. I want to capture what Apple says is great, not what other people may define it as. Though those opinions can assuredly be of value, they don’t give out A.D.A.s - only Apple does.&lt;/p&gt;
+
+&lt;p&gt;Here’s a quick brief on my methodology behind how I created it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First, and most importantly, I read iOS’ Human Interface Guidelines annually from top to bottom after the GM releases of the upcoming version of iOS.&lt;/li&gt;
+  &lt;li&gt;Where there’s smoke, there’s fire. If Apple has said on record that “This is great” about an app, I include whatever that thing or interaction was. These things aren’t clandestine trade secrets, but rather they are things that Apple or an Apple design evangelist publicly gave their seal of approval to.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As always, if you’ve got an item or two that belongs on this list, by all means create a pull request to get it added in by visiting the link at the bottom of the post.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The five sections it covers are:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Accessibility:&lt;/strong&gt; Designing for everyone is the right thing to do, and the best apps do it and they do it exceptionally well.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Platform Technology:&lt;/strong&gt; Apple loves it when apps utilize their new APIs to great effect, you should too. It’s not about shoehorning features, it’s about looking at your product and seeing how to utilize iOS around it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;User Experience:&lt;/strong&gt; Don’t make people think. Your app should have a core function that acts a thesis to a paper - and your UX is the body that supports it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Design:&lt;/strong&gt; Explaining design is hard, but you know a good one when you see it. This section lists some things those apps which are thoughtfully created do.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;App Store Presence&lt;/strong&gt; This is by far the most nascent category I’ve been tracking, so its list is short. It includes best practices for the App Store.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;accessibility-is-first-class&quot;&gt;Accessibility is First Class&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Voice Over is fully supported and the rotor control is implemented by including the relevant headings. Using Screen Curtain yields an experience that’s not only usable, but up to par with the regular app using only Voice Over.&lt;/li&gt;
+  &lt;li&gt;Context considering, you use &lt;code class=&quot;highlighter-rouge&quot;&gt;accessibilityIgnoresInvertColors&lt;/code&gt; for images and video.&lt;/li&gt;
+  &lt;li&gt;Respects reduced motion and blurring user preferences.&lt;/li&gt;
+  &lt;li&gt;Adaptive and supports all devices and multitasking scenarios elegantly.&lt;/li&gt;
+  &lt;li&gt;Fully supports dynamic type.&lt;/li&gt;
+  &lt;li&gt;Readable text uses &lt;code class=&quot;highlighter-rouge&quot;&gt;readableContentGuide&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Color blind support and a 7:1 color contrast ratio.&lt;/li&gt;
+  &lt;li&gt;Smart Invert Color Support and the app responds well to color inversion.&lt;/li&gt;
+  &lt;li&gt;All bar buttons have their landscapeImagePhone and largeContentSizeImage properties set.&lt;/li&gt;
+  &lt;li&gt;All glyphs have their accessibility images set (i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;adjustsImageSizeForAccessibilityContentSizeCategory&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;Includes closed captions and audio descriptions, all images and icons have alternative text set.&lt;/li&gt;
+  &lt;li&gt;Leading and trailing margins are used for constraints to support left to right languages.&lt;/li&gt;
+  &lt;li&gt;The User Interface appears flawlessly when tested using Double Length Pseudo-languages.&lt;/li&gt;
+  &lt;li&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;NSShowNonLocalizedStrings&lt;/code&gt; yields no results.&lt;/li&gt;
+  &lt;li&gt;If you support drag and drop, &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2018/241/&quot;&gt;UIAccessibilityLocationDescriptors&lt;/a&gt; are all set.&lt;/li&gt;
+  &lt;li&gt;Magic taps are supported for the app’s most common functionality.&lt;/li&gt;
+  &lt;li&gt;It uses &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleSpokenName&lt;/code&gt; if the app’s name could potentially be mispronounced by the system (i..e CoolApp23 would be “CoolApp Twenty Three”).&lt;/li&gt;
+  &lt;li&gt;Lastly, running the entire app through Accessibility Inspector produced no warnings and turning on Screen Curtain to navigate the app works flawlessly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ios-technology-is-tightly-integrated&quot;&gt;iOS Technology is Tightly Integrated&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;3D Touch is integrated (Peeks, home shortcuts, quick actions and interaction delegate for unique experiences).&lt;/li&gt;
+  &lt;li&gt;Spotlight search and indexing support.&lt;/li&gt;
+  &lt;li&gt;Effective energy management (i.e. supports low power mode and reacts to it)&lt;/li&gt;
+  &lt;li&gt;Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard.&lt;/li&gt;
+  &lt;li&gt;It supports handoff on Mac (if applicable).&lt;/li&gt;
+  &lt;li&gt;Meaningful extensions are included with the app, whether it’s via a share extension, action extension, etc.&lt;/li&gt;
+  &lt;li&gt;Callback urls are supplied and documented so other apps may integrate with it (x-callback-url)/.&lt;/li&gt;
+  &lt;li&gt;Siri Intent support, when plausible:
+    &lt;ul&gt;
+      &lt;li&gt;Also include intent phrases to help coach users&lt;/li&gt;
+      &lt;li&gt;Alternate app names are included when appropriate&lt;/li&gt;
+      &lt;li&gt;Watchface support&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If it makes sense, document sharing is supported via the file provider.&lt;/li&gt;
+  &lt;li&gt;Drag and drop has first class support:
+    &lt;ul&gt;
+      &lt;li&gt;A fully fleshed out &lt;code class=&quot;highlighter-rouge&quot;&gt;NSItemProvider&lt;/code&gt; exists for custom objects.&lt;/li&gt;
+      &lt;li&gt;Purposeful external and internal app drag support.&lt;/li&gt;
+      &lt;li&gt;This is used for reordering, should the app support it.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If it makes sense, data can be shared via AirDrop.&lt;/li&gt;
+  &lt;li&gt;Natural language processing support if necessary.&lt;/li&gt;
+  &lt;li&gt;All tab bar images are vector .pdf images or have each corresponding size included to ensure they adapt correctly and are vended to accessibility modals properly.&lt;/li&gt;
+  &lt;li&gt;Any displayed Live Photo will animate when force touched and utilize &lt;code class=&quot;highlighter-rouge&quot;&gt;PHLivePhotoImageView&lt;/code&gt; for playback.&lt;/li&gt;
+  &lt;li&gt;Each image also shows their system badge if available (i.e. live photo badges).&lt;/li&gt;
+  &lt;li&gt;If it makes sense, it supports printing via &lt;code class=&quot;highlighter-rouge&quot;&gt;UIPrintInteractionController&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Has Siri Shortcuts supported or donated.&lt;/li&gt;
+  &lt;li&gt;Running the Analyze function in Xcode yields no errors, warnings or suggestions.&lt;/li&gt;
+  &lt;li&gt;There are no calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsBeginImageContextWithOptions&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt; is used instead.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/WebContent.html#//apple_ref/doc/uid/TP40016308-CH8-SW1&quot;&gt;Universal Links&lt;/a&gt; are supported, especially if your app’s content is available online.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-user-experience-is-top-of-mind&quot;&gt;The User Experience is Top of Mind&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Supports &lt;a href=&quot;https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UndoArchitecture/UndoArchitecture.html&quot;&gt;native&lt;/a&gt; “undo” and “redo” actions, typically from shaking.&lt;/li&gt;
+  &lt;li&gt;The content type of all text views and text fields is included, and the correct keyboard type is used for the current context. The keyboard’s language identifier is integrated correctly.&lt;/li&gt;
+  &lt;li&gt;Handles the keyboard being undocked on the iPad, if views are constrained to it via an &lt;code class=&quot;highlighter-rouge&quot;&gt;inputAccessoryView&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;If data is quantifiable while data transfer is occurring, a progress indicator is used over an activity indicator.&lt;/li&gt;
+  &lt;li&gt;It’s localized for all territories it’s released in.&lt;/li&gt;
+  &lt;li&gt;Text tends to not truncate and it &lt;em&gt;never&lt;/em&gt; clips but rather it’s always readable.&lt;/li&gt;
+  &lt;li&gt;All tappable interface elements are at least 44 by 44 points.&lt;/li&gt;
+  &lt;li&gt;The entire app binary is under 30 megabytes. (&lt;em&gt;No source here, this is based off a multitude of data points.&lt;/em&gt;)&lt;/li&gt;
+  &lt;li&gt;Delete actions always are followed by a confirmation prompt.&lt;/li&gt;
+  &lt;li&gt;If your app stores rich information files like a KeyNote presentation, it uses the Quick Look API to preview it.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforImplementingYourApp/StrategiesforImplementingYourApp.html#//apple_ref/doc/uid/TP40007072-CH5-SW2&quot;&gt;State restoration&lt;/a&gt; is implemented (UIStateRestoration).&lt;/li&gt;
+  &lt;li&gt;It uses the correct audio settings, if audio can be played at all within it.&lt;/li&gt;
+  &lt;li&gt;Custom edit options are supported when text or an image is selected, if appropriate.&lt;/li&gt;
+  &lt;li&gt;The user is provided ample time to form an opinion about your app before you request a rating for it.&lt;/li&gt;
+  &lt;li&gt;The launch screen is branding free and closely resembles the first screen of the app.&lt;/li&gt;
+  &lt;li&gt;Opt to use &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplicationOpenURLOptionUniversalLinksOnly&lt;/code&gt; as an option when opening a URL to another app.&lt;/li&gt;
+  &lt;li&gt;Table views deselect selected rows in &lt;a href=&quot;https://gist.github.com/smileyborg/ec4812c146f575cd006d98d681108ba8&quot;&gt;viewDidAppear&lt;/a&gt; when popping back to them.&lt;/li&gt;
+  &lt;li&gt;Notifications supply a value for &lt;a href=&quot;https://developer.apple.com/documentation/usernotifications/unnotificationcategory/2873736-hiddenpreviewsbodyplaceholder&quot;&gt;hiddenPreviewsBodyPlaceholder&lt;/a&gt; and a detail view.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInputAssistantItem&lt;/code&gt; items are used to support common tasks on iPad that are at home within the shortcuts bar.&lt;/li&gt;
+  &lt;li&gt;Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone.&lt;/li&gt;
+  &lt;li&gt;Navigation is clear and foolproof:
+    &lt;ul&gt;
+      &lt;li&gt;Modality is used sparingly, and clearly brings them back to where they were when dismissed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-design-drips-with-polish&quot;&gt;The Design Drips with Polish&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Correct system margins are used throughout the app, and no hard coded ones are used (i.e. layoutMarginsGuide, safeAreaLayoutGuide, etc.)&lt;/li&gt;
+  &lt;li&gt;Haptic feedback is used throughout the system to complement user interactions, and they are not overdone.&lt;/li&gt;
+  &lt;li&gt;Controller transitions feel natural and fluid. Great examples are Calendar and Photos.&lt;/li&gt;
+  &lt;li&gt;You opt for vector assets to combat the differing resolutions and avoid any blurry assets.&lt;/li&gt;
+  &lt;li&gt;Your content is always the focus, and you constantly challenge if that’s true throughout the development cycles.&lt;/li&gt;
+  &lt;li&gt;Particular and specific user experience guidelines are followed:
+    &lt;ul&gt;
+      &lt;li&gt;No segment controls are used in toolbars.&lt;/li&gt;
+      &lt;li&gt;There are no toolbars and tab bars in the same screen.&lt;/li&gt;
+      &lt;li&gt;Destructive actions are the top choice in action sheets.&lt;/li&gt;
+      &lt;li&gt;Alerts, if used, ideally have to two choices and titles have no punctuation. They avoid using Yes and No as choices.&lt;/li&gt;
+      &lt;li&gt;Any picker’s height is equal to about 5 list values.&lt;/li&gt;
+      &lt;li&gt;If a progress indicator is in a bar, it should have the unfolded portion of the track clear. Otherwise, it is colored to denote the amount of work left to do.&lt;/li&gt;
+      &lt;li&gt;Network activity indicators are only shown if the network requests lasts a few seconds or more.&lt;/li&gt;
+      &lt;li&gt;Switches are exclusively used within a table row.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;You aspire to ship on all of Apple’s platforms (iOS iPhone + iPad, watchOS, tvOS and macOS).&lt;/li&gt;
+  &lt;li&gt;Lastly, your app is “jank” free. You know what this means for you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;app-store-page-and-logistical-assets-are-thoughtfully-crafted&quot;&gt;App Store Page and Logistical Assets are Thoughtfully Crafted&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;An app store preview video is used.&lt;/li&gt;
+  &lt;li&gt;Its keywords and category were carefully researched.&lt;/li&gt;
+  &lt;li&gt;The app icon follows the golden grid:
+    &lt;ul&gt;
+      &lt;li&gt;It likely should include your brand’s primary color as well.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;I love checklists. And this is my quality checklist that’s constantly evolving. My side project will ship in a state where it meets or exceeds almost every single bullet point.&lt;/p&gt;
+
+&lt;p&gt;Certainly, quality takes time. If you nailed everything on this list, it’s because you’ve been working towards them for years. If you aren’t close to meeting the items listed here, no stress (it also means you probably shipped!). Take it piece by piece and work your way down.&lt;/p&gt;
+
+&lt;p&gt;And, as a wise honey-loving bear once said, “I get to where I’m going by walking away from where I’ve been.” If your app might lack some polish, better now more than ever to spend some time giving it some.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps takes home an Apple Design Award. And that’s my endgame.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NS_CLOSED_ENUM</title><link href="http://localhost:4000/NS_CLOSED_ENUM/" rel="alternate" type="text/html" title="NS_CLOSED_ENUM" /><published>2019-02-14T00:00:00-06:00</published><updated>2019-02-14T00:00:00-06:00</updated><id>http://localhost:4000/NS_CLOSED_ENUM</id><content type="html" xml:base="http://localhost:4000/NS_CLOSED_ENUM/">&lt;p&gt;There is but one constant in software engineering: change.&lt;/p&gt;
 
 &lt;p&gt;New versions. Additional frameworks. Mutating requirements. Indecisive clients. Nascent patterns for emerging platforms.&lt;/p&gt;
 
@@ -152,7 +311,7 @@
 &lt;p&gt;Though this clearly enhances life with Swift, I’d argue this can be a valuable addition to any Objective-C exclusive code base. If you’re browsing a header, the intent of the enumeration’s status (both current and future) are clear by either the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;NS_ENUM&lt;/code&gt; versus &lt;code class=&quot;highlighter-rouge&quot;&gt;NS_CLOSED_ENUM&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;choices&quot;&gt;Choices&lt;/h3&gt;
-&lt;p&gt;It’s worth considering which type of enumeration to use with Objective-C at this point. We’ve got enum, ENUM or NS_CLOSED_ENUM. Fortunately, the answer is much simpler than you  might think.&lt;/p&gt;
+&lt;p&gt;It’s worth considering which type of enumeration to use with Objective-C at this point. We’ve got enum, NS_ENUM or NS_CLOSED_ENUM. Fortunately, the answer is much simpler than you  might think.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;NS_OPTIONS is also a choice, but is more suited towards bitmasks.&lt;/p&gt;
@@ -330,7 +489,7 @@
 
 &lt;p&gt;iOS essentially derives its memory hit from an image’s &lt;em&gt;dimensions&lt;/em&gt; - whereas the actual file size has much less to do with it. And the dimensions for this photo sit at 1718 pixels wide by 2048 pixels tall. Assuming each pixel will cost us four bytes:&lt;/p&gt;
 
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mf&quot;&gt;1718*2048*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;14.07&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;megabytes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;give&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;1718&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1024&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;13.42&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;megabytes&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;give&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;take&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Imagine if you’ve got a table view with a list of users, and each row shows the now pervasive circle avatar of their photo to the left. If you’re thinking things are kosher because each one has been packed up nice and tight from ImageOptim or something similar, that might not be the case. If each one is a conservative 256x256 you could still be taking quite a hit on memory.&lt;/p&gt;
 
@@ -1668,229 +1827,4 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
 
 &lt;p&gt;And in so many cases, that’s all a developer needs. So next time you feel yourself reaching for a spacer view, opt to embrace the simplicity and safety of &lt;code class=&quot;highlighter-rouge&quot;&gt;UILayoutGuide&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Connecting iOS Apps with Their Websites</title><link href="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/" rel="alternate" type="text/html" title="Connecting iOS Apps with Their Websites" /><published>2018-02-03T00:00:00-06:00</published><updated>2018-02-03T00:00:00-06:00</updated><id>http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps</id><content type="html" xml:base="http://localhost:4000/Techniques-to-Connect-Websites-to-iOS-Apps/">&lt;p&gt;Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.&lt;/p&gt;
-
-&lt;p&gt;Though I’ve &lt;a href=&quot;http://localhost:4000/swift-javascript&quot;&gt;mentioned web related things here before&lt;/a&gt;, the last time I did any meaningful web development in a professional context, I was using JQuery v4.x.&lt;/p&gt;
-
-&lt;p&gt;So, yeah — it’s been a few years and (seemingly) several thousand Javascript frameworks later. I don’t venture into that ecosystem much, and my last trips were on account of the things I’m about to mention here.&lt;/p&gt;
-
-&lt;p&gt;Which is, there are some incredibly trivial things one can do on their website to couple it to their iOS app counterpart. If you have the next thirty minutes free, I’d wager you could do all of them listed here.&lt;/p&gt;
-
-&lt;p&gt;Let’s rock 🤘&lt;/p&gt;
-
-&lt;h3 id=&quot;give-your-saas-some-sass&quot;&gt;Give your SaaS some sass&lt;/h3&gt;
-
-&lt;p&gt;First, what’s the end game here? To simply leverage some hosted .json files on your server and put meta tags in your markup to allow users to jump straight into your app or display information about it more effectively. That’s it.&lt;/p&gt;
-
-&lt;p&gt;This stuff is typically key for SaaS business’ or solopreneurs because in the world we live in, where there is a SaaS website a (hopefully) native app will follow. We want to help them dance together.&lt;/p&gt;
-
-&lt;p&gt;It helps that iOS 11 built features specifically for this. Open up your camera, point it at a QR code. Boom — iOS shows us the actionable details. Share a link in messages. Get a rich text preview. The list goes on.&lt;/p&gt;
-
-&lt;h3 id=&quot;qr-code-detection&quot;&gt;QR Code Detection&lt;/h3&gt;
-
-&lt;p&gt;Let’s start with everyone’s favorite technology, quick response codes.&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//TODO: (insert QR code joke here)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Creating a QR code that users can point to and then be prompted to download, open or route to a part of your app can be useful. Doing so can be accomplished by setting up an &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; JSON file with an “applinks” key value pair and hosting it. You may already have this file for hand off support.&lt;/p&gt;
-
-&lt;p&gt;For this purpose, it looks like this:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The appID key simply must be your team or app ID,(.), followed by your bundle ID.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;An easy place for the JSON file to live is typically in the .well-known subdirectory:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;//wwww.anExample.com/.well-known/apple-app-site-association&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Additionally, planting it at the root of your server works just fine too.&lt;/p&gt;
-
-&lt;p&gt;If you host such a file, the end result is that your app will immediately show to open via a notification when the user points at the QR code. The only metadata your QR code needs is the URL for your website.&lt;/p&gt;
-
-&lt;p&gt;No external QR code download, no more taps — nothing. It just happens.&lt;/p&gt;
-
-&lt;p&gt;If the user doesn’t have your app, Safari will kick in instead, taking them to your website.&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-particular&quot;&gt;Getting Particular&lt;/h3&gt;
-
-&lt;p&gt;You have the ability to specify a few things within your applinks key-value pairs. Let’s look at what’s available:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;apps&lt;/strong&gt; — You supply an empty array here. I would tell you why, but I would be making it up because Apple literally says nothing else about it besides that so…¯(°_o)/¯&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;details&lt;/strong&gt; — An array of dictionaries, one for each app that your site ultimately supports. Ordering matters in the array, as iOS look up links according to it. This allows you to specify an app to handle a certain part of your website.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;details[appid]&lt;/strong&gt; — The team ID or app ID with a period, and your app’s bundle ID tacked on.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;details[paths] &lt;/strong&gt;— An array or strings that determine which parts of your website are supported by the app. Additionally, you can say which parts **aren’t **supported.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The first three entries don’t merit much more discussion. The paths entry does have some nifty options for excluding content where applicable.&lt;/p&gt;
-
-&lt;p&gt;For example, including “NOT “ at the beginning of the path will basically blacklist that content from being used as a universal link:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/posts/iOS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;NOT /oldPosts/outdated/*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This works much like regex, with support for wildcards:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/posts/iOS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-                &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/oldPosts/201?/*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;A few random words of advice:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Keep in mind these matches are case sensitive.&lt;/li&gt;
-  &lt;li&gt;If you’re rocking a few domains, you’ll need to roll an &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file for each one that your app supports. Example: apple.com would have different motives than someProducts.apple.com&lt;/li&gt;
-  &lt;li&gt;One doesn’t actually need to appended “.json” to the JSON file. Don’t ask me how I know this, or how much hypothetical time was lost to it.&lt;/li&gt;
-  &lt;li&gt;If you associate several apps within one &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file, iOS will handle it by presenting an alert showing each one to determine which is opened. The next time this happens, iOS will suggest the last choice as a default — but users can still switch this via a force touch or by pulling down on the notification.&lt;/li&gt;
-  &lt;li&gt;Safari handles all of this as well. If you hosted the QR code as an image, and an iOS user 3D touches on it — this exact same flows happens.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;associated-domains&quot;&gt;Associated Domains&lt;/h3&gt;
-
-&lt;p&gt;As an iOS developer, you’ve got some duties too. Chief among them is to let Xcode know you’re expecting this to happen. This is done by the “Associated Domains” capability for your app binary.&lt;/p&gt;
-
-&lt;p&gt;Flip it on within Xcode and add some entries for each one you wish to support. Again, you might’ve spent time here already if you’ve developed for hand off capabilities.&lt;/p&gt;
-
-&lt;p&gt;For this particular type of routing, though, it would look like this:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;i.e.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;applinks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;applinks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;anExample.com&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;As we’ll see later, this creates a handshake of sorts that confirms both the app and website trust one another. Xcode will generate an entitlement to reconcile the security aspect and apply it on your app’s behalf. Spoiler alert, this opens up the door for quick credential retrieval too, as we’ll see later.&lt;/p&gt;
-
-&lt;p&gt;Of course, this means you’ll need to handle the user activity passed to you within your app delegate. But, that’s a blog post for another day.&lt;/p&gt;
-
-&lt;p&gt;Using universal app links is great, and I hope more apps use it as time goes on. They can happen outside of a QR code context too. They enjoy certain advantages over custom URL schemes in that they are more secure due to the handshake, they can’t be hijacked or claimed by any other app and the only party who can associate one to your app, is you.&lt;/p&gt;
-
-&lt;h3 id=&quot;web-credentials&quot;&gt;Web Credentials&lt;/h3&gt;
-
-&lt;p&gt;This nifty trick is absolutely essential for you if your app has a log in mechanism or any user portal system online. By employing password autofill, users can tap on the lock icon in the quicktype bar that appears over the keyboard, authenticate and then have their information automatically filled out.&lt;/p&gt;
-
-&lt;p&gt;It’s beautiful, and I use it daily.&lt;/p&gt;
-
-&lt;p&gt;To allow for this to happen, there is minor housekeeping that you need to do for the text fields or text views representing your log in. Simply assign the correct values added in iOS 11 to their textContentType property so iOS knows what goes where:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;loginField.textContentType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.username&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;passwordField.textContentType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;That’s all it takes from a coding standpoint — nothing more than assigning to a property (if you don’t, you leave it up to iOS’ heuristics to make the assumptions). There’s nothing left other than to respond accordingly to the incoming “did change” delegate methods or notifications that’ll be fired off with the credentials.&lt;/p&gt;
-
-&lt;p&gt;Technically, you could stop here and things would work….&lt;em&gt;ish&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Users would just get the quick type bar, but your site’s credentials wouldn’t be offered up within it. They’d just see the lock icon, then have to auth up, search for it and select it.&lt;/p&gt;
-
-&lt;p&gt;Amateur hour. Obviously, we’d prefer the user’s credentials to show up immediately once either one of those text controls becomes first responder.&lt;/p&gt;
-
-&lt;h3 id=&quot;establishing-trust-again&quot;&gt;Establishing Trust, Again&lt;/h3&gt;
-
-&lt;p&gt;Which brings us back to our &lt;code class=&quot;highlighter-rouge&quot;&gt;apple-app-site-association&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;Going deeper into the same thought above, a signed entitlement tells iOS which sites you are associated with. The secure, two way link is established in particular when your app is installed or updated. At that point iOS does a wellness check by traversing your domains listed within your Associated Domains (which we mentioned above) and pings each one to see if it gets a valid association file.&lt;/p&gt;
-
-&lt;p&gt;If the app points to the website and the website points to the app — we’re cooking.&lt;/p&gt;
-
-&lt;p&gt;The entry under Associated Domains for password autofill looks a bit different than the above app links we entered before, as it’s prefixed with “webcredentials”:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;webcredentials&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;anExample.com&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;XCode gonna’ Xcode. If you’re still seeing an error at this point, you might need to hop over to the developer portal and enable Associated Domains for your app ID.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As you’ve likely keyed in on, the Associated Domains entries follow the same pattern of including a service (i.e. activitycontinuation, applinks, etc) and domain:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;service&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;fully&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;qualified&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;domain&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;From there, it’s a case of adding that to your association file:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;applinks&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appID&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/posts/iOS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-            &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/oldPosts/201?/*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webcredentials&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apps&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;DJGHSDJGH24.com.blogPost.yolo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;  
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The only key to worry about is “apps”, which is just an array of strings (their value constructed the same way as above with app links) that represent the apps your site provides log in information for.&lt;/p&gt;
-
-&lt;p&gt;Once you throw that up on your site — the entire web credentials and password autofill pipeline is all set. I can’t tell you how much times this saves from a user perspective. It goes up by an order of magnitude if one uses Safari’s password suggestions as well.&lt;/p&gt;
-
-&lt;h3 id=&quot;image-links&quot;&gt;Image Links&lt;/h3&gt;
-
-&lt;p&gt;Sharing links within Messages is a ubiquitous practice among iOS users. Nothing is more rewarding than tapping on the link cards, with their inviting .png hero images sitting there beckoning us to load up a website within Safari.&lt;/p&gt;
-
-&lt;p&gt;Except when that doesn’t happen, and it’s just plain text 😬.&lt;/p&gt;
-
-&lt;p&gt;This is so easy to avoid, though, as you easily can control the title, icon, image and even video that displays. Using the &lt;a href=&quot;http://ogp.me&quot;&gt;open graph protocol&lt;/a&gt;, you can supply all of this stuff inside your site’s  tag.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Title (if this isn’t present, it’ll take your site’s title):&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Just in case, Javascript isn't run when generating rich links - so the value needs to be in the source. They can't be created dynamically.
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;The Title&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Icons (derived from a favicon or apple touch icon if it’s there. If not, you can roll with something like this):&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Image (replaces the icon if present, but still provide both because sometimes Messages prefers the icon over an image in situations like poor networking conditions)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:image&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/image.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Video (of note, you can supply a URL to a YouTube video, which is the only video player network that’ll work if you don’t use a file iOS can natively play)&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;og:video&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/video.mp4&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That’s all it takes to get the pretty, informational rich links when your website is shared within Messages. Nice.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-you-probably-are-already-doing-this-but-ill-add-it-anyways-paragraph&quot;&gt;The “You probably are already doing this but I’ll add it anyways” Paragraph&lt;/h3&gt;
-
-&lt;p&gt;Smart banners. At this point, you’re probably using them.&lt;/p&gt;
-
-&lt;p&gt;But just in case you aren’t, add a meta tag with your app ID to take care of it. When potential users visit your site, they’ll get that call to action banner at the top to download it.&lt;/p&gt;
-
-&lt;p&gt;If you’re wanting to hunt down your app ID quickly, just visit &lt;a href=&quot;http://itunes.apple.com/linkmaker/&quot;&gt;iTunes Link Maker&lt;/a&gt;. The entire meta tag can be as simple as this:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple-iunes-app&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;app-id=123456789&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you need to, you can also include an iTunes affiliate string and app argument parameter to deep link to a specific controller to keep context consistent with where a user might be on your website.&lt;/p&gt;
-
-&lt;p&gt;Generally, though, this is tacked on your landing page and that’s good enough to serve its purpose. Now, go forth and take back what could’ve been just an ephemeral thought about your app and convert it to an install 💪.&lt;/p&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;The lot of us craft software for our 9–5 and craft software to scratch our own creative itch. Eventually, all roads lead to a website talking about one or the other. Do them both justice, step away from Xcode and throw up a json file or two or include some simple meta tags that could help slip users right into your beautiful code.&lt;/p&gt;
-
-&lt;p&gt;Things like this are almost like the chore list for iOS engineers. We may not think about them first, we may not wake up to crank out config files — but hey, they can help our endgame and move the needle towards exposure. So why not?&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Misc" /><summary type="html">Developing for the web feels like a world that’s simply left me behind. I made a concerted effort to double down on iOS development several years ago. I’ve never looked back or regretted it, and I don’t even know what the rear view mirror looks like. It’s caked in dust by this point, no doubt.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">It’s astounding to think that we lived in a pre Auto Layout world not that long ago. Auto resizing masks and CGRectMake() ruled the lands of user interface development for quite some time.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

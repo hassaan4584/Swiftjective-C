@@ -97,7 +97,7 @@ The five sections it covers are:
 - Custom edit options are supported when text or an image is selected, if appropriate.
 - The user is provided ample time to form an opinion about your app before you request a rating for it.
 - The launch screen is branding free and closely resembles the first screen of the app.
-- Opt to use `UIApplicationOpenURLOptionUniversalLinksOnly` as an option when opening a URL to another app.
+- Opt to use `UIApplicationOpenURLOptionUniversalLinksOnly` as an option when [opening a URL to another app](https://recoursive.com/2019/02/22/preflight_universal_links/){:target="_blank"}.
 - Table views deselect selected rows in [viewDidAppear](https://gist.github.com/smileyborg/ec4812c146f575cd006d98d681108ba8) when popping back to them.
 - Notifications supply a value for [hiddenPreviewsBodyPlaceholder](https://developer.apple.com/documentation/usernotifications/unnotificationcategory/2873736-hiddenpreviewsbodyplaceholder) and a detail view.
 - `UITextInputAssistantItem` items are used to support common tasks on iPad that are at home within the shortcuts bar.

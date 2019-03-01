@@ -15,13 +15,16 @@ articles:
     link: https://www.sitepoint.com/author/jordanmorgan/
   - title: Sinch
     link: https://www.sinch.com/tutorials/ios-push-notifications-tutorial/
-  - title: Webby Awards
-    link: https://www.webbyawards.com/winners/2018/mobile-sites-apps/features/best-practices/buffer/
 books:
   - title: The Open Organization Guide to IT Culture Change
     link: https://opensource.com/open-organization/resources/culture-change
   - title: The Open Organization Workbook
     link: https://opensource.com/open-organization/resources/workbook
+honors:
+  - title: Webby Awards - Mobile Apps Best Practices
+    link: https://www.webbyawards.com/winners/2018/mobile-sites-apps/features/best-practices/buffer/
+  - title: Engineer of the Year
+    link: https:/biz417.com
 talks:
   - title: Texture in 10
     link: https://www.youtube.com/watch?v=Tzuz9usUpco

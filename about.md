@@ -23,6 +23,13 @@ Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanm
   {% endfor %}
 </ul>
 
+#### Awards and Honors
+<ul>
+  {% for item in site.data.myWork.honors %}
+    <li><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></li>
+  {% endfor %}
+</ul>
+
 #### Talks and Slides 
 <ul>
   {% for item in site.data.myWork.talks %}

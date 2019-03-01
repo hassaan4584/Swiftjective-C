@@ -91,13 +91,13 @@ The five sections it covers are:
 - All tappable interface elements are at least 44 by 44 points.
 - The entire app binary is under 30 megabytes. (_No source here, this is based off a multitude of data points._)
 - Delete actions always are followed by a confirmation prompt.
-- If your app stores rich information files like a KeyNote presentation, it uses the Quick Look API to preview it.
+- If your app stores rich information files like a Keynote presentation, it uses the Quick Look API to preview it.
 - [State restoration](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforImplementingYourApp/StrategiesforImplementingYourApp.html#//apple_ref/doc/uid/TP40007072-CH5-SW2) is implemented (UIStateRestoration).
 - It uses the correct audio settings, if audio can be played at all within it.
 - Custom edit options are supported when text or an image is selected, if appropriate.
 - The user is provided ample time to form an opinion about your app before you request a rating for it.
 - The launch screen is branding free and closely resembles the first screen of the app.
-- Opt to use `UIApplicationOpenURLOptionUniversalLinksOnly` as an option when [opening a URL to another app](https://recoursive.com/2019/02/22/preflight_universal_links/){:target="_blank"}.
+- Before opening a link that could lead to another app in a web view or `SFSafariViewController`, try calling `UIApplication`'s `openURL:` with the [`UIApplicationOpenURLOptionUniversalLinksOnly`](https://recoursive.com/2019/02/22/preflight_universal_links/){:target="_blank"}option first.
 - Table views deselect selected rows in [viewDidAppear](https://gist.github.com/smileyborg/ec4812c146f575cd006d98d681108ba8) when popping back to them.
 - Notifications supply a value for [hiddenPreviewsBodyPlaceholder](https://developer.apple.com/documentation/usernotifications/unnotificationcategory/2873736-hiddenpreviewsbodyplaceholder) and a detail view.
 - `UITextInputAssistantItem` items are used to support common tasks on iPad that are at home within the shortcuts bar.
@@ -124,7 +124,7 @@ The five sections it covers are:
 - Lastly, your app is "jank" free. You know what this means for you.
 
 ## App Store Page and Logistical Assets are Thoughtfully Crafted
-- An app store preview video is used.
+- An App Store preview video is used.
 - Its keywords and category were carefully researched.
 - The app icon follows the golden grid:
     - It likely should include your brand’s primary color as well.

@@ -101,6 +101,7 @@ The five sections it covers are:
 - Table views deselect selected rows in [viewDidAppear](https://gist.github.com/smileyborg/ec4812c146f575cd006d98d681108ba8) when popping back to them.
 - Notifications supply a value for [hiddenPreviewsBodyPlaceholder](https://developer.apple.com/documentation/usernotifications/unnotificationcategory/2873736-hiddenpreviewsbodyplaceholder) and a detail view.
 - `UITextInputAssistantItem` items are used to support common tasks on iPad that are at home within the shortcuts bar.
+- When performing CRUD operations on a table or collection view, you opt to use `performBatchUpdates:` instead of `reloadData`.
 - Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone.
 - Navigation is clear and foolproof:
     - Modality is used sparingly, and clearly brings them back to where they were when dismissed.

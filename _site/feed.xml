@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-01T09:03:01-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-11T22:00:46-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">A Best in Class iOS App</title><link href="http://localhost:4000/A-Best-in-Class-App/" rel="alternate" type="text/html" title="A Best in Class iOS App" /><published>2019-02-25T00:00:00-06:00</published><updated>2019-02-25T00:00:00-06:00</updated><id>http://localhost:4000/A-Best-in-Class-App</id><content type="html" xml:base="http://localhost:4000/A-Best-in-Class-App/">&lt;p&gt;For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps take home an Apple Design Award. And &lt;em&gt;that’s&lt;/em&gt; my endgame.&lt;/p&gt;
 
 &lt;p&gt;So, years ago, I set out to create a list that succinctly answers only one question:&lt;/p&gt;
@@ -99,16 +99,17 @@
   &lt;li&gt;All tappable interface elements are at least 44 by 44 points.&lt;/li&gt;
   &lt;li&gt;The entire app binary is under 30 megabytes. (&lt;em&gt;No source here, this is based off a multitude of data points.&lt;/em&gt;)&lt;/li&gt;
   &lt;li&gt;Delete actions always are followed by a confirmation prompt.&lt;/li&gt;
-  &lt;li&gt;If your app stores rich information files like a KeyNote presentation, it uses the Quick Look API to preview it.&lt;/li&gt;
+  &lt;li&gt;If your app stores rich information files like a Keynote presentation, it uses the Quick Look API to preview it.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforImplementingYourApp/StrategiesforImplementingYourApp.html#//apple_ref/doc/uid/TP40007072-CH5-SW2&quot;&gt;State restoration&lt;/a&gt; is implemented (UIStateRestoration).&lt;/li&gt;
   &lt;li&gt;It uses the correct audio settings, if audio can be played at all within it.&lt;/li&gt;
   &lt;li&gt;Custom edit options are supported when text or an image is selected, if appropriate.&lt;/li&gt;
   &lt;li&gt;The user is provided ample time to form an opinion about your app before you request a rating for it.&lt;/li&gt;
   &lt;li&gt;The launch screen is branding free and closely resembles the first screen of the app.&lt;/li&gt;
-  &lt;li&gt;Opt to use &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplicationOpenURLOptionUniversalLinksOnly&lt;/code&gt; as an option when &lt;a href=&quot;https://recoursive.com/2019/02/22/preflight_universal_links/&quot; target=&quot;_blank&quot;&gt;opening a URL to another app&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Before opening a link that could lead to another app in a web view or &lt;code class=&quot;highlighter-rouge&quot;&gt;SFSafariViewController&lt;/code&gt;, try calling &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplication&lt;/code&gt;’s &lt;code class=&quot;highlighter-rouge&quot;&gt;openURL:&lt;/code&gt; with the &lt;a href=&quot;https://recoursive.com/2019/02/22/preflight_universal_links/&quot; target=&quot;_blank&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplicationOpenURLOptionUniversalLinksOnly&lt;/code&gt;&lt;/a&gt;option first.&lt;/li&gt;
   &lt;li&gt;Table views deselect selected rows in &lt;a href=&quot;https://gist.github.com/smileyborg/ec4812c146f575cd006d98d681108ba8&quot;&gt;viewDidAppear&lt;/a&gt; when popping back to them.&lt;/li&gt;
   &lt;li&gt;Notifications supply a value for &lt;a href=&quot;https://developer.apple.com/documentation/usernotifications/unnotificationcategory/2873736-hiddenpreviewsbodyplaceholder&quot;&gt;hiddenPreviewsBodyPlaceholder&lt;/a&gt; and a detail view.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInputAssistantItem&lt;/code&gt; items are used to support common tasks on iPad that are at home within the shortcuts bar.&lt;/li&gt;
+  &lt;li&gt;When performing CRUD operations on a table or collection view, you opt to use &lt;code class=&quot;highlighter-rouge&quot;&gt;performBatchUpdates:&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;reloadData&lt;/code&gt;.&lt;/li&gt;
   &lt;li&gt;Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone.&lt;/li&gt;
   &lt;li&gt;Navigation is clear and foolproof:
     &lt;ul&gt;
@@ -142,7 +143,7 @@
 
 &lt;h2 id=&quot;app-store-page-and-logistical-assets-are-thoughtfully-crafted&quot;&gt;App Store Page and Logistical Assets are Thoughtfully Crafted&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;An app store preview video is used.&lt;/li&gt;
+  &lt;li&gt;An App Store preview video is used.&lt;/li&gt;
   &lt;li&gt;Its keywords and category were carefully researched.&lt;/li&gt;
   &lt;li&gt;The app icon follows the golden grid:
     &lt;ul&gt;

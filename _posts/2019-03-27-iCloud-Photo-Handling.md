@@ -181,7 +181,7 @@ func photoLibraryDidChange(_ changeInstance: PHChange)
 }
 ```
 
-With this tweak in place - you'll find that when as asset is fetched from iCloud, a change notification spins up and a fetch result reports a change (or possibly no change). Using batch updates, your collection or table view will reload and have the asset ready to go.
+With this tweak in place - you'll find that when an asset is fetched from iCloud, a change notification spins up and a fetch result reports a change (or possibly no change). Using batch updates, your collection or table view will reload and have the asset ready to go.
 
 To recap - here's the recipe to make this all tick:
 

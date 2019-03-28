@@ -57,7 +57,7 @@ Lipso facto - if you ran this code and saw no images being populated even though
 ### In the Clouds
 The first step to solving a problem isn't really admitting you have one in programming, it's identifying really what you're trying to solve to begin with. And here, we need to know how to identify which assets are indeed housed within iCloud and not yet on the device.
 
-Hitting the Googles can bring up some straight up wild solutions, partly due to the fact that Apple doesn't have a simple `isIniCloud` boolean to indicate as much. The answer for us is housed within the `info` dictionary that pervades much of UIKit's closures.
+Hitting the Googles can yield some straight up wild solutions, partly due to the fact that Apple doesn't have a simple `isIniCloud` boolean to indicate as much. The answer for us is housed within the `info` dictionary that pervades much of UIKit's closures.
 
 For our previous fetch, we can reliably know if the asset is in iCloud via the `PHImageResultIsInCloudKey` key that will be returned in the aforementioned dictionary:
 

@@ -1,5 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-27T08:51:03-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Handling iCloud Assets</title><link href="http://localhost:4000/iCloud-Photo-Handling/" rel="alternate" type="text/html" title="Handling iCloud Assets" /><published>2019-03-27T00:00:00-05:00</published><updated>2019-03-27T00:00:00-05:00</updated><id>http://localhost:4000/iCloud-Photo-Handling</id><content type="html" xml:base="http://localhost:4000/iCloud-Photo-Handling/">&lt;p&gt;There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-02T16:19:15-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">I Made Some Pancakes</title><link href="http://localhost:4000/making-pancakes/" rel="alternate" type="text/html" title="I Made Some Pancakes" /><published>2019-04-02T00:00:00-05:00</published><updated>2019-04-02T00:00:00-05:00</updated><id>http://localhost:4000/making-pancakes</id><content type="html" xml:base="http://localhost:4000/making-pancakes/">&lt;p&gt;Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/pancakes.jpg&quot; alt=&quot;The Chart of Lies&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And it was the weirdest thing.&lt;/p&gt;
+
+&lt;p&gt;As I was sitting there mixing up the batter, getting the cast iron skillet heated up &lt;em&gt;just&lt;/em&gt; right - I found myself humming along as I popped on Spotify to give me some tunes to push these from good-enough pancakes to straight up artisanal masterpieces. I wasn’t rushed at all. For whatever reason, I was only completely focused on making these pancakes and I was having the time of my life.&lt;/p&gt;
+
+&lt;p&gt;For me, that’s huge.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-i-wasnt-thinking-of&quot;&gt;What I Wasn’t Thinking Of&lt;/h3&gt;
+&lt;p&gt;Life is busy for all of us. As a married dad of three kiddos, I find myself objectively busier than I used to be. Given that, I find that there’s times when my mental space and anxiety can constantly be playing their “Greatest Hits” album over and over:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How can I find time to release this side project?&lt;/li&gt;
+  &lt;li&gt;Will it even matter when I do? &lt;a href=&quot;http://localhost:4000/the-chart-that-lies&quot; target=&quot;_blank&quot;&gt;Time spent on it doesn’t really matter.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Beyond side projects, how do I do even better at my job?&lt;/li&gt;
+  &lt;li&gt;Oh yeah - real life. When am I going to finish all of this laundry?&lt;/li&gt;
+  &lt;li&gt;I’m so close to being out of debt, it’s exhausting putting all my disposable income towards it.&lt;/li&gt;
+  &lt;li&gt;But then, do I just trade debt payments for saving for a down payment on a house? I want to enjoy my good income for once! Maybe I’ll buy a new iPad.&lt;/li&gt;
+  &lt;li&gt;Hmm, that’s a lot though. Wow, you know what - it’s crazy that my oldest will need a cell phone before I know it!&lt;/li&gt;
+  &lt;li&gt;Oh shoot - &lt;strong&gt;all&lt;/strong&gt; of my kids will need a cell phone 😬!&lt;/li&gt;
+  &lt;li&gt;and a car 😬😬,&lt;/li&gt;
+  &lt;li&gt;and go to college 😬😬😬,&lt;/li&gt;
+  &lt;li&gt;and also probably get married 😬😬😬😬.&lt;/li&gt;
+  &lt;li&gt;💀.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The point is, I typically would not take time to make any pancakes. Let alone, during a weekday. There’s just too much to do that I simply can’t afford myself the joy of cracking open a box of premade pancake batter and seeing them through to fruition. Ouch.&lt;/p&gt;
+
+&lt;h3 id=&quot;when-life-hits-you-with-a-sigabrt&quot;&gt;When Life Hits You with a SIGABRT()&lt;/h3&gt;
+&lt;p&gt;When you find yourself thinking ahead so fast that you can’t take the time to make pancakes, or enjoy a movie on Netflix or just take 15 minutes to talk with a loved one - you have to realize that’s your brain telling you to quite literally relax.&lt;/p&gt;
+
+&lt;p&gt;If you’re at this point, you might be carrying on like I do when I need to chill out but haven’t realized it yet:&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;Did your mom call you?&lt;/strong&gt; &lt;em&gt;I’ll call back later, I need to finish this post.&lt;/em&gt; &lt;br /&gt;
+&lt;strong&gt;Is it nice outside?&lt;/strong&gt; &lt;em&gt;I’ll take the walk another time, this project needed to finish up yesterday.&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;A new video game out you’d enjoy?&lt;/strong&gt; &lt;em&gt;I’ll play it later, I’ve gotta ship my side project now so I can learn from users, otherwise I won’t be following the lean startup principles!&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;Dreaming of starting a new venture?&lt;/strong&gt; &lt;em&gt;What’s the point, our C.E.O. is only a year older than me and he’s already created a multi-million dollar business. I can’t replicate that.&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;You aren’t at all a bad person if you do these things, I think we all do. Most texts suggest ways to avoid those situations all together, but I personally don’t find that a realistic goal.&lt;/p&gt;
+
+&lt;p&gt;No matter the epiphany you experience today, tomorrow or the next week you’ll eventually start back on your old ways. I think that’s healthy, actually - if we didn’t, we’d never start back in on working towards our goals again. Like anything - the answer is balance.&lt;/p&gt;
+
+&lt;h3 id=&quot;finding-the-pancake-moments&quot;&gt;Finding the Pancake Moments&lt;/h3&gt;
+
+&lt;p&gt;Why was it that I felt so peaceful, calm and balanced today? Enough to wake up early and jam on some delish pancakes. I’ve yearned wanted to answer that type of question for a long time. And, being an engineer, long ago I started to document my “pancake” moments when they did pop up to later try extrapolate why they arrived.&lt;/p&gt;
+
+&lt;p&gt;What I’ve found really isn’t that exciting. There are a few commonalities among the corpus - such as a vacation or time off on the horizon, a date night with my wife, a fun event with one of my kids is coming, etc. But as I dug deeper into my Day One journal archives, I began to realize that I typically only journal when I’m at a high point.&lt;/p&gt;
+
+&lt;p&gt;This was convenient for my current investigation, but the reality is that I couldn’t really nail down why sometimes I take time for myself, and other times I don’t. This time, I’d have to accept that this wasn’t a problem I could analyze several different ways and apply several late nights to eventually uncover the answer to.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As a funny aside, when I was digging through my journal during this time my wife popped around the corner and casually asked “Watcha doin?”. I said I was simply reading my journal, as saying I was in the middle of an in-depth investigation into why I can let myself relax enough to make pancakes and generally be normal was too odd of an answer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The truth is that taking time to enjoy life’s many simple pleasures isn’t something that’s a trivial matter. If it was, there wouldn’t be numerous books, conferences or classes explaining how to do it. This blog post certainly doesn’t offer up the silver bullet either.&lt;/p&gt;
+
+&lt;p&gt;What we can do, then, is simply take our own advice - &lt;em&gt;savor&lt;/em&gt; and &lt;em&gt;enjoy&lt;/em&gt; those little “pancake” moments when they come. Even if we can’t replicate them systemically, we can take heart that there is assuredly another one on the horizon.&lt;/p&gt;
+
+&lt;p&gt;Conversely, just as important is being sure not to put them off. If you do, you’re the lucky winner of free conference tickets to BurnOut Conf. Neglecting some time for yourself is like putting a band-aid over a bullet hole. Eventually, you’re gonna feel it.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;As indie developers, we find ourselves punishing our drive and a perceived lack-thereof if we don’t spend each free moment working towards our app, but then we put ourselves into a mental rut if we always do. But honestly, I’m kinda okay with life’s ebbs and flows - enjoying the times when I’m magnificently firing on all cylinders and all is in order, as much as the chaotic weeks where I feel like everything is just not working out.&lt;/p&gt;
+
+&lt;p&gt;This isn’t a novel, new or groundbreaking realization. In fact, any of your favorite authors found on the interwebs have likely written about it in their own way at some point.&lt;/p&gt;
+
+&lt;p&gt;And yet - so often I find myself needing to be reminded of it.&lt;/p&gt;
+
+&lt;p&gt;So if I may be so bold, perhaps you don’t need a huge life change, to work constantly to ship the side project, or read a self help book while implementing some other drastic change (or maybe you do, that’s cool too honestly).&lt;/p&gt;
+
+&lt;p&gt;Maybe you just need to make some freakin’ pancakes 🥞.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Handling iCloud Assets</title><link href="http://localhost:4000/iCloud-Photo-Handling/" rel="alternate" type="text/html" title="Handling iCloud Assets" /><published>2019-03-27T00:00:00-05:00</published><updated>2019-03-27T00:00:00-05:00</updated><id>http://localhost:4000/iCloud-Photo-Handling</id><content type="html" xml:base="http://localhost:4000/iCloud-Photo-Handling/">&lt;p&gt;There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.&lt;/p&gt;
 
 &lt;p&gt;They have a decade’s worth of talent and hardening baked right into them. While you should stray from a mechanism that can undermine your own structure, sometimes you just need to roll up your sleeves, toss Apple’s preheated solutions to the side and do it yourself. Building your own version of component X or Y is fatalistic in software development, after all.&lt;/p&gt;
 
@@ -47,7 +119,7 @@
 &lt;h3 id=&quot;in-the-clouds&quot;&gt;In the Clouds&lt;/h3&gt;
 &lt;p&gt;The first step to solving a problem isn’t really admitting you have one in programming, it’s identifying really what you’re trying to solve to begin with. And here, we need to know how to identify which assets are indeed housed within iCloud and not yet on the device.&lt;/p&gt;
 
-&lt;p&gt;Hitting the Googles can bring up some straight up wild solutions, partly due to the fact that Apple doesn’t have a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;isIniCloud&lt;/code&gt; boolean to indicate as much. The answer for us is housed within the &lt;code class=&quot;highlighter-rouge&quot;&gt;info&lt;/code&gt; dictionary that pervades much of UIKit’s closures.&lt;/p&gt;
+&lt;p&gt;Hitting the Googles can yield some straight up wild solutions, partly due to the fact that Apple doesn’t have a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;isIniCloud&lt;/code&gt; boolean to indicate as much. The answer for us is housed within the &lt;code class=&quot;highlighter-rouge&quot;&gt;info&lt;/code&gt; dictionary that pervades much of UIKit’s closures.&lt;/p&gt;
 
 &lt;p&gt;For our previous fetch, we can reliably know if the asset is in iCloud via the &lt;code class=&quot;highlighter-rouge&quot;&gt;PHImageResultIsInCloudKey&lt;/code&gt; key that will be returned in the aforementioned dictionary:&lt;/p&gt;
 
@@ -173,7 +245,7 @@ to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; for this to
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;With this tweak in place - you’ll find that when as asset is fetched from iCloud, a change notification spins up and a fetch result reports a change (or possibly no change). Using batch updates, your collection or table view will reload and have the asset ready to go.&lt;/p&gt;
+&lt;p&gt;With this tweak in place - you’ll find that when an asset is fetched from iCloud, a change notification spins up and a fetch result reports a change (or possibly no change). Using batch updates, your collection or table view will reload and have the asset ready to go.&lt;/p&gt;
 
 &lt;p&gt;To recap - here’s the recipe to make this all tick:&lt;/p&gt;
 
@@ -1561,325 +1633,4 @@ Though the iPhone’s touchscreen has made the paradigm commonplace in today’s
   &lt;li&gt;To “Explore new rich interactions”, hence ENRI&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=17067129&quot;&gt;OpenGL&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Wildcard: An instrument to help operators improve handling air traffic control.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSPredicate</title><link href="http://localhost:4000/NSPredicate-Objective-C/" rel="alternate" type="text/html" title="NSPredicate" /><published>2018-05-18T00:00:00-05:00</published><updated>2018-05-18T00:00:00-05:00</updated><id>http://localhost:4000/NSPredicate-Objective-C</id><content type="html" xml:base="http://localhost:4000/NSPredicate-Objective-C/">&lt;p&gt;When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.&lt;/p&gt;
-
-&lt;p&gt;And true — those things are great tools and have superb use cases. But I sense they are often lifted up as silver bullets without the necessary amount of thought that should probably be given to architectural decisions.&lt;/p&gt;
-
-&lt;p&gt;So in 2018, the blog posts overfloweth with Swift hackery (even on my blog 🤷🏻‍♂️) and the conference talks wax poetic of its future using functional programming parlance (yup, I’ve done that too 🙋🏻‍♂️).&lt;/p&gt;
-
-&lt;p&gt;Everyone seems excited about working with collections in Swift &lt;strong&gt;but&lt;/strong&gt; we’ve also been able to do &lt;em&gt;similar&lt;/em&gt; things in Objective-C since iOS 3. So today, I’m chatting about the power of NSPredicate and how you can sift through collections with it using the 🦖.&lt;/p&gt;
-
-&lt;p&gt;I think it’s relevant to bring it back up, as now we’re seeing developers at this point who’ve started with Swift, and then later have circled back to maintain some Objective-C. If that’s you, it’s possible that you’ve been frustrated with the amount of boilerplate or iteration you’ve had to write when using collections in Objective-C.&lt;/p&gt;
-
-&lt;p&gt;Today, I have might have something for you.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-use-case&quot;&gt;The Use Case&lt;/h3&gt;
-
-&lt;p&gt;We’ve come a long way in recent years when it comes to Objective-C collections. Not more than a handful of years ago, we had to tell the compiler we were much smarter than it was:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;indexOfObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Thanks Heavens, Cupertino and Friends© eventually tacked on generics by way of type erasure. This marked a significant improvement:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;Sup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;anArray&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;But generics or not, we often interact with the contents of Objective-C collections by doing something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anArray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isEqualToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;The Key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;   
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;c1&quot;&gt;// Do something  &lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;A lot of times, that’s kosher. But as the requirements become more complex and the relationships more varied, the code gets a bit iffy. If you subscribe to the notion that less code means less bugs and better maintenance, the simple act of querying collections can become a bother.&lt;/p&gt;
-
-&lt;p&gt;Predicates can lessen the blow here. It’s not about being “tricky” or cute with our code, but pragmatic and succinct.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-10000-foot-view&quot;&gt;The 10,000 Foot View&lt;/h3&gt;
-
-&lt;p&gt;At its core, &lt;code class=&quot;highlighter-rouge&quot;&gt;NSPredicate&lt;/code&gt; is used to constrain or define the parameters for in memory filtering or when performing a fetch. It really got its bones when paired with Core Data. It’s like SQL, except less awful*.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;I joke, it’s just that set based operations have never made sense to me 🙃.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;You supply it logical conditions, and it helps to return things that match said conditions. This means it provides support for basic comparisons, compound predicates, key path collections queries, subqueries, aggregates and more.&lt;/p&gt;
-
-&lt;p&gt;As it’s used to sift through collections, you can expect Foundation classes to support it out of the box. Mutable varieties support in-place mutations from the results, whereas their immutable flavors will return a new instance:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// In place  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutableArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*NSPredicate*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// New instance returned  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutableArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filteredArrayUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*NSPredicate*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Though predicates can be instantiated from &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nspredicate?language=objc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSExpression&lt;/code&gt;&lt;/a&gt; , &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nspredicate?language=objc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSCompoundPredicate&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nspredicate?language=objc&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;NSComparisonPredicate&lt;/code&gt;&lt;/a&gt; — it can also be created using a string syntax. This is similar to the Visual Format Language that one can use to define layout constraints.&lt;/p&gt;
-
-&lt;p&gt;We’ll be focusing on the utility of using the string syntax method.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-setup&quot;&gt;The Setup&lt;/h3&gt;
-
-&lt;p&gt;To illustrate, let’s consider the following code for the remainder of the post:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Pseudo code   &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSObject&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;Identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;PayGrade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSNumber&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// An some property somewhere containing Person instances  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employees&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;query-time-️&quot;&gt;Query Time ⚡️&lt;/h3&gt;
-
-&lt;p&gt;What follows for the rest of the post are straight forward examples of how to setup queries using the string format syntax.&lt;/p&gt;
-
-&lt;p&gt;We can start with a simple search scenario. Let’s assume we’ve got an array containing identifiers representing Person objects:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;s&quot;&gt;@&quot;erersdg32453tr&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
-    &lt;span class=&quot;s&quot;&gt;@&quot;dfs8rw093jrkls&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
-    &lt;span class=&quot;c1&quot;&gt;// etc  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Now, we’d like to retrieve Person objects from an existing array of Person objects from these identifiers. Using a double nested for-loop, it could be accomplished as such:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume &quot;employees&quot; is an existing array of Person objects&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;morningEventAttendees&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*Identifiers of people listed above*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;peopleAttendingMorningEvent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSMutableArray&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;morningEventAttendees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;employees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;identifier&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isEqualToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;  
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-            &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;peopleAttending&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;addObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now peopleAttendingMorningEvent has what we want&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The exact same result is accomplished using a predicate as such:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;morningAttendees&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELF.identifier IN %@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;peopleAttendingMorningEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;peopleAttendingMorningEvent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employees&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filteredArrayUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;morningAttendees&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;💫.&lt;/p&gt;
-
-&lt;p&gt;Predicate syntax allows for the use of SELF, which is used to great effect here. It represents the object contained within the array being operated on, so for us — Person objects.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Another bonus is that we’ve dropped the mutability of the array definition._&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It’s for this reason we can access the key paths associated with the object that SELF is representing. You’re seeing that above, as the &lt;code class=&quot;highlighter-rouge&quot;&gt;identifier&lt;/code&gt; property is referenced.&lt;/p&gt;
-
-&lt;p&gt;Should you prefer, any key path can also be expressed via a variable using the “%K” syntax in its place. This version does the same as above:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELF.%K IN %@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;identifier&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;peopleAttendingMorningEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;compound-predicates&quot;&gt;Compound Predicates&lt;/h3&gt;
-
-&lt;p&gt;It’s trivial to combine comparisons. Suppose our requirements now call for finding users attending events the same way as above, but now their paygrade must also be between 50,000 and 60,000.&lt;/p&gt;
-
-&lt;p&gt;If traditional approaches win out, then our first if statement will only grow:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Same code as above same for this tweak  &lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;identifier&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isEqualToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userID&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paygrade&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integerValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paygrade&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;integerValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;peopleAttending&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;addObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;person&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;But using a refactored predicate gets us there in a more idiomatic way:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;morningAttendees&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELF.identifier IN %@ &amp;amp;&amp;amp; SELF.paygrade.integerValue BETWEEN {50000, 60000}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;peopleAttendingMorningEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The syntax allows for different operators denoting the same thing which can help hone in on readability, per your preference. For example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;“&amp;amp;&amp;amp;” or “AND”&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;”&lt;/td&gt;
-          &lt;td&gt; &lt;/td&gt;
-          &lt;td&gt;” or “OR”&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;”!” or “NOT”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As expected, these are usually aggregated into one predicate by using them in tandem with the basic comparison operators you are likely expecting:&lt;/p&gt;
-
-&lt;h3 id=&quot;string-comparisons&quot;&gt;String Comparisons&lt;/h3&gt;
-
-&lt;p&gt;We’re often tasked with matching values based off of string comparisons. It’s well known that Objective-C shines its unrequited love for verboseness in no greater light than when dealing with NSString:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Jordan&quot;&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stringByAppendingString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;stringWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;%@ %@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Wesley&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;Morgan&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;…whereas Swift just smirks and concatenates its own strings with much less fuss. As such, we can take heart that such verboseness doesn’t apply with NSPredicate and string comparisons.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume mutablePersonAr is a Person array with names of &quot;Karl&quot;, &quot;Jordan&quot;  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELF.name BEGINSWITH 'K'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// Now only contains Karl  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Virtually any comparison can be achieved by way of the predicate syntax’s CONTAINS, BEGINSWITH, ENDSWITH and LIKE:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume mutablePersonAr is a Person array with names of &quot;Karl&quot;, &quot;Kathryn&quot;  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELF.name LIKE 'Kar*'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now only contains Karl  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;You may have noticed the asterisk above, which like many similar DSLs out there, represents a wildcard.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The ease of use really begins to come to the forefront when you combine comparison operators within one query:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;(SELF.name LIKE 'Kar*') AND (SELF.paygrade.intValue &amp;gt;= 10)&quot;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now only contains Karl  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Further, there is even support for a mix of NSPredicate’s SQLish syntax to be mashed up with regular expressions by way of the MATCHES syntax:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;SELF.phoneNumber MATCHES %@&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;phoneNumberRegex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;However, this is an opportune time to point out that the predicate format syntax is exactly what it is. A straight up string. And unless you’re Mavis Beacon, you’ll supply it with a typo every now and again.&lt;/p&gt;
-
-&lt;p&gt;The good news is that’ll you find out fast — as a runtime exception awaits. What we gain in power and flexibility is, in some ways, mitigated by the loss of the safety net that static analysis provides.&lt;/p&gt;
-
-&lt;p&gt;To illustrate, this slightly refactored sample from above will crash. Can you tell why?&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;SELF.name LIKE 'Kar*') AND (SELF.paygrade.intValue &amp;gt;= 10)&quot;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now only contains Karl  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;To combat such issues, I’ve often paired predicates with NSStringFromSelector() to provide an additional layer of safety against typos and future refactoring:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;(SELF.%@ LIKE 'Kar*') AND (SELF.paygrade.intValue &amp;gt;= 10)&quot;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kpName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSStringFromSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;@selector(identifier)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kpPaygrade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSStringFromSelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;@selector(paygrade)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kpName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kpPaygrade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now only contains Karl  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;namesStartingWithK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;A bit more heavy handed? Sure. Safer? Absolutely.&lt;/p&gt;
-
-&lt;h3 id=&quot;keypath-collection-queries&quot;&gt;KeyPath Collection Queries&lt;/h3&gt;
-
-&lt;p&gt;Building upon the use of key paths, &lt;code class=&quot;highlighter-rouge&quot;&gt;NSPredicate&lt;/code&gt; boasts a full suite of tools to operate on them in the name of a better search. Consider the following:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume a Person object now has this property on it:  &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// NSArray  *previousPay&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Find everyone who's average previous pay was over 10  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;SELF.previousPay.@avg.doubleValue &amp;gt; 10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousPayOverTen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Everyone whose previous pay's average was greater than 10  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousPayOverTen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;You could switch our the @avg for:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;@sum&lt;/li&gt;
-  &lt;li&gt;@max&lt;/li&gt;
-  &lt;li&gt;@min&lt;/li&gt;
-  &lt;li&gt;@count&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When you consider the amount of, albeit trivial, code that you might’ve had to author to achieve the same things outside of a predicate, these types of techniques can begin to become part of your regular toolchain.&lt;/p&gt;
-
-&lt;h3 id=&quot;digging-deeper-into-arrays&quot;&gt;Digging Deeper into Arrays&lt;/h3&gt;
-
-&lt;p&gt;Much like key path queries, there is also support for inspecting implicit arrays to a finer degree:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;array[FIRST]&lt;/li&gt;
-  &lt;li&gt;array[LAST]&lt;/li&gt;
-  &lt;li&gt;array[SIZE]&lt;/li&gt;
-  &lt;li&gt;array[index]&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Building from the code sample above, this allows for queries such as this:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Find everyone who's had three previous different salaries  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;previousPay[SIZE] == 3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threePreviousSalaries&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// These Person objects had three previous salaries  &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;threePreviousSalaries&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And as we alluded to above, it’s perfectly find to apply multiple conditions:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Find everyone who's had three previous different salaries and whose first one was greater than 8  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;(previousPay[SIZE] == 3) AND (previousPay[FIRST].intValue &amp;gt; 8)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutablePersonAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Going even further, you get gain even more power by using either of the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;@distinctUnionOfArrays&lt;/li&gt;
-  &lt;li&gt;@unionOfArrays&lt;/li&gt;
-  &lt;li&gt;@unionOfObjects&lt;/li&gt;
-  &lt;li&gt;@distinctUnionOfObjects&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hang with me, but assume we had an array of arrays containing Person objects, and all that we needed were the unique identifiers of the Person instances among them:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume p1/2/3/4 are all hydrated Person objects  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousEmployees&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Get every unique ID  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;unqiuePreviousEmployeeIDs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousEmployees&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;valueForKeyPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;@distinctUnionOfObjects.identifier&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// The array would contain only unique IDs&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Cool, no?&lt;/p&gt;
-
-&lt;p&gt;The fun doesn’t stop there, as there is even support for subqueries:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume Person objects have a new property for their team:  &lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// NSArray  *team;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Find everyone in an employee array who has people in their team with a pay over 1 and no previous pay history  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;SUBQUERY(team, $teamMember, $teamMember.paygrade.intValue &amp;gt; 1 AND $teamMember.previousPay == nil).@count &amp;gt; 0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employeeAr&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filterUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Subqueries are quite useful should you find yourself needing to search on an array of objects which also contain a property that’s itself a collection. So here, we’ve got an array of Person objects, and we’re peeking into their teamMember array.&lt;/p&gt;
-
-&lt;h3 id=&quot;convenience-is-keypath&quot;&gt;Convenience is Key(Path)&lt;/h3&gt;
-
-&lt;p&gt;Though &lt;code class=&quot;highlighter-rouge&quot;&gt;NSPredicate&lt;/code&gt; is built for search, it wouldn’t be Objective-C if you couldn’t bend things from their exact purpose &lt;em&gt;just&lt;/em&gt; a tad. No exception here.&lt;/p&gt;
-
-&lt;p&gt;When you think of a predicate, you think of filtering down a collection — meaning the return (or in place mutation) still contains the same stuff.&lt;/p&gt;
-
-&lt;p&gt;But you can, well, make it &lt;em&gt;not&lt;/em&gt; be the same things. And we actually did that in the previous code sample. The array of arrays above was used to return an array of identifiers — NSString instances. Keypathin’ makes it all possible.&lt;/p&gt;
-
-&lt;p&gt;Here’s a more direct example:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// We want an array of identifier strings whose length is greater than 10  &lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;@&quot;SELF.identifier.length &amp;gt; 10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSPredicate&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;predicateWithFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicateFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;longEmployeeIDs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;employeeArray&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;filteredArrayUsingPredicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predicate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;valueForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;identifier&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now longEmployeeIDs has not Person objects, but only strings&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;You can burn through Objective-C collections with sugary syntax. You can drill down to a particular subset of items without nested loops. It’s all much easier on the eyes with &lt;code class=&quot;highlighter-rouge&quot;&gt;NSPredicate&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;While Swift has first class language support to slice and dice collections, it’s really not much of a bother to utilize an object created to do much of the same things. Should you find yourself in a mature codebase or a newly minted one sporting The Dino (Objective-C), let the predicates flow freely.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">When Swift hit, we were enamored over its simplicity compared to Objective-C. Then it quickly became key to roll with protocol oriented programming. Also, forget reference types and classes. The list goes on.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

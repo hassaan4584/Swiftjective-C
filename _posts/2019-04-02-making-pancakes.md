@@ -42,7 +42,6 @@ If you're at this point, you might be carrying on like I do when I need to chill
 **Did your mom call you?** _I'll call back later, I need to finish this post._ <br />
 **Is it nice outside?** _I'll take the walk another time, this project needed to finish up yesterday._<br />
 **A new video game out you'd enjoy?** _I'll play it later, I've gotta ship my side project now so I can learn from users, otherwise I won't be following the lean startup principles!_<br />
-**Dreaming of starting a new venture?** _What's the point, our C.E.O. is only a year older than me and he's already created a multi-million dollar business. I can't replicate that._<br />   
 
 You aren't at all a bad person if you do these things, I think we all do. Most texts suggest ways to avoid those situations all together, but I personally don't find that a realistic goal. 
 
@@ -50,11 +49,11 @@ No matter the epiphany you experience today, tomorrow or the next week you'll ev
 
 ### Finding the Pancake Moments
 
-Why was it that I felt so peaceful, calm and balanced today? Enough to wake up early and jam on some delish pancakes. I've yearned wanted to answer that type of question for a long time. And, being an engineer, long ago I started to document my "pancake" moments when they did pop up to later try extrapolate why they arrived.
+Why was it that I felt so peaceful, calm and balanced today? Enough to wake up early and jam on some delish pancakes. I've yearned to answer that type of question for a long time. And, being an engineer, long ago I started to document my "pancake" moments when they did pop up to later try extrapolate why they arrived.
 
 What I've found really isn't that exciting. There are a few commonalities among the corpus - such as a vacation or time off on the horizon, a date night with my wife, a fun event with one of my kids is coming, etc. But as I dug deeper into my Day One journal archives, I began to realize that I typically only journal when I'm at a high point.
 
-This was convenient for my current investigation, but the reality is that I couldn't really nail down why sometimes I take time for myself, and other times I don't. This time, I'd have to accept that this wasn't a problem I could analyze several different ways and apply several late nights to eventually uncover the answer to.
+This was convenient for my current investigation, but the reality is that I couldn't really nail down why sometimes I take time for myself, and other times I don't. This time, I'd have to accept that this wasn't a problem I could analyze several different ways and apply a few late nights to eventually uncover the answer to.
 
 > As a funny aside, when I was digging through my journal during this time my wife popped around the corner and casually asked "Watcha doin?". I said I was simply reading my journal, as saying I was in the middle of an in-depth investigation into why I can let myself relax enough to make pancakes and generally be normal was too odd of an answer.
 

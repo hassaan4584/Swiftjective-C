@@ -1,7 +1,229 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-02T16:19:15-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">I Made Some Pancakes</title><link href="http://localhost:4000/making-pancakes/" rel="alternate" type="text/html" title="I Made Some Pancakes" /><published>2019-04-02T00:00:00-05:00</published><updated>2019-04-02T00:00:00-05:00</updated><id>http://localhost:4000/making-pancakes</id><content type="html" xml:base="http://localhost:4000/making-pancakes/">&lt;p&gt;Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-03T15:56:49-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">NSSecureCoding</title><link href="http://localhost:4000/NSSecureCoding/" rel="alternate" type="text/html" title="NSSecureCoding" /><published>2019-05-03T00:00:00-05:00</published><updated>2019-05-03T00:00:00-05:00</updated><id>http://localhost:4000/NSSecureCoding</id><content type="html" xml:base="http://localhost:4000/NSSecureCoding/">&lt;p&gt;Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/pancakes.jpg&quot; alt=&quot;The Chart of Lies&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;However, I find that I have quite a predilection for such API changes. The ones that might not make the press or be the chatter among devs undoubtedly taking over each coffee shop in San Jose are the ones which are often extremely valuable to our work. They just aren’t as “sexy”, as such, the spotlight eludes them.&lt;/p&gt;
+
+&lt;p&gt;This week, let’s chat about one such enhancement that’s been around since iOS 6, &lt;code class=&quot;highlighter-rouge&quot;&gt;NSSecureCoding&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;archiving-and-serialization&quot;&gt;Archiving and Serialization&lt;/h3&gt;
+&lt;p&gt;Every iOS app will eventually be a consumer, or producer, of some sort of data. This data can represent itself in several different ways, each of which requires its own nuanced approach in terms of security and how its used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Raw Data:&lt;/strong&gt; The actual stream of bites representing information.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Primitive Data:&lt;/strong&gt; A &lt;a href=&quot;https://en.wikipedia.org/wiki/Unicode#UTF&quot; target=&quot;_blank&quot;&gt;UTF&lt;/a&gt; representation of primitive data. On iOS, this typically ends up as JSON.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Structured Data:&lt;/strong&gt; This is how you’ve chosen to model your data in a strongly typed way. Think of taking some primitive data, and injecting it into a model.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At each point in the life cycle of some data, there are different ways in which developers must handle it. For example, if you are expecting a tiny text file to be returned from your server - you might be tipped off that something is dreadfully wrong if the file is ten gigs when its still in a primitive state:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DataChecks&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;maxTextSize&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1048576&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;textData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;someTextFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;DataChecks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;maxTextSize&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Funny business&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Conversely, one would also be aware of some tomfoolery afoot if deserializing that data to JSON brought about a much different result:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;parsedJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Any&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JSONSerialization&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ReadingOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rawValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// If this works, we know the data will be strings/arrays/etc.&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Things like XML, for example, would fail here.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;parsedJSON&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;JSONSerialization&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;jsonObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Dragons.here */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Whether its by using a some type of checksum on a raw data blob or ensuring primitive data becomes what you expect it to, as a programmer you’re actively taking steps to make sure that the data you’re playing with, plays nice.&lt;/p&gt;
+
+&lt;p&gt;Then, down the road, the data eventually needs to make its way on disk. Consider this example of caching some posts in a hypothetical blogging app:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCoding&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// For brevity these are unimplemented...&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;aCoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Imagine this is donesis */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kd&quot;&gt;required&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coder&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;aDecoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCoder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* And this too */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Later on down the road, you might do something like this...&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;updatePostsCache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;saveURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fileURLWithPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;someDestination&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;archiver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSKeyedArchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;archivedData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withRootObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;archiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;saveURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// And eventually get it back out...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;postCache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Data loaded up */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postCache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postData&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;postBlob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSKeyedUnarchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;unarchiveTopLevelObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postBlob&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Error handling */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And, just like the scenarios above, malicious actors could step in at this point as well. Foundation would rather not have that happen, but it also could use your help to ensure that it doesn’t.&lt;/p&gt;
+
+&lt;h3 id=&quot;understanding-the-unarchiving-pipeline&quot;&gt;Understanding the Unarchiving Pipeline&lt;/h3&gt;
+&lt;p&gt;To get a feel for how things could go wrong here, it’s key to understand what exactly &lt;code class=&quot;highlighter-rouge&quot;&gt;NSKeyedUnarchiver&lt;/code&gt; is doing when it unarchives your structured data. When your data is stored, it’ll look a little something like this in the archive:&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;$class&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Post&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Later on, when one goes to pull it back out via unarchiving, &lt;code class=&quot;highlighter-rouge&quot;&gt;NSKeyedUnarchiver&lt;/code&gt; will dynamically look for a class with the same name of the key (passed in via its initializer) in your app’s bundle. Then, a few things happen:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An instance of that class gets allocated in memory&lt;/li&gt;
+  &lt;li&gt;Then, it’s initialized to allow it to decode&lt;/li&gt;
+  &lt;li&gt;Lastly, &lt;code class=&quot;highlighter-rouge&quot;&gt;awakeAfter(using:)&lt;/code&gt; gets invoked to allow for any final state considerations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That all looks reasonable, but consider this - the unarchiver will do this on &lt;em&gt;whatever&lt;/em&gt; key you pass. So if a #TerribleHumanBeing injected some nonsense in there, this is what happens:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;unarchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSKeyedArchiverRootObjectKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;BadTerribleThings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;BadTerribleThings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;coder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;BadTerribleThings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awakeAfer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;using&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;😱.&lt;/p&gt;
+
+&lt;p&gt;Under the hood, when we invoked &lt;code class=&quot;highlighter-rouge&quot;&gt;unarchiveTopLevelObject(with:)&lt;/code&gt; an instance of &lt;code class=&quot;highlighter-rouge&quot;&gt;KSKeyedUnarchiver&lt;/code&gt; popped up and tried to decode an object for the given key. Now, you can see why this line really matters:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;postBlob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSKeyedUnarchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;unarchiveTopLevelObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…because even though we’ll fail since the downcast will not pass, and even though we’ll discard the object - the archiver still could’ve just allocated some BS.&lt;/p&gt;
+
+&lt;p&gt;And said BS could do a few different things to really flip your biscuits.&lt;/p&gt;
+
+&lt;p&gt;Perhaps it might change some global state 💀!&lt;br /&gt;
+Or initialize some sort of singleton 🙅🏻‍♂️!&lt;br /&gt;
+…or perform any other attack vector that they can dream up ⚰️.&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You might think that’s dramatic, but archives can be maliciously constructed. Plus, if &lt;a href=&quot;https://twitter.com/stroughtonsmith/status/1123741346425180161?s=20&quot; target=&quot;_blank&quot;&gt;Steve Troughton-Smith&lt;/a&gt; can make Marzipan work when Marzipan isn’t released on apps that he doesn’t have the source code too - trust no one.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So what’s a dev to do? Of course, the answer is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;NSSecureCoding&lt;/code&gt; - and even better, it’s typically &lt;em&gt;a one line change&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;secure-serialization&quot;&gt;Secure Serialization&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;NSSecureCoding&lt;/code&gt; protocol directly inherits from &lt;code class=&quot;highlighter-rouge&quot;&gt;NSCoding&lt;/code&gt; - and as the name implies it performs the same functions as its parent but in a more secure fashion. Using it, we’ll avoid any arbitrary code execution attacks as mentioned above.&lt;/p&gt;
+
+&lt;p&gt;Normally, I’d dive into the intricacies of the API - but this one only adds a single static boolean property for you to override at the class level.&lt;/p&gt;
+
+&lt;p&gt;Continuing with our &lt;code class=&quot;highlighter-rouge&quot;&gt;Post&lt;/code&gt; class:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSSecureCoding&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;supportsSecureCoding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// The rest of the class code omitted for brevity&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, the archivers will subtly change their process:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Before secure coding&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;decoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObjectForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Posts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// After&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;decoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Posts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This makes all the difference, because now archivers can directly preflight its contents to ensure it has the types you expect when secure coding is used.&lt;/p&gt;
+
+&lt;p&gt;Internally, this is achieved by some bookkeeping done for us by archivers creating an &lt;em&gt;allowed class list&lt;/em&gt;. This list contains all of the classes that can be securely decoded and encoded. Think of it as some malformed naughty or nice list, but only real and not used by a portly man donning a red suit.&lt;/p&gt;
+
+&lt;p&gt;Considering it, here’s what the process above looks like now:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;unarchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSKeyedArchiverRootObjectKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Class check would fail if it's not a post, and then return with a failure&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Thus, this code below would no longer happen...&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;BadTerribleThings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;BadTerribleThings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;coder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;BadTerribleThings&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awakeAfer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;using&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You can see this list yourself, as coders have a set property containing its contents: &lt;code class=&quot;highlighter-rouge&quot;&gt;aCoder.allowedClasses&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Crisis averted, but &lt;code class=&quot;highlighter-rouge&quot;&gt;NSSecureCoding&lt;/code&gt; also comes with another bonus: static type checking. If you’ve got any manual decode calls with conditional downcasts, those can now go away&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Before&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myPost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Post&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// After&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myPost&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;coder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Post&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However, there are a few other intricacies around subclasses to consider. If one’s class &lt;em&gt;doesn’t&lt;/em&gt; override &lt;code class=&quot;highlighter-rouge&quot;&gt;init(coder:)&lt;/code&gt;, it can still conform to &lt;code class=&quot;highlighter-rouge&quot;&gt;NSSecureCoding&lt;/code&gt; without any changes if it’s a subclass of another class that does conform. Though, if it does override &lt;code class=&quot;highlighter-rouge&quot;&gt;init(coder:)&lt;/code&gt; it also must decode any nested objects using &lt;code class=&quot;highlighter-rouge&quot;&gt;decodeObjectOfClass:forKey&lt;/code&gt;:.&lt;/p&gt;
+
+&lt;h3 id=&quot;on-failing&quot;&gt;On Failing&lt;/h3&gt;
+&lt;p&gt;When decoding fails as above, whether by a programmer’s error or malicious intent, it’s known as a secure decoding violation. Additionally, other failure states exist, such as a type mismatch (expecting an object and receiving a primitive) or perhaps the archive faces corruption.&lt;/p&gt;
+
+&lt;p&gt;What happens in this scenario is entirely up to you, and you can control it via &lt;code class=&quot;highlighter-rouge&quot;&gt;NSDecodingPolicyFailure&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSCoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSDecodingFailurePolicy&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;raiseException&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;setErrorAndReturn&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The default choice is to raise an exception, but you can opt for a simple error assignment to the coder and continue execution. So, if it indeed a class injection were occurring, it’d fail and the coder would invoke &lt;code class=&quot;highlighter-rouge&quot;&gt;failWithError(_ error: Error)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Recall that Swift can’t catch Objective-C or++ exceptions, so be thoughtful here. If you’d opt for &lt;code class=&quot;highlighter-rouge&quot;&gt;setErrorAndReturn&lt;/code&gt; the coder will have its error property set, and it would return nil. You can also tailor this error to be specific for your own use case:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Assume class injection, a failure from corruption, etc&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unarchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;decodeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;forKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Post&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;unarchiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;failWithError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;CocoaError&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;coderValueNotFound&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// obj will be nil, or 0 if its a primitive type&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Now handle the populated error however you see fit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bonus-points-why-now&quot;&gt;Bonus Points: Why Now?&lt;/h3&gt;
+&lt;p&gt;Aside from my love of writing about the outliers of iOS, why write a post about an API that’s quite old in iOS years? The answer is that I suspect more developers will be wanting for more information over it shortly. Starting with iOS 12, the legacy way of using both keyed archiver/unarchiver are now deprecated:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/badCoder.jpg&quot; alt=&quot;Deprecation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The deprecations means both classes gained new variants of &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nskeyedunarchiver/2983380-unarchivedobject&quot; target=&quot;_blank&quot;&gt;those methods&lt;/a&gt; which allow for &lt;a href=&quot;https://developer.apple.com/documentation/foundation/nskeyedarchiver/2962880-archiveddata&quot; target=&quot;_blank&quot;&gt;gated class checks&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;Further, support for adhering on a per-class basis with the class boolean, &lt;code class=&quot;highlighter-rouge&quot;&gt;supportSecureCoding&lt;/code&gt;, was only added in iOS 10. So, with iOS 13 on the horizon - this means that the lot of us will turn to iOS 12 as our minimum build target, thus the non-secure archiving deprecation will be showing in serialization scenarios within Xcode all over the world quite soon.&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
+&lt;p&gt;Refactoring all of ones archiving and serialization pipeline to make sure its vending the intended class might not be the most thrilling task on the backlog. But it’s a quick win, and it yields a more secure app.&lt;/p&gt;
+
+&lt;p&gt;And if we’re being honest, the chances of a malicious attack targeting your app through this particular vector might be slim. But it never happens &lt;em&gt;until it does&lt;/em&gt;. Plus, when the tide goes out - you can tell who was skinny dipping. Don’t be the dev who got toasted because they forgot to use a more secure archiving technique.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">I Made Some Pancakes</title><link href="http://localhost:4000/making-pancakes/" rel="alternate" type="text/html" title="I Made Some Pancakes" /><published>2019-04-02T00:00:00-05:00</published><updated>2019-04-02T00:00:00-05:00</updated><id>http://localhost:4000/making-pancakes</id><content type="html" xml:base="http://localhost:4000/making-pancakes/">&lt;p&gt;Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/pancakes.jpg&quot; alt=&quot;DopePancakes&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;And it was the weirdest thing.&lt;/p&gt;
 
@@ -35,8 +257,7 @@
 &lt;p&gt;If you’re at this point, you might be carrying on like I do when I need to chill out but haven’t realized it yet:&lt;br /&gt;&lt;br /&gt;
 &lt;strong&gt;Did your mom call you?&lt;/strong&gt; &lt;em&gt;I’ll call back later, I need to finish this post.&lt;/em&gt; &lt;br /&gt;
 &lt;strong&gt;Is it nice outside?&lt;/strong&gt; &lt;em&gt;I’ll take the walk another time, this project needed to finish up yesterday.&lt;/em&gt;&lt;br /&gt;
-&lt;strong&gt;A new video game out you’d enjoy?&lt;/strong&gt; &lt;em&gt;I’ll play it later, I’ve gotta ship my side project now so I can learn from users, otherwise I won’t be following the lean startup principles!&lt;/em&gt;&lt;br /&gt;
-&lt;strong&gt;Dreaming of starting a new venture?&lt;/strong&gt; &lt;em&gt;What’s the point, our C.E.O. is only a year older than me and he’s already created a multi-million dollar business. I can’t replicate that.&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;strong&gt;A new video game out you’d enjoy?&lt;/strong&gt; &lt;em&gt;I’ll play it later, I’ve gotta ship my side project now so I can learn from users, otherwise I won’t be following the lean startup principles!&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;You aren’t at all a bad person if you do these things, I think we all do. Most texts suggest ways to avoid those situations all together, but I personally don’t find that a realistic goal.&lt;/p&gt;
 
@@ -44,11 +265,11 @@
 
 &lt;h3 id=&quot;finding-the-pancake-moments&quot;&gt;Finding the Pancake Moments&lt;/h3&gt;
 
-&lt;p&gt;Why was it that I felt so peaceful, calm and balanced today? Enough to wake up early and jam on some delish pancakes. I’ve yearned wanted to answer that type of question for a long time. And, being an engineer, long ago I started to document my “pancake” moments when they did pop up to later try extrapolate why they arrived.&lt;/p&gt;
+&lt;p&gt;Why was it that I felt so peaceful, calm and balanced today? Enough to wake up early and jam on some delish pancakes. I’ve yearned to answer that type of question for a long time. And, being an engineer, long ago I started to document my “pancake” moments when they did pop up to later try extrapolate why they arrived.&lt;/p&gt;
 
 &lt;p&gt;What I’ve found really isn’t that exciting. There are a few commonalities among the corpus - such as a vacation or time off on the horizon, a date night with my wife, a fun event with one of my kids is coming, etc. But as I dug deeper into my Day One journal archives, I began to realize that I typically only journal when I’m at a high point.&lt;/p&gt;
 
-&lt;p&gt;This was convenient for my current investigation, but the reality is that I couldn’t really nail down why sometimes I take time for myself, and other times I don’t. This time, I’d have to accept that this wasn’t a problem I could analyze several different ways and apply several late nights to eventually uncover the answer to.&lt;/p&gt;
+&lt;p&gt;This was convenient for my current investigation, but the reality is that I couldn’t really nail down why sometimes I take time for myself, and other times I don’t. This time, I’d have to accept that this wasn’t a problem I could analyze several different ways and apply a few late nights to eventually uncover the answer to.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;As a funny aside, when I was digging through my journal during this time my wife popped around the corner and casually asked “Watcha doin?”. I said I was simply reading my journal, as saying I was in the middle of an in-depth investigation into why I can let myself relax enough to make pancakes and generally be normal was too odd of an answer.&lt;/p&gt;
@@ -1520,117 +1741,4 @@ It’s not too uncommon for screens, especially external ones, to change their r
 
 &lt;p&gt;But, as is typical, W.W.D.C. brought some new stuff we weren’t expecting, hardening updates and most importantly the new APIs. Exciting times, plus — our apps are just better by virtue of simply running on the new OS. UIKit will always be at the forefront, and this year was no exception as there’s still plenty of discussions left to be had around this year’s improvements.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">WWDC 2018: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-18-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2018: The Pregame Quiz" /><published>2018-05-30T00:00:00-05:00</published><updated>2018-05-30T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-18-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-18-The-Pregame-Quiz/">&lt;p&gt;It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?&lt;/p&gt;
-
-&lt;p&gt;Time will soon tell, but until then it’s time for the fourth annual T.T.I.D.G. WWDC Pregame Quiz!&lt;/p&gt;
-
-&lt;p&gt;If you’d like a quick primer on how this all works or how it got started, check out the first three quizzes from &lt;a href=&quot;http://localhost:4000/WWDC-2015-The-Pregame-Quiz&quot;&gt;2015&lt;/a&gt; ,&lt;a href=&quot;http://localhost:4000/WWDC-2016-The-Pregame-Quiz&quot;&gt;2016&lt;/a&gt; and &lt;a href=&quot;http://localhost:4000/WWDC-2017-The-Pregame-Quiz&quot;&gt;2017&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Participants — time to add the quiz operation to your queues⚡️!&lt;/p&gt;
-
-&lt;h3 id=&quot;ground-rules&quot;&gt;Ground Rules&lt;/h3&gt;
-
-&lt;p&gt;There are three rounds, and the point break down is as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Round 1&lt;/strong&gt; – 1 point each answer&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Round 2&lt;/strong&gt; - 2 points each answer&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Round 3&lt;/strong&gt; - 3 points each answer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The last question of each round is an optional wildcard question. Get it right, and your team gets &lt;strong&gt;4&lt;/strong&gt; &lt;strong&gt;points&lt;/strong&gt;, &lt;em&gt;but&lt;/em&gt; miss it and the team will be &lt;strong&gt;deducted 2 points&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;round-1swiftly-answered&quot;&gt;Round 1 — Swiftly Answered&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
-This technique, introduced in a WWDC 15 session, declared that Swift was the industries first &lt;em&gt;what&lt;/em&gt; oriented programming language?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
-On June 2nd, 2014 — what app became the first publicly available app written in Swift?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
-What’s the name of the instance method that’s &lt;strong&gt;not&lt;/strong&gt; possible to use in pure Swift classes/objects that NSObject uses to invoke objc_msgSend and allow for dynamic method resolution?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Which new typealias introduced in Swift 4 extended support of archival and serialization to struct and enum types and enables type-safety for serializing to external formats such as JSON and plist?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-During WWDC 14 when Swift was unveiled, what was the &lt;em&gt;very first&lt;/em&gt; public Swift string variable set equal to during its inaugural demo introduction by Chris Lattner?&lt;/p&gt;
-
-&lt;h3 id=&quot;round-2ios--its-tools-storied-history&quot;&gt;Round 2 — iOS’ &amp;amp; its Tools Storied History&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
-What framework, added in iOS 5, gave rise to the popularity of photo editing apps by exposing a powerful set of built-in filters for manipulating video and still images?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
-It’s well known that Core Data, Keyed Archiver and User Defaults allow for persistency on iOS. What other persistency option is available by default on the platform?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
-What CLI, originally released with Xcode 6 and housed within xcrun, allows one to perform various tasks on the iOS simulator, such as recording videos and opening URL schemes?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Developers sometimes crash their app in a controlled manner during development by invoking the abort(); function, but there is also a little known intrinsic function that generates a machine-specific trap instruction. What is it?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-This ridiculously long initializer, clocking in at 202 characters, is found within what Apple framework:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;initWithEnableFan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;enableAirConditioner&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;enableClimateControl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;enableAutoMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;airCirculationMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;fanSpeedIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;fanSpeedPercentage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;relativeFanSpeedSetting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;temperature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;relativeTemperatureSetting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  
-&lt;span class=&quot;nv&quot;&gt;climateZone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;round-3the-random-apple-ones&quot;&gt;Round 3 — The Random Apple Ones&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
-This game is a now a triple A blockbuster shooter, but it was originally announced at MacWorld in 1999 and was set to release on the platform as a third person action game. What game is it?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
-Steve Jobs infamously said that &lt;em&gt;what&lt;/em&gt; was a “sweet solution” for developing on the iPhone before the advent of the App Store at WWDC 07’?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
-The iPhone’s revolutionary multitouch interface was prototyped by a team, colloquially referred to as the ENRI group, at Apple in their abandoned user-testing lab at 2 Infinite Loop — what was their original mission statement?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;John Carmack, long a pioneer of the games industry, went toe to toe with Steve Jobs in advocating that which framework should be adopted as the Mac’s 3D Graphics API?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-Though the iPhone’s touchscreen has made the paradigm commonplace in today’s world — Eric Arthur Johnson is believed to have invented the world’s very first touch screen as an engineer at England’s Royal Radar Establishment in 1965. What instrument did he create a touchscreen for?&lt;/p&gt;
-
-&lt;h3 id=&quot;answer-key&quot;&gt;Answer Key&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;Round 1:&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;http://asciiwwdc.com/2015/sessions/408&quot;&gt;A protocol oriented programming language&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The WWDC App, this was confirmed in their Platforms State of the Union address during WWDC of that year.&lt;/li&gt;
-  &lt;li&gt;Good ol’ performSelector:&lt;/li&gt;
-  &lt;li&gt;Codable&lt;/li&gt;
-  &lt;li&gt;Wildcard: 
-&lt;a href=&quot;https://www.youtube.com/watch?reload=9&amp;amp;v=MO7Ta0DvEWA&quot;&gt;The variable “s” was declared as a string set equal to “Hello WWDC!”, showing off Swift’s vastly superior string interpolation API.&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;b&gt;Round 2:&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS5.html#//apple_ref/doc/uid/TP30915195-SW62&quot;&gt;Core Image&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;SQLite&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://localhost:4000/ios-simulator-power-ups&quot;&gt;simctl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;__builtin_trap();&lt;/li&gt;
-  &lt;li&gt;Wildcard: &lt;a href=&quot;https://developer.apple.com/documentation/sirikit/insetclimatesettingsincarintent/2102611-init&quot;&gt;SiriKit&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;b&gt;Round 3:&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Halo&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://daringfireball.net/2007/06/wwdc_2007_keynote&quot;&gt;Web Apps&lt;/a&gt; (Yikes)&lt;/li&gt;
-  &lt;li&gt;To “Explore new rich interactions”, hence ENRI&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=17067129&quot;&gt;OpenGL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Wildcard: An instrument to help operators improve handling air traffic control.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">It’s Christmas time for iOS engineers the world over. Mr.Cook and friends are a little less than a week away from pulling the curtains off of iOS 12. Will we see vast improvements, or the oft rumored “maintenance” release?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

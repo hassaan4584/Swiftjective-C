@@ -9,7 +9,7 @@ permalink: /about
 ### About Me
 Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanmorgan10){:target="_blank"}. I'm an iOS engineer from Ozark, Missouri where I live with my [wife](https://www.instagram.com/jmorgan){:target="_blank"} and three kids. Currently, I work remotely on the iOS team at [Buffer](https://www.buffer.com){:target="_blank"}, where we build a suite of social media tools.
 
-#### Articles 
+#### Other Places I've Written For
 <ul>
   {% for item in site.data.myWork.articles %}
     <li><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></li>

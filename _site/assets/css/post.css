@@ -179,6 +179,22 @@ body {
   font-size: 12px;
   margin-left: 16px; }
 
+.articleTagByDate {
+  background-color: #70A2F9;
+  color: white;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 16px; }
+
+.tagDateContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch; }
+
  /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a:link {
@@ -210,10 +226,7 @@ blockquote p {
 h1 {
   color: #314A4F; }
 
-h2,
-h3,
-h3,
-h4 {
+h2, h3, h3, h4 {
   color: #615B5B; }
 
 hr {
@@ -232,9 +245,7 @@ footer {
 img {
   border-radius: 25px; }
 
-article h2,
-h3,
-h4 {
+article h2, h3, h4 {
   margin-top: 64px; }
 
 article h3 {
@@ -251,9 +262,7 @@ article p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 800px and down) */
 @media (max-width: 800px) {
-  #gridHeader,
-  #gridMiddle,
-  #gridFooter {
+  #gridHeader, #gridMiddle, #gridFooter {
     width: 100vw;
     padding-left: 32px;
     padding-right: 32px; }
@@ -265,8 +274,16 @@ article p {
     flex-direction: column;
     align-items: flex-start; }
 
+  .tagDateContainer {
+    flex-direction: column;
+    align-items: flex-start; }
+
   .articleTag {
     margin-left: 0px; }
+
+  .articleTagByDate {
+    margin-left: 0px;
+    margin-top: 8px; }
 
   article h3 {
     font-size: 26px; }
@@ -274,11 +291,7 @@ article p {
   blockquote {
     margin: 0; } }
 @media (prefers-color-scheme: dark) {
-  h1,
-  h2,
-  h3,
-  h3,
-  h4 {
+  h1, h2, h3, h3, h4 {
     color: white !important;
     opacity: 0.6 !important; }
 
@@ -304,7 +317,4 @@ article p {
     background: #2c2d2f !important; }
 
   #mc_embed_signup input.email {
-    background-color: #2c2d2f !important; }
-
-  #carbonads {
-    color: black !important; } }
+    background-color: #2c2d2f !important; } }

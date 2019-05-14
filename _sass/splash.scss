@@ -53,6 +53,27 @@
     margin-bottom: 4px;
 }
 
+.postByDate {
+    margin-top: 32px;
+    padding-bottom: 32px;
+    width: 100%;
+}
+
+.postByDate h2 {
+    margin-bottom: 0px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.postByDate p {
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
 /* Middle Article Sections */
 
 .articleSection {

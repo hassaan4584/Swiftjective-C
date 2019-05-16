@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-14T09:48:44-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-16T14:59:57-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">NSSecureCoding</title><link href="http://localhost:4000/NSSecureCoding/" rel="alternate" type="text/html" title="NSSecureCoding" /><published>2019-05-03T00:00:00-05:00</published><updated>2019-05-03T00:00:00-05:00</updated><id>http://localhost:4000/NSSecureCoding</id><content type="html" xml:base="http://localhost:4000/NSSecureCoding/">&lt;p&gt;Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.&lt;/p&gt;
 
 &lt;p&gt;However, I find that I have quite a predilection for such API changes. The ones that might not make the press or be the chatter among devs undoubtedly taking over each coffee shop in San Jose are the ones which are often extremely valuable to our work. They just aren’t as “sexy”, as such, the spotlight eludes them.&lt;/p&gt;
@@ -518,6 +518,35 @@ to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; for this to
 &lt;h3 id=&quot;accessibility-is-first-class&quot;&gt;Accessibility is First Class&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Voice Over is fully supported and the rotor control is implemented by including the relevant headings. Using Screen Curtain yields an experience that’s not only usable, but up to par with the regular app using only Voice Over.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/SupportingAccessibility.html&quot; target=&quot;_blank&quot;&gt;Voice Over gestures&lt;/a&gt; are overriden where necessary:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/documentation/objectivec/nsobject/1615091-accessibilityperformescape&quot; target=&quot;_blank&quot;&gt;Escape&lt;/a&gt;&lt;/strong&gt;: A two-finger Z-shaped gesture that dismisses a modal dialog, or goes back one level in a navigation hierarchy.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;func accessibilityPerformEscape() -&amp;gt; Bool&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/documentation/objectivec/nsobject/1615137-accessibilityperformmagictap&quot; target=&quot;_blank&quot;&gt;Magic Tap&lt;/a&gt;&lt;/strong&gt;: A two-finger double-tap that performs the most-intended action.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;func accessibilityPerformMagicTap() -&amp;gt; Bool&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/documentation/objectivec/nsobject/1615161-accessibilityscroll&quot; target=&quot;_blank&quot;&gt;Three-Finger Scroll&lt;/a&gt;&lt;/strong&gt;: A three-finger swipe that scrolls content vertically or horizontally.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;func accessibilityScroll(_ direction: UIAccessibilityScrollDirection) -&amp;gt; Bool&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/documentation/objectivec/nsobject/1615076-accessibilityincrement&quot; target=&quot;_blank&quot;&gt;Increment&lt;/a&gt;&lt;/strong&gt;: A one-finger swipe up that increments a value in an element.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;func accessibilityIncrement()&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://developer.apple.com/documentation/objectivec/nsobject/1615169-accessibilitydecrement&quot; target=&quot;_blank&quot;&gt;Decrement&lt;/a&gt;&lt;/strong&gt;: A one-finger swipe down that decrements a value in an element.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;func accessibilityDecrement()&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;Context considering, you use &lt;code class=&quot;highlighter-rouge&quot;&gt;accessibilityIgnoresInvertColors&lt;/code&gt; for images and video.&lt;/li&gt;
   &lt;li&gt;Respects reduced motion and blurring user preferences.&lt;/li&gt;
   &lt;li&gt;Adaptive and supports all devices and multitasking scenarios elegantly.&lt;/li&gt;

@@ -19,13 +19,13 @@ permalink: /
             <div class="articleSection">
                 {% assign sorted = site.posts | sort: "date" | reverse %}
                 <em>Recent Posts</em>
-                {% assign popular = sorted | slice:0,2 %}
+                {% assign popular = sorted | slice:1,2 %}
                 <div class="houseSpecial">
                     {% for firstTwo in popular %}
                     {% include articleWell.html post=firstTwo %}
                     {% endfor %}
                 </div>
-                {% assign popularTwo = sorted | slice:2,2 %}
+                {% assign popularTwo = sorted | slice:3,2 %}
                 <div class="houseSpecial">
                     {% for lastTwo in popularTwo %}
                     {% include articleWell.html post=lastTwo %}

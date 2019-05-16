@@ -35,6 +35,17 @@ The five sections it covers are:
 
 ### Accessibility is First Class
 - Voice Over is fully supported and the rotor control is implemented by including the relevant headings. Using Screen Curtain yields an experience that's not only usable, but up to par with the regular app using only Voice Over.
+- [Voice Over gestures](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/SupportingAccessibility.html){:target="_blank"} are overriden where necessary:
+    + **[Escape](https://developer.apple.com/documentation/objectivec/nsobject/1615091-accessibilityperformescape){:target="_blank"}**: A two-finger Z-shaped gesture that dismisses a modal dialog, or goes back one level in a navigation hierarchy.
+        * `func accessibilityPerformEscape() -> Bool`
+    + **[Magic Tap](https://developer.apple.com/documentation/objectivec/nsobject/1615137-accessibilityperformmagictap){:target="_blank"}**: A two-finger double-tap that performs the most-intended action.
+        * `func accessibilityPerformMagicTap() -> Bool`
+    + **[Three-Finger Scroll](https://developer.apple.com/documentation/objectivec/nsobject/1615161-accessibilityscroll){:target="_blank"}**: A three-finger swipe that scrolls content vertically or horizontally.
+        * `func accessibilityScroll(_ direction: UIAccessibilityScrollDirection) -> Bool`
+    + **[Increment](https://developer.apple.com/documentation/objectivec/nsobject/1615076-accessibilityincrement){:target="_blank"}**: A one-finger swipe up that increments a value in an element.
+        * `func accessibilityIncrement()`
+    + **[Decrement](https://developer.apple.com/documentation/objectivec/nsobject/1615169-accessibilitydecrement){:target="_blank"}**: A one-finger swipe down that decrements a value in an element.
+        * `func accessibilityDecrement()`
 - Context considering, you use `accessibilityIgnoresInvertColors` for images and video.
 - Respects reduced motion and blurring user preferences.
 - Adaptive and supports all devices and multitasking scenarios elegantly.

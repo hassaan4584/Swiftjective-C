@@ -221,7 +221,7 @@
 <lastmod>2018-05-18T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/WWDC-18-The-Pregame-Quiz/</loc>
+<loc>http://localhost:4000/WWDC-2018-The-Pregame-Quiz/</loc>
 <lastmod>2018-05-30T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -261,8 +261,12 @@
 <lastmod>2019-04-02T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/NSSecureCoding/</loc>
+<loc>http://localhost:4000/NSSecureCoding-copy/</loc>
 <lastmod>2019-05-03T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/WWDC-2019-The-Pregame-Quiz/</loc>
+<lastmod>2019-05-23T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about</loc>

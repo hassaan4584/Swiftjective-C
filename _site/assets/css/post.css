@@ -176,8 +176,7 @@ body {
   color: white;
   padding: 4px 6px 4px 6px;
   border-radius: 6px;
-  font-size: 12px;
-  margin-left: 16px; }
+  font-size: 12px; }
 
 .articleTagByDate {
   background-color: #70A2F9;
@@ -296,10 +295,10 @@ article p {
     opacity: 0.6 !important; }
 
   hr {
-    color: #FFFFF00 !important; }
+    color: #FFFF00 !important; }
 
   body {
-    background: #2c2d2f !important;
+    background-color: #2c2d2f !important;
     color: white !important; }
 
   code {

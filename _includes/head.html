@@ -29,4 +29,8 @@
     {% seo %}
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{{ page.description }}" />
+    {% if page.tags[0] == "Trivia" %}
+    <script type="text/javascript" src="/assets/js/quiz/confetti.js"></script>
+    <script type="text/javascript" src="/assets/js/quiz/quiz.js"></script>
+    {% endif %}
 </head>

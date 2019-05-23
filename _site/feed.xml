@@ -1,5 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-16T15:11:30-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">NSSecureCoding</title><link href="http://localhost:4000/NSSecureCoding/" rel="alternate" type="text/html" title="NSSecureCoding" /><published>2019-05-03T00:00:00-05:00</published><updated>2019-05-03T00:00:00-05:00</updated><id>http://localhost:4000/NSSecureCoding</id><content type="html" xml:base="http://localhost:4000/NSSecureCoding/">&lt;p&gt;Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-23T18:53:53-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">WWDC 2019: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2019: The Pregame Quiz" /><published>2019-05-23T00:00:00-05:00</published><updated>2019-05-23T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-2019-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/">&lt;p&gt;Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.&lt;/p&gt;
+
+&lt;p&gt;At this point it’s all conjecture, so let’s ready up with the fifth annual Swiftjective-C WWDC Pregame Quiz!&lt;/p&gt;
+
+&lt;p&gt;If you’d like a quick primer on how this all works or how it got started, check out the first four quizzes from &lt;a href=&quot;http://localhost:4000/WWDC-2015-The-Pregame-Quiz&quot;&gt;2015&lt;/a&gt; ,&lt;a href=&quot;http://localhost:4000/WWDC-2016-The-Pregame-Quiz&quot;&gt;2016&lt;/a&gt;, &lt;a href=&quot;http://localhost:4000/WWDC-2017-The-Pregame-Quiz&quot;&gt;2017&lt;/a&gt; and &lt;a href=&quot;http://localhost:4000/WWDC-2018-The-Pregame-Quiz&quot;&gt;2018&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now - Lets.Play(with:🔥)!&lt;/p&gt;
+
+&lt;h3 id=&quot;ground-rules&quot;&gt;Ground Rules&lt;/h3&gt;
+
+&lt;p&gt;There are three rounds, and the point break down is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Round 1&lt;/strong&gt; – 1 point each answer&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Round 2&lt;/strong&gt; - 2 points each answer&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Round 3&lt;/strong&gt; - 3 points each answer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last question of each round is an optional wildcard question. Get it right, and your team gets &lt;strong&gt;4&lt;/strong&gt; &lt;strong&gt;points&lt;/strong&gt;, &lt;em&gt;but&lt;/em&gt; miss it and the team will be &lt;strong&gt;deducted 2 points&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;round-1swift-decisions&quot;&gt;Round 1 — Swift Decisions&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
+What’s the name of the Swift attribute, added in Swift 5 to bolster dynamic language interoperability, that allows one to call named types like you’d call functions using a simple syntactic sugar?&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attribute&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftjectiveC&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showArticles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withTags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftjectiveC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Foundation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Swift&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// This will desugar down to instance.showArticles(withTags: [&quot;Foundation&quot;, &quot;Swift&quot;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
+In Swift, variables are initialized before they are used by a concept enforced by LLVM’s optimizer. What is this concept in computer science referred to as?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
+SIMD Vector and Result types were finally added to Swift in an official capacity in what version?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
+Before Apple’s Swift was announced, there already existed a parallel programming language by the same name - who were its developers?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
+Before Swift was a popular programming language at Apple, it was also the codename for an Apple-designed processor - which one was it?&lt;/p&gt;
+
+&lt;h3 id=&quot;round-2ios-history-101&quot;&gt;Round 2 — iOS History 101&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
+Auto Layout, long a core component of laying out user interfaces on macOS, didn’t arrive on iOS until which major release?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
+Security is a hallmark feature of iOS, and this specific feature involves placing data in random locations in memory and works alongside ARM’s XN (Execute Never) feature to prevent buffer overflow attacks - what is it?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
+When iOS was still shrouded in secrecy within Apple, how old was the youngest engineer working on iOS 1.0?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
+When the iPhone was first launched on June 29th, 2007 its operating system wasn’t yet referred to as iOS until iOS 4. What was its original name?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
+Leading the way to haggle all of your friends who appear as green bubbles in your conversations, in which version of iOS did iMessage debut?&lt;/p&gt;
+
+&lt;h3 id=&quot;round-3apple-myth-and-lore&quot;&gt;Round 3 — Apple Myth and Lore&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
+Leading up to its March 25th, 2019 “It’s Showtime” keynote, Apple live streamed Carplay displaying a six hour ride - where was its end destination?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
+Steve Jobs, long known as being a master of details, hotly debated &lt;em&gt;what&lt;/em&gt; aspect of an Apple Store’s bathroom signs?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
+What was the very first thing &lt;em&gt;ever&lt;/em&gt; rendered in a Safari browser, produced by Ken Kocienda during its development?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
+To ensure that a visiting Ross Perot wouldn’t think Apple and its employees were too rich for investment - Steve Jobs had himself and Randy Adams hide what objects before he arrived?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
+What original Apple employee quickly sold off their 10% share of the company in 1977 for only $800 (which would be worth billions today)?&lt;/p&gt;
+
+&lt;h3 id=&quot;answer-key&quot;&gt;Answer Key&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Round 1:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0216-dynamic-callable.md&quot;&gt;@dynamicCallable&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://localhost:4000on-definitive-initialization/&quot;&gt;Definitive Initialization.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Swift 5.&lt;/li&gt;
+  &lt;li&gt;The University of Chicago and Argonne National Laboratory.&lt;/li&gt;
+  &lt;li&gt;Wildcard: &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_Apple_codenames&quot;&gt;The Apple A6 and A6X chips.&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Round 2:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;iOS 6.&lt;/li&gt;
+  &lt;li&gt;Address Space Layout Randomization.&lt;/li&gt;
+  &lt;li&gt;18 years old, Scott Goodson.&lt;/li&gt;
+  &lt;li&gt;iPhone OS.&lt;/li&gt;
+  &lt;li&gt;Wildcard: iOS 5.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Round 3:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Cupertino.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.businessinsider.com/steve-jobs-attention-to-detail-2011-10#when-he-was-hospitalized-he-rejected-masks-because-they-were-ugly-8&quot;&gt;The shade of gray they should be colored as.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://asciiwwdc.com/2014/sessions/237&quot;&gt;A black obelisk!&lt;/a&gt; Fun fact, it actually rendered in the wrong direction.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.forbes.com/sites/connieguglielmo/2012/10/03/untold-stories-about-steve-jobs-friends-and-colleagues-share-their-memories/#4932fdc6c584&quot;&gt;Their Porsche 911s&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wildcard: One of it’s oft forgotten co-founders, Ronald Wayne.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSSecureCoding</title><link href="http://localhost:4000/NSSecureCoding-copy/" rel="alternate" type="text/html" title="NSSecureCoding" /><published>2019-05-03T00:00:00-05:00</published><updated>2019-05-03T00:00:00-05:00</updated><id>http://localhost:4000/NSSecureCoding%20copy</id><content type="html" xml:base="http://localhost:4000/NSSecureCoding-copy/">&lt;p&gt;Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.&lt;/p&gt;
 
 &lt;p&gt;However, I find that I have quite a predilection for such API changes. The ones that might not make the press or be the chatter among devs undoubtedly taking over each coffee shop in San Jose are the ones which are often extremely valuable to our work. They just aren’t as “sexy”, as such, the spotlight eludes them.&lt;/p&gt;
 
@@ -547,6 +656,8 @@ to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; for this to
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;When presenting new controllers, you set the Voice Over Cursor to an &lt;a href=&quot;https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/SupportingAccessibility.html#//apple_ref/doc/uid/TP40007457-CH12-SW1&quot; target=&quot;_blank&quot;&gt;appropriate element&lt;/a&gt; if the top-most left element doesn’t make sense:
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;UIAccessibilityPostNotification(.creenChangedNotification, myHeadering);&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Context considering, you use &lt;code class=&quot;highlighter-rouge&quot;&gt;accessibilityIgnoresInvertColors&lt;/code&gt; for images and video.&lt;/li&gt;
   &lt;li&gt;Respects reduced motion and blurring user preferences.&lt;/li&gt;
   &lt;li&gt;Adaptive and supports all devices and multitasking scenarios elegantly.&lt;/li&gt;
@@ -1620,154 +1731,4 @@ It’s not too uncommon for screens, especially external ones, to change their r
 
 &lt;p&gt;Maybe it should be, as is the case with &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;. You likely won’t have to twist many arms to persuade iOS engineers to make the switch, “No ✋ — I don’t want block based, automatically color managed, extensible drawing code that already manages its context lifetime — that’s awful” said…..nobody?&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">iOS 12: Notable UIKit Additions</title><link href="http://localhost:4000/iOS-12-Notable-UIKit-Additions/" rel="alternate" type="text/html" title="iOS 12: Notable UIKit Additions" /><published>2018-06-08T00:00:00-05:00</published><updated>2018-06-08T00:00:00-05:00</updated><id>http://localhost:4000/iOS-12-Notable-UIKit-Additions</id><content type="html" xml:base="http://localhost:4000/iOS-12-Notable-UIKit-Additions/">&lt;p&gt;And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.&lt;/p&gt;
-
-&lt;p&gt;Each year, I dive in on the latest version of iOS and try to bring up some of the new APIs that our favorite framework, UIKit, has brought to the table. In no particular order, let’s dig in on some of the enhancements that caught my eye.&lt;/p&gt;
-
-&lt;h3 id=&quot;uitextinputtraits&quot;&gt;UITextInputTraits&lt;/h3&gt;
-
-&lt;p&gt;Apple continues its push towards keeping its user’s data private and secure, so it’s no surprise to see Cupertino &amp;amp; Friends© extend the password autofill APIs.&lt;/p&gt;
-
-&lt;p&gt;New this year is the ability to suggest a new password for your users, &lt;em&gt;and&lt;/em&gt; supply your password parameters dictated by business requirements to iOS when suggesting such a password. This is done via the &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInputPasswordRules&lt;/code&gt; class:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;createNewPasswordTextField&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITextField&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;newPasswordReqs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITextInputPasswordRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;descriptor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;required: lower; required: digit; max-consecutive: 3; minlength: 12;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;createNewPasswordTextField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;passwordRules&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newPasswordReqs&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Now, when iOS suggests a new password - these rules will be used to generate it&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The pertinent information here is the descriptor parameter, which is a plain string that follows a certain syntax, à la the visual format language:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;&quot;key: value;&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Think of it a dictionary entry that always is followed by semicolon. It’s quite close to CSS declarations. With it, you can specify the following items:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;required : Self explanatory&lt;/li&gt;
-  &lt;li&gt;allowed : Allow a subset of allowed characters&lt;/li&gt;
-  &lt;li&gt;max-consecutive : Restrict the number of successive characters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And character classes to match against those rules:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;upper&lt;/code&gt; : A-Z&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lower&lt;/code&gt; : a-z&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;special&lt;/code&gt; : -~!@#$%^&amp;amp;*_+=`&lt;/td&gt;
-          &lt;td&gt;(){}[:;”’&amp;lt;&amp;gt;,.? ] and space&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ascii-printable&lt;/code&gt; : All ACII printable&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;unicode&lt;/code&gt; : All unicode&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To further things a little, suppose you only wanted to allow the letters “j,o,r,d,a,n” because you want the strongest password that I’ll never, ever most definitely guess, then you could do this:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;UITextInputPasswordRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;descriptor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;required: [j,o,r,d,a,n]; max-consecutive: 2; minlength: 12;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Be aware that the framework has some validation against your supplied validation, resulting in some form of validationception.&lt;/p&gt;
-
-&lt;p&gt;Your parameters have to &lt;em&gt;at least&lt;/em&gt; use two instances of the ASCII uppercase letters, digits and ASDII lowercase letters classes. Other than that, it also must be longer than 12 characters.&lt;/p&gt;
-
-&lt;p&gt;If you don’t meet this criteria, do you get some sort of runtime error or exception? Nope — the user agent just throws out your insecure, primitive suggestion and uses the default. Which is probably a good thing.&lt;/p&gt;
-
-&lt;p&gt;As a bonus, you can do the same thing in HTML by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;passwordrules&lt;/code&gt; attribute in your input element.&lt;/p&gt;
-
-&lt;h3 id=&quot;one-time-tfa-codes&quot;&gt;One Time TFA Codes&lt;/h3&gt;
-
-&lt;p&gt;In one of my favorite “It just works” APIs that Apple supplies to developers, it’s hard to argue that there’s something more trivial to implement in iOS development that simultaneously brings real value to users than setting a text content type.&lt;/p&gt;
-
-&lt;p&gt;The powerful heuristics of iOS sucks in passwords and phone numbers, can suggest a relevant address and more. And now, that more is TFA codes, accomplished by doing nothing more than choosing &lt;code class=&quot;highlighter-rouge&quot;&gt;oneTimeCode&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;aTFAtextField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;textContentType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oneTimeCode&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This also joins the new value, &lt;code class=&quot;highlighter-rouge&quot;&gt;newPassword&lt;/code&gt;, which would enable the password creation prompts touched on above. The usual restrictions (if you can even call them that) is that the element accepting the password must be a text field, text view or a view that adopts the &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInput&lt;/code&gt; protocol.&lt;/p&gt;
-
-&lt;p&gt;Of note, tvOS apps are also granted the same affordances when using the control center keyboard, the continuity keyboard or even Cupertino’s Remote App. And let’s face it, nobody wants to type on that platform so any shortcuts we can provide just promotes engagement that much more.&lt;/p&gt;
-
-&lt;p&gt;Text content type is powerful, but also the definition of lightweight, simple and WYSIWYG. Sometimes what you aren’t is just as important as what you are. That’s also true with framework design.&lt;/p&gt;
-
-&lt;h3 id=&quot;graphics-rendering&quot;&gt;Graphics Rendering&lt;/h3&gt;
-
-&lt;p&gt;As we’ll briefly discuss later on, iOS 12 has automatic backing store support for views. The depth of their content drives this. So, for example, if you are rendering a grey scale image on the screen iOS will employ an 8 bit per pixel backing store instead of the usual 64 bit per pixel backing store a portrait image would incur.&lt;/p&gt;
-
-&lt;p&gt;The cost savings is significant, in the &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2018/202/&quot;&gt;What’s New in Cocoa Touch&lt;/a&gt; session, Apple engineer Josh Shaffer notes that the previous example goes from 2.2 megabytes of real estate down to &lt;em&gt;275 kilobytes&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As aforementioned, views get this out of the box. If you draw into offscreen bitmaps using &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt;, though, iOS won’t be able to predict the developer’s intentions with the resulting image. As such, a configurable buffer backing store style has been introduced so one can take part in the memory savings:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;rendererFormat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIGraphicsImageRendererFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;n&quot;&gt;rendererFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preferredRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extended&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// For an extended range image&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;renderer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIGraphicsImageRenderer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rendererFormat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Above, we indicated our intention to utilize an extended range image. Though, we can also indicate that its unspecified, automatic or standard.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-small-quick-win&quot;&gt;The Small Quick Win&lt;/h3&gt;
-
-&lt;p&gt;Detecting user interface orientations is traditionally frowned upon via Apple’s official stance. And though trait collections offer us most of what we need, it’s still refreshing to see Apple come full circle on all the edge cases with two new additions here:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;device&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIDevice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isFlat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orientation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isFlat&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isValid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orientation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isValidInterfaceOrientation&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;darkness-for-days&quot;&gt;Darkness for Days&lt;/h3&gt;
-
-&lt;p&gt;Also, we have dark mode on iOS, finally! Mojave doesn’t get all the fun!&lt;/p&gt;
-
-&lt;p&gt;Err…shoot, no wait — we just have API support for it. But it doesn’t officially exist. But it also kinda does too, because the code is there. It’s shipped with Xcode.&lt;/p&gt;
-
-&lt;p&gt;I don’t know. I’m just telling you that trait collections now know about it:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;darkTraitCollection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UITraitCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;userInterfaceStyle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;…there’s obviously enumerations for it:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@available(iOS 12.0, *)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIUserInterfaceStyle&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;unspecified&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;light&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…but they only apply to CarPlay on iOS 12 beta 1.&lt;/p&gt;
-
-&lt;p&gt;So there you go 🤷🏻‍♂️.&lt;/p&gt;
-
-&lt;h3 id=&quot;notifications&quot;&gt;Notifications&lt;/h3&gt;
-
-&lt;p&gt;Technically not part of UIKit, but I did have to highlight one welcome change aside from the new grouping capabilities. Look, dealing with notifications is often a pain from a developer perspective. While not a forgone conclusion, the more notification offerings we have to support, generally the issues that could arise grow exponentially.&lt;/p&gt;
-
-&lt;p&gt;You have the system notification view to toggle app permissions within iOS’ settings, possibly your own user interface to allow for granular choices, APNS to go through and oh, let’s not forget the network to contend with too.&lt;/p&gt;
-
-&lt;p&gt;So, the fact that you can deep link directly into your app’s notification settings from an incoming one is not a small improvement (via &lt;code class=&quot;highlighter-rouge&quot;&gt;providesAppNotificationSettings&lt;/code&gt;), but a very welcome change as developers continue their journey towards simplifying notification issues for them, the end user and customer support.&lt;/p&gt;
-
-&lt;p&gt;🕺!&lt;/p&gt;
-
-&lt;h3 id=&quot;-and-the-free-ones-&quot;&gt;… And The Free Ones 🙌&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/_inside/status/1003831980025372673&quot;&gt;iOS 12 is fast&lt;/a&gt;. A lot of the improvements we’ll enjoy come from deep within the framework itself. Here, I’ve chosen to highlight API changes you’ll need to put some time into to reap benefits.&lt;/p&gt;
-
-&lt;p&gt;But that’s the thing — our apps will feel a bit smoother, faster and coherent without us having done anything at all.&lt;/p&gt;
-
-&lt;p&gt;The reasons why range from smarter cell prefetching via the API scheduling things serially, smarter CPU diversification, more intelligent backing stores for &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; and Auto Layout (quite impressively) hitting O(n) instead of O(n²) for multiple common layout scenarios, to name a few.&lt;/p&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-
-&lt;p&gt;Personally, I came away more impressed than I thought I would be with iOS 12. Initially, it appeared that a lot of the chatter preemptively declared that iOS 12 would be a day late and dollar short. Last year, we were treated to some marquee features within UIKit like drag and drop — so what could they throw down for us this year?&lt;/p&gt;
-
-&lt;p&gt;But, as is typical, W.W.D.C. brought some new stuff we weren’t expecting, hardening updates and most importantly the new APIs. Exciting times, plus — our apps are just better by virtue of simply running on the new OS. UIKit will always be at the forefront, and this year was no exception as there’s still plenty of discussions left to be had around this year’s improvements.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">And here we are. We’ve finally got a good look at iOS 12 and all it has on offer. Though some chose to view it as a tame maintenance release, tagging it as such is a disservice and there was plenty to digest during the WWDC keynote.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">The history of photography is rife with interesting stories of how the medium developed. Among them, digital photography is one of the more exciting bits of its history. It’s still quite a nascent craft, with its history tracing back to as recently as 1957 when the fine folks at the National Institute of Standards and Technology slapped a photo into computer memory.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

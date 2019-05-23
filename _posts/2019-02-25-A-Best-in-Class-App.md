@@ -6,7 +6,7 @@ writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "What is a best in class iOS app? How are they built, and can we quantify what makes them great?"
 image: /assets/images/logo.png
-updated: "2019-05-16"
+updated: "2019-05-23"
 ---
 
 For as long as I've been a part of this industry, I've watched incredible, well-deserving apps take home an Apple Design Award. And _that's_ my endgame. 
@@ -47,6 +47,8 @@ The five sections it covers are:
         * `func accessibilityIncrement()`
     + **[Decrement](https://developer.apple.com/documentation/objectivec/nsobject/1615169-accessibilitydecrement){:target="_blank"}**: A one-finger swipe down that decrements a value in an element.
         * `func accessibilityDecrement()`
+- When presenting new controllers, you set the Voice Over Cursor to an [appropriate element](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/SupportingAccessibility.html#//apple_ref/doc/uid/TP40007457-CH12-SW1){:target="_blank"} if the top-most left element doesn't make sense:
+    `UIAccessibilityPostNotification(.creenChangedNotification, myHeadering);`
 - Context considering, you use `accessibilityIgnoresInvertColors` for images and video.
 - Respects reduced motion and blurring user preferences.
 - Adaptive and supports all devices and multitasking scenarios elegantly.

@@ -109,7 +109,7 @@ What original Apple employee quickly sold off their 10% share of the company in 
 2. [The shade of gray they should be colored as.] [8]
 3. [A black obelisk!][9] Fun fact, it actually rendered in the wrong direction.
 4. [Their Porsche 911s] [10]
-5. Wildcard: One of it's oft forgotten co-founders, Ronald Wayne.
+5. Wildcard: One of its oft forgotten co-founders, Ronald Wayne.
 
 [1]: {{ site.url | append:"/WWDC-2015-The-Pregame-Quiz" }}
 [2]: {{ site.url | append:"/WWDC-2016-The-Pregame-Quiz" }}

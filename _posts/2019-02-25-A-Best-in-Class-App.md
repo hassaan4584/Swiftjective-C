@@ -48,7 +48,7 @@ The five sections it covers are:
     + **[Decrement](https://developer.apple.com/documentation/objectivec/nsobject/1615169-accessibilitydecrement){:target="_blank"}**: A one-finger swipe down that decrements a value in an element.
         * `func accessibilityDecrement()`
 - When presenting new controllers, you set the Voice Over Cursor to an [appropriate element](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/SupportingAccessibility.html#//apple_ref/doc/uid/TP40007457-CH12-SW1){:target="_blank"} if the top-most left element doesn't make sense:
-    `UIAccessibilityPostNotification(.creenChangedNotification, myHeadering);`
+    `UIAccessibilityPostNotification(.screenChangedNotification, myHeading);`
 - Context considering, you use `accessibilityIgnoresInvertColors` for images and video.
 - Respects reduced motion and blurring user preferences.
 - Adaptive and supports all devices and multitasking scenarios elegantly.

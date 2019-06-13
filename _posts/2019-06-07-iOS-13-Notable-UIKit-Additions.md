@@ -4,7 +4,7 @@ tags: ["UIKit"]
 title: "iOS 13: Notable UIKit Additions"
 writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
-description: "Though UIKit wasn't the star of the show, it's number of improvements certainly don't show it. Let's see what's new in iOS 13 for our favorite framework."
+description: "Though UIKit wasn't the star of the show, its number of improvements certainly don't show it. Let's see what's new in iOS 13 for our favorite framework."
 image: /assets/images/logo.png
 ---
 Phew.
@@ -246,7 +246,7 @@ _Cool! An icon pack!_
 
 Nay, it's much more than that. The subtleties are what become difficult about glpyhs - getting them all in the correct weights and sizes, ensuring sure line heights stay in harmony with system fonts or making them big when they should be and small when they shouldn't.
 
-And, that's only after you've got them all exported out and then tack on the time it takes to maintain them. But that's pre iOS 13, because a lot of these pain points have been solved:
+And, that's only after you've got them all exported out and then you've got to tack on the time it takes to maintain them as well. But that's pre iOS 13, because a lot of these pain points have been solved:
 
 ```swift
 // A pencil glyph
@@ -277,7 +277,7 @@ This is a small one, albeit one that we should have seen coming for the last yea
 
 The grouped table view hearkens back to the original grouped style, yet it adds a subtle corner radius to the beginning and end cells. The Research Kit team added this style as part of its version 2 release. It's a style that's easily achieved on your own, but why would you?
 
-Enter [.groupedInset](https://developer.apple.com/documentation/uikit/uitableview/style/insetgrouped){:target="_blank"}:
+Enter [.insetGrouped](https://developer.apple.com/documentation/uikit/uitableview/style/insetgrouped){:target="_blank"}:
 
 ```swift
 let tableView = UITableView(frame: .zero, style: .insetGrouped)

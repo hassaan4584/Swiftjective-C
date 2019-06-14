@@ -270,7 +270,7 @@ These are just convenience initializers (not in the concrete Swift term) that bo
 
 Going further, with the highlighted emphasis Apple has placed upon `UITraitCollection`, it's not a lot of work to make an image (or color) toggle based upon the trait collection housing it. See this [gist](https://gist.github.com/timonus/8b4feb47eccb6dde47ca6320d8fc6b11){:target="_blank"}, via [Tim](https://twitter.com/timonus){:target="_blank"}, to get a feel for what that looks like.
 
-### Bonus - Grouped Inset
+### Bonus - Inset Grouped
 This is a small one, albeit one that we should have seen coming for the last year. If you follow [Research Kit's](https://github.com/ResearchKit/ResearchKit){:target="_blank"} development, then it was clear where iOS was taking some of its new table view styles:
 
 ![Research Kit 2.0](../assets/images/RK2Stable.png)

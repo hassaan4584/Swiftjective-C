@@ -7,7 +7,7 @@ writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Say hello to a new framework shipping in iOS 13 that you've likely used hundreds of times as an end user. Now, rich link previews are available to all of us."
 image: /assets/images/logo.png
 ---
-It wasn't but [three posts ago][1] that I began my piece by opining about the forgotten heroes of WWDC. 
+It wasn't but [three posts ago][3] that I began my piece by opining about the forgotten heroes of WWDC. 
 
 Bring me your nascent frameworks, subtle API changes or things that were not graced with any keynote or State of the Union time. Those are the unknown territories I enjoy roaming, and the excitement of browsing them is amplified even more so by the fact that the documentation for them hasn't even landed yet during the beta period.
 

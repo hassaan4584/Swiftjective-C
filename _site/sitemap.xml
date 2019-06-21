@@ -261,7 +261,7 @@
 <lastmod>2019-04-02T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/NSSecureCoding-copy/</loc>
+<loc>http://localhost:4000/NSSecureCoding/</loc>
 <lastmod>2019-05-03T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -271,6 +271,10 @@
 <url>
 <loc>http://localhost:4000/iOS-13-Notable-UIKit-Additions/</loc>
 <lastmod>2019-06-07T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/LinkPresentation-Introduction/</loc>
+<lastmod>2019-06-18T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about</loc>

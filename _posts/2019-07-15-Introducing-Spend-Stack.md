@@ -92,6 +92,4 @@ Your own app has a story too. And, if you're not telling it, I think you're miss
 
 Thanks for hearing about my own connection behind Spend Stack, and it's live [here if you'd like to try it out yourself.](https://www.spendstack.com){:target="_blank"}
 
-CHANGE DATE OF ARTICLE TO 7-15
-
 Until next time ✌️.

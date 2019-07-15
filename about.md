@@ -7,7 +7,9 @@ permalink: /about
 <img id="headerImg" alt="headshot" src="/assets/images/about/headshot.jpeg" />
 
 ### About Me
-Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanmorgan10){:target="_blank"}. I'm an iOS engineer from Ozark, Missouri where I live with my [wife](https://www.instagram.com/jmorgan){:target="_blank"} and three kids. Currently, I work remotely on the iOS team at [Buffer](https://www.buffer.com){:target="_blank"}, where we build a suite of social media tools.
+Swiftjective-C is written by me, [Jordan Morgan](https://www.twitter.com/jordanmorgan10){:target="_blank"}. I'm an iOS engineer from Ozark, Missouri where I live with my [wife](https://www.instagram.com/jmorgan){:target="_blank"} and three kids. Currently, I work remotely on the iOS team at [Buffer](https://www.buffer.com){:target="_blank"}, where we build a suite of social media tools. 
+
+As an indie, I design and develop [Spend Stack]({{ site.spendStackURL }}), a list app built off of CloudKit that can keep an accurate running total of its items.
 
 #### Other Places I've Written For
 <ul>

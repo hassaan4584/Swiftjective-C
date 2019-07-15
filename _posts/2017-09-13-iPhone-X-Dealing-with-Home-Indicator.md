@@ -6,7 +6,6 @@ writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "View Controllers are notorious for the amount of responsibilities they have, but get ready for one more. Here's how to handle the home indicator."
 image: /assets/images/logo.png
-special: "true"
 ---
 In a move that, well, [everyone saw coming][1] — Apple unveiled the iPhone X. And along with it, a new little bar that sits happily towards the bottom bezel that invokes nostalgic feelings of a physical home button. Less than a year later, almost every modern iOS device released post iPhone X also followed suit.
 

@@ -6,7 +6,6 @@ writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Stack View has been pushed heavily by Apple, but sometimes its complexity overshadows its utility. A few simple tips can help ease that burden."
 image: /assets/images/logo.png
-special: "true"
 ---
 You've got to handle it to Apple's team on UIKit — they took on an intricate architectural problem and solved it rather beautifully. Given the task of creating useable APIs that would help developers create interfaces across a wide multitude of devices with differing resolutions — Auto Layout was born and thus matured.
 

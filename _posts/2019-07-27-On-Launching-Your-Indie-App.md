@@ -100,7 +100,7 @@ The press can lift you up, plain and simple. Getting it, though - is hard. That�
 
 In any event, the press I did get was super helpful. [9 to 5 Mac](https://9to5mac.com/2019/07/18/spend-stack-list-app-budgeting-ios/) picked it up, so did [AppAdvice](https://appadvice.com/post/spend-stack-helps-you-keep-an-accurate-running-total-with-smart-lists/1329068268/1114042886) and [Club MacStories](https://club.macstories.net) included it in their newsletter and some other publications whose primary audience is outside of the U.S. did too.
 
-I’ll always wonder if the press release I put out was part of that, but that’s kind of a opaque thing and hard to gauge. After all, you can’t manage what you can’t measure. 
+I’ll always wonder if the press release I put out was part of that, but that’s kind of an opaque thing and hard to gauge. After all, you can’t manage what you can’t measure. 
 
 Going forward, I’m taking the time to form friendships with the press so I can provide stories and news to them that provide value to their blogs/sites/etc. That’s the best outcome for each party involved.
 

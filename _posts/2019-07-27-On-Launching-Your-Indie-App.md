@@ -20,10 +20,10 @@ I’ve always found the concept of a North Star incredibly helpful. You have a g
 
 So, what were my North Star apps? After deciding early on I’d love to do a paid up front model, I looked at the developers who do that best:
 
-- Dark Sky
-- Things 3
-- Notability
-- iA Writer
+- [Dark Sky](https://www.darksky.net/app)
+- [Things 3](https://www.culturedcode.com)
+- [Notability](https://www.gingerlabs.com)
+- [iA Writer](https://www.ia.net/writer)
 
 These apps are highly respected, are always charting and offer a premium experience with an up front buy in. These are the apps I want to be alongside of, and while it’ll take a lot of work to get there, it’s served me well to study others who’ve been doing the App Store dance extremely well.
 
@@ -61,7 +61,7 @@ The things I had noted in the Launch and Post Launch sections are nothing unhear
 
 ![Launch Day](../assets/images/launchDay.jpeg)
 
-The key to each of these places is to ensure you follow the rules to the letter, plus - you know spam when you see it. Nobody wants to read it. Even if it’s a highly trafficked spot on the web, if Spend Stack didn’t seem like the right subject matter for it, I skipped it. You want to be things to go great at launch - but how you do it also matters in my opinion.
+The key to each of these places is to ensure you follow the rules to the letter, plus - you know spam when you see it. Nobody wants to read it. Even if it’s a highly trafficked spot on the web, if Spend Stack didn’t seem like the right subject matter for it, I skipped it. You want things to go great at launch - but how you do it also matters in my opinion.
 
 ### Your App’s Story
 One of the most useful forms of spreading the word about Spend Stack was the one that was the most genuine, less market-y thing I did. Just simply telling the [app’s story]({{ site.url | append:"/introducing-spend-stack" }}). I wrote about the what and why of Spend Stack, and several people outside of our normal Twitter tech circle picked it up and resonated with it.

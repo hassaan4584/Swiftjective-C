@@ -149,7 +149,7 @@ You see Things 3 doing this to perfection. As of today, their iPhone app sits at
 ### The Night Before Launch
 One thing that was a huge mental load off, and time saver, was to get everything for launch day all prepped the day before.
 
-So, on Wednesday night I had my launch tweet ready, my Product Hunt post was all created, every asset was done and anything else I had to tend to. I just had to wake up and hit tweet, post or whatever else the verb was. 
+So, on Wednesday night I had my launch tweet ready, my Product Hunt post was all created, every asset was ready to share and anything else I had to tend to was good to go. I just had to wake up and hit tweet, post or whatever else the verb was. 
 
 It made for a relatively calm morning, where I could just sit back and take it all in. My wife made a lovely card waiting for me when I woke up, and instead of running around trying to get everything out the door - I could sit back, drink my morning quad shot (YAY BUDDY! COFFFFAY 🤘) and just read it.
 
@@ -169,6 +169,6 @@ Make a fantastic, best in class app and tell its story.
 ### Final Thoughts
 Launching an app is a crazy, unnerving experience. You just really don’t know what’s going to happen. Especially if you are a solo indie, your time, resources and mental capacity are stretched thin. You’ve got to be persistent, insistent and persistent about your app’s success.
 
-Though there’s certainly an art to launching, I’ve yet to crack its code though. Glean what you can from what worked for me, but more importantly - take note of what *didn’t* work. Avoid those. Most importantly, if you’re launching soon, best of luck!
+Though there’s certainly an art to launching, I’ve yet to crack its code. Glean what you can from what worked for me, but more importantly - take note of what *didn’t* work. Avoid those. Most importantly, if you’re launching soon, best of luck!
 
 Until next time ✌️

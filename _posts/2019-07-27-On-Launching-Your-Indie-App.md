@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: ["The Indie Dev Diaries"]
-title: "On Lauching Your Indie App"
+title: "On Launching Your Indie App"
 writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "The art of launching is a mystical, debated art. Yet, in many ways it's the cornerstone of our initial success."

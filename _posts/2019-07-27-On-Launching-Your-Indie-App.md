@@ -34,7 +34,7 @@ They are also all paid up front apps, the model I chose. Speaking of...
 ### Paid Up Front
 Your pricing models dictates a lot of other choices you’ll make, so this was a decision I made very early on. 
 
-As a one man show, I’m happy with far less users who are happy with the app than several orders of magnitude more who I’ve got to convert either via I.A.P.’s or a subscription. I prefer to offer you up the whole deal, no gated content or up selling required. 
+As a one man show, I’m good with far less users who are happy with the app than several orders of magnitude more who I’ve got to convert either via I.A.P.’s or a subscription. I prefer to offer you up the whole deal, no gated content or up selling required. 
 
 A lot of people said this was a huge mistake business wise, and I can certainly see why they did. Paid up front apps are becoming a thing of the past, it has the most friction for acquisition and a lot of people simply aren’t willing to pay for apps. But, it’s still my favorite way to do business in the App Store. 
 
@@ -167,7 +167,7 @@ To close things out, if I had to write a one sentence thesis on launching specif
 Make a fantastic, best in class app and tell its story.
 
 ### Final Thoughts
-Launching an app is a crazy, unnerving experience. You just really don’t know what’s going to happen. Especially if you are a solo indie, your time, resources and mental capacity are stretched thin. You’ve got to be persistent, insistent and persistent about your app’s success.
+Launching an app is a crazy, unnerving experience. You just really don’t know what’s going to happen. Especially if you are a solo indie, your time, resources and mental capacity are stretched thin. You’ve got to be persistent, insistent and consistent about your app’s success.
 
 Though there’s certainly an art to launching, I’ve yet to crack its code. Glean what you can from what worked for me, but more importantly - take note of what *didn’t* work. Avoid those. Most importantly, if you’re launching soon, best of luck!
 

@@ -80,7 +80,7 @@ Think about each W.W.D.C. from the past few years, what does the keynote end wit
 
 You never know who’s going to really take to your story and identify with it. Those are great customers you’ll be able to make really happy.
 
-### The Preoder Thing
+### The Preorder Thing
 After announcing it, preordering just kind of happened. My timeline was setup to where if app review went fine (and it did, it was approved on the first go around) I would have two weeks until launch. 
 
 I told press about it on a Monday, and then one week later I publicly announced it on Twitter. Since I was already approved, I just put it up for preorder and didn’t really think much of it.

@@ -9,6 +9,8 @@
 /* Style the header */
 #gridHeader {
     grid-area: header;
+    padding-left: 32px;
+        padding-right: 32px;
     height: auto;
 }
 
@@ -17,11 +19,15 @@
     grid-area: middle;
     height: auto;
     margin-top: 32px;
+    padding-left: 32px;
+        padding-right: 32px;
 }
 
 /* Style the footer */
 #gridFooter {
     grid-area: footer;
+    padding-left: 32px;
+        padding-right: 32px;
     height: auto;
 }
 
@@ -51,14 +57,11 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Extra small devices (phones, 800px and down) */
-@media (max-width: 800px) {
-
+@media (max-width: 840px) {
     #gridHeader,
     #gridMiddle,
     #gridFooter {
         width: 100vw;
-        padding-left: 32px;
-        padding-right: 32px;
     }
 
 }

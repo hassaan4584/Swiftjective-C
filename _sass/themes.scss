@@ -30,6 +30,7 @@
      padding: 4px 6px 4px 6px;
      border-radius: 6px;
      font-size: 12px;
+     display: inline-block;
  }
  .articleTagByDate {
      background-color: $secondary-color;
@@ -68,6 +69,7 @@
  a:active {
      color: #70A2F9;
  }
+
  /* Selectors
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -115,12 +117,13 @@
  article p {
      margin-top: 8px;
  }
+
  /* Media Breakpoints
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
  /* Extra small devices (phones, 800px and down) */
 
- @media (max-width: 800px) {
+ @media (max-width: 840px) {
      #gridHeader, #gridMiddle, #gridFooter {
          width: 100vw;
          padding-left: 32px;

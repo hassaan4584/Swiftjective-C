@@ -1,5 +1,237 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-16T09:03:16-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">On Launching Your Indie App</title><link href="http://localhost:4000/On-Launching-Your-Indie-App/" rel="alternate" type="text/html" title="On Launching Your Indie App" /><published>2019-07-27T00:00:00-05:00</published><updated>2019-07-27T00:00:00-05:00</updated><id>http://localhost:4000/On-Launching-Your-Indie-App</id><content type="html" xml:base="http://localhost:4000/On-Launching-Your-Indie-App/">&lt;p&gt;Y.O.L.O.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-21T17:32:39-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Animating Images using ImageIO</title><link href="http://localhost:4000/Animating-Images-Using-Image-IO/" rel="alternate" type="text/html" title="Animating Images using ImageIO" /><published>2019-09-21T00:00:00-07:00</published><updated>2019-09-21T00:00:00-07:00</updated><id>http://localhost:4000/Animating-Images-Using-Image-IO</id><content type="html" xml:base="http://localhost:4000/Animating-Images-Using-Image-IO/">&lt;p&gt;When I was a little boy, I remember that my father could often be found somewhere around the house fixing something up. Never the adroit handymen, but far from incompetent, I would happily would tag along and watch as he patched up a leaky faucet, swap out an old flickering light bulb or tighten up a loose screw on an old towel rack.&lt;/p&gt;
+
+&lt;p&gt;On one particularly cold November morning, I remember he started tending to an old heater that we were using to keep my parent’s room nice and toasty amidst the encroaching winter climate. A screw was loose on one of its sides, and the only screwdriver he had laying was a rusted, weathered Phillips.&lt;/p&gt;
+
+&lt;p&gt;The issue, of course, was that this screw was a standard flathead.&lt;/p&gt;
+
+&lt;p&gt;Never the less, he made it work - but was quick to note to his curious sidekick (i.e. me) that this was the incorrect tool for the job. While we’d be able to complete the task, a flathead screwdriver would be far more efficient in tightening things up.&lt;/p&gt;
+
+&lt;p&gt;Now, many decades later, I often think back to that day and the universal lesson that myself, and eventually everyone, is taught. Get the right tool for the right job. For years, we’ve been granted &lt;em&gt;some&lt;/em&gt; tools to playback .gifs in iOS.&lt;/p&gt;
+
+&lt;p&gt;But it wasn’t until now, with iOS 13, that Apple bequeathed us with the right one, and they barely made a peep about it.&lt;/p&gt;
+
+&lt;h2 id=&quot;blink-and-youll-miss-it&quot;&gt;Blink and You’ll Miss it&lt;/h2&gt;
+&lt;p&gt;The first stop I make during beta season is the incredibly valuable API diffs that CodeWorkshop pipes out using their custom CLI tool. Starting with the diff from &lt;a href=&quot;http://codeworkshop.net/objc-diff/sdkdiffs/ios/13.0b3/ImageIO.html&quot; target=&quot;_blank&quot;&gt;iOS 13 beta 2 to 3&lt;/a&gt;, I noticed something in particular nestled within Image IO:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;CGAnimateImageAtURLWithBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hmmm. Could this be what I thought it was? A first class API for .gifs? Like many of you, I went to the source of truth to confirm any such notion. But, well…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/images/docImageIO.png&quot; alt=&quot;Launch List&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;… &lt;br /&gt;
+…. &lt;br /&gt;
+….. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Despite the paucity of information, I tinkered on. As it turns out, Image IO has, in fact, granted us with an excellent way to animate .gifs (and even the slicker, 24-bit variant APNGs) but it’s not without some question marks. Namely, if you’re thinking of using Apple’s flagship programming language, you’ll be slightly disappointed.&lt;/p&gt;
+
+&lt;p&gt;As of Xcode 11 (11A420a), this isn’t even visible to Swift at all.&lt;/p&gt;
+
+&lt;p&gt;Which means I finally I have an excuse to write a post in Objective-C!&lt;/p&gt;
+
+&lt;h3 id=&quot;mirroring-the-api&quot;&gt;Mirroring the API&lt;/h3&gt;
+&lt;p&gt;To expose this in Swift, the first question I find myself asking is should I expressly bridge over the methods and functionality nearly one to one, or would a custom object or class serve me better?&lt;/p&gt;
+
+&lt;p&gt;For me, it’s the latter. After I confirmed how the API worked, I created a generic object that hides Image IO’s dirty laundry from Swift. To carry out such a task, we need to know what to expose - and here’s what this new API offers:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Status type&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;CGImageAnimationStatus&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Errors&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStatus_ParameterError&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStatus_CorruptInputImage&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStatus_UnsupportedFormat&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStatus_IncompleteInputImage&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStatus_AllocationFailure&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Options for animation&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStartIndex&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationDelayTime&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;kCGImageAnimationLoopCount&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;CGImageSourceAnimationBlock&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Animation functions&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;CGAnimateImageAtURLWithBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;CGAnimateImageDataWithBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We’ve got a status that reports how the process is going (via a typedef’d SInt32, OSStatus), some options to express our .gif/APNG presentation preferences (a common pattern in Image IO, and Core Graphics in general) and two different sources we can provide for our .gif or APNG.&lt;/p&gt;
+
+&lt;p&gt;To express this to Swift (or really any client, Objective-C codebases notwithstanding) we might write something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#import &amp;lt;Foundation/Foundation.h&amp;gt;
+#import &amp;lt;CoreGraphics/CoreGraphics.h&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;@class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UIImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_Nullable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_Nullable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSError&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_Nullable&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;NS_ASSUME_NONNULL_BEGIN&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@interface&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ImageAnimator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;NSObject&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;beginningFrameIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGFloat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delayPerFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSUInteger&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loopCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@property&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nonatomic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BOOL&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stopPlayback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;animateImageWithData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;animationBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;animateImageAtURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;animationBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;NS_ASSUME_NONNULL_END&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, we’ve expressed a simple block to report the resulting image to assign back to our image view, along with an error that you might rely on if the resulting operation didn’t work. You’d query for any of the OSStatus errors, returned from either of the two animating functions listed, to check for such a scenario.&lt;/p&gt;
+
+&lt;p&gt;Other than that, exposing the options as properties will take us 75% of the way there. The next part is really up to you, and that’s opening up the actual animation functions.&lt;/p&gt;
+
+&lt;p&gt;There are several different ways to get this done, but I prefer just two dedicated methods. Feel free to vend things through a callback, dependency injection or any other pattern that will achieve much of the same thing. Regardless, simply passing our source of truth for the image is all that’s left.&lt;/p&gt;
+
+&lt;p&gt;In Image IO’s case, this will come either from the network or locally via a chunk of data or just the location of the images via a URL. We’ve stubbed out both of these at the bottom of the header file above:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;animateImageWithData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animationBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;animateImageAtURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animationBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;implementation&quot;&gt;Implementation&lt;/h3&gt;
+&lt;p&gt;Of course, since we are in the stone age of Objective-C today (where I &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1172882580187881472?s=20&quot; target=&quot;_blank&quot;&gt;admittedly&lt;/a&gt; love to play) where the header files roam freely, and the square brackets are treated as deity - we mustn’t forget to write the other half of our code. Thus, we now arrive at the implementation file.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Let’s not get too hasty, either. For years, the .h and .m paradigm has offered C, C++ and Objective-C many advantages . To learn more, visit your friendly neighborhood &lt;a href=&quot;https://stackoverflow.com/questions/15580539/what-are-the-advantages-of-using-more-then-1-code-file-for-a-project-c&quot; target=&quot;_blank&quot;&gt;Stack Overflow post&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#import &quot;ImageAnimator.h&quot;
+#import &quot;ImageIO/CGImageAnimation.h&quot;
+#import &amp;lt;UIKIT/UIKit.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@implementation&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ImageAnimator&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#pragma mark - Initializer
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instancetype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;beginningFrameIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delayPerFrame&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loopCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#pragma mark - Public
+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animateImageAtURL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animationBlock&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;__weak&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weakSelf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;animationOptionsDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;CGAnimateImageAtURLWithBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CFURLRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CFDictionaryRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGImageRef&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;_Nonnull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_Nonnull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weakSelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopPlayback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;animationBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIImage&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;imageWithCGImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* report any relevant OSStatus if needed*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animateImageWithData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onAnimate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animationBlock&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;__weak&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weakSelf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;animationOptionsDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;CGAnimateImageDataWithBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CFDataRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CFDictionaryRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;size_t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CGImageRef&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;_Nonnull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_Nonnull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weakSelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stopPlayback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;animationBlock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIImage&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;imageWithCGImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* report any relevant OSStatus if needed*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cp&quot;&gt;#pragma mark - Private
+&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animationOptionsDictionary&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSMutableDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableDictionary&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addEntriesFromDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:@{(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStartIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;beginningFrameIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kCGImageAnimationDelayTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delayPerFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loopCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;kCGImageAnimationLoopCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loopCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;@end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;There is not much to see here, other than we take care to vend any options we’ve set before kicking off an animation by combining our properties into a dictionary:&lt;/p&gt;
+
+&lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#pragma mark - Private
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animationOptionsDictionary&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NSMutableDictionary&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NSNumber&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSMutableDictionary&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;addEntriesFromDictionary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:@{(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kCGImageAnimationStartIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;beginningFrameIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+                                        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kCGImageAnimationDelayTime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;delayPerFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loopCount&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;kCGImageAnimationLoopCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loopCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Of note, in my testing I seemed to experience that any .gif would stop after one complete repetition if I passed &lt;code class=&quot;highlighter-rouge&quot;&gt;kCFNumberPositiveInfinity&lt;/code&gt; as a default value for the loop count. The docs indicate that this should keep things playing - but hey, my aforementioned handyman Dad also told me Santa Clause was real too.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you’ve been away from #TeamDino for some time, the pointer to a boolean may look weird too. However, this approach can be handy in cases where we might want to assign to a boolean (or any other type) later, but lack any context to control it after the initial function invocation. This way, one can set the boolean at any point within the block by referencing another boolean’s assignment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Piping things over to Swift - we’ve now got a fully functioning class that will allow us to spread the joy of any animated .gif or APNG anywhere on the main queue. So, putting it all together:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIViewController&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;imageView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIImageView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;animator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ImageAnimator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;viewDidLoad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        
+        &lt;span class=&quot;n&quot;&gt;imageView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIImageView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;addSubview&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imageView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;imageView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;translatesAutoresizingMaskIntoConstraints&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;imageView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentMode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scaleAspectFit&lt;/span&gt;
+        
+        &lt;span class=&quot;nf&quot;&gt;setupImageViewConstraints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;gifData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* Your Gif */&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;weakSelf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;animator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;animateImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gifData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;weakImgView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;weakSelf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;imageView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;weakImgView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;…if you ran such code, you’d enjoy a .gif that would play indefinitely. Of course, setting any of the properties on our &lt;code class=&quot;highlighter-rouge&quot;&gt;ImageAnimator&lt;/code&gt; class would let you tweak playback however you wish, such as starting at some relevant frame, applying a delay or a playback limit. And, as mentioned above, if one assigns false to &lt;code class=&quot;highlighter-rouge&quot;&gt;stopPlayback&lt;/code&gt; at any point after playback has started, playback will cease.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;The things we take for granted, right? To the end user, .gifs or any sort of animated image is commonplace within iOS. But, developers know there is more than meets the eye. Whether it was piping an array of images through &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImageView&lt;/code&gt; or using some other open source library, it was a bit more work than it should have been.&lt;/p&gt;
+
+&lt;p&gt;But what you are is just as important as what you aren’t.&lt;/p&gt;
+
+&lt;p&gt;On the surface, it’s easy to say that &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImageView&lt;/code&gt; may be built for something like this. But, Image IO is &lt;em&gt;really&lt;/em&gt; built for something like this, you know? Its tooling is expressly written to efficiently operate on images, so it feels like the right tool. And in 2019, even though it takes some dancing around to expose in Swift, we can check off playing .gifs or APNG files as another problem solved by Cupertino and Friends©.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="technical" /><summary type="html">When I was a little boy, I remember that my father could often be found somewhere around the house fixing something up. Never the adroit handymen, but far from incompetent, I would happily would tag along and watch as he patched up a leaky faucet, swap out an old flickering light bulb or tighten up a loose screw on an old towel rack.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">On Launching Your Indie App</title><link href="http://localhost:4000/On-Launching-Your-Indie-App/" rel="alternate" type="text/html" title="On Launching Your Indie App" /><published>2019-07-27T00:00:00-07:00</published><updated>2019-07-27T00:00:00-07:00</updated><id>http://localhost:4000/On-Launching-Your-Indie-App</id><content type="html" xml:base="http://localhost:4000/On-Launching-Your-Indie-App/">&lt;p&gt;Y.O.L.O.&lt;/p&gt;
 
 &lt;p&gt;No, not the chant of today’s youth, declaring our ephemeral state of life wherein we should explore any dangerous activity our heart leads us towards. What I’m referring to is something much more sacred:&lt;/p&gt;
 
@@ -177,7 +409,7 @@
 
 &lt;p&gt;Though there’s certainly an art to launching, I’ve yet to crack its code. Glean what you can from what worked for me, but more importantly - take note of what &lt;em&gt;didn’t&lt;/em&gt; work. Avoid those. Most importantly, if you’re launching soon, best of luck!&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Y.O.L.O.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Introducing Spend Stack</title><link href="http://localhost:4000/Introducing-Spend-Stack/" rel="alternate" type="text/html" title="Introducing Spend Stack" /><published>2019-07-15T00:00:00-05:00</published><updated>2019-07-15T00:00:00-05:00</updated><id>http://localhost:4000/Introducing-Spend-Stack</id><content type="html" xml:base="http://localhost:4000/Introducing-Spend-Stack/">&lt;p&gt;Every app has a story.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Y.O.L.O.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Introducing Spend Stack</title><link href="http://localhost:4000/Introducing-Spend-Stack/" rel="alternate" type="text/html" title="Introducing Spend Stack" /><published>2019-07-15T00:00:00-07:00</published><updated>2019-07-15T00:00:00-07:00</updated><id>http://localhost:4000/Introducing-Spend-Stack</id><content type="html" xml:base="http://localhost:4000/Introducing-Spend-Stack/">&lt;p&gt;Every app has a story.&lt;/p&gt;
 
 &lt;p&gt;You’ve heard this before, right? Apple pushes it in their messaging, the press lets you know you should tell yours and general marketing revolves around it.&lt;/p&gt;
 
@@ -264,7 +496,7 @@
 
 &lt;p&gt;Thanks for hearing about my own connection behind Spend Stack, and it’s live &lt;a href=&quot;https://www.spendstack.com&quot; target=&quot;_blank&quot;&gt;here if you’d like to try it out yourself.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Every app has a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">A LinkPresentation Introduction</title><link href="http://localhost:4000/LinkPresentation-Introduction/" rel="alternate" type="text/html" title="A LinkPresentation Introduction" /><published>2019-06-21T00:00:00-05:00</published><updated>2019-06-21T00:00:00-05:00</updated><id>http://localhost:4000/LinkPresentation-Introduction</id><content type="html" xml:base="http://localhost:4000/LinkPresentation-Introduction/">&lt;p&gt;It wasn’t but &lt;a href=&quot;http://localhost:4000/NSSecureCoding&quot;&gt;three posts ago&lt;/a&gt; that I began my piece by opining about the forgotten heroes of WWDC.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Every app has a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">A LinkPresentation Introduction</title><link href="http://localhost:4000/LinkPresentation-Introduction/" rel="alternate" type="text/html" title="A LinkPresentation Introduction" /><published>2019-06-21T00:00:00-07:00</published><updated>2019-06-21T00:00:00-07:00</updated><id>http://localhost:4000/LinkPresentation-Introduction</id><content type="html" xml:base="http://localhost:4000/LinkPresentation-Introduction/">&lt;p&gt;It wasn’t but &lt;a href=&quot;http://localhost:4000/NSSecureCoding&quot;&gt;three posts ago&lt;/a&gt; that I began my piece by opining about the forgotten heroes of WWDC.&lt;/p&gt;
 
 &lt;p&gt;Bring me your nascent frameworks, subtle API changes or things that were not graced with any keynote or State of the Union time. Those are the unknown territories I enjoy roaming, and the excitement of browsing them is amplified even more so by the fact that the documentation for them hasn’t even landed yet during the beta period.&lt;/p&gt;
 
@@ -413,7 +645,7 @@
 
 &lt;p&gt;Let Apple take another menial task off of your plate. In the same spirit of SwiftUI’s announcement, the more we can afford to Cupertino and Friends©, then the more we can spend time on making our own app’s shine. Now, we check making link previews off of our own list.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="LinkPresentation" /><summary type="html">It wasn’t but three posts ago that I began my piece by opining about the forgotten heroes of WWDC.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">iOS 13: Notable UIKit Additions</title><link href="http://localhost:4000/iOS-13-Notable-UIKit-Additions/" rel="alternate" type="text/html" title="iOS 13: Notable UIKit Additions" /><published>2019-06-07T00:00:00-05:00</published><updated>2019-06-07T00:00:00-05:00</updated><id>http://localhost:4000/iOS-13-Notable-UIKit-Additions</id><content type="html" xml:base="http://localhost:4000/iOS-13-Notable-UIKit-Additions/">&lt;p&gt;Phew.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="LinkPresentation" /><summary type="html">It wasn’t but three posts ago that I began my piece by opining about the forgotten heroes of WWDC.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">iOS 13: Notable UIKit Additions</title><link href="http://localhost:4000/iOS-13-Notable-UIKit-Additions/" rel="alternate" type="text/html" title="iOS 13: Notable UIKit Additions" /><published>2019-06-07T00:00:00-07:00</published><updated>2019-06-07T00:00:00-07:00</updated><id>http://localhost:4000/iOS-13-Notable-UIKit-Additions</id><content type="html" xml:base="http://localhost:4000/iOS-13-Notable-UIKit-Additions/">&lt;p&gt;Phew.&lt;/p&gt;
 
 &lt;p&gt;This year’s WWDC has simply been a monster of the best kind. SwiftUI is a seismic shift, yet it’s &lt;em&gt;far&lt;/em&gt; from the only relevant news. Now that we’ve finally got a good look at iOS 13 (and, for the pedantic, iPadOS) and all it has on offer - the problem now becomes knowing where to start and how to focus your attention.&lt;/p&gt;
 
@@ -688,7 +920,7 @@
 
 &lt;p&gt;But, even though SwiftUI is &lt;em&gt;not&lt;/em&gt; UIKit, the latter is certainly here to stay. And this year, it became better than it ever has been.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">Phew.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">WWDC 2019: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2019: The Pregame Quiz" /><published>2019-05-23T00:00:00-05:00</published><updated>2019-05-23T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-2019-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/">&lt;p&gt;Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">Phew.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">WWDC 2019: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2019: The Pregame Quiz" /><published>2019-05-23T00:00:00-07:00</published><updated>2019-05-23T00:00:00-07:00</updated><id>http://localhost:4000/WWDC-2019-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/">&lt;p&gt;Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.&lt;/p&gt;
 
 &lt;p&gt;At this point it’s all conjecture, so let’s ready up with the fifth annual Swiftjective-C WWDC Pregame Quiz!&lt;/p&gt;
 
@@ -797,7 +1029,7 @@ What original Apple employee quickly sold off their 10% share of the company in 
   &lt;li&gt;&lt;a href=&quot;https://asciiwwdc.com/2014/sessions/237&quot;&gt;A black obelisk!&lt;/a&gt; Fun fact, it actually rendered in the wrong direction.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.forbes.com/sites/connieguglielmo/2012/10/03/untold-stories-about-steve-jobs-friends-and-colleagues-share-their-memories/#4932fdc6c584&quot;&gt;Their Porsche 911s&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Wildcard: One of its oft forgotten co-founders, Ronald Wayne.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSSecureCoding</title><link href="http://localhost:4000/NSSecureCoding/" rel="alternate" type="text/html" title="NSSecureCoding" /><published>2019-05-03T00:00:00-05:00</published><updated>2019-05-03T00:00:00-05:00</updated><id>http://localhost:4000/NSSecureCoding</id><content type="html" xml:base="http://localhost:4000/NSSecureCoding/">&lt;p&gt;Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NSSecureCoding</title><link href="http://localhost:4000/NSSecureCoding/" rel="alternate" type="text/html" title="NSSecureCoding" /><published>2019-05-03T00:00:00-07:00</published><updated>2019-05-03T00:00:00-07:00</updated><id>http://localhost:4000/NSSecureCoding</id><content type="html" xml:base="http://localhost:4000/NSSecureCoding/">&lt;p&gt;Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.&lt;/p&gt;
 
 &lt;p&gt;However, I find that I have quite a predilection for such API changes. The ones that might not make the press or be the chatter among devs undoubtedly taking over each coffee shop in San Jose are the ones which are often extremely valuable to our work. They just aren’t as “sexy”, as such, the spotlight eludes them.&lt;/p&gt;
 
@@ -1019,7 +1251,7 @@ Or initialize some sort of singleton 🙅🏻‍♂️!&lt;br /&gt;
 
 &lt;p&gt;And if we’re being honest, the chances of a malicious attack targeting your app through this particular vector might be slim. But it never happens &lt;em&gt;until it does&lt;/em&gt;. Plus, when the tide goes out - you can tell who was skinny dipping. Don’t be the dev who got toasted because they forgot to use a more secure archiving technique.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">I Made Some Pancakes</title><link href="http://localhost:4000/making-pancakes/" rel="alternate" type="text/html" title="I Made Some Pancakes" /><published>2019-04-02T00:00:00-05:00</published><updated>2019-04-02T00:00:00-05:00</updated><id>http://localhost:4000/making-pancakes</id><content type="html" xml:base="http://localhost:4000/making-pancakes/">&lt;p&gt;Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">I Made Some Pancakes</title><link href="http://localhost:4000/making-pancakes/" rel="alternate" type="text/html" title="I Made Some Pancakes" /><published>2019-04-02T00:00:00-07:00</published><updated>2019-04-02T00:00:00-07:00</updated><id>http://localhost:4000/making-pancakes</id><content type="html" xml:base="http://localhost:4000/making-pancakes/">&lt;p&gt;Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/images/pancakes.jpg&quot; alt=&quot;DopePancakes&quot; /&gt;&lt;/p&gt;
 
@@ -1090,7 +1322,7 @@ Or initialize some sort of singleton 🙅🏻‍♂️!&lt;br /&gt;
 
 &lt;p&gt;Maybe you just need to make some freakin’ pancakes 🥞.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Handling iCloud Assets</title><link href="http://localhost:4000/iCloud-Photo-Handling/" rel="alternate" type="text/html" title="Handling iCloud Assets" /><published>2019-03-27T00:00:00-05:00</published><updated>2019-03-27T00:00:00-05:00</updated><id>http://localhost:4000/iCloud-Photo-Handling</id><content type="html" xml:base="http://localhost:4000/iCloud-Photo-Handling/">&lt;p&gt;There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Handling iCloud Assets</title><link href="http://localhost:4000/iCloud-Photo-Handling/" rel="alternate" type="text/html" title="Handling iCloud Assets" /><published>2019-03-27T00:00:00-07:00</published><updated>2019-03-27T00:00:00-07:00</updated><id>http://localhost:4000/iCloud-Photo-Handling</id><content type="html" xml:base="http://localhost:4000/iCloud-Photo-Handling/">&lt;p&gt;There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.&lt;/p&gt;
 
 &lt;p&gt;They have a decade’s worth of talent and hardening baked right into them. While you should stray from a mechanism that can undermine your own structure, sometimes you just need to roll up your sleeves, toss Apple’s preheated solutions to the side and do it yourself. Building your own version of component X or Y is fatalistic in software development, after all.&lt;/p&gt;
 
@@ -1282,7 +1514,7 @@ to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; for this to
 
 &lt;p&gt;Ensuring that our own home rolled solutions outside of &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImagePickerController&lt;/code&gt; can retrieve them, communicate its progress of doing so and then displaying the end result is a baseline expectation at this point. Though it requires a bit of know-how, the code doesn’t yield a massive time commitment when weighed against its payoff.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Photos" /><summary type="html">There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">A Best in Class iOS App</title><link href="http://localhost:4000/A-Best-in-Class-App/" rel="alternate" type="text/html" title="A Best in Class iOS App" /><published>2019-02-25T00:00:00-06:00</published><updated>2019-02-25T00:00:00-06:00</updated><id>http://localhost:4000/A-Best-in-Class-App</id><content type="html" xml:base="http://localhost:4000/A-Best-in-Class-App/">&lt;p&gt;For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps take home an Apple Design Award. And &lt;em&gt;that’s&lt;/em&gt; my endgame.&lt;/p&gt;
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Photos" /><summary type="html">There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">A Best in Class iOS App</title><link href="http://localhost:4000/A-Best-in-Class-App/" rel="alternate" type="text/html" title="A Best in Class iOS App" /><published>2019-02-25T00:00:00-07:00</published><updated>2019-02-25T00:00:00-07:00</updated><id>http://localhost:4000/A-Best-in-Class-App</id><content type="html" xml:base="http://localhost:4000/A-Best-in-Class-App/">&lt;p&gt;For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps take home an Apple Design Award. And &lt;em&gt;that’s&lt;/em&gt; my endgame.&lt;/p&gt;
 
 &lt;p&gt;So, years ago, I set out to create a list that succinctly answers only one question:&lt;/p&gt;
 
@@ -1473,212 +1705,4 @@ to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; for this to
 
 &lt;p&gt;And, as a wise honey-loving bear once said, “I get to where I’m going by walking away from where I’ve been.” If your app might lack some polish, better now more than ever to spend some time giving it some.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps take home an Apple Design Award. And that’s my endgame.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">NS_CLOSED_ENUM</title><link href="http://localhost:4000/NS_CLOSED_ENUM/" rel="alternate" type="text/html" title="NS_CLOSED_ENUM" /><published>2019-02-14T00:00:00-06:00</published><updated>2019-02-14T00:00:00-06:00</updated><id>http://localhost:4000/NS_CLOSED_ENUM</id><content type="html" xml:base="http://localhost:4000/NS_CLOSED_ENUM/">&lt;p&gt;There is but one constant in software engineering: change.&lt;/p&gt;
-
-&lt;p&gt;New versions. Additional frameworks. Mutating requirements. Indecisive clients. Nascent patterns for emerging platforms.&lt;/p&gt;
-
-&lt;p&gt;The outside factors will always pile in, and yet sitting within stark juxtaposition of this notion is that some code might not &lt;em&gt;ever&lt;/em&gt; change. A prime candidate for such immutability? Enumerations.&lt;/p&gt;
-
-&lt;p&gt;And now, thanks to the Swift compiler and Xcode 10.2, we can broadcast the future of any Objective-C enumeration with a higher degree of clarity.&lt;/p&gt;
-
-&lt;h3 id=&quot;frozen-and-unfrozen&quot;&gt;Frozen and Unfrozen&lt;/h3&gt;
-&lt;p&gt;Far from moribund, Objective-C appears to gain new gadgets on an annual basis. However, a closer inspection reveals that all good things happening to the thirty-plus year old language are a direct result of bettering the Swift programming experience. So, it should come as no surprise that this macro was born primarily from &lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md&quot; target=&quot;_blank&quot;&gt;Swift evolution proposal 0192&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The TL;DR is that the Swift community were considering how to effectively handle enumerations that would change, and those that wouldn’t. In programming parlance we consider this distinction as &lt;em&gt;frozen&lt;/em&gt; and &lt;em&gt;unfrozen&lt;/em&gt; enumerations.&lt;/p&gt;
-
-&lt;p&gt;For an unfrozen enumeration (likely the lot of them), additional cases are likely coming in future API changes:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Later on, another case could be added&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeMigrated&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Whereas other situations call for a certain degree of finality, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;FloatingPointSign&lt;/code&gt; from within the Swift Standard Library:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sign&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;FloatingPointSign&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minus&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sign&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;minus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;swiftly-business&quot;&gt;Swiftly Business&lt;/h3&gt;
-&lt;p&gt;The differences in approach between the two languages are vast and wide when dealing with enumerations. Recall that Objective-C supports storing any value in an enumeration, so as long as it matches the underlying type:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Later on, assignment...&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;934&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Or control flow...&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;243&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// It's all totally legal&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In Swift, that’s no fly zone territory:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Cannot assign value of type 'Int' to type 'AccountType'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;934&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// This errs as well, unless one initializes an Int with the enum's rawValue.    &lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;But where things really become tightened up in Swift is within a &lt;code class=&quot;highlighter-rouge&quot;&gt;switch&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// If we omit default, we'll err since the switch isn't exhaustive. Or leave out a break.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;existing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here, Swift is the straight A student who buckles their seat belt before starting their engine. Objective-C wouldn’t mind driving blindfolded:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Really anything goes. Leave out a break. Don't use all the cases. Just whatever with a side of YOLO.&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And you can see where the issues come into play. Though we can’t do much in terms of safety with Objective-C, we can vend more intent to Swift consumers of their enumerations by marking them as either frozen or unfrozen. Doing so yields a subtle but welcome change for Swift API consumers.&lt;/p&gt;
-
-&lt;p&gt;Enter NS_CLOSED_ENUM.&lt;/p&gt;
-
-&lt;h3 id=&quot;freezing-enumerations&quot;&gt;Freezing Enumerations&lt;/h3&gt;
-&lt;p&gt;Though our account type example enumeration is ripe for future mutations, let’s consider one that isn’t:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_CLOSED_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountStandingStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusFreeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusPaid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusOwes&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Here, our business needs dictated that an account will ever only be in one of three states. Forever. When bridged over to Swift, usage might look like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountStanding&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;owes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;@unknown&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Note that a default case can’t alert the compiler that a particular enumeration has elements that aren’t explicitly handled in the switch. For this reason, Swift added a new attribute in Swift 4 for switches, @unknown. Using it will act as a huge safety net, a catch-all. A key difference is that a warning will still be produced to let developers know they’ve missed a case.&lt;/p&gt;
-
-&lt;p&gt;That being said, intent is the most valued prize to engineers both from a maintainer’s perspective as well as a consumer’s one. Though @unknown is useful for letting one know they’ve missed a case; even better is to communicate that they don’t need a default case at all. YAGNI.&lt;/p&gt;
-
-&lt;p&gt;We can use NS_CLOSED_ENUM here to signify things will, and forever more, stay the same:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NS_CLOSED_ENUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUInteger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountStandingStatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusFreeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusPaid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountStandingStatusOwes&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now Swift can guarantee that the additional &lt;code class=&quot;highlighter-rouge&quot;&gt;default&lt;/code&gt; is unnecessary, but notice how no warning is generated for our unfrozen enumeration, &lt;code class=&quot;highlighter-rouge&quot;&gt;AccountType&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;account&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Account&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;existing&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountStanding&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paid&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountType&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;existing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;unknown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;@unknown&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Still useful, because new types could later be added&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;account&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accountStanding&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;freeTrial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;owes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;paid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;@unknown&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Case is already handled by previous patterns; consider removing it&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Though this clearly enhances life with Swift, I’d argue this can be a valuable addition to any Objective-C exclusive code base. If you’re browsing a header, the intent of the enumeration’s status (both current and future) are clear by either the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;NS_ENUM&lt;/code&gt; versus &lt;code class=&quot;highlighter-rouge&quot;&gt;NS_CLOSED_ENUM&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;choices&quot;&gt;Choices&lt;/h3&gt;
-&lt;p&gt;It’s worth considering which type of enumeration to use with Objective-C at this point. We’ve got enum, NS_ENUM or NS_CLOSED_ENUM. Fortunately, the answer is much simpler than you  might think.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;NS_OPTIONS is also a choice, but is more suited towards bitmasks.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The old C way of defining an enumeration, which by proxy Objective-C gained by virtue of being a superset, could lead to confusion. Look to &lt;a href=&quot;https://nshipster.com/ns_enum-ns_options/&quot; target=&quot;_blank&quot;&gt;NSHipster’s&lt;/a&gt; excellent post over the topic, but to jog your memory:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// There's no type. Only Integer values&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// or a specified type&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// or Apple's old way of doing things,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeNew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeExisting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;AccountTypeUnknown&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSInteger&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AccountType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To provide explicit hints to the compiler, one should always opt for NS_ENUM as we’ve done in the previous examples. We’ll get switch case completeness along with our type checking.&lt;/p&gt;
-
-&lt;p&gt;Now, with NS_CLOSED_ENUM, the only &lt;em&gt;additional&lt;/em&gt; question you’ve got ask yourself is if this enumeration is frozen or not. That’s it:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Don’t use enum&lt;/li&gt;
-  &lt;li&gt;If it’s unfrozen, opt for NS_ENUM&lt;/li&gt;
-  &lt;li&gt;If it’s frozen, use NS_CLOSED_ENUM&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It should be noted that the choice to use a frozen enumeration is final. The header for a closed enumeration communicates this plainly:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Once an enum is marked as closed, it is a binary and source incompatible change to add a new value. If there is any doubt about an enum gaining a private or additional public case in the future, use NS_ENUM instead.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-&lt;p&gt;If Objective-C was “deprecated” tomorrow, the traveled software developer knows that in programming there is but one truth: what is dead never truly dies.&lt;/p&gt;
-
-&lt;p&gt;Interop with old faithful (Objective-C) isn’t going away anytime soon, as much as the prevailing narrative may have you believe. Sure, the Swift only frameworks are en route, no doubt, but so long as Foundation holds its firm grip in the iOS ecosystem - we can bet the dinosaur will still roam its plains.&lt;/p&gt;
-
-&lt;p&gt;As such, we should take care to integrate the changing of the guard in delightful ways, and NS_CLOSED_ENUM is an indefectible definition in that regard.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Swift" /><summary type="html">There is but one constant in software engineering: change.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">For as long as I’ve been a part of this industry, I’ve watched incredible, well-deserving apps take home an Apple Design Award. And that’s my endgame.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

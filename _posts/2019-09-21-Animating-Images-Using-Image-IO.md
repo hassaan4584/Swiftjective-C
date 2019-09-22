@@ -111,7 +111,7 @@ In Image IO's case, this will come either from the network or locally via a chun
 ### Implementation
 Of course, since we are in the stone age of Objective-C today (where I [admittedly](https://twitter.com/JordanMorgan10/status/1172882580187881472?s=20){:target="_blank"} love to play) where the header files roam freely, and the square brackets are treated as deity - we mustn't forget to write the other half of our code. Thus, we now arrive at the implementation file.
 
-> Let's not get too hasty, either. For years, the .h and .m paradigm has offered C, C++ and Objective-C many advantages . To learn more, visit your friendly neighborhood [Stack Overflow post](https://stackoverflow.com/questions/15580539/what-are-the-advantages-of-using-more-then-1-code-file-for-a-project-c){:target="_blank"}.
+> Let's not get too hasty, either. For years, the .h and .m paradigm has offered C, C++ and Objective-C many advantages . To learn more, visit your friendly neighborhood [Stack Overflow post](https://stackoverflow.com/questions/2798202/what-are-the-benefits-and-drawbacks-of-using-header-files){:target="_blank"}.
 
 ```objc
 #import "ImageAnimator.h"

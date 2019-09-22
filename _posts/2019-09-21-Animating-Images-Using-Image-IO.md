@@ -7,7 +7,7 @@ writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
 description: "Animating images is a common medium for communication in today's society. In iOS 13, Apple quietly offered us up a way to serve up .gifs or APNG files using ImageIO."
 image: /assets/images/logo.png
 ---
-When I was a little boy, I remember that my father could often be found somewhere around the house fixing something up. Never the adroit handymen, but far from incompetent, I would happily would tag along and watch as he patched up a leaky faucet, swap out an old flickering light bulb or tighten up a loose screw on an old towel rack.
+When I was a little boy, I remember that my father could often be found somewhere around the house fixing something up. Never the adroit handymen, but far from incompetent, I would happily would tag along and watch as he would patch up a leaky faucet, swap out an old flickering light bulb or tighten up a loose screw on an old towel rack.
 
 On one particularly cold November morning, I remember he started tending to an old heater that we were using to keep my parent's room nice and toasty amidst the encroaching winter climate. A screw was loose on one of its sides, and the only screwdriver he had laying was a rusted, weathered Phillips.
 

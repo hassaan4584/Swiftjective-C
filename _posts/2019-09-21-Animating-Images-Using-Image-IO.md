@@ -236,7 +236,7 @@ class ViewController: UIViewController
 ...if you ran such code, you'd enjoy a .gif that would play indefinitely. Of course, setting any of the properties on our `ImageAnimator` class would let you tweak playback however you wish, such as starting at some relevant frame, applying a delay or a playback limit. And, as mentioned above, if one assigns false to `stopPlayback` at any point after playback has started, playback will cease.
 
 ### Final Thoughts
-The things we take for granted, right? To the end user, .gifs or any sort of animated image is commonplace within iOS. But, developers know there is more than meets the eye. Whether it was piping an array of images through `UIImageView` or using some other open source library, it was a bit more work than it should have been.
+The things we take for granted, right? To the end user, .gifs or any sort of animated image is commonplace within iOS. But, developers know there is more than meets the eye. Whether it was firing up a webview, piping an array of images through `UIImageView` or using some other open source library, it was a bit more work than it should have been.
 
 But what you are is just as important as what you aren't. 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["technical"]
+tags: ["Image IO"]
 title: "Animating Images using ImageIO"
 writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"

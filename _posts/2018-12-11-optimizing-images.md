@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["UIKit"]
+tags: ["Image IO"]
 title: "Optimizing Images"
 writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"

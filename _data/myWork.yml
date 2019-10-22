@@ -26,6 +26,8 @@ honors:
   - title: Engineer of the Year
     link: https://www.biz417.com/awards/excellence-in-technology/2019-winners/developer-of-the-year-jordan-morgan-springfield-mo/
 talks:
+  - title: try Swift! NYC - The Life of an Image on iOS
+    link: https://www.youtube.com/watch?v=vl3aXaNPKE0&list=PLCl5NM4qD3u8MjC_uV709BxqPoT3KX2C-&index=22&t=0s
   - title: Swift Origin Stories Podcast Appearance
     link: https://podcasts.apple.com/us/podcast/origin-stories-24-jordan-morgan-ios-dev-buffer-creator/id1426167395?i=1000451405904
   - title: Reducing Image Memory Consumption in 10 Minutes

@@ -117,7 +117,7 @@ struct ContentView: View {
 ```
 
 #### Property Wrappers
-Bindings, data marshaling, omitting values to subscribers and more are common to the framework. For our case, they aren't shown in a default template app - but it's worth nothing all of those are driven by property wrappers. If you want to really see their power, skip everything else and read Mattt's excellent discourse over them [here](https://nshipster.com/propertywrapper/){:target="_blank"}.
+Bindings, data marshaling, omitting values to subscribers and more are common to the framework. For our case, they aren't shown in a default template app - but it's worth noting all of those are driven by property wrappers. If you want to really see their power, skip everything else and read Mattt's excellent discourse over them [here](https://nshipster.com/propertywrapper/){:target="_blank"}.
 
 So, that's the syntax demystified. But it gets even more interesting when you consider the design aspect - namely, the `View` protocol.
 

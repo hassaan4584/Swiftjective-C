@@ -226,8 +226,7 @@ Further - it can optimized down to metal with one view modifier. While I'm not c
 
 > Another freebie? SwiftUI rounds the corners of views to the nearest pixel to get crisp edges, instead of producing anti-aliased ones.
 
-The immense control a child has over its sizing might be giving you slight anxiety, as to this point, UIKit developers have heavily relied on the parent to position controls. That's still possible too - all one needs to reach for is `GeometryReader`. It
-s somewhat heavy handed name aside, you can think of it as the UIKit frame of a super view. It reports sizing back to down to children to base things off of its parent's size, should you need it.
+The immense control a child has over its sizing might be giving you slight anxiety, as to this point, UIKit developers have heavily relied on the parent to position controls. That's still possible too - all one needs to reach for is `GeometryReader`. Its somewhat heavy handed name aside, you can think of it as the UIKit frame of a super view. It reports sizing back to down to children to base things off of its parent's size, should you need it.
 
 Look - this is great. Auto Layout and company are brilliant technologies. But wow - I admire it much more than I enjoy it. In my brief travels with SwiftUI, all of my layouts have been stupid simple to setup. 
 

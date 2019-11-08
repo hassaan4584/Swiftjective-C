@@ -4,7 +4,7 @@ tags: ["SwiftUI"]
 title: "SwiftUI: What Just Happened?"
 writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
-description: "The amount of power and engineering behind SwiftUI is extradionary. Let's breakdown what's happening when one creates a new project using it."
+description: "The amount of power and engineering behind SwiftUI is extraordinary. Let's breakdown what's happening when one creates a new project using it."
 image: /assets/images/logo.png
 ---
 

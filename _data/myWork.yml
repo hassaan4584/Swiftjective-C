@@ -26,21 +26,23 @@ honors:
   - title: Engineer of the Year
     link: https://www.biz417.com/awards/excellence-in-technology/2019-winners/developer-of-the-year-jordan-morgan-springfield-mo/
 talks:
-  - title: try Swift! NYC - The Life of an Image on iOS
+  - title: 🎙 The Buffer Overflow Podcast
+    link: https://anchor.fm/s/e0146dc/podcast/rss
+  - title: 🎥 try Swift! NYC - The Life of an Image on iOS
     link: https://www.youtube.com/watch?v=vl3aXaNPKE0&list=PLCl5NM4qD3u8MjC_uV709BxqPoT3KX2C-&index=22&t=0s
-  - title: Swift Origin Stories Podcast Appearance
+  - title: 🎙 Swift Origin Stories Podcast Appearance
     link: https://podcasts.apple.com/us/podcast/origin-stories-24-jordan-morgan-ios-dev-buffer-creator/id1426167395?i=1000451405904
-  - title: Reducing Image Memory Consumption in 10 Minutes
+  - title: 🎥 Reducing Image Memory Consumption in 10 Minutes
     link: https://www.youtube.com/watch?v=1K6R-NDca04
-  - title: Texture in 10
+  - title: 🎥 Texture in 10
     link: https://www.youtube.com/watch?v=Tzuz9usUpco
-  - title: Swift Initializers
+  - title: 🎥 Swift Initializers
     link: https://forwardcourses.com/lectures/128
-  - title: Transitioning to Remote Devlopment
+  - title: 📓 Transitioning to Remote Devlopment
     link: https://www.dropbox.com/s/t6hs9ezd3u1t4uz/Transition.key?dl=0
-  - title: Spend Stack Case Study
+  - title: 📓 Spend Stack Case Study
     link: https://www.slideshare.net/alpha10david
-  - title: Introduction to Swift V1
+  - title: 📓 Introduction to Swift V1
     link: https://www.slideshare.net/alpha10david
 online: 
 - title: LinkedIn

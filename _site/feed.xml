@@ -1,5 +1,313 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-11-08T09:13:56-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">SwiftUI: What Just Happened?</title><link href="http://localhost:4000/SwiftUI-What-Just-Happened/" rel="alternate" type="text/html" title="SwiftUI: What Just Happened?" /><published>2019-11-08T00:00:00-06:00</published><updated>2019-11-08T00:00:00-06:00</updated><id>http://localhost:4000/SwiftUI-What-Just-Happened</id><content type="html" xml:base="http://localhost:4000/SwiftUI-What-Just-Happened/">&lt;p&gt;When I created my first SwiftUI project, so much was foreign. I needed to understand how any of this was possible. There was so much that was new, so much that was different - I couldn’t stand spinning up a project without knowing how the beast came to be.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-07T13:31:48-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Can You Learn Design?</title><link href="http://localhost:4000/Can-You-Learn-Design/" rel="alternate" type="text/html" title="Can You Learn Design?" /><published>2019-12-07T00:00:00-06:00</published><updated>2019-12-07T00:00:00-06:00</updated><id>http://localhost:4000/Can-You-Learn-Design</id><content type="html" xml:base="http://localhost:4000/Can-You-Learn-Design/">&lt;p&gt;Did you know that the version of Spend Stack I released a few short months ago is actually… &lt;em&gt;not&lt;/em&gt; the first version?&lt;/p&gt;
+
+&lt;p&gt;It’s true that I did take &lt;a href=&quot;http://localhost:4000/Introducing-Spend-Stack&quot; target=&quot;_blank&quot;&gt;many years to design and develop it&lt;/a&gt;, and it’s also true that was due to a variety of reasons (having three kids, married, job - life stuff). But another important reason was that I was teaching myself design. If I had to guess, that’s where more than half of those years went.&lt;/p&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;p&gt;Well, because &lt;em&gt;this thing&lt;/em&gt; is how the first version of Spend Stack looked:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/fugly.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/fugly.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For real - I’m dead serious! I even had a good friend whip up a promo trailer for it:&lt;/p&gt;
+
+&lt;style&gt;
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+&lt;/style&gt;
+
+&lt;div class=&quot;embed-container&quot;&gt;
+	&lt;iframe src=&quot;https://player.vimeo.com/video/101882671&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;This might strike you as quite surprising if you’ve ever used or have seen Spend Stack, because this is how it looks today:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/headerSS.jpeg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/headerSS.jpeg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given that, the obvious question becomes:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How did I go from something that was objectively bad design, to making the design become a strength of the app?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Today, I’m going to lay out eight core lessons I learned over the years which helped me appreciate design. They each will help answer the question of “How can indie devs learn about design?”   While I still wouldn’t consider myself a designer, I’d submit to you that it’s nearly undeniable how much better Spend Stack looks, works and functions today in comparison to what it did five years ago.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A small sidebar before we continue - what follows below lays squarely in the “this is my opinion” category. Simply put, these are the things that helped me out. Design has objective truths, but can also have many subjective opinions. My goal here is to shed light on some design practices for those indie devs out there who might be stuck with it as I was. Let me tell you, I have not figured out design. I still see a million things wrong in Spend Stack today, but I’m getting there.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That said, without further ado here are the lessons I’ve learned, and the order in which I learned them:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#syci&quot;&gt;1. Something You Can’t Ignore&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#swams&quot;&gt;2. Start with a Mission Statement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#wif&quot;&gt;3. Who’s It For?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#nswt&quot;&gt;4. Never Start with Technology&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#fnsa&quot;&gt;5. Find North Star Apps&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#aay&quot;&gt;6. Always Ask Yourself&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hdadt&quot;&gt;7. How Does Apple Do This?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dcm&quot;&gt;8. Design Centric Materials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;syci&quot;&gt;Lesson 1: Something You Can’t Ignore&lt;/h3&gt;
+&lt;p&gt;The first thing I realized about Spend Stack of yore was that the idea of the app was validated, but the design made your eyes bleed. As such, the app’s idea or functionality (which are intrinsically tied to its design) didn’t matter much.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In this lesson, when I say “design” I’m more pertaining to the “smell test”/judge-a-book-by-its-cover bits of design. Design is a function of many things - how it works, what it does and how it does it, not just how it looks. But in this lesson, it’s all about the looks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It could solve a problem, it could save you money. Nay, it could just &lt;em&gt;print&lt;/em&gt; money. It could cure diseases!&lt;/p&gt;
+
+&lt;p&gt;But if the design sucks, nobody will care. Because this is the App Store, and not really a B.2.B. market where a terminal U.I. can still win contracts. Realizing this, I had a little saying that was in my Notion workspace for all things Spend Stack, and it simply said the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Design isn’t everything, but it is the only thing that matters.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And you can debate it however you want.&lt;/p&gt;
+
+&lt;p&gt;Functionality and user experience are paramount. But to me, those are a byproduct of good design. Marketing, validating your idea, having an incredible app that does one thing well - all of those things matter. But if the app doesn’t look and feel right, people won’t give it a chance.&lt;/p&gt;
+
+&lt;p&gt;Of course, nothing I am saying here is gospel. There are exceptions to every rule. But playing the averages, the numbers say that an ugly app that does a thing well will probably sell far less than a beautiful app that’s not really giving you much.&lt;/p&gt;
+
+&lt;p&gt;You have to take design seriously, you have to learn things about it and you have to be critical of your own apps and figure out why or why not its design works.&lt;/p&gt;
+
+&lt;p&gt;To make this abstract idea and make it more concrete, consider this view in the first Spend Stack that was used to create a list:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/fuglier.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/fuglier.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Why do I consider it poor design? Here are a few reasons:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; The hints at the top are already an issue. As they say, user interfaces are like a joke in that if you have to explain them, they aren’t funny (i.e. functional). &lt;br /&gt;
+&lt;strong&gt;2)&lt;/strong&gt; Those hints are there because to create the new list, you had to swipe down. The gesture was hidden. &lt;br /&gt;
+&lt;strong&gt;3)&lt;/strong&gt; Because of that, this view hides its main functionality - which is creating a new list. A button should have been used here. &lt;br /&gt;
+&lt;strong&gt;4)&lt;/strong&gt; The colors. &lt;br /&gt;
+&lt;strong&gt;5)&lt;/strong&gt; To input data for each option (such as the name, tax rate and more) you had to swipe within the middle box area. A list would easily convey the view’s affordances. &lt;br /&gt;
+&lt;strong&gt;6)&lt;/strong&gt; I firmly believe being a &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot; target=&quot;_blank&quot;&gt;best in class app&lt;/a&gt; is part of design on iOS. Given that, this view ignores accessibility fonts, dark mode and much more.&lt;/p&gt;
+
+&lt;p&gt;To contrast that view, here is what it looks like today:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/newList.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/newList.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Much better. The process of redesigning Spend Stack made me appreciate how important design is. You’ve no other recourse but to consider it as much as we do software architecture or whether to use SwiftUI versus UIKit. I realized that design is something you can’t ignore. You have to think of it constantly, and users will know it when they see it.&lt;/p&gt;
+
+&lt;p&gt;So as you go about your indie dev days, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson one: Design is something you can’t ignore.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;swams&quot;&gt;Lesson 2: Start with a Mission Statement&lt;/h3&gt;
+&lt;p&gt;Much like a ship wouldn’t leave port without a destination in mind, so too should indie developers define what their app will do before putting code to compiler.&lt;/p&gt;
+
+&lt;p&gt;And this is hard to grasp for a lot of us because all apps technically start with an idea. But an idea is dangerous! Why? Because an idea is an amorphous blob of several themes, problems, aspirations, and jobs - almost all of which should be shed in the beginning phases of your app’s inception. Conversely, a mission statement proudly proclaims in one sentence what your app will do and what problem it solves.&lt;/p&gt;
+
+&lt;p&gt;For example, let’s say you had an idea to create a podcast player. Most of us will crack open Xcode and rock and roll. Months later, we might release something that isn’t differentiated in any meaningful way, does the same thing as most other podcast players and leaves no lasting reason for why anyone should let go of other established players such as Overcast, Castro or Apple’s built-in solution.&lt;/p&gt;
+
+&lt;p&gt;To help mitigate such an outcome - I’ve found that it often helps to bottle that excitement stemming from your idea up, and hone it down into something tangible and zeroed in. Ask yourself a few questions to develop your idea into a mission statement. Following our podcasting example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Why do I want to make a podcast player?&lt;/li&gt;
+  &lt;li&gt;Can mine offer things that other podcast players do not? Even if it’s a better, or different, design that people would want?&lt;/li&gt;
+  &lt;li&gt;If the answer is “not much”, what shortcomings do the current solutions have that I could make up for?&lt;/li&gt;
+  &lt;li&gt;And if I can do either of these things, is it worth it to me to put the time in to see it through?&lt;/li&gt;
+  &lt;li&gt;If it is, will it be a pet project or something I want to sell?&lt;/li&gt;
+  &lt;li&gt;Given this information - can I make a mission statement for this app?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A mission statement is powerful - it could literally save (or make you!) thousands of dollars while preventing wasted hours along with heartache and disappointment. If you’ve got a mission statement, you know what to make, what to cut and where to go next. Plus, users will have a much better idea of what they are buying - because they’ll simply &lt;em&gt;know what it is and the problem it will solve&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I think Dale Carnegie put it best:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“And if salespeople can show us how their services or merchandise will help us solve our problems, they won’t need to sell us. We’ll buy. And customers like to feel that they are buying—not being sold.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;On a marketing document I often visit, I have my mission statement front and center to remind me to consider all of my upcoming decisions against it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/statement.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/statement.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s helped me cut features, know when to add features and so much more. You simply can’t leave home without it. Tonight, as you map out your next app or consider adding to your current one - remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson two: Well designed apps stem from a focused mission statement.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wif&quot;&gt;Lesson 3: Who’s It For?&lt;/h3&gt;
+&lt;p&gt;If you’ve got a mission statement, you can hunt down a persona for the app. Personas are awesome. Straight up. I’ll be the first to admit I found them a bit cheesy, only suitable for corporate board room exercises. But I just didn’t see their value, and now that I have it’s hard to think about skipping out on them.&lt;/p&gt;
+
+&lt;p&gt;Developing a persona for your app is simply the process of mapping who your user might be. And if you know who your use might be, you can surmise all sorts of important things:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; What do you they value? &lt;br /&gt;
+&lt;strong&gt;2)&lt;/strong&gt; Where do they hang out, and what do they do? &lt;br /&gt;
+&lt;strong&gt;3)&lt;/strong&gt; Most importantly, does my mission statement solve problems that they currently have? &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you’ve got a target customer with a problem you can solve, that’s a huge first step. Considering it, you can consider if they might pay for your solution.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This lesson comes with an asterisk. Maybe you don’t care about making money on your app. If that’s the case, skip on to the next lesson. But even if you don’t, it’s still important to figure out who you’re making the app for - if only for people like yourself.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This phase is especially difficult because iOS apps tend to have broad appeal. Given that, they often solve  “vitamin” problems. In his book &lt;a href=&quot;https://www.goodreads.com/en/book/show/27250038-marketing-for-developers&quot;&gt;Marketing for Developers&lt;/a&gt; Justin Jackson laid out a way to consider whether or not your target customer might be willing to buy your product. He did so with a pain tolerance concept, and I don’t remember it word for word but the gist of it really resonated with me.&lt;/p&gt;
+
+&lt;p&gt;Is the problem you’re solving a major, game-changing issue your target customers are facing? It’s a life or death problem - they’ll be willing to pay handsomely for something to take this problem off of their hands. Or, maybe it’s a bone-breaking problem. It hurts pretty bad, but they’ve made due. Maybe there is a temporary stint they’ve applied to the problem, so they want it addressed and would likely pay for it to go away.&lt;/p&gt;
+
+&lt;p&gt;The idea keeps going down until you reach a “vitamin” level problem. These are problems that are minor nuisances, and if a person simply takes their vitamins they go away. They will likely only pay for a solution to the problem if it really speaks to them, or it solves the issue extremely well and for a small price.&lt;/p&gt;
+
+&lt;p&gt;In addition to knowing if your target customer might pay for it, knowing who they are defines a lot of other things, too. Every app has a voice, and your target customer helps define it. If a networking error occurs, you’ll know if they would enjoy copy in the error messaging U.I. that’s funny, or if they’d prefer a more formal tone. This concept flows throughout each part of your design.&lt;/p&gt;
+
+&lt;p&gt;Before you crack open Sketch or tab over to Figma, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson three: To design well, you’ve got to have an idea of who you’re designing for.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;nswt&quot;&gt;Lesson 4: Never Start with Technology&lt;/h3&gt;
+&lt;p&gt;And now we arrive at my most painful tendency as an indie dev. I’m talking, of course, about using a particular technology because it’s either new, fun or we just want to learn it.&lt;/p&gt;
+
+&lt;p&gt;In the first version of Spend Stack, I had swipe to delete:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/swipeDelete.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/swipeDelete.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And do you know why?&lt;/p&gt;
+
+&lt;p&gt;Because six or seven years ago (before this UX was common and built right into iOS) I found a Github project that did it. And I thought it was cool. So, I jammed it into my app.&lt;/p&gt;
+
+&lt;p&gt;I didn’t ask any other questions or stop to think about why I was doing what I was doing. That’s a sign-in of itself. You can see where I’m going with this, but I’ve made this mistake so many times and lost so many hours because of it - I might as well be writing a diary entry right now. And it would say only this:&lt;/p&gt;
+
+&lt;p&gt;“Define the problems first, and work your way back with the technology that solves them. Don’t start with the technology, and look for problems to solve.”&lt;/p&gt;
+
+&lt;p&gt;The famous Steve Job &lt;a href=&quot;https://www.youtube.com/watch?v=FF-tKLISfPE&quot;&gt;rebuttle to some public criticism&lt;/a&gt; demonstrated this point succinctly. In it, he said:&lt;/p&gt;
+
+&lt;p&gt;“One of the things I’ve always found is that you’ve got to start with the customer experience and work backward to the technology, you can’t start with the technology and figure out where you’re going to try and sell it.”&lt;/p&gt;
+
+&lt;p&gt;It’s so hard to do, too! As developers, we are naturally drawn to new APIs and frameworks. In fact, this very reason is why W.W.D.C. is my favorite time of year. Mountains of new API! I’d even argue that it’s a very healthy sign that you love doing what you do - learning new things and picking up new ways to solve architectural issues gives us a buzz. But don’t let it cloud the design part of your brain.&lt;/p&gt;
+
+&lt;p&gt;To everyone else it’s obvious, for developers it’s difficult - but never start with the technology, start with what the user needs and work your way back towards the tech. Because if you don’t, you’ll end up with little edges of your app that don’t fit a central theme or support the mission statement. You’ll have things that feel out of place or the user experience may feel a bit scattered.&lt;/p&gt;
+
+&lt;p&gt;Next time you feel the urge to add one more line to your podfile, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson four: Starting with technologies and looking for problems to solve in your app could hinder its design.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fnsa&quot;&gt;Lesson 5: Find North Star Apps&lt;/h3&gt;
+&lt;p&gt;You’ve likely heard the phrase, “Good artists copy, great artists steal” and it holds true in design. Much like I alluded to in my post about &lt;a href=&quot;http://localhost:4000/On-Launching-Your-Indie-App&quot;&gt;releasing your indie app&lt;/a&gt;, the concept of finding people you aspire to be like flows directly down into design and iOS apps.&lt;/p&gt;
+
+&lt;p&gt;Find the apps that you love using, and then write down why you love them. It sounds obvious, but I hadn’t done this in the past. I had apps I loved using, but actually putting pen to paper and writing down at least three reasons why uncovered a lot of helpful direction I could use for Spend Stack.&lt;/p&gt;
+
+&lt;p&gt;Beyond that - find the apps that Apple has given its seal of approval to. I have each Apple Design Award Winner bookmarked in Safari, and every now and then I poke around their apps just to see how they (deservedly so) got that ultimate award.&lt;/p&gt;
+
+&lt;p&gt;Remember, it’s beyond just the looks here. A lot of apps may look good, but even less feel good. Further still, not many look &lt;em&gt;and&lt;/em&gt; feel good. Here are some starter questions you might ask yourself about apps you enjoy:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Why does this app &lt;em&gt;feel&lt;/em&gt; good to use? &lt;br /&gt;
+&lt;strong&gt;2)&lt;/strong&gt; If I wrote this app’s mission statement, what would it be and why does the app support it? &lt;br /&gt;
+&lt;strong&gt;3)&lt;/strong&gt; What have other people, whose opinion I respect, said about the app and why they do or do not like it? &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;For another example directly related to Spend Stack, I made it a point to often look at &lt;a href=&quot;https://twitter.com/viticci&quot;&gt;Federico Viticci’s&lt;/a&gt; feedback on iPad apps he enjoys. Since he knows the marketplace very well, and is a power user of the platform - he’s in a good position to uncover little things that apps do well to separate them from the rest of the pack.&lt;/p&gt;
+
+&lt;p&gt;Recently, he made mention of how he could navigate an iPad app (I believe it was Things 3 maybe?) almost entirely from the keyboard, which inspired me to make that a bar I will eventually hit for Spend Stack. It sounds like a fairly “well yeah!” observation, but with a million things happening while developing Spend Stack, I sure didn’t think of it.&lt;/p&gt;
+
+&lt;p&gt;Next time you’re short on inspiration, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson five: Reference apps that you enjoy using and figure out why you, and others, enjoy using them.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;aay&quot;&gt;Lesson 6: Always Ask Yourself&lt;/h3&gt;
+&lt;p&gt;Much like having iOS apps that you aspire to be like, it also helps to have certain rules, or an ethos, to ascribe by as you develop indie apps. A north star framework, if you will. I’ve found that I often forget the simple things, and so I wrote them down and put them in a place where I’m sure to see them often.&lt;/p&gt;
+
+&lt;p&gt;I call these little things “always ask yourself” tips. Almost all of the ones I have written down have to do with design. To me, design is like math. It doesn’t come naturally to me, but I &lt;em&gt;can&lt;/em&gt; do it - I just really need to focus a bit harder on it. So plopped right in my app delegate file are these little tips that help me frame my mind for the work I’m about to do:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/aaySnips.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/aaySnips.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s a little silly, and certainly not for everyone - but they’ve done wonders for me. It simply reminds me to focus on design, and before I chase a random thread that might lead down some rabbit hole, I should stop and consider if what I’m doing is worth it. Does X or Y help promote a cohesive design, or am I straying off the path a little?&lt;/p&gt;
+
+&lt;p&gt;Expanding on this idea a little more, I also have fully formed documents that hold thoughts, ideas or things that I want my apps to be known for. In fact, the one I have in my Notion workspace is what my &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot;&gt;best in class iOS app post&lt;/a&gt; came from:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/aayLarge.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/aayLarge.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This idea is the same reason college stadiums have inspirational quotes sitting right outside of locker rooms, or offices have pictures with motivational quotes hanging on the walls. It’s because they offer a simple proposition: reminding us what we’re about, what we want to do or where we want to go.&lt;/p&gt;
+
+&lt;p&gt;As you go about writing your Swift or Objective-C today, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson six: Always ask yourself if the work you are doing is enforcing a solid design and direction that’s been laid down for your app.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hdadt&quot;&gt;Lesson 7: How Does Apple Do This?&lt;/h3&gt;
+&lt;p&gt;This is my secret weapon hiding in plain sight. Whether you fall into the “Apple is amazing at design on iOS” or the “They lost their way on iOS 7” - I only know one thing: they are the ones who hand out A.D.A.’s, who have more context or data than anyone else, spend all day on the platform and are the subject matter experts.&lt;/p&gt;
+
+&lt;p&gt;So look to their work when you are stuck, need inspiration or aren’t quite sure what to do. I’ve got two tips in this area:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tip 1&lt;/strong&gt; - Have their apps on your home screen. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tip 2&lt;/strong&gt; - Recreate scenarios you’re stuck on in their apps. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tip 1 is fairly self-explanatory, but I’d love to toss out an example of where tip 2 came into mind for Spend Stack. As I was developing its sharing functionality, I was struggling with coming up with copy for this scenario:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A user has shared a list of theirs with someone.&lt;/li&gt;
+  &lt;li&gt;The owner deletes this list, but doing so will also delete it from the other share participant’s devices.&lt;/li&gt;
+  &lt;li&gt;As such - how do I alert them of this?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As I want back and forth, I realized that Notes on iOS could also have this same scenario. So, I grabbed a test device and my iPad and recreated it. Their copy had perfect messaging, and so I ended up with much of the same thing for Spend Stack. The only change I made was tweaking “ok” to a destructive “delete” (per Apple’s advice, I may add):&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/leaveShare.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/leaveShare.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Borrowing liberally from Apple is a good thing, and I’ll tell you why; Aside from being experts of the platform, the biggest advantage is that users are already comfortable with the flows, copy and designs that they’ve established. As such, if a user has used Notes before, shared a note and then later deleted it - that user will know what to expect when they do the same thing in Spend Stack. It won’t make them think.&lt;/p&gt;
+
+&lt;p&gt;As you question some assumptions today and aren’t quite sure what to do, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson seven: See how Apple has solved similar problems, designs or copy within their apps and consider using them yourself.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dcm&quot;&gt;Lesson 8: Design Centric Materials&lt;/h3&gt;
+&lt;p&gt;A common theme has hopefully emerged from the previous seven lessons, which is that these things are much less about how to use colors correctly, when to consider a certain font or what margin to use - it’s about cultivating a design mindset. By far and away, this has helped me the most.&lt;/p&gt;
+
+&lt;p&gt;But, at the end of the day, you most certainly do need to learn about the more concrete truths and practices of design. For that purpose, I’ve found a few things that I reference quite often to develop those skills.&lt;/p&gt;
+
+&lt;p&gt;First, the most important one. Consider it your design bible for Apple. I’m talking, of course, about the &lt;a href=&quot;https://developer.apple.com/design/human-interface-guidelines/&quot;&gt;human interface guidelines&lt;/a&gt;. If you haven’t done so yet, stop everything now and read the H.I.G. from beginning to end. Some of it, I admit, can be dry by nature - but the upside is too important to ignore.&lt;/p&gt;
+
+&lt;p&gt;Following the H.I.G. simply means you’ll know what a great app looks and feels like, the technology available to you to make them possible and when to follow their advice to the letter and when to add a little personal spin on things. It’s simply the first and most important step to improving your iOS design skills&lt;/p&gt;
+
+&lt;p&gt;Why does Spend Stack’s &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1156618254447722499?s=20&quot;&gt;onboarding experience&lt;/a&gt; offer three main advantages to the app, is quick to dismiss and doesn’t ask for inessential setup or configuration data upfront? Because I took cues from the H.I.G. on the matter:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/higOnboard.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/higOnboard.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Further, here are the design resources I often visit to learn more:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://refactoringui.com&quot;&gt;Refactoring UI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://designcode.io&quot;&gt;Design+Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These may or may not help you, but find the resources that do and study them often. So before you wireframe your next view, remember:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson eight: Keep design resources close by to learn from, and keep the H.I.G. at the top of the pile.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;recap-or-tldr&quot;&gt;Recap or TL;DR&lt;/h3&gt;
+&lt;p&gt;Here’s each lesson mapped out for your reference:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lesson one:&lt;/strong&gt; Design is something you can’t ignore.&lt;br /&gt;
+&lt;strong&gt;Lesson two:&lt;/strong&gt; Well designed apps stem from a focused mission statement.&lt;br /&gt;
+&lt;strong&gt;Lesson three:&lt;/strong&gt; To design well, you’ve got to have an idea of who you’re designing for.&lt;br /&gt;
+&lt;strong&gt;Lesson four:&lt;/strong&gt; Starting with technologies and looking for problems to solve in your app could hinder its design.&lt;br /&gt;
+&lt;strong&gt;Lesson five:&lt;/strong&gt; Reference apps that you enjoy using and figure out why you, and others, enjoy using them.&lt;br /&gt;
+&lt;strong&gt;Lesson six:&lt;/strong&gt; Always ask yourself if the work you are doing is enforcing a solid design and direction that’s been laid down for your app.&lt;br /&gt;
+&lt;strong&gt;Lesson seven:&lt;/strong&gt; See how Apple has solved similar problems, designs or copy within their apps and consider using them yourself.&lt;br /&gt;
+&lt;strong&gt;Lesson eight:&lt;/strong&gt; Keep design resources close by to learn from, and keep the H.I.G. at the top of the pile.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;As indie developers, we’re forced to wear many hats. And the one of design might be the most important of them all. But years ago, I foolishly resigned to the notion that I had boxed myself into being purely a developer, a code junkie - someone who could implement the good looking thing, but who would never design it.&lt;/p&gt;
+
+&lt;p&gt;Being at the other end of the tunnel now, I think Spend Stack is a living testament that &lt;em&gt;anyone&lt;/em&gt; can learn design to some degree. Sure, many are just “born with it”, institutions can teach it and millions of other talented people have their careers built off of mastering it - but what about &lt;em&gt;us&lt;/em&gt;? The common indie dev who learned all about retain cycles and pointers instead of color theory and typography? Can we?&lt;/p&gt;
+
+&lt;p&gt;The answer, is of course, yes.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Did you know that the version of Spend Stack I released a few short months ago is actually… not the first version?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">SwiftUI: What Just Happened?</title><link href="http://localhost:4000/SwiftUI-What-Just-Happened/" rel="alternate" type="text/html" title="SwiftUI: What Just Happened?" /><published>2019-11-08T00:00:00-06:00</published><updated>2019-11-08T00:00:00-06:00</updated><id>http://localhost:4000/SwiftUI-What-Just-Happened</id><content type="html" xml:base="http://localhost:4000/SwiftUI-What-Just-Happened/">&lt;p&gt;When I created my first SwiftUI project, so much was foreign. I needed to understand how any of this was possible. There was so much that was new, so much that was different - I couldn’t stand spinning up a project without knowing how the beast came to be.&lt;/p&gt;
 
 &lt;p&gt;After all, there is just &lt;em&gt;so&lt;/em&gt; much to talk about it in this one, tiny picture. And none of it was doable before WWDC 2019:&lt;/p&gt;
 
@@ -106,7 +414,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;property-wrappers&quot;&gt;Property Wrappers&lt;/h4&gt;
-&lt;p&gt;Bindings, data marshaling, omitting values to subscribers and more are common to the framework. For our case, they aren’t shown in a default template app - but it’s worth nothing all of those are driven by property wrappers. If you want to really see their power, skip everything else and read Mattt’s excellent discourse over them &lt;a href=&quot;https://nshipster.com/propertywrapper/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bindings, data marshaling, omitting values to subscribers and more are common to the framework. For our case, they aren’t shown in a default template app - but it’s worth noting all of those are driven by property wrappers. If you want to really see their power, skip everything else and read Mattt’s excellent discourse over them &lt;a href=&quot;https://nshipster.com/propertywrapper/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;So, that’s the syntax demystified. But it gets even more interesting when you consider the design aspect - namely, the &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; protocol.&lt;/p&gt;
 
@@ -222,8 +530,7 @@
   &lt;p&gt;Another freebie? SwiftUI rounds the corners of views to the nearest pixel to get crisp edges, instead of producing anti-aliased ones.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;The immense control a child has over its sizing might be giving you slight anxiety, as to this point, UIKit developers have heavily relied on the parent to position controls. That’s still possible too - all one needs to reach for is &lt;code class=&quot;highlighter-rouge&quot;&gt;GeometryReader&lt;/code&gt;. It
-s somewhat heavy handed name aside, you can think of it as the UIKit frame of a super view. It reports sizing back to down to children to base things off of its parent’s size, should you need it.&lt;/p&gt;
+&lt;p&gt;The immense control a child has over its sizing might be giving you slight anxiety, as to this point, UIKit developers have heavily relied on the parent to position controls. That’s still possible too - all one needs to reach for is &lt;code class=&quot;highlighter-rouge&quot;&gt;GeometryReader&lt;/code&gt;. Its somewhat heavy handed name aside, you can think of it as the UIKit frame of a super view. It reports sizing back to down to children to base things off of its parent’s size, should you need it.&lt;/p&gt;
 
 &lt;p&gt;Look - this is great. Auto Layout and company are brilliant technologies. But wow - I admire it much more than I enjoy it. In my brief travels with SwiftUI, all of my layouts have been stupid simple to setup.&lt;/p&gt;
 
@@ -1559,196 +1866,4 @@ Or initialize some sort of singleton 🙅🏻‍♂️!&lt;br /&gt;
 
 &lt;p&gt;Maybe you just need to make some freakin’ pancakes 🥞.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Handling iCloud Assets</title><link href="http://localhost:4000/iCloud-Photo-Handling/" rel="alternate" type="text/html" title="Handling iCloud Assets" /><published>2019-03-27T00:00:00-05:00</published><updated>2019-03-27T00:00:00-05:00</updated><id>http://localhost:4000/iCloud-Photo-Handling</id><content type="html" xml:base="http://localhost:4000/iCloud-Photo-Handling/">&lt;p&gt;There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.&lt;/p&gt;
-
-&lt;p&gt;They have a decade’s worth of talent and hardening baked right into them. While you should stray from a mechanism that can undermine your own structure, sometimes you just need to roll up your sleeves, toss Apple’s preheated solutions to the side and do it yourself. Building your own version of component X or Y is fatalistic in software development, after all.&lt;/p&gt;
-
-&lt;p&gt;That’s where we find ourselves this week. While &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImagePickerController&lt;/code&gt; has a lot baked in and should be used most of the time, this post is about that &lt;em&gt;other&lt;/em&gt; time.&lt;/p&gt;
-
-&lt;p&gt;And, if you find yourself building a media picker, fetching assets found in iCloud can be deceptively tricky.&lt;/p&gt;
-
-&lt;h3 id=&quot;fetch-options&quot;&gt;Fetch Options&lt;/h3&gt;
-&lt;p&gt;Everything in the Photos framework is generally vended via a manager singleton (i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;PHImageManager&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHCachingImageManager&lt;/code&gt;) - and what you want to retrieve from them is specified in from an optional options object, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHFetchOptions&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Generally, if you ran this code and saw images getting piped back to you - it’d be easy to call it a day:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// In viewDidLoad&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;mostRecentMedia&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PHFetchOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mostRecentMedia&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortDescriptors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSSortDescriptor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;creationDate&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;ascending&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;allPhotos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PHFetchResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PHAsset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetchAssets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mostRecentMedia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// In a cellForRow for a collection or table view&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;asset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;allPhotos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indexPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;CGSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;PHCachingImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;targetSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aspectFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;resultHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Ensure we're dealing with the same cell when the asset returns&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// In case its since been recycled&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localAssetID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localIdentifier&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theImageViewImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;While the Photos Framework does benefit from sensible API design, it’s a somewhat hidden forgone conclusion that media living in iCloud will be staying there from the previous code sample. Adding to the possible confusion is that they will technically appear from the fetch, as their corresponding &lt;code class=&quot;highlighter-rouge&quot;&gt;PHAsset&lt;/code&gt; will be returned - it’s just that looking for the media yields no result:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;PHCachingImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;targetSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aspectFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;resultHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localAssetID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localIdentifier&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Media found in iCloud will report a nil result for the image here&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theImageViewImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Considering fetching an image’s common use case, such as displaying them in a grid, you can add other common bugs to this scenario as well such as cell reuse.&lt;/p&gt;
-
-&lt;p&gt;Lipso facto - if you ran this code and saw no images being populated even though assets were being fetched, it can be hard to know where to look.&lt;/p&gt;
-
-&lt;h3 id=&quot;in-the-clouds&quot;&gt;In the Clouds&lt;/h3&gt;
-&lt;p&gt;The first step to solving a problem isn’t really admitting you have one in programming, it’s identifying really what you’re trying to solve to begin with. And here, we need to know how to identify which assets are indeed housed within iCloud and not yet on the device.&lt;/p&gt;
-
-&lt;p&gt;Hitting the Googles can yield some straight up wild solutions, partly due to the fact that Apple doesn’t have a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;isIniCloud&lt;/code&gt; boolean to indicate as much. The answer for us is housed within the &lt;code class=&quot;highlighter-rouge&quot;&gt;info&lt;/code&gt; dictionary that pervades much of UIKit’s closures.&lt;/p&gt;
-
-&lt;p&gt;For our previous fetch, we can reliably know if the asset is in iCloud via the &lt;code class=&quot;highlighter-rouge&quot;&gt;PHImageResultIsInCloudKey&lt;/code&gt; key that will be returned in the aforementioned dictionary:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;PHCachingImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;targetSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aspectFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;resultHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localAssetID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localIdentifier&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isIniCloud&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PHImageResultIsInCloudKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isIniCloud&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boolValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;showLoadingFromCloudUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theImageViewImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now, we’ve provided clarity to the user to at least know why media isn’t displaying for a particular item. Progress.&lt;/p&gt;
-
-&lt;h3 id=&quot;hot-reloads&quot;&gt;Hot Reloads&lt;/h3&gt;
-&lt;p&gt;Assuming we’re in a collection or table view situation here, what we’d see now is that we’ve identified the asset is in iCloud, and we could even track its progression and see it successfully download. As with the fetch, we can get this done by using another options construct, namely &lt;code class=&quot;highlighter-rouge&quot;&gt;PHImageRequestOptions&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;reqOptions&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PHImageRequestOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;reqOptions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isNetworkAccessAllowed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;reqOptions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progressHandler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Asset download progress is at &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;progress&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;PHCachingImageManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;requestImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;targetSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aspectFill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reqOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;resultHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localAssetID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;localIdentifier&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isIniCloud&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;PHImageResultIsInCloudKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as?&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;NSNumber&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isIniCloud&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boolValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;showLoadingFromCloudUI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;theImageViewImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;img&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Though documentation states that one needs to set &lt;code class=&quot;highlighter-rouge&quot;&gt;isNetworkAccessAllowed&lt;/code&gt;
-to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; for this to work, I’ve seen it done without using it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;One could be potentially flummoxed if they were to see these downloads complete, yet their asset request doesn’t do anything after the fact. Do you need to request the asset again? Why would it show up if you were to scroll the collection or table view up and down again?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Yes, and no.&lt;/li&gt;
-  &lt;li&gt;It would, because now the asset is in memory.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The answer to this scenario is in the docs, but it’s a blink and you’ll miss it comment at the end of a document describing how to request user access to media:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Use the register(_:) method to observe photo library changes before fetching content. After the user grants your app access to the photo library, Photos sends change messages for any empty fetch results you retrieved earlier, notifying you that library content for those fetches is now available.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Photo libraries can mutate at any point, so the key for developers who are making their home baked media picker is to react to those changes. You can do so by adopting the &lt;code class=&quot;highlighter-rouge&quot;&gt;PHPhotoLibraryChangeObserver&lt;/code&gt; protocol and implementing only one method.&lt;/p&gt;
-
-&lt;p&gt;Before we go and snag media from the user, it’s pertinent to register for changes in the library first:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;PHPhotoLibrary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;shared&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;…and then adopt &lt;code class=&quot;highlighter-rouge&quot;&gt;func photoLibraryDidChange(_ changeInstance: PHChange)&lt;/code&gt;. As I’m not one to reinvent the wheel, Apple has a perfect example of how #todothisright within their Photos documentation:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;photoLibraryDidChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;changeInstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PHChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;changes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;changeDetails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fetchResult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;// Change notifications may originate from a background queue.&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// As such, re-dispatch execution to the main queue before acting&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// on the change, so you can update the UI.&lt;/span&gt;
-    &lt;span class=&quot;kt&quot;&gt;DispatchQueue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sync&lt;/span&gt; 
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Hang on to the new fetch result.&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fetchResult&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fetchResultAfterChanges&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;// If we have incremental changes, animate them in the collection view.&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hasIncrementalChanges&lt;/span&gt; 
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fatalError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// Handle removals, insertions, and moves in a batch update.&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;performBatchUpdates&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;removed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;removedIndexes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;removed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; 
-                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;deleteItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;removed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inserted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insertedIndexes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inserted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; 
-                &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;insertItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inserted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;enumerateMoves&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fromIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toIndex&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;moveItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fromIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-                                            &lt;span class=&quot;nv&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// We are reloading items after the batch update since `PHFetchResultChangeDetails.changedIndexes` refers to&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// items in the *after* state and not the *before* state as expected by `performBatchUpdates(_:completion:)`.&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;changed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changedIndexes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; 
-            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reloadItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IndexPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;// Reload the collection view if incremental changes are not available.&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;collectionView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reloadData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With this tweak in place - you’ll find that when an asset is fetched from iCloud, a change notification spins up and a fetch result reports a change (or possibly no change). Using batch updates, your collection or table view will reload and have the asset ready to go.&lt;/p&gt;
-
-&lt;p&gt;To recap - here’s the recipe to make this all tick:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Register for changes before you fetch anything.&lt;/li&gt;
-  &lt;li&gt;Conform to &lt;code class=&quot;highlighter-rouge&quot;&gt;PHPhotoLibraryChangeObserver&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Refresh your datasource, look for changes and load those up within &lt;code class=&quot;highlighter-rouge&quot;&gt;func photoLibraryDidChange(_ changeInstance: PHChange)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;PHImageRequestOptions&lt;/code&gt;, specify that you’ll opt into network downloads for fetches.&lt;/li&gt;
-  &lt;li&gt;Check if the image is in iCloud during the fetch, if it is - indicate as much in the user interface. Optional, but I think it’s necessary.&lt;/li&gt;
-  &lt;li&gt;Unregister yourself when your object should be freed from memory.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-&lt;p&gt;Ten years ago, the future was the cloud. Five years ago, it became a mature, saturated market. Today, it’s not uncommon for the most vanilla of our user base to use it in some capacity. As such - a lot of media can be found hanging out up there in 2019.&lt;/p&gt;
-
-&lt;p&gt;Ensuring that our own home rolled solutions outside of &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImagePickerController&lt;/code&gt; can retrieve them, communicate its progress of doing so and then displaying the end result is a baseline expectation at this point. Though it requires a bit of know-how, the code doesn’t yield a massive time commitment when weighed against its payoff.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Photos" /><summary type="html">There is a reason Cupertino &amp;amp; Friends© encourage us to leverage UIKit and its components in our own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

@@ -43,7 +43,7 @@ At that point, I mostly disregard them and come up with a system to help me beco
 Here's how it works for me.
 
 ### The Journal Aspect
-The first step is laying the foundation. Who am I, what am I about? What's important to me, and what do I want to be known for? To help answer those kinds of things, I have evergreen journal entry in Day One that I read each morning to set my frame of reference:
+The first step is laying the foundation. Who am I, what am I about? What's important to me, and what do I want to be known for? To help answer those kinds of things, I have an evergreen journal entry in Day One that I read each morning to set my frame of reference:
 
 {% include lazyLoadImage.html image="../assets/images/dayone.png" %}
 

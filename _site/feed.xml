@@ -1,5 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-07T13:31:48-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Can You Learn Design?</title><link href="http://localhost:4000/Can-You-Learn-Design/" rel="alternate" type="text/html" title="Can You Learn Design?" /><published>2019-12-07T00:00:00-06:00</published><updated>2019-12-07T00:00:00-06:00</updated><id>http://localhost:4000/Can-You-Learn-Design</id><content type="html" xml:base="http://localhost:4000/Can-You-Learn-Design/">&lt;p&gt;Did you know that the version of Spend Stack I released a few short months ago is actually… &lt;em&gt;not&lt;/em&gt; the first version?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-01T11:03:43-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">On Forming Habits</title><link href="http://localhost:4000/On-Forming-Habits/" rel="alternate" type="text/html" title="On Forming Habits" /><published>2020-01-01T00:00:00-06:00</published><updated>2020-01-01T00:00:00-06:00</updated><id>http://localhost:4000/On-Forming-Habits</id><content type="html" xml:base="http://localhost:4000/On-Forming-Habits/">&lt;p&gt;Ah, the New Year 🎉!&lt;/p&gt;
+
+&lt;p&gt;I think &lt;a href=&quot;https://www.youtube.com/watch?v=2MwhxdGAnic&quot;&gt;Death Cab for Cutie&lt;/a&gt; put it best:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;So this is the New Year / And I don’t feel any different.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ve danced with the whole “new year, new you!” concept more times than I care to count. Now, at age 31, I feel like I’ve finally arrived at a point where I can actually reflect on my year and make changes to get things done that I want to accomplish.&lt;/p&gt;
+
+&lt;p&gt;This is big as an indie dev, because without a system in place &lt;a href=&quot;http://localhost:4000/Introducing-Spend-Stack&quot;&gt;Spend Stack&lt;/a&gt; simply would not exist. Why? Because I have three kids under six, am married, have a full time job, an indie app, a blog and, well, my own hobbies. I used to think time was too short, or there simply wasn’t enough of it. However, with some tweaks, I truly believe there is enough time in the day to live the lives that we want if we have the right habits to support it.&lt;/p&gt;
+
+&lt;p&gt;After many mistakes, I know that if my day doesn’t have structure produced by some recurring habits, it gets lost in life’s many responsibilities. Today, I’ll share the system I have in place, and the apps that help support it, that have helped me form good habits.&lt;/p&gt;
+
+&lt;h3 id=&quot;forgetting-goals&quot;&gt;Forgetting Goals&lt;/h3&gt;
+&lt;p&gt;Years ago, if someone had told me to forget setting goals in the name of productivity, I’d call them mad. But I’ve since changed my thinking on them. As evidenced by books such as &lt;a href=&quot;https://www.amazon.com/Irresistible-Addictive-Technology-Business-Keeping/dp/1594206643&quot;&gt;Irresistible&lt;/a&gt;, &lt;a href=&quot;https://www.amazon.com/Make-Time-Focus-Matters-Every/dp/0525572422&quot;&gt;Make Time&lt;/a&gt; and &lt;a href=&quot;https://jamesclear.com/atomic-habits&quot;&gt;Atomic Habits&lt;/a&gt;, the problem I’ve found with goals is that you stay on the hamster wheel.&lt;/p&gt;
+
+&lt;p&gt;Accomplish one, then another immediately follows.&lt;/p&gt;
+
+&lt;p&gt;For me, I need a smooth, constant feeling of accomplishment, and goals give me peaks and valleys. I’ve certainly found I admire goals much more than I enjoy them, so I’ve taken their good aspects and tossed out the rest instead of following another hackneyed goal system I might come up with.&lt;/p&gt;
+
+&lt;p&gt;These days, I’m all about forming a system in my life to become the person who would accomplish the goals I want to.&lt;/p&gt;
+
+&lt;p&gt;👨🏻‍💻 Is shipping Spend Stack a goal? Then become an indie dev.&lt;br /&gt;
+🏃🏻‍♂️ Is getting in shape a goal? Then become athletic.&lt;br /&gt;
+📖 Is delivering conference talks a goal? Become a speaker.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And so on.&lt;/p&gt;
+
+&lt;p&gt;But in 2020, talk is still cheap. I need concrete methods to carry out a plan because hearing it and doing it are two different things. To that end, I’ve found that if I discover who I want to be and what major themes I want to accomplish - I can then formulate smaller goals from that information.&lt;/p&gt;
+
+&lt;p&gt;At that point, I mostly disregard them and come up with a system to help me become the person who would be likely to routinely do those things.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The TL;DR - For me it’s less about setting goals, and more about working backward from those goals to become the kind of person who would do those things by getting “1%” better as often as I can.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s how it works for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-journal-aspect&quot;&gt;The Journal Aspect&lt;/h3&gt;
+&lt;p&gt;The first step is laying the foundation. Who am I, what am I about? What’s important to me, and what do I want to be known for? To help answer those kinds of things, I have evergreen journal entry in Day One that I read each morning to set my frame of reference:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/dayone.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/dayone.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The information in the rest of that entry simply states things I’d like to do at a more finite level. The key is that I may or may not do some of these things, as I’ve written a generous amount of tasks down. So, the idea here is that having them front and center will help me remember the person I’m trying to be. This way, I avoid only thinking in terms of arbitrary boxes I’m trying to tick off in 2020 which would only lead to yet another set of boxes to check off.&lt;/p&gt;
+
+&lt;p&gt;To get to this quickly, I’ve set up a trivial Shortcut that opens its respective URL:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/dayoneURL.jpeg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/dayoneURL.jpeg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If I read a simple document written by myself to give me that North Star (a concept I’ve talked a lot &lt;a href=&quot;http://localhost:4000/Can-You-Learn-Design&quot;&gt;about&lt;/a&gt;) for my life, I feel centered and my mind is a bit less cluttered.&lt;/p&gt;
+
+&lt;p&gt;Once I’ve read the “big idea” though, it’s time to shift my focus to the day to day things.&lt;/p&gt;
+
+&lt;h3 id=&quot;foundational-habits&quot;&gt;Foundational Habits&lt;/h3&gt;
+&lt;p&gt;Things I need to do every single day are what I call foundational habits. This is the part where it becomes easy to make things far too ambiguous, so I’ve sectioned off foundational habits on an app by app basis, each one representing different domains of my life.&lt;/p&gt;
+
+&lt;p&gt;Streaks is what I use to remind myself to do certain things each day of my life. I even order them in the same way I typically go about my day:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/streaksFH.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/streaksFH.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s a reason this has snagged one of the coveted Apple Design Awards - it’s simple to use, engaging and does one thing well. So I lean into it and try not to make it anything other than what it’s trying to do. An app that helps me do six things daily.&lt;/p&gt;
+
+&lt;p&gt;So, ask yourself, based on the “big ideas” you have for your life - what things should you be doing, or want to do, daily?&lt;/p&gt;
+
+&lt;h3 id=&quot;highlight-tasks&quot;&gt;Highlight Tasks&lt;/h3&gt;
+&lt;p&gt;However, daily tasks are stringent by nature. We all have those moon shot goals in mind. Or, we simply have a bigger highlight (a term coined by the aforementioned Make Time book) that we want to tackle over one or more days.&lt;/p&gt;
+
+&lt;p&gt;For this, I turn to Things 3. Here are some examples of things I’ve recently put in Things (zing!):&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/things.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/things.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clean out the entry closet, take items to Good Will or shoot hoops with my son - these are all great things that support who I want to be but aren’t likely to repetitive daily items. So, that kind of item goes here.&lt;/p&gt;
+
+&lt;p&gt;With daily tasks and highlights accounted for, we now get into the menial tasks.&lt;/p&gt;
+
+&lt;h3 id=&quot;familylifehusbanddadindie-tasks&quot;&gt;Family/Life/Husband/Dad/Indie Tasks&lt;/h3&gt;
+&lt;p&gt;Life has so many responsibilities, and for the “remember to take out the trash” or “pay my personal property tax by December 31st” kind of things I use Reminders. The key here is that these kinds of entries are either family-related or just plain “adulting” tasks:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/reminders.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/reminders.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since its iOS 13 overhaul, I’ve found Reminders to be even more component. I’ve always been a fan, but with its new features (such as grouped tasks) I’ve been able to lean on it even more.&lt;/p&gt;
+
+&lt;p&gt;Further, this is the &lt;em&gt;only&lt;/em&gt; tool I use for side project or Spend Stack action items.&lt;/p&gt;
+
+&lt;p&gt;Why?&lt;/p&gt;
+
+&lt;p&gt;Because it’s beautifully limiting. With so much happening in life, I found that if I opened up super tools (such as Github Issues, Asana or something similar) I would write a novel and likely not ever return to read it again. But Reminders is short and unforgivably terse.&lt;/p&gt;
+
+&lt;p&gt;This is a perfect set of restrictions for me, and I’d imagine it’s the same reason a lot of creative folks produce breakthroughs under a certain level of rigidity or constraints. It forces only important ideas out. For the higher-level stuff, I use Notion. For the Do X and Y stuff, I use Reminders and love it.&lt;/p&gt;
+
+&lt;h3 id=&quot;app-recap&quot;&gt;App Recap&lt;/h3&gt;
+&lt;p&gt;For reference, here’s a recap of the apps I’ve mentioned:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dayoneapp.com&quot;&gt;Day One&lt;/a&gt;: Journaling and “big picture” stuff.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://streaksapp.com&quot;&gt;Streaks&lt;/a&gt;: Foundational, every single day things.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://culturedcode.com/things/&quot;&gt;Things 3&lt;/a&gt;: “Highlight”-esque tasks.&lt;/li&gt;
+  &lt;li&gt;Reminders in iOS: Family, adulting or Spend Stack centric tasks.&lt;/li&gt;
+  &lt;li&gt;Shortcuts: To quickly open Day One entries.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.notion.so&quot;&gt;Notion&lt;/a&gt;: For big picture ideas and documents related to Spend Stack.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Depending on your personality type, my system may sound like the most stressful thing since taking the ACT. That’s ok, my wife fits into this category. She’s a more of a “go with the flow” gal, and she balances me out in many ways.&lt;/p&gt;
+
+&lt;p&gt;But, if you’re laughably Type-A like yours truly, having everything in its place and place for everything is simply invigorating and habit forming. While this may appear on the surface as too many tools to use - they each are serving a simple purpose. And that removes any ambiguity from my head, which helps me form the habits I want to.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;Over the years, I’ve discovered one truth when it comes to habits and the likelihood that I’ll achieve them - it’s about the 1% wins. As James Clear noted, the same way that investing in your 20s leads to riches through the magic of compound interest, so to do 1% habits in your day to day lead to compounded results over time.&lt;/p&gt;
+
+&lt;p&gt;In the end, that’s all my little system does. 1% wins help me learn from the past, produce in the present and prepare for the future. If my goal is to write a book, I don’t write that down as the thing I want to do. Instead, I need to figure out what to do to become a writer. May you have an amazing 2020 in accomplishing all of your aspirations, and heres to better habits 🍻!&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Ah, the New Year 🎉!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Can You Learn Design?</title><link href="http://localhost:4000/Can-You-Learn-Design/" rel="alternate" type="text/html" title="Can You Learn Design?" /><published>2019-12-07T00:00:00-06:00</published><updated>2019-12-07T00:00:00-06:00</updated><id>http://localhost:4000/Can-You-Learn-Design</id><content type="html" xml:base="http://localhost:4000/Can-You-Learn-Design/">&lt;p&gt;Did you know that the version of Spend Stack I released a few short months ago is actually… &lt;em&gt;not&lt;/em&gt; the first version?&lt;/p&gt;
 
 &lt;p&gt;It’s true that I did take &lt;a href=&quot;http://localhost:4000/Introducing-Spend-Stack&quot; target=&quot;_blank&quot;&gt;many years to design and develop it&lt;/a&gt;, and it’s also true that was due to a variety of reasons (having three kids, married, job - life stuff). But another important reason was that I was teaching myself design. If I had to guess, that’s where more than half of those years went.&lt;/p&gt;
 
@@ -1795,75 +1905,4 @@ Or initialize some sort of singleton 🙅🏻‍♂️!&lt;br /&gt;
 
 &lt;p&gt;And if we’re being honest, the chances of a malicious attack targeting your app through this particular vector might be slim. But it never happens &lt;em&gt;until it does&lt;/em&gt;. Plus, when the tide goes out - you can tell who was skinny dipping. Don’t be the dev who got toasted because they forgot to use a more secure archiving technique.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">I Made Some Pancakes</title><link href="http://localhost:4000/making-pancakes/" rel="alternate" type="text/html" title="I Made Some Pancakes" /><published>2019-04-02T00:00:00-05:00</published><updated>2019-04-02T00:00:00-05:00</updated><id>http://localhost:4000/making-pancakes</id><content type="html" xml:base="http://localhost:4000/making-pancakes/">&lt;p&gt;Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/pancakes.jpg&quot; alt=&quot;DopePancakes&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And it was the weirdest thing.&lt;/p&gt;
-
-&lt;p&gt;As I was sitting there mixing up the batter, getting the cast iron skillet heated up &lt;em&gt;just&lt;/em&gt; right - I found myself humming along as I popped on Spotify to give me some tunes to push these from good-enough pancakes to straight up artisanal masterpieces. I wasn’t rushed at all. For whatever reason, I was only completely focused on making these pancakes and I was having the time of my life.&lt;/p&gt;
-
-&lt;p&gt;For me, that’s huge.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-i-wasnt-thinking-of&quot;&gt;What I Wasn’t Thinking Of&lt;/h3&gt;
-&lt;p&gt;Life is busy for all of us. As a married dad of three kiddos, I find myself objectively busier than I used to be. Given that, I find that there’s times when my mental space and anxiety can constantly be playing their “Greatest Hits” album over and over:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;How can I find time to release this side project?&lt;/li&gt;
-  &lt;li&gt;Will it even matter when I do? &lt;a href=&quot;http://localhost:4000/the-chart-that-lies&quot; target=&quot;_blank&quot;&gt;Time spent on it doesn’t really matter.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Beyond side projects, how do I do even better at my job?&lt;/li&gt;
-  &lt;li&gt;Oh yeah - real life. When am I going to finish all of this laundry?&lt;/li&gt;
-  &lt;li&gt;I’m so close to being out of debt, it’s exhausting putting all my disposable income towards it.&lt;/li&gt;
-  &lt;li&gt;But then, do I just trade debt payments for saving for a down payment on a house? I want to enjoy my good income for once! Maybe I’ll buy a new iPad.&lt;/li&gt;
-  &lt;li&gt;Hmm, that’s a lot though. Wow, you know what - it’s crazy that my oldest will need a cell phone before I know it!&lt;/li&gt;
-  &lt;li&gt;Oh shoot - &lt;strong&gt;all&lt;/strong&gt; of my kids will need a cell phone 😬!&lt;/li&gt;
-  &lt;li&gt;and a car 😬😬,&lt;/li&gt;
-  &lt;li&gt;and go to college 😬😬😬,&lt;/li&gt;
-  &lt;li&gt;and also probably get married 😬😬😬😬.&lt;/li&gt;
-  &lt;li&gt;💀.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The point is, I typically would not take time to make any pancakes. Let alone, during a weekday. There’s just too much to do that I simply can’t afford myself the joy of cracking open a box of premade pancake batter and seeing them through to fruition. Ouch.&lt;/p&gt;
-
-&lt;h3 id=&quot;when-life-hits-you-with-a-sigabrt&quot;&gt;When Life Hits You with a SIGABRT()&lt;/h3&gt;
-&lt;p&gt;When you find yourself thinking ahead so fast that you can’t take the time to make pancakes, or enjoy a movie on Netflix or just take 15 minutes to talk with a loved one - you have to realize that’s your brain telling you to quite literally relax.&lt;/p&gt;
-
-&lt;p&gt;If you’re at this point, you might be carrying on like I do when I need to chill out but haven’t realized it yet:&lt;br /&gt;&lt;br /&gt;
-&lt;strong&gt;Did your mom call you?&lt;/strong&gt; &lt;em&gt;I’ll call back later, I need to finish this post.&lt;/em&gt; &lt;br /&gt;
-&lt;strong&gt;Is it nice outside?&lt;/strong&gt; &lt;em&gt;I’ll take the walk another time, this project needed to finish up yesterday.&lt;/em&gt;&lt;br /&gt;
-&lt;strong&gt;A new video game out you’d enjoy?&lt;/strong&gt; &lt;em&gt;I’ll play it later, I’ve gotta ship my side project now so I can learn from users, otherwise I won’t be following the lean startup principles!&lt;/em&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;You aren’t at all a bad person if you do these things, I think we all do. Most texts suggest ways to avoid those situations all together, but I personally don’t find that a realistic goal.&lt;/p&gt;
-
-&lt;p&gt;No matter the epiphany you experience today, tomorrow or the next week you’ll eventually start back on your old ways. I think that’s healthy, actually - if we didn’t, we’d never start back in on working towards our goals again. Like anything - the answer is balance.&lt;/p&gt;
-
-&lt;h3 id=&quot;finding-the-pancake-moments&quot;&gt;Finding the Pancake Moments&lt;/h3&gt;
-
-&lt;p&gt;Why was it that I felt so peaceful, calm and balanced today? Enough to wake up early and jam on some delish pancakes. I’ve yearned to answer that type of question for a long time. And, being an engineer, long ago I started to document my “pancake” moments when they did pop up to later try extrapolate why they arrived.&lt;/p&gt;
-
-&lt;p&gt;What I’ve found really isn’t that exciting. There are a few commonalities among the corpus - such as a vacation or time off on the horizon, a date night with my wife, a fun event with one of my kids is coming, etc. But as I dug deeper into my Day One journal archives, I began to realize that I typically only journal when I’m at a high point.&lt;/p&gt;
-
-&lt;p&gt;This was convenient for my current investigation, but the reality is that I couldn’t really nail down why sometimes I take time for myself, and other times I don’t. This time, I’d have to accept that this wasn’t a problem I could analyze several different ways and apply a few late nights to eventually uncover the answer to.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;As a funny aside, when I was digging through my journal during this time my wife popped around the corner and casually asked “Watcha doin?”. I said I was simply reading my journal, as saying I was in the middle of an in-depth investigation into why I can let myself relax enough to make pancakes and generally be normal was too odd of an answer.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The truth is that taking time to enjoy life’s many simple pleasures isn’t something that’s a trivial matter. If it was, there wouldn’t be numerous books, conferences or classes explaining how to do it. This blog post certainly doesn’t offer up the silver bullet either.&lt;/p&gt;
-
-&lt;p&gt;What we can do, then, is simply take our own advice - &lt;em&gt;savor&lt;/em&gt; and &lt;em&gt;enjoy&lt;/em&gt; those little “pancake” moments when they come. Even if we can’t replicate them systemically, we can take heart that there is assuredly another one on the horizon.&lt;/p&gt;
-
-&lt;p&gt;Conversely, just as important is being sure not to put them off. If you do, you’re the lucky winner of free conference tickets to BurnOut Conf. Neglecting some time for yourself is like putting a band-aid over a bullet hole. Eventually, you’re gonna feel it.&lt;/p&gt;
-
-&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h3&gt;
-&lt;p&gt;As indie developers, we find ourselves punishing our drive and a perceived lack-thereof if we don’t spend each free moment working towards our app, but then we put ourselves into a mental rut if we always do. But honestly, I’m kinda okay with life’s ebbs and flows - enjoying the times when I’m magnificently firing on all cylinders and all is in order, as much as the chaotic weeks where I feel like everything is just not working out.&lt;/p&gt;
-
-&lt;p&gt;This isn’t a novel, new or groundbreaking realization. In fact, any of your favorite authors found on the interwebs have likely written about it in their own way at some point.&lt;/p&gt;
-
-&lt;p&gt;And yet - so often I find myself needing to be reminded of it.&lt;/p&gt;
-
-&lt;p&gt;So if I may be so bold, perhaps you don’t need a huge life change, to work constantly to ship the side project, or read a self help book while implementing some other drastic change (or maybe you do, that’s cool too honestly).&lt;/p&gt;
-
-&lt;p&gt;Maybe you just need to make some freakin’ pancakes 🥞.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Wouldn’t you know it - today I made some pancakes for breakfast. I know, I know - pics or it didn’t happen:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Foundation" /><summary type="html">Every year when Apple announces a new operating system, I find myself transfixed to the now famous word cloud slide (or tag or bubble cloud depending on who you ask). I’m talking about the “Oh Yeahs” and the “We also did this” API changes that weren’t deemed worthy enough of a call out during the keynote or state of the union address. Thus, such changes will find themselves relegated to its own cozy corner within the word cloud slide.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

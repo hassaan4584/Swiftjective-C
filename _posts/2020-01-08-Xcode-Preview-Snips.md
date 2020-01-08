@@ -135,7 +135,7 @@ struct ContentView_Previews: PreviewProvider {
 
 {% include lazyLoadImage.html image="../assets/images/ld1.png" %}
 
-Luckily, this one is trivial to get right if your app is mostly architected with SwiftUI. But, most aren't. So it is in 2020, some of us forgot to constraint labels to their leading and trailing edges instead of their right or left sides.
+Luckily, this one is trivial to get right if your app is mostly architected with SwiftUI. But, most aren't. So it is in 2020, some of us forgot to constrain labels to their leading and trailing edges instead of their right or left sides.
 
 Being able to inject environment variables can claim back a mountain of previously lost productivity. This truly is a feedback loop that heretofore took one to many build and runs. So, in the name of Xcode, why not inject whatever outlandish requirement that might come your way.
 

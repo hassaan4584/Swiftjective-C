@@ -34,7 +34,7 @@ For example, suppose we were crafting a cell type of `View` for our app. SwiftUI
 
 {% include lazyLoadImage.html image="../assets/images/pl1.jpg" %}
 
-Further, once can impose a fixed size in addition to `.sizeThatFits`, or just take the device. But since Xcode Previews is drunk with power, why not show them all?
+Further, one can impose a fixed size in addition to `.sizeThatFits`, or just take the device. But since Xcode Previews is drunk with power, why not show them all?
 
 ```swift
 struct ContentView_Previews: PreviewProvider {

@@ -18,9 +18,9 @@ And that was the only inconvenience in their path to see what the fruits of thei
 2) Run <br />
 3) Xcode says that your device is locked (it's probably not) <br />
 4) Clean the project <br />
-4) You change the constant of the layout anchor, and Source Kit crashes <br />
-5) Throw your mac out the window <br />
-6) Pick your mac back up, apologize to it and start back at 1 <br />
+5) You change the constant of the layout anchor, and Source Kit crashes <br />
+6) Throw your mac out the window <br />
+7) Pick your mac back up, apologize to it and start back at 1 <br />
 
 Look, you know where I'm going with this. If you've adopted SwiftUI (or even if you haven't - view controllers apply here too) then you know Xcode Previews are more than a time saver. They are a fork in the road. There's no going back once you get hooked on that instant feedback.
 

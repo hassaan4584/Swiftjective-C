@@ -61,7 +61,7 @@
   margin-bottom: 64px;
   text-align: center; }
 
- /* Sign Up 
+/* Sign Up 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #mc_embed_signup input.button {
   background-color: #70A2F9; }
@@ -72,7 +72,7 @@
 #mc_embed_signup {
   background: #fff;
   clear: left;
-  font: 14px -apple-system,Helvetica,Arial,sans-serif;
+  font: 14px -apple-system, Helvetica, Arial, sans-serif;
   width: 100%;
   margin-bottom: 4px !important; }
 
@@ -106,6 +106,32 @@
 #next h1 {
   margin-top: 8px;
   margin-bottom: 0px; }
+
+.infoContainer {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  background-color: #F0F3F7;
+  border-radius: 15px;
+  padding: 8px;
+  color: #000000; }
+
+.smallInfoContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+  background-color: #615B5B;
+  border-radius: 8px;
+  margin: 8px;
+  color: #FFFFFF; }
 
 div.highlight {
   border-radius: 8px;
@@ -151,6 +177,14 @@ img {
 
   div.jekyll-twitter-plugin {
     width: 100%; } }
+@media (prefers-color-scheme: dark) {
+  .infoContainer {
+    background-color: #615B5B;
+    color: #FFFFFF; }
+
+  .smallInfoContainer {
+    background-color: #F0F3F7;
+    color: #000000; } }
 body {
   background-color: #FFFFFF;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -172,9 +206,18 @@ body {
   justify-content: space-between;
   align-items: center; }
 
- /* Tag
+.centerFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 8px;
+  margin: 5px; }
 
- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Tags
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .articleTag {
   background-color: #70A2F9;
   color: white;
@@ -240,7 +283,10 @@ blockquote p {
 h1 {
   color: #314A4F; }
 
-h2, h3, h3, h4 {
+h2,
+h3,
+h3,
+h4 {
   color: #615B5B; }
 
 hr {
@@ -259,7 +305,9 @@ footer {
 img {
   border-radius: 25px; }
 
-article h2, h3, h4 {
+article h2,
+h3,
+h4 {
   margin-top: 64px; }
 
 article h3 {
@@ -276,7 +324,9 @@ article p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 800px and down) */
 @media (max-width: 840px) {
-  #gridHeader, #gridMiddle, #gridFooter {
+  #gridHeader,
+  #gridMiddle,
+  #gridFooter {
     width: 100vw;
     padding-left: 32px;
     padding-right: 32px; }
@@ -305,7 +355,11 @@ article p {
   blockquote {
     margin: 0; } }
 @media (prefers-color-scheme: dark) {
-  h1, h2, h3, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h3,
+  h4 {
     color: white !important;
     opacity: 0.6 !important; }
 

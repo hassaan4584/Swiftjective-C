@@ -1,5 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-08T09:19:24-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">Xcode Preview Snips</title><link href="http://localhost:4000/Xcode-Preview-Snips/" rel="alternate" type="text/html" title="Xcode Preview Snips" /><published>2020-01-08T00:00:00-06:00</published><updated>2020-01-08T00:00:00-06:00</updated><id>http://localhost:4000/Xcode-Preview-Snips</id><content type="html" xml:base="http://localhost:4000/Xcode-Preview-Snips/">&lt;p&gt;For years, web developers have lamented how some of their workflows required them to hit two keys on macOS:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-15T11:52:08-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><entry><title type="html">A Best In Class App: Spend Stack Checkup</title><link href="http://localhost:4000/Spend-Stack-Best-In-Class/" rel="alternate" type="text/html" title="A Best In Class App: Spend Stack Checkup" /><published>2020-01-15T00:00:00-06:00</published><updated>2020-01-15T00:00:00-06:00</updated><id>http://localhost:4000/Spend-Stack-Best-In-Class</id><content type="html" xml:base="http://localhost:4000/Spend-Stack-Best-In-Class/">&lt;p&gt;Previously, I’ve written about this notion of what it looks like to be a &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot; target=&quot;_blank&quot;&gt;best in class iOS app&lt;/a&gt;. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.&lt;/p&gt;
+
+&lt;p&gt;Now, months later - how am I doing by my own definition? Let’s take a look at where I stand. The grades below have been pulled from the Best in Class post, but some have been altered, added or left out to only include items that can be answered with a yes or no anwer as it pertains to Spend Stack.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;With each subsequent release, I’ll be updating my progress.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;infoContainer&quot;&gt;
+    &lt;small&gt;So far, Spend Stack is...&lt;/small&gt;
+    &lt;b style=&quot;font-size: calc(36px + 1.5vw);&quot;&gt;56%&lt;/b&gt;
+    &lt;small&gt;...of the way towards a best in class app (49/87).&lt;/small&gt;
+    &lt;div class=&quot;centerFlex&quot;&gt;
+        &lt;div class=&quot;smallInfoContainer&quot;&gt;
+            &lt;b&gt;Accessibility&lt;/b&gt;
+            &lt;small&gt;47% (9/19)&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;smallInfoContainer&quot;&gt;
+            &lt;b&gt;Platform&lt;/b&gt;
+            &lt;small&gt;38% (11/28)&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;smallInfoContainer&quot;&gt;
+            &lt;b&gt;U.X.&lt;/b&gt;
+            &lt;small&gt;35% (16/20)&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;smallInfoContainer&quot;&gt;
+            &lt;b&gt;Design&lt;/b&gt;
+            &lt;small&gt;77% (10/13)&lt;/small&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;smallInfoContainer&quot;&gt;
+            &lt;b&gt;App Store&lt;/b&gt;
+            &lt;small&gt;50% (2/4)&lt;/small&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;accessibility&quot;&gt;Accessibility&lt;/h3&gt;
+&lt;p&gt;◎ Voice Over fully supported. &lt;br /&gt;
+◎ Voice Control fully supported. &lt;br /&gt;
+◎ Voice Over Gestures supported where needed (Magic tap, escape, etc.) &lt;br /&gt;
+◎ &lt;code class=&quot;highlighter-rouge&quot;&gt;accessibilityIgnoresInvertColors&lt;/code&gt; where needed. &lt;br /&gt;
+◉ Respects reduced motion and blurring where needed. &lt;br /&gt;
+◉ Adaptive to all content sizes (i.e. dynamic type). &lt;br /&gt;
+◉ Uses &lt;code class=&quot;highlighter-rouge&quot;&gt;readableContentGuide&lt;/code&gt; for view that are predominently text based. &lt;br /&gt;
+◎ Color contrast is 7:1 or better. &lt;br /&gt;
+◉ Supported smart color inversion elegantly. &lt;br /&gt;
+◉ Bar button items supply a crisp landscape and large content size image. &lt;br /&gt;
+◉ Glyphs have their &lt;code class=&quot;highlighter-rouge&quot;&gt;adjustsImageSizeForAccessibilityContentSizeCategory&lt;/code&gt; set. &lt;br /&gt;
+◉ Includes closed captions and audio descriptions, all images and icons have alternative text set. &lt;br /&gt;
+◎ Leading and trailing margins are used for constraints to support left to right languages.  &lt;br /&gt;
+◎ The User Interface appears flawlessly when tested using Double Length Pseudo-languages.  &lt;br /&gt;
+◉ Using &lt;code class=&quot;highlighter-rouge&quot;&gt;NSShowNonLocalizedStrings&lt;/code&gt; yields no results.  &lt;br /&gt;
+◎ If you support drag and drop, &lt;code class=&quot;highlighter-rouge&quot;&gt;UIAccessibilityLocationDescriptors&lt;/code&gt; are all set.  &lt;br /&gt;
+◎ Magic taps are supported for the app’s most common functionality.  &lt;br /&gt;
+◉ It uses &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleSpokenName&lt;/code&gt; if the app’s name could potentially be mispronounced by the system (i..e CoolApp23 would be “CoolApp Twenty Three”).  &lt;br /&gt;
+◎ Lastly, running the entire app through Accessibility Inspector produced no warnings and turning on Screen Curtain to navigate the app works flawlessly.  &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Accessibility: 9/19 - 47%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;platform-technology&quot;&gt;Platform Technology&lt;/h3&gt;
+&lt;p&gt;◉ Contextual interactions supported (Controll previews, home shortcuts, quick actions and interaction delegate for unique experiences). &lt;br /&gt;
+◎ Spotlight search and indexing support. &lt;br /&gt;
+◉ Effective energy management (i.e. supports low power mode and reacts to it) &lt;br /&gt;
+◎ Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard. &lt;br /&gt;
+◎ It supports handoff on Mac (if applicable). &lt;br /&gt;
+◎ Meaningful extensions are included with the app, whether it’s via a share extension, action extension, etc.&lt;br /&gt;
+◎ Callback urls are supplied and documented so other apps may integrate with it (x-callback-url)/. &lt;br /&gt;
+◎ Siri Intent support, when plausible: &lt;br /&gt;
+◎ Siri Shortcuts also include intent phrases to help coach users &lt;br /&gt;
+◎ Alternate app names are included when appropriate &lt;br /&gt;
+◎ Watchface support &lt;br /&gt;
+◎ If it makes sense, document sharing is supported via the file provider. &lt;br /&gt;
+◉ Drag and drop has first class support: &lt;br /&gt;
+    ◎ A fully fleshed out NSItemProvider exists for custom objects. &lt;br /&gt;
+    ◉ Purposeful external and internal app drag support. &lt;br /&gt;
+    ◉ This is used for reordering, should the app support it. &lt;br /&gt;
+◎ If it makes sense, data can be shared via AirDrop. &lt;br /&gt;
+◉ All tab bar images are vector .pdf images or have each corresponding size included to ensure they adapt correctly and are vended to accessibility modals properly. &lt;br /&gt;
+◎ Any displayed Live Photo will animate when force touched and utilize PHLivePhotoImageView for playback. &lt;br /&gt;
+    ◎ Each image also shows their system badge if available (i.e. live photo badges). &lt;br /&gt;
+◉ Supports printing via &lt;code class=&quot;highlighter-rouge&quot;&gt;UIPrintInteractionController&lt;/code&gt;. &lt;br /&gt;
+◎ Has Siri Shortcuts supported or donated. &lt;br /&gt;
+    ◎ Rich Siri Shortcuts support with parameters.
+◎ Running the Analyze function in Xcode yields no errors, warnings or suggestions. &lt;br /&gt;
+◉ There are no calls to&lt;code class=&quot;highlighter-rouge&quot;&gt; UIGraphicsBeginImageContextWithOptions&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt; is used instead. &lt;br /&gt;
+◎ Universal Links are supported, especially if your app’s content is available online. &lt;br /&gt;
+◉ Modern multitasking is supported (slide over, split view and PiP). &lt;br /&gt;
+◉ Multiple windows is supported on iPadOS. &lt;br /&gt;
+◉ If it can be dragged, it can make a new window. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Platform Technology: 11/28 - 39%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;user-experience&quot;&gt;User Experience&lt;/h3&gt;
+&lt;p&gt;◉ Supports native “undo” and “redo” actions, typically from shaking or from the iOS 13 gestures. &lt;br /&gt;
+◉ The content type of all text views and text fields is included, and the correct keyboard type is used for the current context. 
+◉ The keyboard’s language identifier is integrated correctly. &lt;br /&gt;
+◎  Handles the keyboard being undocked on the iPad, if views are constrained to it via an inputAccessoryView. &lt;br /&gt;
+◉ It’s localized and internationlized for all territories it’s released in. &lt;br /&gt;
+◉ Text tends to not truncate and it never clips but rather it’s always readable. &lt;br /&gt;
+◉ All tappable interface elements are at least 44 by 44 points. &lt;br /&gt;
+◉ The entire app binary is under 30 megabytes. (No source here, this is based off a multitude of data points.) &lt;br /&gt;
+◉ Delete actions always are followed by a confirmation prompt. &lt;br /&gt;
+◎ If your app stores rich information files like a Keynote presentation, it uses the Quick Look API to preview it. &lt;br /&gt;
+◎ State restoration is implemented via &lt;code class=&quot;highlighter-rouge&quot;&gt;NSUserActivity&lt;/code&gt; APIs for scenes. &lt;br /&gt;
+◉ It uses the correct audio settings, if audio can be played at all within it. &lt;br /&gt;
+◉ Custom edit options are supported when text or an image is selected, if appropriate. &lt;br /&gt;
+◉ The user is provided ample time to form an opinion about your app before you request a rating for it. &lt;br /&gt;
+◉ The launch screen is branding free and closely resembles the first screen of the app. &lt;br /&gt;
+◎ Before opening a link that could lead to another app in a web view or &lt;code class=&quot;highlighter-rouge&quot;&gt;SFSafariViewController&lt;/code&gt;, try calling &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplication’s openURL:&lt;/code&gt; with the &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplicationOpenURLOptionUniversalLinksOnlyoption&lt;/code&gt; first. &lt;br /&gt;
+◉ Table views deselect selected rows in &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidAppear&lt;/code&gt; when popping back to them.&lt;br /&gt;
+◎ &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInputAssistantItem&lt;/code&gt; items are used to support common tasks on iPad that are at home within the shortcuts bar. &lt;br /&gt;
+◉ When performing CRUD operations on a table or collection view, you opt to use &lt;code class=&quot;highlighter-rouge&quot;&gt;performBatchUpdates:&lt;/code&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; instead of &lt;/code&gt;reloadData`. &lt;br /&gt;
+◉ Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone. &lt;br /&gt;
+◉ Navigation is clear and foolproof: 
+    - Modality is used sparingly, and clearly brings them back to where they were when dismissed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Experience: 16/20 - 74%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;design&quot;&gt;Design&lt;/h3&gt;
+&lt;p&gt;◉ Correct system margins are used throughout the app, and no hard coded ones are used (i.e. layoutMarginsGuide, safeAreaLayoutGuide, etc.)  &lt;br /&gt;
+◉ Haptic feedback is used throughout the system to complement user interactions, and they are not overdone.  &lt;br /&gt;
+◉ Controller transitions feel natural and fluid. Great examples are Calendar and Photos.  &lt;br /&gt;
+◉ You opt for vector assets to combat the differing resolutions and avoid any blurry assets.  &lt;br /&gt;
+◉ Your content is always the focus, and you constantly challenge if that’s true throughout the development cycles.  &lt;br /&gt;
+◉ No segment controls are used in toolbars.  &lt;br /&gt;
+◉ There are no toolbars and tab bars in the same screen.  &lt;br /&gt;
+◉ Destructive actions are the last choice in action sheets.  &lt;br /&gt;
+◉ Alerts, if used, ideally have to two choices and titles have no punctuation.  &lt;br /&gt;
+◎ Alerts avoid using Yes and No as choices.  &lt;br /&gt;
+◉ Switches are exclusively used within a table row.  &lt;br /&gt;
+◎ You aspire to ship on all of Apple’s platforms (iOS iPhone + iPad, watchOS, tvOS and macOS).  &lt;br /&gt;
+◎ Lastly, your app is “jank” free. You know what this means for you.  &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Design: 10/13 - 77%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;app-store-prescence&quot;&gt;App Store Prescence&lt;/h3&gt;
+&lt;p&gt;◎ An App Store preview video is used. &lt;br /&gt;
+◎ Its keywords and category were carefully researched. &lt;br /&gt;
+◉ The app icon follows the golden grid. &lt;br /&gt;
+◉ The icon follows your brand’s primary color as well. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;App Store Prescence: 2/4 - 50%&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;No app is perfect, and no app can check off all of the boxes you want. But it’s motivating to have a goal to shoot for, and this list is mine. When it’s all done, I’ll feel extremely proud to have my name behind Spend Stack.&lt;/p&gt;
+
+&lt;p&gt;Here’s to creating quality software, and this list being completely checked off sooner rather than later!&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="The Indie Dev Diaries" /><summary type="html">Previously, I’ve written about this notion of what it looks like to be a best in class iOS app. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">Xcode Preview Snips</title><link href="http://localhost:4000/Xcode-Preview-Snips/" rel="alternate" type="text/html" title="Xcode Preview Snips" /><published>2020-01-08T00:00:00-06:00</published><updated>2020-01-08T00:00:00-06:00</updated><id>http://localhost:4000/Xcode-Preview-Snips</id><content type="html" xml:base="http://localhost:4000/Xcode-Preview-Snips/">&lt;p&gt;For years, web developers have lamented how some of their workflows required them to hit two keys on macOS:&lt;/p&gt;
 
 &lt;p&gt;Command + R&lt;/p&gt;
 
@@ -9,9 +157,9 @@
 2) Run &lt;br /&gt;
 3) Xcode says that your device is locked (it’s probably not) &lt;br /&gt;
 4) Clean the project &lt;br /&gt;
-4) You change the constant of the layout anchor, and Source Kit crashes &lt;br /&gt;
-5) Throw your mac out the window &lt;br /&gt;
-6) Pick your mac back up, apologize to it and start back at 1 &lt;br /&gt;&lt;/p&gt;
+5) You change the constant of the layout anchor, and Source Kit crashes &lt;br /&gt;
+6) Throw your mac out the window &lt;br /&gt;
+7) Pick your mac back up, apologize to it and start back at 1 &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Look, you know where I’m going with this. If you’ve adopted SwiftUI (or even if you haven’t - view controllers apply here too) then you know Xcode Previews are more than a time saver. They are a fork in the road. There’s no going back once you get hooked on that instant feedback.&lt;/p&gt;
 
@@ -25,7 +173,7 @@
 
 &lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/pl1.jpg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/pl1.jpg&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Further, once can impose a fixed size in addition to &lt;code class=&quot;highlighter-rouge&quot;&gt;.sizeThatFits&lt;/code&gt;, or just take the device. But since Xcode Previews is drunk with power, why not show them all?&lt;/p&gt;
+&lt;p&gt;Further, one can impose a fixed size in addition to &lt;code class=&quot;highlighter-rouge&quot;&gt;.sizeThatFits&lt;/code&gt;, or just take the device. But since Xcode Previews is drunk with power, why not show them all?&lt;/p&gt;
 
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -125,7 +273,7 @@
 
 &lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/ld1.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/ld1.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Luckily, this one is trivial to get right if your app is mostly architected with SwiftUI. But, most aren’t. So it is in 2020, some of us forgot to constraint labels to their leading and trailing edges instead of their right or left sides.&lt;/p&gt;
+&lt;p&gt;Luckily, this one is trivial to get right if your app is mostly architected with SwiftUI. But, most aren’t. So it is in 2020, some of us forgot to constrain labels to their leading and trailing edges instead of their right or left sides.&lt;/p&gt;
 
 &lt;p&gt;Being able to inject environment variables can claim back a mountain of previously lost productivity. This truly is a feedback loop that heretofore took one to many build and runs. So, in the name of Xcode, why not inject whatever outlandish requirement that might come your way.&lt;/p&gt;
 
@@ -1768,113 +1916,4 @@
 
 &lt;p&gt;But, even though SwiftUI is &lt;em&gt;not&lt;/em&gt; UIKit, the latter is certainly here to stay. And this year, it became better than it ever has been.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">Phew.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry><entry><title type="html">WWDC 2019: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2019: The Pregame Quiz" /><published>2019-05-23T00:00:00-05:00</published><updated>2019-05-23T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-2019-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-2019-The-Pregame-Quiz/">&lt;p&gt;Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.&lt;/p&gt;
-
-&lt;p&gt;At this point it’s all conjecture, so let’s ready up with the fifth annual Swiftjective-C WWDC Pregame Quiz!&lt;/p&gt;
-
-&lt;p&gt;If you’d like a quick primer on how this all works or how it got started, check out the first four quizzes from &lt;a href=&quot;http://localhost:4000/WWDC-2015-The-Pregame-Quiz&quot;&gt;2015&lt;/a&gt; ,&lt;a href=&quot;http://localhost:4000/WWDC-2016-The-Pregame-Quiz&quot;&gt;2016&lt;/a&gt;, &lt;a href=&quot;http://localhost:4000/WWDC-2017-The-Pregame-Quiz&quot;&gt;2017&lt;/a&gt; and &lt;a href=&quot;http://localhost:4000/WWDC-2018-The-Pregame-Quiz&quot;&gt;2018&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now - Lets.Play(with:🔥)!&lt;/p&gt;
-
-&lt;h3 id=&quot;ground-rules&quot;&gt;Ground Rules&lt;/h3&gt;
-
-&lt;p&gt;There are three rounds, and the point break down is as follows:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Round 1&lt;/strong&gt; – 1 point each answer&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Round 2&lt;/strong&gt; - 2 points each answer&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Round 3&lt;/strong&gt; - 3 points each answer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The last question of each round is an optional wildcard question. Get it right, and your team gets &lt;strong&gt;4&lt;/strong&gt; &lt;strong&gt;points&lt;/strong&gt;, &lt;em&gt;but&lt;/em&gt; miss it and the team will be &lt;strong&gt;deducted 2 points&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;round-1swift-decisions&quot;&gt;Round 1 — Swift Decisions&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
-What’s the name of the Swift attribute, added in Swift 5 to bolster dynamic language interoperability, that allows one to call named types like you’d call functions using a simple syntactic sugar?&lt;/p&gt;
-
-&lt;p&gt;Example:&lt;/p&gt;
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;attribute&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftjectiveC&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showArticles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withTags&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;instance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SwiftjectiveC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Foundation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Swift&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// This will desugar down to instance.showArticles(withTags: [&quot;Foundation&quot;, &quot;Swift&quot;])&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
-In Swift, variables are initialized before they are used by a concept enforced by LLVM’s optimizer. What is this concept in computer science referred to as?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
-SIMD Vector and Result types were finally added to Swift in an official capacity in what version?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
-Before Apple’s Swift was announced, there already existed a parallel programming language by the same name - who were its developers?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-Before Swift was a popular programming language at Apple, it was also the codename for an Apple-designed processor - which one was it?&lt;/p&gt;
-
-&lt;h3 id=&quot;round-2ios-history-101&quot;&gt;Round 2 — iOS History 101&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
-Auto Layout, long a core component of laying out user interfaces on macOS, didn’t arrive on iOS until which major release?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
-Security is a hallmark feature of iOS, and this specific feature involves placing data in random locations in memory and works alongside ARM’s XN (Execute Never) feature to prevent buffer overflow attacks - what is it?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
-When iOS was still shrouded in secrecy within Apple, how old was the youngest engineer working on iOS 1.0?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
-When the iPhone was first launched on June 29th, 2007 its operating system wasn’t yet referred to as iOS until iOS 4. What was its original name?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-Leading the way to haggle all of your friends who appear as green bubbles in your conversations, in which version of iOS did iMessage debut?&lt;/p&gt;
-
-&lt;h3 id=&quot;round-3apple-myth-and-lore&quot;&gt;Round 3 — Apple Myth and Lore&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
-Leading up to its March 25th, 2019 “It’s Showtime” keynote, Apple live streamed Carplay displaying a six hour ride - where was its end destination?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
-Steve Jobs, long known as being a master of details, hotly debated &lt;em&gt;what&lt;/em&gt; aspect of an Apple Store’s bathroom signs?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
-What was the very first thing &lt;em&gt;ever&lt;/em&gt; rendered in a Safari browser, produced by Ken Kocienda during its development?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
-To ensure that a visiting Ross Perot wouldn’t think Apple and its employees were too rich for investment - Steve Jobs had himself and Randy Adams hide what objects before he arrived?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
-What original Apple employee quickly sold off their 10% share of the company in 1977 for only $800 (which would be worth billions today)?&lt;/p&gt;
-
-&lt;h3 id=&quot;answer-key&quot;&gt;Answer Key&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;Round 1:&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0216-dynamic-callable.md&quot;&gt;@dynamicCallable&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://localhost:4000on-definitive-initialization/&quot;&gt;Definitive Initialization.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Swift 5.&lt;/li&gt;
-  &lt;li&gt;The University of Chicago and Argonne National Laboratory.&lt;/li&gt;
-  &lt;li&gt;Wildcard: &lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_Apple_codenames&quot;&gt;The Apple A6 and A6X chips.&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;b&gt;Round 2:&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;iOS 6.&lt;/li&gt;
-  &lt;li&gt;Address Space Layout Randomization.&lt;/li&gt;
-  &lt;li&gt;18 years old, Scott Goodson.&lt;/li&gt;
-  &lt;li&gt;iPhone OS.&lt;/li&gt;
-  &lt;li&gt;Wildcard: iOS 5.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;b&gt;Round 3:&lt;/b&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Cupertino.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.businessinsider.com/steve-jobs-attention-to-detail-2011-10#when-he-was-hospitalized-he-rejected-masks-because-they-were-ugly-8&quot;&gt;The shade of gray they should be colored as.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://asciiwwdc.com/2014/sessions/237&quot;&gt;A black obelisk!&lt;/a&gt; Fun fact, it actually rendered in the wrong direction.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.forbes.com/sites/connieguglielmo/2012/10/03/untold-stories-about-steve-jobs-friends-and-colleagues-share-their-memories/#4932fdc6c584&quot;&gt;Their Porsche 911s&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Wildcard: One of its oft forgotten co-founders, Ronald Wayne.&lt;/li&gt;
-&lt;/ol&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="Trivia" /><summary type="html">Dark mode, Marzipan and who knows what else await us which means we’re not far from Tim Cook and Friends revealing iOS 13 to the world. With a ton of services announcements already taken care of such as Apple TV+, Apple News+ and more - the tea leaves indicate that they’re going hard on pure API news this year.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;&quot;jordanmorgan10&quot;, &quot;picture&quot;=&gt;&quot;/assets/images/about/headshot.jpeg&quot;}</name></author><category term="UIKit" /><summary type="html">Phew.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /></entry></feed>

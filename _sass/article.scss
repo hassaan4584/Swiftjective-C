@@ -9,22 +9,22 @@
     text-align: center;
 }
 
- /* Sign Up 
+/* Sign Up 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #mc_embed_signup input.button {
-    background-color:#70A2F9;
+    background-color: #70A2F9;
 }
 
 #mc_embed_signup input.button:hover {
-    background-color:$sub-header-color;
+    background-color: $sub-header-color;
 }
 
 #mc_embed_signup {
-    background:#fff; 
-    clear:left; 
-    font:14px -apple-system,Helvetica,Arial,sans-serif; 
-    width:100%;
+    background: #fff;
+    clear: left;
+    font: 14px -apple-system, Helvetica, Arial, sans-serif;
+    width: 100%;
     margin-bottom: 4px !important;
 }
 
@@ -66,6 +66,34 @@
     margin-bottom: 0px;
 }
 
+.infoContainer {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    background-color: #F0F3F7;
+    border-radius: 15px;
+    padding: 8px;
+    color: #000000;
+}
+
+.smallInfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding:10px;
+    background-color: $sub-header-color;
+    border-radius: 8px;
+    margin:8px;
+    color: #FFFFFF;
+}
+
 div.highlight {
     border-radius: 8px;
     overflow: auto;
@@ -94,9 +122,9 @@ div.jekyll-twitter-plugin {
 }
 
 img {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 32px;
@@ -119,5 +147,17 @@ img {
 
     div.jekyll-twitter-plugin {
         width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .infoContainer {
+        background-color: $sub-header-color;
+        color: #FFFFFF;
+    }
+
+    .smallInfoContainer {
+        background-color: #F0F3F7;
+        color: #000000;
     }
 }

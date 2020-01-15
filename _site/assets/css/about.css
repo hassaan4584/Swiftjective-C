@@ -79,9 +79,18 @@ body {
   justify-content: space-between;
   align-items: center; }
 
- /* Tag
+.centerFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 8px;
+  margin: 5px; }
 
- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Tags
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .articleTag {
   background-color: #70A2F9;
   color: white;
@@ -147,7 +156,10 @@ blockquote p {
 h1 {
   color: #314A4F; }
 
-h2, h3, h3, h4 {
+h2,
+h3,
+h3,
+h4 {
   color: #615B5B; }
 
 hr {
@@ -166,7 +178,9 @@ footer {
 img {
   border-radius: 25px; }
 
-article h2, h3, h4 {
+article h2,
+h3,
+h4 {
   margin-top: 64px; }
 
 article h3 {
@@ -183,7 +197,9 @@ article p {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Extra small devices (phones, 800px and down) */
 @media (max-width: 840px) {
-  #gridHeader, #gridMiddle, #gridFooter {
+  #gridHeader,
+  #gridMiddle,
+  #gridFooter {
     width: 100vw;
     padding-left: 32px;
     padding-right: 32px; }
@@ -212,7 +228,11 @@ article p {
   blockquote {
     margin: 0; } }
 @media (prefers-color-scheme: dark) {
-  h1, h2, h3, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h3,
+  h4 {
     color: white !important;
     opacity: 0.6 !important; }
 

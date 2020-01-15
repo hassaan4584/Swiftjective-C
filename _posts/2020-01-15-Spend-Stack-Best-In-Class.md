@@ -10,7 +10,7 @@ image: /assets/images/logo.png
 
 Previously, I've written about this notion of what it looks like to be a [best in class iOS app][1]{:target="_blank"}. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.
 
-Now, months later - how am I doing by my own definition? Let's take a look at where I stand. The grades below have been pulled from the Best in Class post, but some have been altered, added or left out to only include items that can be answered with a yes or no anwer as it pertains to Spend Stack.
+Now, months later - how am I doing by my own definition? Let's take a look at where I stand. The grades below have been pulled from the Best in Class post, but some have been altered, added or left out to only include items that can be answered with a yes or no answer as it pertains to Spend Stack.
 
 > With each subsequent release, I'll be updating my progress.
 
@@ -50,7 +50,7 @@ Now, months later - how am I doing by my own definition? Let's take a look at wh
 ◎ `accessibilityIgnoresInvertColors` where needed. <br />
 ◉ Respects reduced motion and blurring where needed. <br />
 ◉ Adaptive to all content sizes (i.e. dynamic type). <br />
-◉ Uses `readableContentGuide` for view that are predominently text based. <br />
+◉ Uses `readableContentGuide` for view that are predominantly text based. <br />
 ◎ Color contrast is 7:1 or better. <br />
 ◉ Supported smart color inversion elegantly. <br />
 ◉ Bar button items supply a crisp landscape and large content size image. <br />
@@ -67,7 +67,7 @@ Now, months later - how am I doing by my own definition? Let's take a look at wh
 **Accessibility: 9/19 - 47%**
 
 ### Platform Technology
-◉ Contextual interactions supported (Controll previews, home shortcuts, quick actions and interaction delegate for unique experiences). <br />
+◉ Contextual interactions supported (Control previews, home shortcuts, quick actions and interaction delegate for unique experiences). <br />
 ◎ Spotlight search and indexing support. <br />
 ◉ Effective energy management (i.e. supports low power mode and reacts to it) <br />
 ◎ Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard. <br />
@@ -104,7 +104,7 @@ Now, months later - how am I doing by my own definition? Let's take a look at wh
 ◉ The content type of all text views and text fields is included, and the correct keyboard type is used for the current context. 
 ◉ The keyboard’s language identifier is integrated correctly. <br />
 ◎  Handles the keyboard being undocked on the iPad, if views are constrained to it via an inputAccessoryView. <br />
-◉ It’s localized and internationlized for all territories it’s released in. <br />
+◉ It’s localized and internationalized for all territories it’s released in. <br />
 ◉ Text tends to not truncate and it never clips but rather it’s always readable. <br />
 ◉ All tappable interface elements are at least 44 by 44 points. <br />
 ◉ The entire app binary is under 30 megabytes. (No source here, this is based off a multitude of data points.) <br />
@@ -142,13 +142,13 @@ Now, months later - how am I doing by my own definition? Let's take a look at wh
 
 **Design: 10/13 - 77%**
 
-### App Store Prescence
+### App Store Presence
 ◎ An App Store preview video is used. <br />
 ◎ Its keywords and category were carefully researched. <br />
 ◉ The app icon follows the golden grid. <br />
 ◉ The icon follows your brand’s primary color as well. <br />
 
-**App Store Prescence: 2/4 - 50%**
+**App Store Presence: 2/4 - 50%**
 
 ### Final Thoughts
 No app is perfect, and no app can check off all of the boxes you want. But it's motivating to have a goal to shoot for, and this list is mine. When it's all done, I'll feel extremely proud to have my name behind Spend Stack.

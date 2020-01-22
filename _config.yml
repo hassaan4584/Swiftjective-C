@@ -9,9 +9,11 @@ description: >
 url: "https://swiftjectivec.com"
 site: https://swiftjectivec.com
 permalink: /:title/ 
-author:
+author: 
+  name: Jordan Morgan
+  avatar: /assets/images/about/headshot.jpeg
+  url: https://wwww.twitter.com/jordanmorgan10
   twitter: jordanmorgan10
-  picture: /assets/images/about/headshot.jpeg
 defaults:
   - scope:
       path: "assets/images"
@@ -23,6 +25,8 @@ twitter:
 facebook:
   publisher: alpha10david
 logo: /assets/images/logo.png
+plugins:
+  - jekyll-feed
 social:
   name: Jordan Morgan
   links:

@@ -30,7 +30,6 @@
      align-items: center;
      align-content: center;
      padding:8px;
-     margin:5px;
  }
 
  /* Tags
@@ -44,6 +43,16 @@
      font-size: 12px;
      display: block;
      width: 108px;
+ }
+
+  .articleTechNote {
+     background-color: $secondary-color;
+     color: white;
+     padding: 4px 6px 4px 6px;
+     border-radius: 6px;
+     font-size: 12px;
+     display: block;
+     width: 74px;
  }
 
  .articleTagIndie {
@@ -209,7 +218,6 @@
  }
 
  @media (prefers-color-scheme: dark) {
-
      h1,
      h2,
      h3,

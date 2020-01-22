@@ -86,8 +86,7 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 8px;
-  margin: 5px; }
+  padding: 8px; }
 
 /* Tags
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -99,6 +98,15 @@ body {
   font-size: 12px;
   display: block;
   width: 108px; }
+
+.articleTechNote {
+  background-color: #70A2F9;
+  color: white;
+  padding: 4px 6px 4px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: block;
+  width: 74px; }
 
 .articleTagIndie {
   background-color: #70A2F9;

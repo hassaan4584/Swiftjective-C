@@ -2,6 +2,10 @@
 <small class="articleTagIndie">
     Indie Dev Diaries
 </small>
+{% else if post.tags[0] == "Tech Notes" %}
+<small class="articleTechNote">
+    Tech Note
+</small>
 {% else %}
 <small class="articleTag">
     Technical Article

@@ -65,6 +65,8 @@ Tonally, I opt for much more of an "open journal" style of writing. My hope is t
 
 In addition to my technical articles, in January of 2019 I started a series, "The Indie Dev Diaries", which explores the human side of indie development. These are open letters to myself dealing with every component of creating your own iOS app as an indie; the business side, the questions, the launches, etc.
 
+Finally, in January of 2020 I started a new series called "Tech Notes" (named after Apple's technical documents of the same name) to allow me to write down quick thoughts on interesting problems I had come across in my own apps. They are always under 500 words, and allow me to share fun things without the stress of writing a "full" post.
+
 Finally, the name itself is a mash up of the two predominant languages used to create iOS, macOS, tvOS, and watchOS software. Swift and Objective-C. Additionally, the logo contains callbacks to both languages. The two brackets around the "SC" representing Objective-C and the trailing "()" representing Swift.
 
 ### Colophon

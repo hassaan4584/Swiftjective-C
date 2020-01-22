@@ -13,6 +13,8 @@ title: post
                 <section id="articleHeaderSection">
                     {% if page.tags[0] == "The Indie Dev Diaries" %}
                         <i>The Indie Dev Diaries Presents...</i>
+                    {% else if page.tags[0] == "Tech Notes"%}
+                        <i>Today in Tech Notes...</i>
                     {% else %}
                         <i>Now serving...</i>
                     {% endif %}

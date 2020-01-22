@@ -16,8 +16,8 @@ Now, months later - how am I doing by my own definition? Let's take a look at wh
 
 <div class="infoContainer">
     <small>So far, Spend Stack is...</small>
-    <b style="font-size: calc(36px + 1.5vw);">56%</b>
-    <small>...of the way towards a best in class app (49/87).</small>
+    <b style="font-size: calc(36px + 1.5vw);">55%</b>
+    <small>...of the way towards a best in class app (48/87).</small>
     <div class="centerFlex">
         <div class="smallInfoContainer">
             <b>Accessibility</b>
@@ -25,11 +25,11 @@ Now, months later - how am I doing by my own definition? Let's take a look at wh
         </div>
         <div class="smallInfoContainer">
             <b>Platform</b>
-            <small>38% (11/28)</small>
+            <small>39% (11/28)</small>
         </div>
         <div class="smallInfoContainer">
             <b>U.X.</b>
-            <small>35% (16/20)</small>
+            <small>80% (16/20)</small>
         </div>
         <div class="smallInfoContainer">
             <b>Design</b>

@@ -181,7 +181,7 @@ let currentItems = [1,2,3]
 let newItems = [1,2,3,4,5,6]
 
 let diff = newItems.difference(from: currentItems)
-let newCount = diff.insertions.filter { $0.}
+let newCount = diff.insertions.count
 
 print("\(newCount) new items.") // 3 new items
 

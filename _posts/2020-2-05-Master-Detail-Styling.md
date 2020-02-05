@@ -42,7 +42,7 @@ It turns out, this is exactly the kind of task that really eats at you on update
 
 But as someone who took five years to release an app, I figured another shot of feature creep wouldn't hurt 🤠. 
 
-I quickly tested out using `.secondaryBackground` for the master view - while keeping the detail view with `.primaryBackground`. This is similar to what Mail and Reminders do.
+After looking at Xcode's default master-detail view template (which has no accordances for this kind of thing), I quickly tested things out using `.secondaryBackground` for the master view - while keeping the detail view with `.primaryBackground`. This is similar to what Mail and Reminders do.
 
 > If you aren't using SwiftUI and want this process to be forty times less painless - trying using the helpful utility app [Adaptivity][1] to quickly reference colors.
 
@@ -83,7 +83,7 @@ That last one can be a bit of a sticker. On iPadOS, you can quickly swap between
 
 {% include lazyLoadImage.html image="../assets/images/mdv_switch.png" %}
 
-This means my navigation, tool bars and master view all need to a get little bit smarter, more configurable or use any other of the other platter of patterns available (delegates, dependency injections, blocks or what have you). These controllers are, as you may have surmised, still written in Objective-C, so my new favorite toy, Combine, is out.
+This means my navigation, tool bars and master view all need to a get little bit smarter, more configurable or use any other of the other platter of patterns available (delegates, dependency injections, blocks or what have you). These controllers are, as you may have surmised, still written in Objective-C. Regrettably, my new favorite toy, Combine is out of the question.
 
 Alas, as with most of these kinds of tasks within `UIKit`, it's always a hop, skip and a step away from being as simple as checking the device idiom:
 

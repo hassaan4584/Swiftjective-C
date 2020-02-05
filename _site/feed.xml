@@ -1,5 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-01-29T09:08:17-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">CollectionDifference</title><link href="http://localhost:4000/CollectionDifference/" rel="alternate" type="text/html" title="CollectionDifference" /><published>2020-01-29T00:00:00-06:00</published><updated>2020-01-29T00:00:00-06:00</updated><id>http://localhost:4000/CollectionDifference</id><content type="html" xml:base="http://localhost:4000/CollectionDifference/">&lt;p&gt;In the not so distant past, it was a foregone conclusion that developers would eventually fall back to the jackhammer when it came to table or collection views: &lt;code class=&quot;highlighter-rouge&quot;&gt;reloadData&lt;/code&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-05T09:38:08-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">Dynamic Master Detail View Background Colors</title><link href="http://localhost:4000/Master-Detail-Styling/" rel="alternate" type="text/html" title="Dynamic Master Detail View Background Colors" /><published>2020-02-05T00:00:00-06:00</published><updated>2020-02-05T00:00:00-06:00</updated><id>http://localhost:4000/Master-Detail-Styling</id><content type="html" xml:base="http://localhost:4000/Master-Detail-Styling/">&lt;p&gt;One of my goals for the next update for Spend Stack was to tighten up the design of master detail scenarios, which are prevalent on macOS and iPadOS:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_things.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_things.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve noticed that these apps typically have a subtle contrast between the master view and the detail view (though not all, as we’ll see). I decided to follow a similar pattern as well, so I started poking around to see what other apps in the wild did for this kind of thing.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-examples&quot;&gt;The Examples&lt;/h3&gt;
+&lt;p&gt;Let’s take a quick tour of how Apple’s stock apps handle the situation:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes&lt;/strong&gt;&lt;br /&gt;
+&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_notes.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_notes.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Files&lt;/strong&gt;&lt;br /&gt;
+&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_files.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_files.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;News&lt;/strong&gt;&lt;br /&gt;
+&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_news.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_news.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mail&lt;/strong&gt;&lt;br /&gt;
+&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_mail.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_mail.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Messages&lt;/strong&gt;&lt;br /&gt;
+&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_messages.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_messages.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reminders&lt;/strong&gt;&lt;br /&gt;
+&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_reminders.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_reminders.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was surprised to see that quite a few of Cupertino &amp;amp; Friends’© apps tend to use the same background color. Still, Spend Stack’s white on white in this scenario feels a little too jarring.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-implementation&quot;&gt;The Implementation&lt;/h3&gt;
+&lt;p&gt;It turns out, this is exactly the kind of task that really eats at you on updates. It was a fleeting thought I had (to address this) and I figured it wouldn’t take more than thirty minutes. In software development, that and similar phrases are always famous last words.&lt;/p&gt;
+
+&lt;p&gt;But as someone who took five years to release an app, I figured another shot of feature creep wouldn’t hurt 🤠.&lt;/p&gt;
+
+&lt;p&gt;I quickly tested out using &lt;code class=&quot;highlighter-rouge&quot;&gt;.secondaryBackground&lt;/code&gt; for the master view - while keeping the detail view with &lt;code class=&quot;highlighter-rouge&quot;&gt;.primaryBackground&lt;/code&gt;. This is similar to what Mail and Reminders do.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you aren’t using SwiftUI and want this process to be forty times less painless - trying using the helpful utility app &lt;a href=&quot;https://apps.apple.com/us/app/adaptivity-a/id1054670022&quot;&gt;Adaptivity&lt;/a&gt; to quickly reference colors.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;traitCollectionDidChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UITraitCollection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousTraitCollection&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;super&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;traitCollectionDidChange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousTraitCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;traitCollection&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;isDifferentThanTraitCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousTraitCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSNotificationCenter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaultCenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;postNotificationName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;SS_TRAIT_COLLECTION_CHANGED&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;systemBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;traitCollection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontalSizeClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;UIUserInterfaceSizeClassRegular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secondarySystemBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tableView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// These methods do pretty much the same as above&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toolbar&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationController&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;updateBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which gets me half way there:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_firstPass.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_firstPass.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Not bad - but the subtleties start to creep in.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I have to update the table view cells, easier said than done. They look okay in dark mode, but there isn’t enough contrast in light mode.&lt;/li&gt;
+  &lt;li&gt;I also have to tackle both the navigation and tool bars (one of which has been busted since iOS 13, throwing me into several apoplectic fits).&lt;/li&gt;
+  &lt;li&gt;And, I have to dynamically switch out styles according to trait collection changes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That last one can be a bit of a sticker. On iPadOS, you can quickly swap between a regular to compact horizontal trait collection for a number of reasons (namely, multitasking scenarios). In this case, I need to swap back and forth between the “old” style and the master view one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_switch.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_switch.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This means my navigation, tool bars and master view all need to a get little bit smarter, more configurable or use any other of the other platter of patterns available (delegates, dependency injections, blocks or what have you). These controllers are, as you may have surmised, still written in Objective-C, so my new favorite toy, Combine, is out.&lt;/p&gt;
+
+&lt;p&gt;Alas, as with most of these kinds of tasks within &lt;code class=&quot;highlighter-rouge&quot;&gt;UIKit&lt;/code&gt;, it’s always a hop, skip and a step away from being as simple as checking the device idiom:&lt;/p&gt;
+
+&lt;div class=&quot;language-objc highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;systemBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;traitCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;horizontalSizeClass&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UIUserInterfaceSizeClassRegular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;secondarySystemBackgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;UINavigationBarAppearance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UINavigationBarAppearance&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;configureWithOpaqueBackground&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;largeTitleTextAttributes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSForegroundColorAttributeName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UIColor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ssMainFontColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]};&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;standardAppearance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compactAppearance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scrollEdgeAppearance&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;navigationBar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;barTintColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Avoid bleed on push/pop&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;navBarAppearance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;backgroundColor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That gets me closer, but I either have to propagate those changes to the table cell or check in their trait collection change events as well (the latter seems to be more appropriate, though I’ve yet to get that far yet).&lt;/p&gt;
+
+&lt;p&gt;There are many places where I don’t want to occur, such as modals:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_modal.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_modal.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Worse yet, my navigation and toolbars are all jank-town now. That’s to be expected (as to this point, I’ve just hardcoded a new color in) but I feel like navigation bar’s new API never quite does what I expect it to. For the life of me, I can’t quite get my navigation bar to respect my &lt;code class=&quot;highlighter-rouge&quot;&gt;UINavigationBarAppearance&lt;/code&gt; choices until it lays out its subviews.&lt;/p&gt;
+
+&lt;p&gt;Here, I purposely want the navigation bar to reflect the “old” styling, yet it doesn’t update until it does another layout pass:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_nav.gif&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_nav.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I use a subclassed &lt;code class=&quot;highlighter-rouge&quot;&gt;UINavigationBar&lt;/code&gt; throughout Spend Stack (same for the toolbar) and I won’t always want this behavior, so it’s not as simple as trait collection bookkeeping. For now, I’m leaning towards a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;bool&lt;/code&gt; flag to pipe right into the initializer since I style each of them there, far earlier than any trait collection change might occur.&lt;/p&gt;
+
+&lt;p&gt;We’ll see what happens, and of course - I’ll have the final product in the next version of Spend Stack, version 1.2.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Tech Notes" /><summary type="html">One of my goals for the next update for Spend Stack was to tighten up the design of master detail scenarios, which are prevalent on macOS and iPadOS:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">CollectionDifference</title><link href="http://localhost:4000/CollectionDifference/" rel="alternate" type="text/html" title="CollectionDifference" /><published>2020-01-29T00:00:00-06:00</published><updated>2020-01-29T00:00:00-06:00</updated><id>http://localhost:4000/CollectionDifference</id><content type="html" xml:base="http://localhost:4000/CollectionDifference/">&lt;p&gt;In the not so distant past, it was a foregone conclusion that developers would eventually fall back to the jackhammer when it came to table or collection views: &lt;code class=&quot;highlighter-rouge&quot;&gt;reloadData&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;The reasons why were simple:&lt;/p&gt;
 
@@ -1718,91 +1836,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;Though there’s certainly an art to launching, I’ve yet to crack its code. Glean what you can from what worked for me, but more importantly - take note of what &lt;em&gt;didn’t&lt;/em&gt; work. Avoid those. Most importantly, if you’re launching soon, best of luck!&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Y.O.L.O.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Spend Stack</title><link href="http://localhost:4000/Introducing-Spend-Stack/" rel="alternate" type="text/html" title="Introducing Spend Stack" /><published>2019-07-15T00:00:00-05:00</published><updated>2019-07-15T00:00:00-05:00</updated><id>http://localhost:4000/Introducing-Spend-Stack</id><content type="html" xml:base="http://localhost:4000/Introducing-Spend-Stack/">&lt;p&gt;Every app has a story.&lt;/p&gt;
-
-&lt;p&gt;You’ve heard this before, right? Apple pushes it in their messaging, the press lets you know you should tell yours and general marketing revolves around it.&lt;/p&gt;
-
-&lt;p&gt;But, each app also needs to solve a problem that’s a legitimate pain point for someone.  After several years - I’d love to tell you my app’s story and the problem it solved for me.&lt;/p&gt;
-
-&lt;p&gt;Today, I’m pleased to &lt;em&gt;finally&lt;/em&gt; introduce the world to &lt;a href=&quot;https://apps.apple.com/app/spend-stack-smarter-lists/id1329068268&quot;&gt;Spend Stack&lt;/a&gt;. It’s a list app that can keep an accurate total cost of its items that syncs to your devices, plus you can share and collaborate with others on any list you make. Live edits and all.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/hero.png&quot; alt=&quot;Spend Stack&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-elevator-pitch&quot;&gt;The Elevator Pitch&lt;/h3&gt;
-&lt;p&gt;About five years ago, my wife and I started to budget in all cash. We meticulously split up our money into separate categories each pay period and we still do to this day.&lt;/p&gt;
-
-&lt;p&gt;Spend Stack was born when we visited the grocery store during our first crack at this, and we found that it was mostly guesswork, difficult or not possible to keep a running total of our stuff. It’s a little aggravating if you walked into the store with $200 but your bill tallied about $250. If you live in the states, this is even more difficult because tax isn’t applied to the prices you see on the shelf.&lt;/p&gt;
-
-&lt;p&gt;So, I wanted to keep a to-the-penny running total. That meant local sales tax included, pricing by weight, applying discounts via a percentage or fixed amount, etc.&lt;/p&gt;
-
-&lt;p&gt;You can see where this is going - and this was the first reason I built Spend Stack. This is what our grocery list looks like today, and I have no problem keeping track of what something costs with tax, priced by weight and with a discount (as seen here):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/groceries.png&quot; alt=&quot;Grocery List&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;At first, I found the problem very concrete, yet each solution I mocked up was entirely too abstract. Over time, even as an autodidact designer, I was able to hone it in to focus on the problem over anything else (another blog post in of itself). With each early, hacked together version we’d discover a different need or obstacle.&lt;/p&gt;
-
-&lt;p&gt;My wife wanted to add pictures to items so I would finally stop buying the wrong Chobani (sorry, Jansyn!), so I’d add it in. Tech like CloudKit was naturally included by other factors - such as me not wanting account creation, but also needing lists synced across devices along with the ability to share and collaborate on them with others. Each validated need led to me cracking open Xcode and slotting it in:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/ipadShare.png&quot; alt=&quot;iCloud Share&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The list (no pun intended) goes on.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-beta-days&quot;&gt;The Beta Days&lt;/h3&gt;
-&lt;p&gt;As time went on and I showed it to friends, and those friends tested it out - one thing became clear. A lot of people had a use for a running total list app, but they all used it a bit differently. Some really leaned into the accurate running total, some just wanted to keep a simple one without taxes, discounts, or anything else. What I ended up building was something that could not only adapt to those needs, but try to excel at them.&lt;/p&gt;
-
-&lt;p&gt;Today, using the tags system, optional checkbox support and more people make far more than the obvious grocery list. It’s been used for birthday lists, Christmas lists, vacation budget planning and more. A family friend even had her daughter track all the money she made doing chores to save up for a pet hamster, checking off tasks as she did them ❤.&lt;/p&gt;
-
-&lt;p&gt;It’s changed a lot over the years, and at times I’ve just been stuck analyzing it inside and out. Paralysis by analysis. But I’ve always believed that high achievement takes place within the framework of high expectations. And my own were high.&lt;/p&gt;
-
-&lt;p&gt;Recently, I looked at it, and I thought, “Hmmm, I think this is &lt;em&gt;kinda&lt;/em&gt; good now”. So, I just hit the submit button. I arrived at a spot where I was actually “proud” of it. For the developer minded reader, here are some things I am personally happy about:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Full dynamic type support (before it was free with SwiftUI!)&lt;/li&gt;
-  &lt;li&gt;Every size class and orientation is supported&lt;/li&gt;
-  &lt;li&gt;Smaller things, like including glyphs for large content size items, à la tapping and holding on a tool bar item when large content sizes are active&lt;/li&gt;
-  &lt;li&gt;Seamless (I realize that’s overused, but it’s earned here) syncing between devices&lt;/li&gt;
-  &lt;li&gt;Full CloudKit sharing, this was not trivial to do&lt;/li&gt;
-  &lt;li&gt;No use of &lt;code class=&quot;highlighter-rouge&quot;&gt;reloadData&lt;/code&gt;, everything is diffed and batch reloaded (&lt;em&gt;also&lt;/em&gt; before it was free with SwiftUI)&lt;/li&gt;
-  &lt;li&gt;Undo and redo support for &lt;em&gt;nearly&lt;/em&gt; for every single CRUD action&lt;/li&gt;
-  &lt;li&gt;And I think it looks okay&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As an aside, you can see that SwiftUI could be a time saver for me in the future. Hair Force One himself said as much when I cold emailed him about Spend Stack, and that was a fun moment for me:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/hfo.jpg&quot; alt=&quot;Hair Force One&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I basically did the things that draw me to apps I pay for. It’s a one time purchase, you can tell the developer cares and is unlikely to abandon it, it works on iPhone and iPad, etc.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-human-connection&quot;&gt;The Human Connection&lt;/h3&gt;
-&lt;p&gt;To close out the story aspect, I think it’s fun to show how, that to my wife and I, Spend Stack &lt;em&gt;truly&lt;/em&gt; feels like part of the family. Let me explain.&lt;/p&gt;
-
-&lt;p&gt;Back in 2013, I was a ball of anxiety when my wife was at the hospital about to deliver our oldest, Bennett. As I paced back and forth, she surprised me with what she said next:&lt;/p&gt;
-
-&lt;p&gt;“Try getting out your laptop, work on Spend Stack and relax until my contractions kick in.”&lt;/p&gt;
-
-&lt;p&gt;So, I did (and it did chill me out….a &lt;em&gt;little&lt;/em&gt;. Here’s my genuine “this is fine” face):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/bennyDev.jpg&quot; alt=&quot;Developing at the hospital 2013&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Fast forward to 2016, and I was no more brave at the prospect of my wife delivering a human being that was currently nestled inside of her abdomen. But, until my middle child Remy was ready to arrive, it was the same story. We didn’t snap a picture of it that year, but looking back I found this one of Jansyn checking out the latest build in between naps at the hospital a few days postpartum:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/remyDev.jpeg&quot; alt=&quot;Developing at the hospital 2016&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;…and in 2018 with my daughter Baylor:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/baylorDev.jpg&quot; alt=&quot;Developing at the hospital 2018&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It actually became a funny tradition between my wife and I. Of course, there were much bigger things to worry about once the contractions started. But until then, instead of watching me slowly devolve into a crazy, amped up and entirely too anxious husband, she gently suggested to code until our little ones decided to start the action. She’s a good one ❤.&lt;/p&gt;
-
-&lt;p&gt;So it’s funny, this post is an end cap of sorts. We don’t plan on having more children, so the days of coding Spend Stack until my wife starts having contractions are behind me. At the same time, it’s finally releasing! Life is funny like that, with one chapter ending and another beginning.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;So that’s my app’s story.&lt;/p&gt;
-
-&lt;p&gt;It feels so good to launch. I can’t emphasis that enough. After years of hard work, it all culminates into this. I’m proud of it, and that was one of the biggest things I wanted out of the project. Something to put my name on and &lt;em&gt;really&lt;/em&gt; own it.&lt;/p&gt;
-
-&lt;p&gt;Your own app has a story too. And, if you’re not telling it, I think you’re missing out. I’d love to hear it, at the very least. There is always a human connection behind the pixels on your screen that gets lost in translation from idea to App Store - and for me it’s refreshing to discover them.&lt;/p&gt;
-
-&lt;p&gt;Thanks for hearing about my own connection behind Spend Stack, and it’s live &lt;a href=&quot;https://www.spendstack.com&quot; target=&quot;_blank&quot;&gt;here if you’d like to try it out yourself.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Every app has a story.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Y.O.L.O.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

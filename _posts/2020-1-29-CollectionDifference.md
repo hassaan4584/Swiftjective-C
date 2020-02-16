@@ -121,7 +121,7 @@ If we do need it, notice how we get the associations by way of `inferringMoves`.
 for update in diff.inferringMoves { /* code */ }
 
 /* Now prints
-Moved A at idx 0 and moved to 1
+Removed A at idx 0 and moved to 1
 Inserted A at idx 1 from 0
 */
 ```

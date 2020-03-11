@@ -1,5 +1,153 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-05T09:38:08-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">Dynamic Master Detail View Background Colors</title><link href="http://localhost:4000/Master-Detail-Styling/" rel="alternate" type="text/html" title="Dynamic Master Detail View Background Colors" /><published>2020-02-05T00:00:00-06:00</published><updated>2020-02-05T00:00:00-06:00</updated><id>http://localhost:4000/Master-Detail-Styling</id><content type="html" xml:base="http://localhost:4000/Master-Detail-Styling/">&lt;p&gt;One of my goals for the next update for Spend Stack was to tighten up the design of master detail scenarios, which are prevalent on macOS and iPadOS:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-10T15:30:26-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">Creating a Retail Demo for Apple</title><link href="http://localhost:4000/Creating-A-Retail-Demo/" rel="alternate" type="text/html" title="Creating a Retail Demo for Apple" /><published>2020-03-10T00:00:00-05:00</published><updated>2020-03-10T00:00:00-05:00</updated><id>http://localhost:4000/Creating-A-Retail-Demo</id><content type="html" xml:base="http://localhost:4000/Creating-A-Retail-Demo/">&lt;p&gt;Through luck, determination and whatever other stereotypical noble quality you can conjure up, Apple selected &lt;a href=&quot;https://www.spendstack.com&quot;&gt;Spend Stack&lt;/a&gt; to take part in their retail demo program.&lt;/p&gt;
+
+&lt;p&gt;Yay! Right!? Just look at it!&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/demoStore.jpeg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/demoStore.jpeg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, yes. Of course yes! But, if you hit the Googles for past experiences with this, you’ll find quite a lot of tumbleweeds. This makes sense, as if you happen to scan the apps that are on retail iPhones and iPads at your local Best Buy, Apple Store, etc. - they tend to be apps that hail from Big Corp©. And rightfully so, they all are quality, well made apps with the team and budget to match.&lt;/p&gt;
+
+&lt;p&gt;Though, the everyman doesn’t often appear there. And if they do, it typically tends to be in the form of a game. So today, I figured I’d spend this indie dev diary chronicling my experience with getting Spend Stack on iPhones and iPads across America 🇺🇸. Think of it as Spend Stack’s official road tour 🚌.&lt;/p&gt;
+
+&lt;p&gt;Or, maybe more than America. I’m not really sure? I’ll get into that later, as we’ll see.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-reach-out&quot;&gt;The Reach Out&lt;/h3&gt;
+&lt;p&gt;It was Saturday in December when I was hacking away at Spend Stack at local coffee shop. As I slid into my inbox for my developer account, I noticed an email that stuck out. It’s subject line spoke about an incredible marketing opportunity.&lt;/p&gt;
+
+&lt;p&gt;I thought it was spam 😅!&lt;/p&gt;
+
+&lt;p&gt;Thankfully, I took a closer look and saw the sender had a bonafide Apple domain. The message was simple enough. Someone from developer relations introduced themselves and laid out how the process works.&lt;/p&gt;
+
+&lt;p&gt;From there, you just dive into the ~15 page .pdf file they give you to point out the finer details. I will say, this guide was incredibly helpful. It had step-by-step pictures with call out glyphs to ensure you were getting logistical things done correctly (especially helpful when you get into the upload part of the process).&lt;/p&gt;
+
+&lt;h3 id=&quot;the-prep&quot;&gt;The Prep&lt;/h3&gt;
+&lt;p&gt;With my requirements in hand, I got to work! Luckily, this occurred over my Christmas break, where I am fortunate enough to take about three weeks off each year. I had quite a large update to Spend Stack planned for this time (which I’m in the middle of now) but the opportunity cost was worth the trade.&lt;/p&gt;
+
+&lt;p&gt;If you’ve spent any number of minutes with these demo apps at stores, you kind of know what to expect. A splash screen saying that’s it a demo, pre-populated data and some features that are either taken out or gated by an alert controller saying it’s unavailable.&lt;/p&gt;
+
+&lt;p&gt;In Spend Stack, all of this was easy enough. Instead of going through my designs and taking things out, I opted to keep them in so users would be aware they existed. I’d rather they hit a “You can’t do this in the demo” alert than be none-the-wiser to some pretty great features that are core to Spend Stack (i.e. iCloud sharing and collaborating for lists).&lt;/p&gt;
+
+&lt;p&gt;The splash screen was quick to whip up - I originally was using the one I have shipped now, but it was easier to rip it out to make a more “to the point” variation:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/compareSplash.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/compareSplash.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If anything, I probably would’ve taken out the “Continue” button, as I noticed quite a few apps don’t even use one.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-problems&quot;&gt;The Problems&lt;/h3&gt;
+&lt;p&gt;I hit some issues along the way, though. The first and most challenging was around how I chose to tackle demo data. I need quite a bit of it. I wrote a list of lists (meta!) that I wanted to include to best showcase all of the things you can do with Spend Stack. I ended up with a solid line up, and each one was filled with relevant items, images, notes and more:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/listLists.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/listLists.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The issue was, I created these all in code for my first go around. And, well - it took about 5 seconds to create the database, drop existing data and populate these on the fly. That’s a non-starter, obviously, as nobody except my Mom and (maybe) my wife would wait around for that. And even then, it would only be out of love 😅.&lt;/p&gt;
+
+&lt;p&gt;I tried to turn some tricks with concurrency, but as is so often the case with programming - I stepped away from it and arrived at an answer. The epiphany came, and the solution was dead simple: simply ship the retail demo with a database. Spend Stack uses raw SQLite for data, and once I used the app and had a good set of dummy lists to work with - I simply found it within the file system on my mac and included it as part of the Xcode project.&lt;/p&gt;
+
+&lt;p&gt;It booted lightning fast - done and done:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;databaseFilePath&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;NSFileManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSFileManager&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;defaultManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;NSArray&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;directories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fileManager&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLsForDirectory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSDocumentDirectory&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;inDomains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;NSUserDomainMask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;NSString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;documentPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;directories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;firstObject&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;URLByAppendingPathComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&quot;spendStack.db&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;documentPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The other hiccup has to do with multiple spaces on iPadOS. When you ship these retail apps, you’ve got to wipe any data entered on them when the user is “done” with them. Done is quite ambiguous, and there’s no concrete “when” defined. So, when a user backgrounds Spend Stack I reset everything:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;sceneDidEnterBackground&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;UIScene&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scene&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;initateSelfDestructSequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The only fun thing is that when you open a new window, iOS also gives you that same notification while the window is being setup. You can see this quite easily, and it makes sense I guess - iOS puts up that blurry view while another window slides in. So, I’ve got some jank there that I won’t share publicly to help avoid any deleterious state bugs 😅 (spoiler, it’s &lt;em&gt;totally&lt;/em&gt; not a simple GCD delay, no way).&lt;/p&gt;
+
+&lt;p&gt;Aside from that - uploading it App Store Connect gave me some fits. Try to hide your surprise 😜. It’s a bit of a different flow, but again - the .pdf guide they give you really helped out here.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-uncertainty&quot;&gt;The Uncertainty&lt;/h3&gt;
+&lt;p&gt;Once it was uploaded, all that was left to do was wait. I didn’t really get much information on when and where it would be. Was this like App Store promo art, where you supply it and it might be lost to the dark ether of the App Store editorial team (still waiting for mine to be used 🤞😭🙃) or show up next week? I had no idea, so I figured I’d just point blank ask them.&lt;/p&gt;
+
+&lt;p&gt;The response?&lt;/p&gt;
+
+&lt;p&gt;An email telling me to gate one more feature with an alert 🤣. But, I guess that did mean they were going to use it! Shoot your shot, right?&lt;/p&gt;
+
+&lt;p&gt;Getting responses was a little difficult to be honest, and in some ways frustrating, because to smaller indies like me - this is a &lt;strong&gt;big&lt;/strong&gt; deal! This is getting Apple’s stamp of approval for your app! It’s marketing! Validation! The list goes on. I wanted to know I was doing everything they needed.&lt;/p&gt;
+
+&lt;p&gt;Look, there could be a million reasons for why things work the way they do on the App Store and these kind of things. It could be out of certain individual’s control. It’s always easy to bemoan X or Y on the outside.&lt;/p&gt;
+
+&lt;p&gt;I do know this - the rep I worked with was always kind when I chatted with them, and we cracked a few jokes back and forth. Plus, each person I’ve meet at W.W.D.C. on the App Store team was delightful, and the labs with them were a highlight. It feels like the key here is like anything else, you just need to build relationships to get things moving and I’m still working on that with the App Store folks.&lt;/p&gt;
+
+&lt;p&gt;All that to say - the reason for this tweet was half because I wanted to share the news with my fellows devs, and half because I wanted to get the word out:&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;🤩&lt;br /&gt;&lt;br /&gt;About that Spend Stack news...&lt;br /&gt;&lt;br /&gt;I’ve always said that my main goal was to make an app I’m truly proud of. While I’ve got a lot left to do, having Apple want &lt;a href=&quot;https://twitter.com/SpendStackApp?ref_src=twsrc%5Etfw&quot;&gt;@SpendStackApp&lt;/a&gt; on iPhones to demo their product is a huge honor for me and validation that I’m on the right track. &lt;a href=&quot;https://t.co/uSGhEbv8YL&quot;&gt;pic.twitter.com/uSGhEbv8YL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1224478409423716353?ref_src=twsrc%5Etfw&quot;&gt;February 3, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If someone saw Spend Stack at the stores, maybe they would tell me and that would be how I found out it released. Thankfully, that wasn’t necessary.&lt;/p&gt;
+
+&lt;p&gt;Why? Because I straight up walked into Best Buy a few times a week to check (there’s no Apple Store by me, unfortunately). And, well - one day it was there!&lt;/p&gt;
+
+&lt;h3 id=&quot;the-payoff&quot;&gt;The Payoff&lt;/h3&gt;
+&lt;p&gt;There is nothing quite like walking into a brick and mortar store and seeing your own app sitting there on an iPhone. It really is one of those career moments that I’ll never forget. As someone who tends to be extremely critical of their work and a slight perfectionist, I find that being “proud” or feeling “finished” is always &lt;em&gt;just&lt;/em&gt; another milestone away.&lt;/p&gt;
+
+&lt;p&gt;But as my wife noted, when I walked in there and saw it - I was unmistakably proud and fulfilled. She said my face lit up, and she caught some convert, candid pics to prove it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/proud.jpg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/proud.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It was a lot of fun chatting it up with the Best Buy employees too:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Best Buy Person: Hey! Any questions about that iPhone?&lt;br /&gt;
+ Me: No, but dude - my app is on here!&lt;br /&gt;
+ Best Buy Person: Wait, what? Which one?&lt;br /&gt;
+ Me: This one!&lt;br /&gt;
+ Best Buy Person: No way! How? When? So many questions!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;They all were genuinely interested, and who knows - maybe I inadvertently created the first Spend Stack sales team 😎. On our way out, my wife and I decided to take a picture to commerate the occasion. A kind gentleman walking by offered to take it for us:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/wifeyCakes.jpg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/wifeyCakes.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Why is that funny? Well, we’re obviously very happy in that picture. So another couple walking by asked, with a beaming expression:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Them: Oh my goodness, did you all just get engaged!?&lt;br /&gt;
+Me: No, but Spend Stack got selected as a retail demo on the iPhones…&lt;br /&gt;
+Them: &amp;lt; They cut me off, looked at me weird and walked away confused before I could finish &amp;gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We still laugh about that 😜.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-random-insights&quot;&gt;Other Random Insights&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;I’ve noticed that there are about 3-4 different retail demo “line ups”.&lt;/li&gt;
+  &lt;li&gt;…though some are very similar. For example, Spend Stack and Lifesum are mutually exclusive. They show up in the same spot (3rd page, 3rd row, 1st item I think) and if one is there, the other won’t be.&lt;/li&gt;
+  &lt;li&gt;Most employees didn’t recall when their retail demo line up refreshed. It appears to be an over the air thing, which makes sense.&lt;/li&gt;
+  &lt;li&gt;The timeline from start to finish was about two and a half months.&lt;/li&gt;
+  &lt;li&gt;If it’s not already obvious from the article, you don’t apply for the retail demo - Apple proactively reaches out to you.&lt;/li&gt;
+  &lt;li&gt;Sales wise it’s been a huge help, as Spend Stack tends to consistently chart since it’s retail demo release. Before, it tends to dip in and out throughout the month.&lt;/li&gt;
+  &lt;li&gt;I go fairly in-depth on all of this, and talk about how my &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot;&gt;Best in Class&lt;/a&gt; ideals may have helped Spend Stack get selected on an episode of &lt;a href=&quot;https://podcasts.apple.com/us/podcast/launched/id1491582246#episodeGuid=47cc2b57-c99a-4ced-8609-74270d651bb9&quot;&gt;Launched.fm&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Lastly, here’s a &lt;a href=&quot;https://www.reddit.com/r/apple/comments/f7ugww/apple_selected_my_app_spend_stack_to_be_in_its/?utm_source=share&amp;amp;utm_medium=i&quot;&gt;Reddit&lt;/a&gt; post on &lt;code class=&quot;highlighter-rouge&quot;&gt;r/Apple&lt;/code&gt; where I chat about it some more while answering some questions others had.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;You never know where our little creations will end up. While you toil away night after late night, it’s too easy to end up in that phase of doubt:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Will this even matter at all?”&lt;/li&gt;
+  &lt;li&gt;“Will it get a few downloads on launch and meekly wither away?”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I’m telling you, I’ve been there. And I have a season pass too, apparently. I revisit that space probably a little too often. You start to look at other apps and their success thinking that your own are always just a day late and a dollar short.&lt;/p&gt;
+
+&lt;p&gt;But hey! &lt;strong&gt;Sometimes you get the win!&lt;/strong&gt; And when you do, be sure to stop to enjoy it. You never what’s around the corner, who’s paying attention to your app or when you’ll get a random email in December asking you to put your app on thousands of iPhones with other carefully curated apps hand selected by them.&lt;/p&gt;
+
+&lt;p&gt;So keep on truckin’ on that next great app 💪!&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Tech Notes" /><summary type="html">Through luck, determination and whatever other stereotypical noble quality you can conjure up, Apple selected Spend Stack to take part in their retail demo program.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dynamic Master Detail View Background Colors</title><link href="http://localhost:4000/Master-Detail-Styling/" rel="alternate" type="text/html" title="Dynamic Master Detail View Background Colors" /><published>2020-02-05T00:00:00-06:00</published><updated>2020-02-05T00:00:00-06:00</updated><id>http://localhost:4000/Master-Detail-Styling</id><content type="html" xml:base="http://localhost:4000/Master-Detail-Styling/">&lt;p&gt;One of my goals for the next update for Spend Stack was to tighten up the design of master detail scenarios, which are prevalent on macOS and iPadOS:&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_things.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_things.png&quot; /&gt;&lt;/p&gt;
 
@@ -33,7 +181,7 @@
 
 &lt;p&gt;But as someone who took five years to release an app, I figured another shot of feature creep wouldn’t hurt 🤠.&lt;/p&gt;
 
-&lt;p&gt;I quickly tested out using &lt;code class=&quot;highlighter-rouge&quot;&gt;.secondaryBackground&lt;/code&gt; for the master view - while keeping the detail view with &lt;code class=&quot;highlighter-rouge&quot;&gt;.primaryBackground&lt;/code&gt;. This is similar to what Mail and Reminders do.&lt;/p&gt;
+&lt;p&gt;After looking at Xcode’s default master-detail view template (which has no accordances for this kind of thing), I quickly tested things out using &lt;code class=&quot;highlighter-rouge&quot;&gt;.secondaryBackground&lt;/code&gt; for the master view - while keeping the detail view with &lt;code class=&quot;highlighter-rouge&quot;&gt;.primaryBackground&lt;/code&gt;. This is similar to what Mail and Reminders do.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;If you aren’t using SwiftUI and want this process to be forty times less painless - trying using the helpful utility app &lt;a href=&quot;https://apps.apple.com/us/app/adaptivity-a/id1054670022&quot;&gt;Adaptivity&lt;/a&gt; to quickly reference colors.&lt;/p&gt;
@@ -77,7 +225,7 @@
 
 &lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/mdv_switch.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/mdv_switch.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This means my navigation, tool bars and master view all need to a get little bit smarter, more configurable or use any other of the other platter of patterns available (delegates, dependency injections, blocks or what have you). These controllers are, as you may have surmised, still written in Objective-C, so my new favorite toy, Combine, is out.&lt;/p&gt;
+&lt;p&gt;This means my navigation, tool bars and master view all need to a get little bit smarter, more configurable or use any other of the other platter of patterns available (delegates, dependency injections, blocks or what have you). These controllers are, as you may have surmised, still written in Objective-C. Regrettably, my new favorite toy, Combine is out of the question.&lt;/p&gt;
 
 &lt;p&gt;Alas, as with most of these kinds of tasks within &lt;code class=&quot;highlighter-rouge&quot;&gt;UIKit&lt;/code&gt;, it’s always a hop, skip and a step away from being as simple as checking the device idiom:&lt;/p&gt;
 
@@ -229,7 +377,7 @@ Inserted A at idx 1 from nil
 &lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inferringMoves&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/* code */&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;cm&quot;&gt;/* Now prints
-Moved A at idx 0 and moved to 1
+Removed A at idx 0 and moved to 1
 Inserted A at idx 1 from 0
 */&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1658,182 +1806,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;On the surface, it’s easy to say that &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImageView&lt;/code&gt; may be built for something like this. But, Image IO is &lt;em&gt;really&lt;/em&gt; built for something like this, you know? Its tooling is expressly written to efficiently operate on images, so it feels like the right tool. And in 2019, even though it takes some dancing around to expose in Swift, we can check off playing .gifs or APNG files as another problem solved by Cupertino and Friends©.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Image IO" /><summary type="html">When I was a little boy, I remember that my father could often be found somewhere around the house fixing something up. Never the adroit handymen, but far from incompetent, I would happily would tag along and watch as he would patch up a leaky faucet, swap out an old flickering light bulb or tighten up a loose screw on an old towel rack.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">On Launching Your Indie App</title><link href="http://localhost:4000/On-Launching-Your-Indie-App/" rel="alternate" type="text/html" title="On Launching Your Indie App" /><published>2019-07-27T00:00:00-05:00</published><updated>2019-07-27T00:00:00-05:00</updated><id>http://localhost:4000/On-Launching-Your-Indie-App</id><content type="html" xml:base="http://localhost:4000/On-Launching-Your-Indie-App/">&lt;p&gt;Y.O.L.O.&lt;/p&gt;
-
-&lt;p&gt;No, not the chant of today’s youth, declaring our ephemeral state of life wherein we should explore any dangerous activity our heart leads us towards. What I’m referring to is something much more sacred:&lt;/p&gt;
-
-&lt;p&gt;You only launch once.&lt;/p&gt;
-
-&lt;p&gt;And launch &lt;a href=&quot;https://www.spendstack.com&quot; target=&quot;_blank&quot;&gt;Spend Stack&lt;/a&gt; I did, last Thursday in fact. Therapy for me as much as it might be helpful for you - I’d love to leave a brain dump of how I went about things, in no particular order and commingled together.&lt;/p&gt;
-
-&lt;h3 id=&quot;north-star-apps&quot;&gt;North Star Apps&lt;/h3&gt;
-&lt;p&gt;I’ve always found the concept of a North Star incredibly helpful. You have a goal, you’ve got others to look towards who’ve achieved that goal - and all of that gives you clarity on future decisions.&lt;/p&gt;
-
-&lt;p&gt;So, what were my North Star apps? After deciding early on I’d love to do a paid up front model, I looked at the developers who do that best:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.darksky.net/app&quot;&gt;Dark Sky&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.culturedcode.com&quot;&gt;Things 3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.gingerlabs.com&quot;&gt;Notability&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.ia.net/writer&quot;&gt;iA Writer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These apps are highly respected, are always charting and offer a premium experience with an up front buy in. These are the apps I want to be alongside of, and while it’ll take a lot of work to get there, it’s served me well to study others who’ve been doing the App Store dance extremely well.&lt;/p&gt;
-
-&lt;p&gt;These all leverage best in class features of their respective platforms, lean into premium experiences while being cogent about it and they do a fantastic job of instilling user confidence. All of those things speak to me, and it’s a direction I’m passionate in taking Spend Stack.&lt;/p&gt;
-
-&lt;p&gt;They are also all paid up front apps, the model I chose. Speaking of…&lt;/p&gt;
-
-&lt;h3 id=&quot;paid-up-front&quot;&gt;Paid Up Front&lt;/h3&gt;
-&lt;p&gt;Your pricing models dictates a lot of other choices you’ll make, so this was a decision I made very early on.&lt;/p&gt;
-
-&lt;p&gt;As a one man show, I’m good with far less users who are happy with the app than several orders of magnitude more who I’ve got to convert either via I.A.P.’s or a subscription. I prefer to offer you up the whole deal, no gated content or up selling required.&lt;/p&gt;
-
-&lt;p&gt;A lot of people said this was a huge mistake business wise, and I can certainly see why they did. Paid up front apps are becoming a thing of the past, it has the most friction for acquisition and a lot of people simply aren’t willing to pay for apps. But, it’s still my favorite way to do business in the App Store.&lt;/p&gt;
-
-&lt;p&gt;It does mean you have a tremendous responsibility though. If someone pays for your app, you absolutely have to deliver. That’s why I talk about the notion of being a best in class app so much, because if you are paid up front - you have to be one &lt;em&gt;and&lt;/em&gt; you are expected to be one. For me, that’s motivating.&lt;/p&gt;
-
-&lt;p&gt;Your user base is typically more involved too. People who pay money for an app are invested in them, and I don’t see this point brought up nearly enough as a major positive for paid up front business models. I’ve had several great conversations with a lot of them already, and we’ve even got a Reddit community going now to discuss the future of the app.&lt;/p&gt;
-
-&lt;p&gt;From a support standpoint, being paid up front was critical to my initial launch success too. I replied back to each email timely, and that was a great experience all the way around. But, I was getting around 10-15 a day at about 500 downloads. Let’s say free apps yield about 10x more downloads, putting us hypothetically at 5,000 downloads if I had gone that route. I simply would’ve been drowning in email, and only a fraction of those users might be paying ones.&lt;/p&gt;
-
-&lt;h3 id=&quot;launch-checklist&quot;&gt;Launch Checklist&lt;/h3&gt;
-&lt;p&gt;Once I had a business model and an app mostly built, I started in on what a launch might look like.&lt;/p&gt;
-
-&lt;p&gt;I’m a Type A personality if there ever was one. I got lists on lists. And those lists are categorized by date and color coded. As such, my launch strategy was rigid and calculated. Anytime I had a thought about launching, it went through this flow:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Get it into Reminders straight away&lt;/li&gt;
-  &lt;li&gt;Add any relevant notes to it, such as links.&lt;/li&gt;
-  &lt;li&gt;Later that night, vet all of these thoughts. If they were something I wanted to actually explore, I’d pop them into a Notion doc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The aforementioned Notion doc was divided into three columns: Pre launch, launch day and post launch.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/launchList.jpeg&quot; alt=&quot;Launch List&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The things I had noted in the Launch and Post Launch sections are nothing unheard of - experiment and try new things, give search ads a spin, etc. It had notes on how to take time to craft some quality posts on the places you know of already; Product Hunt, some subreddits and similar places.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/launchDay.jpeg&quot; alt=&quot;Launch Day&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The key to each of these places is to ensure you follow the rules to the letter, plus - you know spam when you see it. Nobody wants to read it. Even if it’s a highly trafficked spot on the web, if Spend Stack didn’t seem like the right subject matter for it, I skipped it. You want things to go great at launch - but how you do it also matters in my opinion.&lt;/p&gt;
-
-&lt;h3 id=&quot;your-apps-story&quot;&gt;Your App’s Story&lt;/h3&gt;
-&lt;p&gt;One of the most useful forms of spreading the word about Spend Stack was the one that was the most genuine, less market-y thing I did. Just simply telling the &lt;a href=&quot;http://localhost:4000/introducing-spend-stack&quot;&gt;app’s story&lt;/a&gt;. I wrote about the what and why of Spend Stack, and several people outside of our normal Twitter tech circle picked it up and resonated with it.&lt;/p&gt;
-
-&lt;p&gt;I said it before and I’ll say it again - tell your app’s story! It’s a great thing to do, and everybody wins: They get to know you, form a connection behind why it exists and then they also can see the app’s value proposition first hand.&lt;/p&gt;
-
-&lt;p&gt;If you go back and skim my post over Spend Stack’s story you’ll see it follows this exact format:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Here’s a problem I wanted to solve&lt;/li&gt;
-  &lt;li&gt;Here’s the app I made that solves it&lt;/li&gt;
-  &lt;li&gt;Here’s the story about how I got the idea and how it came together&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Simply put, as an indie you’re missing out if you’re not doing this. I really believe that.&lt;/p&gt;
-
-&lt;p&gt;Think about each W.W.D.C. from the past few years, what does the keynote end with? It ends with a touching video showcasing the story behind their products, often showing developers talking about their struggles, triumphs and their family talking about the same thing. They do it because it resonates with us - it’s like looking in the mirror.&lt;/p&gt;
-
-&lt;p&gt;You never know who’s going to really take to your story and identify with it. Those are great customers you’ll be able to make really happy.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-preorder-thing&quot;&gt;The Preorder Thing&lt;/h3&gt;
-&lt;p&gt;After announcing it, preordering just kind of happened. My timeline was setup to where if app review went fine (and it did, it was approved on the first go around) I would have two weeks until launch.&lt;/p&gt;
-
-&lt;p&gt;I told press about it on a Monday, and then one week later I publicly announced it on Twitter. Since I was already approved, I just put it up for preorder and didn’t really think much of it.&lt;/p&gt;
-
-&lt;p&gt;In hindsight - maybe that was super helpful for charting? I had about 80ish preorders, and while I’m not 100% this is way it works - I assume I started my launch day with those sales right off the bat. If so, that would’ve put me in a great place to start charting immediately.&lt;/p&gt;
-
-&lt;p&gt;From there, the rest of the ~130 sales from launch day came and I guess that’s what gave me the push to end up at #14 under Productivity within the United States:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/charting.JPG&quot; alt=&quot;Charting&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-press&quot;&gt;The Press&lt;/h3&gt;
-&lt;p&gt;A launch can live and die by the press. Yet, I was thankful to chart in the top 15 for Productivity for three days without hardly any of it. And, that’s not bragging - that’s regret coming through.&lt;/p&gt;
-
-&lt;p&gt;Because if I &lt;em&gt;had&lt;/em&gt; gotten press, surely I could’ve pumped that number up much higher. I’ve got some early data to back this up, too. On recent talks with users, I simply asked “How did you hear about Spend Stack?” And every single one, &lt;em&gt;every single one&lt;/em&gt;, has said it was from a blog or website.&lt;/p&gt;
-
-&lt;p&gt;The press can lift you up, plain and simple. Getting it, though - is hard. That’s another post in of itself, but the biggest mistake I made was reaching out far too late. I’ll touch on that more down below.&lt;/p&gt;
-
-&lt;p&gt;In any event, the press I did get was super helpful. &lt;a href=&quot;https://9to5mac.com/2019/07/18/spend-stack-list-app-budgeting-ios/&quot;&gt;9 to 5 Mac&lt;/a&gt; picked it up, so did &lt;a href=&quot;https://appadvice.com/post/spend-stack-helps-you-keep-an-accurate-running-total-with-smart-lists/1329068268/1114042886&quot;&gt;AppAdvice&lt;/a&gt; and &lt;a href=&quot;https://club.macstories.net&quot;&gt;Club MacStories&lt;/a&gt; included it in their newsletter and some other publications whose primary audience is outside of the U.S. did too.&lt;/p&gt;
-
-&lt;p&gt;I’ll always wonder if the press release I put out was part of that, but that’s kind of an opaque thing and hard to gauge. After all, you can’t manage what you can’t measure.&lt;/p&gt;
-
-&lt;p&gt;Going forward, I’m taking the time to form friendships with the press so I can provide stories and news to them that provide value to their blogs/sites/etc. That’s the best outcome for each party involved.&lt;/p&gt;
-
-&lt;h3 id=&quot;ask-the-experts&quot;&gt;Ask the Experts&lt;/h3&gt;
-&lt;p&gt;I’m a huge believer in asking for advice from people who are a lot smarter than you. Going by that metric for me, that’s a ton of people.&lt;/p&gt;
-
-&lt;p&gt;Cold emails are hard to pull off, but they can work. But you have to know &lt;em&gt;why&lt;/em&gt; they work. They work because you are genuinely reaching out to someone because you respect their domain knowledge, and you want to learn from them. They work because you are asking a pointed, specific question.&lt;/p&gt;
-
-&lt;p&gt;I don’t want to toss out specific names since I didn’t ask if it was fine to include them in this post, but there were some people I really respect with a lot of influence who took the time to answer questions I had. It made a huge difference in terms of just straight up encouragement (app looks great!), to lessons learned (I wouldn’t do X or Y) to general advice (I had no luck with marketing this way, but did that way).&lt;/p&gt;
-
-&lt;h3 id=&quot;diy&quot;&gt;D.I.Y.&lt;/h3&gt;
-&lt;p&gt;My launch was the antithesis of the lean startup methods. While there can be enourmous value in that approach, I think it’s fine as indies to go entirely the other direction. That is, if you want something done right(ish), do it yourself.&lt;/p&gt;
-
-&lt;p&gt;And, I did a lot of things myself 😅:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The splash page&lt;/li&gt;
-  &lt;li&gt;The promo video&lt;/li&gt;
-  &lt;li&gt;The music for the promo video (I made it in GarageBand)&lt;/li&gt;
-  &lt;li&gt;Design, UI/UX&lt;/li&gt;
-  &lt;li&gt;Writing the press release&lt;/li&gt;
-  &lt;li&gt;…basically all of it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There are some services I checked into that package these things up, but each one had a trade off or got me 75% of the way there. Rolling up my sleeves and doing it on my own dime took longer, but it also saved me money and ensured I came away with something I was proud of.&lt;/p&gt;
-
-&lt;p&gt;To make this shorter, the only thing I did &lt;em&gt;not&lt;/em&gt; do myself was the app’s icon. It’s a know your strengths thing, and everything I was doing just wasn’t working. The icon is your poster child for an app, I really believe it’s money well spent to invest in it to make sure it’s done right.&lt;/p&gt;
-
-&lt;p&gt;If I did it again, there is one other area I would outsource to someone I trust - my App Store screenshots. Right now, holistically speaking of Spend Stack, I’d wager that’s the weakest part of the package. It’s something I’m going to start improving right away.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For example, Spend Stack is internationalized to work with all currencies. But, you wouldn’t know it from my screenshots. Plus, there’s too much text.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;the-mistakes&quot;&gt;The Mistakes&lt;/h3&gt;
-&lt;p&gt;Let’s chat about where I left something on the table, so to speak. The biggest mistake? Without a doubt, it was my handling of the press.&lt;/p&gt;
-
-&lt;p&gt;I reached out to them &lt;em&gt;entirely&lt;/em&gt; too late in the process (about 8 days before launch). While some did pick it up (mentioned above), overall I didn’t give them enough time to dive into the app and form an opinion of it. If you’ve got a beta, let them know today.&lt;/p&gt;
-
-&lt;p&gt;Take &lt;a href=&quot;https://www.flightyapp.com&quot;&gt;Flighty&lt;/a&gt;, which launched a day or two after I did. Some of the press that covered it mentioned that they had been using it for months. And, that’s what it takes to truly know an app.&lt;/p&gt;
-
-&lt;p&gt;These writers are smart people. They need to get their hands dirty on an app to really know how they feel about it, let alone write a review of it. They are insanely busy too, with people like us all vying for their attention. It was simply  unrealistic to think anyone could’ve gone deep into Spend Stack in the timeline I provided.&lt;/p&gt;
-
-&lt;p&gt;Next up, I launched too cheap. If anything - I would’ve launched at a higher price point. You get an iPad and iPhone app for $5, and as developers we all know it’s worth more than that. We’ve got to remember, though, it’s not us we have to convince and convey value to, it’s the consumer.&lt;/p&gt;
-
-&lt;p&gt;The perception is already there that this should be a premium app if I’m asking you to pay me for it up front, and I don’t think developers should be afraid at all to lean into that. Especially indies. When I hit macOS, I don’t see any scenario where I would ship for less than $20.&lt;/p&gt;
-
-&lt;p&gt;You see Things 3 doing this to perfection. As of today, their iPhone app sits at $10 and their iPad app is $20. They can do that because they’ve built up relationships and goodwill with their users. I can’t ship like that, this is just the beginning for Spend Stack, but again - that’s my North Star.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-night-before-launch&quot;&gt;The Night Before Launch&lt;/h3&gt;
-&lt;p&gt;One thing that was a huge mental load off, and time saver, was to get everything for launch day all prepped the day before.&lt;/p&gt;
-
-&lt;p&gt;So, on Wednesday night I had my launch tweet ready, my Product Hunt post was all created, every asset was ready to share and anything else I had to tend to was good to go. I just had to wake up and hit tweet, post or whatever else the verb was.&lt;/p&gt;
-
-&lt;p&gt;It made for a relatively calm morning, where I could just sit back and take it all in. My wife made a lovely card waiting for me when I woke up, and instead of running around trying to get everything out the door - I could sit back, drink my morning quad shot (YAY BUDDY! COFFFFAY 🤘) and just read it.&lt;/p&gt;
-
-&lt;h3 id=&quot;lastly-random-thoughts&quot;&gt;Lastly, Random Thoughts&lt;/h3&gt;
-&lt;p&gt;Here are some things that were on my mind, but I didn’t know where to put them. So, herein I write a random list:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Be genuine.&lt;/em&gt; Not only because it’s a better way to sell an app, but because it’s the right thing to do. Spend Stack won’t be right for everyone and I shouldn’t try to pretend that it is. If I post about Spend Stack on an online community, I don’t make it an advert for Spend Stack. I want to talk about it, and then see how I can relate my experiences to other people there to try and help them with the challenges they are facing.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Think about them.&lt;/em&gt; If someone takes the time to type out a detailed bug report and it’s already on your radar, don’t just send back “Thanks, I know!” - take the time to let them know how much you appreciate it. And when it comes to the press, consider why they would even cover your app - what’s in it for them? Same for product choices, and really - anything else.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Make friends, not fans.&lt;/em&gt; If you’re reading this, you’re likely an indie developer or are at least interested in iOS. I don’t ever want you to be my fan, I would much rather you be my friend. If someone bought your app and tweeted about it solely because they wanted to be nice and help, be sure to let them know you’ll do the same, and mean it. There can be a lot of ego in today’s social media driven society, but I truly believe that if you are just a nice person, people will naturally gravitate towards you, what you do and will listen to what you’re saying.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For more on that last point, I highly recommend reading the classic tome on the matter, &lt;a href=&quot;https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034&quot;&gt;How to Win Friends and Influence People&lt;/a&gt; by Dale Carnegie.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To close things out, if I had to write a one sentence thesis on launching specifically for indies, it would go something like this:&lt;/p&gt;
-
-&lt;p&gt;Make a fantastic, best in class app and tell its story.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;Launching an app is a crazy, unnerving experience. You just really don’t know what’s going to happen. Especially if you are a solo indie, your time, resources and mental capacity are stretched thin. You’ve got to be persistent, insistent and consistent about your app’s success.&lt;/p&gt;
-
-&lt;p&gt;Though there’s certainly an art to launching, I’ve yet to crack its code. Glean what you can from what worked for me, but more importantly - take note of what &lt;em&gt;didn’t&lt;/em&gt; work. Avoid those. Most importantly, if you’re launching soon, best of luck!&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Y.O.L.O.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Image IO" /><summary type="html">When I was a little boy, I remember that my father could often be found somewhere around the house fixing something up. Never the adroit handymen, but far from incompetent, I would happily would tag along and watch as he would patch up a leaky faucet, swap out an old flickering light bulb or tighten up a loose screw on an old towel rack.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

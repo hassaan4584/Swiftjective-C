@@ -21,11 +21,15 @@ books:
   - title: The Open Organization Workbook
     link: https://opensource.com/open-organization/resources/workbook
 honors:
+  - title: Spend Stack - Multiple App Store features, and was selected for the Apple retail demo program.
+    link: 
   - title: Webby Awards - Mobile Apps Best Practices
     link: https://www.webbyawards.com/winners/2018/mobile-sites-apps/features/best-practices/buffer/
   - title: Engineer of the Year
     link: https://www.biz417.com/awards/excellence-in-technology/2019-winners/developer-of-the-year-jordan-morgan-springfield-mo/
 talks:
+  - title: 🎙 Launched.FM Podcast Appearance
+    link: https://podcasts.apple.com/us/podcast/launched/id1491582246#episodeGuid=47cc2b57-c99a-4ced-8609-74270d651bb9
   - title: 🎙 The Buffer Overflow Podcast
     link: https://anchor.fm/s/e0146dc/podcast/rss
   - title: 🎥 try Swift! NYC - The Life of an Image on iOS

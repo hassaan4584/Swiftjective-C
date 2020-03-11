@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: ["Tech Notes"]
+tags: ["The Indie Dev Diaries"]
 title: "Creating a Retail Demo for Apple"
 writtenBy: Jordan Morgan
 writtenByTwitter: "https://www.twitter.com/jordanmorgan10"
@@ -75,7 +75,7 @@ The other hiccup has to do with multiple spaces on iPadOS. When you ship these r
 }
 ```
 
-The only fun thing is that when you open a new window, iOS also gives you that same notification while the window is being setup. You can see this quite easily, and it makes sense I guess - iOS puts up that blurry view while another window slides in. So, I've got some jank there that I won't share publicly to help avoid any deleterious state bugs 😅 (spoiler, it's _totally_ not a simple GCD delay, no way).
+The only fun thing is that when you open a new window, iOS also calls the same delegate method while the window is being setup. You can see this quite easily, and it makes sense I guess - iOS puts up that blurry view while another window slides in. So, I've got some jank there that I won't share publicly to help avoid any deleterious state bugs 😅 (spoiler, it's _totally_ not a simple GCD delay, no way).
 
 Aside from that - uploading it App Store Connect gave me some fits. Try to hide your surprise 😜. It's a bit of a different flow, but again - the .pdf guide they give you really helped out here.
 
@@ -134,7 +134,7 @@ We still laugh about that 😜.
 * Most employees didn't recall when their retail demo line up refreshed. It appears to be an over the air thing, which makes sense.
 * The timeline from start to finish was about two and a half months.
 * If it's not already obvious from the article, you don't apply for the retail demo - Apple proactively reaches out to you.
-* Sales wise it's been a huge help, as Spend Stack tends to consistently chart since it's retail demo release. Before, it tends to dip in and out throughout the month.
+* Sales wise it's been a huge help, as Spend Stack tends to consistently chart since its retail demo release. Before, it tends to dip in and out throughout the month.
 * I go fairly in-depth on all of this, and talk about how my [Best in Class][4] ideals may have helped Spend Stack get selected on an episode of [Launched.fm][5].
 * Lastly, here's a [Reddit][6] post on `r/Apple` where I chat about it some more while answering some questions others had.
 

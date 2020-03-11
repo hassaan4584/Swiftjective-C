@@ -16,7 +16,7 @@ Yay! Right!? Just look at it!
 
 Well, yes. Of course yes! 
 
-But, if you hit the Googles for past experiences with this, you'll find quite a lot of tumbleweeds. This makes sense, as if you happen to scan the apps that are on retail iPhones and iPads at your local Best Buy, Apple Store, etc. - they tend to be apps that hail from Big Corp©. And rightfully so, they all are quality, well made apps with the team and budget to match.
+But, if you hit the Googles for past experiences with this, you'll find quite a lot of tumbleweeds. This makes sense, because if you happen to scan the apps that are on retail iPhones and iPads at your local Best Buy, Apple Store, etc. - they tend to be apps that hail from Big Corp©. And rightfully so, they all are quality, well made apps with the team and budget to match.
 
 Though, the everyman doesn't often appear there. And if they do, it typically tends to be in the form of a game. So today, I figured I'd spend this indie dev diary chronicling my experience with getting Spend Stack on iPhones and iPads across America 🇺🇸. Think of it as Spend Stack's official road tour 🚌.
 

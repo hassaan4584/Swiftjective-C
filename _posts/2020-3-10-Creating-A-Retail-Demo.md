@@ -115,7 +115,7 @@ It was a lot of fun chatting it up with the Best Buy employees too:
  Me: This one!<br />
  Best Buy Person: No way! How? When? So many questions!
 
-They all were genuinely interested, and who knows - maybe I inadvertently created the first Spend Stack sales team 😎. On our way out, my wife and I decided to take a picture to commerate the occasion. A kind gentleman walking by offered to take it for us:
+They all were genuinely interested, and who knows - maybe I inadvertently created the first Spend Stack sales team 😎. On our way out, my wife and I decided to take a picture to commemorate the occasion. A kind gentleman walking by offered to take it for us:
 
 {% include lazyLoadImage.html image="../assets/images/wifeyCakes.jpg" %}
 
@@ -147,7 +147,7 @@ You never know where our little creations will end up. While you toil away night
 
 I'm telling you, I've been there. And I have a season pass too, apparently. I revisit that space probably a little too often. You start to look at other apps and their success thinking that your own are always just a day late and a dollar short.
 
-But hey! **Sometimes you get the win!** And when you do, be sure to stop to enjoy it. You never what's around the corner, who's paying attention to your app or when you'll get a random email in December asking you to put your app on thousands of iPhones with other carefully curated apps hand selected by them.
+But hey! **Sometimes you get the win!** And when you do, be sure to stop and enjoy it. You never what's around the corner, who's paying attention to your app or when you'll get a random email in December from Apple asking you to put your creation on thousands of iPhones with other carefully curated apps hand picked by them.
 
 So keep on truckin' on that next great app 💪!
 

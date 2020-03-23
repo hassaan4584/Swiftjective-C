@@ -32,7 +32,7 @@
   grid-template-areas: "header header header header" "middle middle middle middle" "footer footer footer footer";
   margin-left: auto;
   margin-right: auto;
-  max-width: 840px;
+  max-width: 940px;
   margin: 0 auto; }
 
 /* Grid Specific

@@ -117,10 +117,9 @@ class KeyboardHandler {
         
         if #available(iOS 13.0, *) {
             let nc = NotificationCenter.default
-            kbSub = nc.publisher(for: keyboardNotifications[0])
-            .merge(with: nc.publisher(for: keyboardNotifications[1]))
-            .merge(with: nc.publisher(for: keyboardNotifications[2]))
-            .merge(with: nc.publisher(for: keyboardNotifications[3]))
+            kbSub = Publishers.MergeMany(
+                keyboardNotifications.map { nc.publisher(for: $0) }
+            )
             .sink(receiveValue: { (note) in
                 self.currentState = KeyboardState(with: note)
                 self.onChange(KeyboardState(with: note))
@@ -153,6 +152,8 @@ class KeyboardHandler {
 }
 ```
 There's likely a prettier path to merging all of the notifications, but I accepted my Combine naïveté and moved on. Further, one might not need all of em' either. 
+
+> Update: Thanks to [Jasdev Singh](https://www.twitter.com/jasdev) for suggesting `mergeMany`.
 
 ### In Practice
 So what's that leave us with? Well, a tidy little object that'll hide the messiness of keyboard handling away in a simple package:

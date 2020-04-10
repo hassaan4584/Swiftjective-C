@@ -1,5 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-30T10:09:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">Keyboard and Combine</title><link href="http://localhost:4000/Keyboard-and-Combine/" rel="alternate" type="text/html" title="Keyboard and Combine" /><published>2020-03-22T00:00:00-05:00</published><updated>2020-03-22T00:00:00-05:00</updated><id>http://localhost:4000/Keyboard-and-Combine</id><content type="html" xml:base="http://localhost:4000/Keyboard-and-Combine/">&lt;p&gt;While toiling about with some keyboard handling code in Spend Stack, I started to remember one import choice I made several months ago:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-10T10:57:16-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">It’s Okay to Do Nothing</title><link href="http://localhost:4000/Its-Okay-To-Do-Nothing/" rel="alternate" type="text/html" title="It's Okay to Do Nothing" /><published>2020-04-10T00:00:00-05:00</published><updated>2020-04-10T00:00:00-05:00</updated><id>http://localhost:4000/Its-Okay-To-Do-Nothing</id><content type="html" xml:base="http://localhost:4000/Its-Okay-To-Do-Nothing/">&lt;p&gt;If there is one thing I don’t like doing - it’s nothing.&lt;/p&gt;
+
+&lt;p&gt;I’ve never been good at it. While I’m miles away from the “hustle porn” ways that are unfortunately pervasive within the tech industry, I’ve always had a natural work ethic and a desire to do more. My near-anathema towards inaction, no goals being set forth or something to solve has served me well in my career.&lt;/p&gt;
+
+&lt;p&gt;But right now, I just can’t. And if you can’t either, you should know that you don’t have to.&lt;/p&gt;
+
+&lt;p&gt;It’s something I’ve been having to remind myself. Not even a few hours ago, I retreated to my bathroom, closed the door and buried my head in my hands. I felt defeated - it was 9:00 a.m. and &lt;em&gt;just couldn’t get anything started&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Typically, my work day would’ve started hours ago. But between (literally) spilled milk, a diaper change, breaking up a fight over a kickball, making another bowl of cereal because a sibling got jealous his brother had one and he didn’t while also getting myself dressed and somewhat fed - I found no ounce of down time.&lt;/p&gt;
+
+&lt;h3 id=&quot;detour&quot;&gt;Detour&lt;/h3&gt;
+
+&lt;p&gt;When I look at my goals for the year, they stick out like a sore thumb and, now, produce a stark juxtaposition of priorities and unrealistic expectations when faced with the current world wide pandemic. I’m dutifully staying home, as I’m sure most of you are, and within these walls are my entire life:&lt;/p&gt;
+
+&lt;p&gt;My wife, Bennett (age 6), Remy (age 3) and Baylor (1 year old).&lt;/p&gt;
+
+&lt;p&gt;Our days are spent almost entirely spent in our 1100 square foot home with three bedrooms. In many ways, I feel thankful and lucky to have this extra time with the people I care most about it.&lt;/p&gt;
+
+&lt;p&gt;But when it comes to work, and getting things done - I nearly can’t. And it bothers me, but I’ve come to accept that this is simply where things are at. Even more so, it’s the definition of “out of my control”. Either Remy is banging on my bedroom door screaming because he doesn’t understand why I can’t come out to play, or Bennett wants help with school work or Baylor wants me to hold her - I’ve come to realize that parenthood doesn’t give you a pass just because the world is on fire.&lt;/p&gt;
+
+&lt;p&gt;So, I’m doing the best that I can. And some days, it’s nearly nothing. On those days, I continually count my blessings to offset my mood. I work for an amazing company and team who truly are sympathetic to not only my situation, but everyone across the team. They’ve got my back, and I’m truly grateful for it. My wife, who does this every day (pandemic or not) keeps us all together and chugging along.&lt;/p&gt;
+
+&lt;p&gt;And, in between these moments, I find time to write code. And someday (who knows when) I’ll have time to write more of it.&lt;/p&gt;
+
+&lt;p&gt;But right now, Xcode is getting a breather more often than not. And while it does, I’m going to take my own deep breath, be a great Dad and husband - and give me company all I can, when I can. Some days that’s not a lot, some days it’s a little bit more than yesterday and very rarely it’s quite a bit.&lt;/p&gt;
+
+&lt;p&gt;So if your productivity is  taking a hit, and you’re a little stressed about it - please know that there are many of us feeling that burn along with you. Spend Stack can wait, blog posts can wait, learning new things can wait - it all can wait. Your employer will hopefully know that some work will have to wait, too. But taking care of myself, my kids and wife cannot.&lt;/p&gt;
+
+&lt;p&gt;This is nothing that Twitter hasn’t already said, but maybe you needed a reminder today. We will put COVID-19 in our rear view mirror someday. Humanity has defeated several forms of sickness before, and we will do it again. But this is not normal, and your throughput won’t be normal.&lt;/p&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;Just a take a breather, know that better days are on the way and please remember; it’s OK to do nothing. Right now, some days it’s all you can do.&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">If there is one thing I don’t like doing - it’s nothing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Keyboard and Combine</title><link href="http://localhost:4000/Keyboard-and-Combine/" rel="alternate" type="text/html" title="Keyboard and Combine" /><published>2020-03-22T00:00:00-05:00</published><updated>2020-03-22T00:00:00-05:00</updated><id>http://localhost:4000/Keyboard-and-Combine</id><content type="html" xml:base="http://localhost:4000/Keyboard-and-Combine/">&lt;p&gt;While toiling about with some keyboard handling code in Spend Stack, I started to remember one import choice I made several months ago:&lt;/p&gt;
 
 &lt;p&gt;Spend Stack’s minimum build target is iOS 13.&lt;/p&gt;
 
@@ -1504,240 +1537,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;The answer, is of course, yes.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Did you know that the version of Spend Stack I released a few short months ago is actually… not the first version?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SwiftUI: What Just Happened?</title><link href="http://localhost:4000/SwiftUI-What-Just-Happened/" rel="alternate" type="text/html" title="SwiftUI: What Just Happened?" /><published>2019-11-08T00:00:00-06:00</published><updated>2019-11-08T00:00:00-06:00</updated><id>http://localhost:4000/SwiftUI-What-Just-Happened</id><content type="html" xml:base="http://localhost:4000/SwiftUI-What-Just-Happened/">&lt;p&gt;When I created my first SwiftUI project, so much was foreign. I needed to understand how any of this was possible. There was so much that was new, so much that was different - I couldn’t stand spinning up a project without knowing how the beast came to be.&lt;/p&gt;
-
-&lt;p&gt;After all, there is just &lt;em&gt;so&lt;/em&gt; much to talk about it in this one, tiny picture. And none of it was doable before WWDC 2019:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/images/swiftui.png&quot; alt=&quot;Launch Day&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So today I briefly describe how, in the context of the template single view application Xcode provides for SwiftUI, any of this is possible.&lt;/p&gt;
-
-&lt;p&gt;Four distinct components stood out to me when surveying the default SwiftUI template from Xcode, feel free to skip to any relevant section:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#syntax&quot;&gt;The Syntax&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#protocol&quot;&gt;The Protocol&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#live&quot;&gt;The Live Previews&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#layout&quot;&gt;The Layout System&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;syntax&quot;&gt;The Syntax&lt;/h2&gt;
-&lt;p&gt;We’ve got to start at the top, and for me that’s the Swift code. It’s full of little SwiftUI nuggets.&lt;/p&gt;
-
-&lt;p&gt;This code snippet might be the poster child of why this is a Swift only framework. Take a close look, and you’ll see concepts that didn’t exist before Swift 5.1:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This was the first bit that peaked my curiosity. Syntactical sugar must’ve been at the forefront of Cupertino &amp;amp; Friends© collective hive mind, because it seems each new feature slotted into Swift supported one core idea - make it easy to write.&lt;/p&gt;
-
-&lt;p&gt;Because without the following tweaks, SwiftUI might look something like this:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AnyView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentBuilder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;contentBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AnyView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;returnwhat-exactly&quot;&gt;Return…what exactly?&lt;/h4&gt;
-&lt;p&gt;First off, there’s no return statement. True to declarative form, saying what you need and not much else is the route SwiftUI takes (as well it should). As Nate Chandler mentions in the proposal that landed this in Swift, short closures already had implicit returns - so why not extend this to shorthand functions?&lt;/p&gt;
-
-&lt;p&gt;And so it was, &lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0255-omit-return.md&quot; target=&quot;_blank&quot;&gt;SE-0255&lt;/a&gt; is the first new tool that helps make SwiftUI, SwiftUI.&lt;/p&gt;
-
-&lt;p&gt;Now, our would-be code sample changes for the better:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AnyView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentBuilder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;contentBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// No return statement&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;AnyView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;thats-some-view&quot;&gt;That’s Some View&lt;/h4&gt;
-&lt;p&gt;Next, &lt;a href=&quot;https://github.com/apple/swift-evolution/blob/master/proposals/0244-opaque-result-types.md&quot; target=&quot;_blank&quot;&gt;SE-0244&lt;/a&gt; turns up and makes returning our views much more pragmatic. Opaque result types free us from declaring specific returns types and instead opt to return values that simply implement a protocol contract. Here, the return type will be determined by the &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; implementation before returning back over to SwiftUI, fully abstracted. Before, we could only achieve the reverse of that scenario (i.e. generics where the caller decides what types are bound to generic arguments).&lt;/p&gt;
-
-&lt;p&gt;Lipso facto, all SwiftUI needs to know is that we’re returning some kind of view, who cares what though. Does it conform to the &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; protocol? Yeah? Awesome - we’ll take it from here.&lt;/p&gt;
-
-&lt;p&gt;Our pre-Swift 5.1 SwiftUI code sample changes yet again:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;contentBuilder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentBuilder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;contentBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// No return statement, no type erasure&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;contentBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;function-builders&quot;&gt;Function Builders&lt;/h4&gt;
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; closure has a &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; component just chilling in there. If you consider that we have implicit returns now, that might not mean much to you. But if you’ve waded through SwiftUI’s code, you know that’s rarely the case. SwiftUI is all about composability:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;VStack&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;There&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Dear Reader&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;A new proposal (which is already technically implemented, bringing about a small &lt;a href=&quot;https://forums.swift.org/t/important-evolution-discussion-of-the-new-dsl-feature-behind-swiftui/25168&quot; target=&quot;_blank&quot;&gt;point of contention&lt;/a&gt; within the community) makes this work. &lt;a href=&quot;https://github.com/apple/swift-evolution/blob/9992cf3c11c2d5e0ea20bee98657d93902d5b174/proposals/XXXX-function-builders.md&quot; target=&quot;_blank&quot;&gt;Function builders&lt;/a&gt; are insanely meta to think about, and their name perfectly describes everything they do.&lt;/p&gt;
-
-&lt;p&gt;The gist? A result of a function’s statements collate everything together using a builder type, and the result is one value created from the sequence.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;You can see this first hand by looking at the exotic return types one gets from their &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; property. Simply use &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; along with reflection to check out what types your views are composing to.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Now, our pre Swift 5.1 code sample looks like the real thing:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;property-wrappers&quot;&gt;Property Wrappers&lt;/h4&gt;
-&lt;p&gt;Bindings, data marshaling, omitting values to subscribers and more are common to the framework. For our case, they aren’t shown in a default template app - but it’s worth noting all of those are driven by property wrappers. If you want to really see their power, skip everything else and read Mattt’s excellent discourse over them &lt;a href=&quot;https://nshipster.com/propertywrapper/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;So, that’s the syntax demystified. But it gets even more interesting when you consider the design aspect - namely, the &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; protocol.&lt;/p&gt;
-
-&lt;h2 id=&quot;protocol&quot;&gt;The Protocol&lt;/h2&gt;
-&lt;p&gt;This is where things start to go off the rails.&lt;/p&gt;
-
-&lt;p&gt;For almost a decade, we’ve found new patterns, techniques and ways to achieve impressive user interfaces by utilizing M.V.C. and…..the heap. I mean, we’ve just &lt;em&gt;piled&lt;/em&gt; onto the heap.&lt;/p&gt;
-
-&lt;p&gt;And why wouldn’t we? These were the days before &lt;a href=&quot;https://developer.apple.com/videos/play/wwdc2015/408/&quot; target=&quot;_blank&quot;&gt;Krusty&lt;/a&gt; went on and on about protocol oriented programming. Built right on the shoulders of NeXT - Objective-C and UIKit have really stood the test of time. But you are what you are.&lt;/p&gt;
-
-&lt;p&gt;UIKit returns concrete &lt;code class=&quot;highlighter-rouge&quot;&gt;UIView&lt;/code&gt; types allocated on the heap, that we extend and manipulate via its many robust properties. SwiftUI is &lt;em&gt;not&lt;/em&gt; that….at all. Really try to comprehend that and sit on it for a hot second.&lt;/p&gt;
-
-&lt;p&gt;Think about the immediate wins you get by creating an entire user interface from the client by simply returning a bunch of Structs on the stack - allowing the underlying details to be optimized and decided by the framework. And, SwiftUI can pick up changes extremely quick by virtue of its design to know what to update and when. It’s insane, and awesome.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For example, it uses static types to optimize parts of its view graph that cannot, and will not, change.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;You’ve simply got to leave &lt;code class=&quot;highlighter-rouge&quot;&gt;UIKit&lt;/code&gt; &lt;em&gt;thinking&lt;/em&gt; behind.&lt;/p&gt;
-
-&lt;p&gt;Example: SwiftUI’s &lt;code class=&quot;highlighter-rouge&quot;&gt;frame&lt;/code&gt;. The only thing it has in common with &lt;code class=&quot;highlighter-rouge&quot;&gt;UIKit&lt;/code&gt; is its name and that it helps with sizing stuff. Everything else is different. It’s not a property on a view, it’s another function that’ll return something conforming to &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@inlinable&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;So if you tack it onto our &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; we’ve been using above, now we’ve got an entirely new type altogether.&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Mirror&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;reflecting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subjectType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myType&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Prints Text&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;myType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;frame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nf&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Mirror&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;reflecting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subjectType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myType&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;// Prints ModifiedContent&amp;lt;Text, _FrameLayout&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;As one Steve Jobs would say….are you getting it!? This isn’t one type, this can be many different types!&lt;/p&gt;
-
-&lt;p&gt;To me, this is the most exciting technical detail about SwiftUI. As one of the Swift holdouts for a number of reasons, seeing this in action made me realize what Swift has been all about since the beginning - pulling some tomfoolery that Objective-C simply can’t do to allow for more robust frameworks and unique ways in which we can use them. And I’m here for it.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Notice I said “UIKit thinking”, not UIKit itself. You can pull it in every which way with representables, or even pump SwiftUI views into UIKit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;live&quot;&gt;The Live Preview&lt;/h2&gt;
-&lt;p&gt;The other part of the equation is the hot swapping previews Xcode is slinging.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;How does that work?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;I was happy to learn more about this, because the roads would eventually lead back to my Objective-C FunTime™ days. In short, Swift is leveraging its dynamic replacement feature.&lt;/p&gt;
-
-&lt;p&gt;Xcode knows what we’re editing, and here it’s our default &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt; file. So why not just do delta updates?&lt;/p&gt;
-
-&lt;p&gt;And, in fact, that’s kinda what happens. As we can edits, Xcode compiles &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt; exclusively from the rest of the project. When it does, it injects the new implementation back into the running application via dynamic replacement.&lt;/p&gt;
-
-&lt;p&gt;While we make edits, what our code really looks like that’s being executed is closer to this:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;extension&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// Dynamically replaced in ContentView's body implementation&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;__preview_body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This happens over and over for virtually every edit we make. It’s made possible because the amount of changes we make are usually much smaller than recompiling the rest of the app. So once Xcode does its initial build, then it’s free to only cherry pick what’s new (or deleted) and reflect that within the preview.&lt;/p&gt;
-
-&lt;p&gt;Given that - how is it still so fast? Well, it’s smart. Things like literal values are just swapped without any recompilation at all!&lt;/p&gt;
-
-&lt;p&gt;Even more, the previews that we’re seeing are just the result of plain old SwiftUI Code (or, naturally, POSUIC for short, amirite?). As such, we can preview things in so many different contexts now. Here’s what I’ve been doing:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Display every single locale available to format currency&lt;/li&gt;
-  &lt;li&gt;I almost always have dark and light mode running together&lt;/li&gt;
-  &lt;li&gt;Multiple text sizes to represent dynamic type options.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Given that we can also bring our old components in with previews, it almost feels criminal to go back to the old way of doing things.&lt;/p&gt;
-
-&lt;h2 id=&quot;layout&quot;&gt;The Layout&lt;/h2&gt;
-&lt;p&gt;Perhaps the most encouraging aspect of SwiftUI is its no-nonsense approach to putting elements on screen. Clarity at the point of use is a common term tossed around for Swift’s API design guidelines, and I can think of no better example of that term than SwiftUI’s layout system.&lt;/p&gt;
-
-&lt;p&gt;It’s a three step system:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Parent proposes a size for a given child &lt;br /&gt;
-&lt;strong&gt;2)&lt;/strong&gt; Child considers it, but ultimately chooses its own size &lt;br /&gt;
-&lt;strong&gt;3)&lt;/strong&gt; The parent puts the child in the parent’s coordinate space &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is how we arrive at the text being centered in default template app. The parent (i.e. the root view of the device in this case) says “I’ve got the whole screen!”, and so the &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; looks at it and considers it. In this case, the &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; says that it’s only as big as its intrinsic content size and it can’t fill all that space. So the root view has to put it somewhere - so it plants it in the middle.&lt;/p&gt;
-
-&lt;p&gt;But - if we added another view modifier, say &lt;code class=&quot;highlighter-rouge&quot;&gt;Frame&lt;/code&gt;, then the &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; would turn rebellious, ignore its parent - and two sheets to the wind, would use it’s &lt;code class=&quot;highlighter-rouge&quot;&gt;Frame&lt;/code&gt; size information instead. Regardless, &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt; has what it needs and it’s placed according to the layout information on screen.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In SwiftUI, the top layer of any view with a &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; is said to be “layout neutral”. In short - its bounds are defined by the bounds of its body. So, &lt;code class=&quot;highlighter-rouge&quot;&gt;ContentView&lt;/code&gt; has the same bounds as the &lt;code class=&quot;highlighter-rouge&quot;&gt;Text&lt;/code&gt; view returned from its &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt; property.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;When the layout system was being developed, it seems that all of the quirks, gotchas and oddities of UIKit, Auto Layout and frame based approaches were considered, and then sent out back packing. SwiftUI’s approach is so easy - so trivial, that my wife looked over my shoulder the other night (who is a nurse with no programming experience) and was able to comprehend what a VStack and HStack were and what they meant.&lt;/p&gt;
-
-&lt;p&gt;I liken it to setting up &lt;code class=&quot;highlighter-rouge&quot;&gt;UIBarButtonItem&lt;/code&gt; controls in UIKit. They just always do what you want and expect. I’ve never, coming up on a decade, had one issue setting up bar button items. &lt;code class=&quot;highlighter-rouge&quot;&gt;VStack&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;HStack&lt;/code&gt; have produced the same results for me as well.&lt;/p&gt;
-
-&lt;p&gt;The combination of SwiftUI’s semantics and layout system mean I no longer reach for some catch-all sizing control (looking squarely at you, &lt;code class=&quot;highlighter-rouge&quot;&gt;UIStackView&lt;/code&gt;) and end up with exotic results or frustration. As the Apple mantra goes, it just works.&lt;/p&gt;
-
-&lt;p&gt;Further - it can optimized down to metal with one view modifier. While I’m not certain of this, some of the rendering may be already. For example, &lt;em&gt;something&lt;/em&gt; is going down with images and more efficient decoding - as sizing the same &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImage&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImageView&lt;/code&gt; against the same representation in SwiftUI seemed to consume around 25% more memory.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Another freebie? SwiftUI rounds the corners of views to the nearest pixel to get crisp edges, instead of producing anti-aliased ones.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The immense control a child has over its sizing might be giving you slight anxiety, as to this point, UIKit developers have heavily relied on the parent to position controls. That’s still possible too - all one needs to reach for is &lt;code class=&quot;highlighter-rouge&quot;&gt;GeometryReader&lt;/code&gt;. Its somewhat heavy handed name aside, you can think of it as the UIKit frame of a super view. It reports sizing back to down to children to base things off of its parent’s size, should you need it.&lt;/p&gt;
-
-&lt;p&gt;Look - this is great. Auto Layout and company are brilliant technologies. But wow - I admire it much more than I enjoy it. In my brief travels with SwiftUI, all of my layouts have been stupid simple to setup.&lt;/p&gt;
-
-&lt;p&gt;And that’s exactly what I want out of a layout system.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;SwiftUI is incredible. The amount of engineering that’s occurring behind the scenes is almost too staggering to comprehend at first, but once you do - seeing what SwiftUI is bringing to the proverbial table becomes clear, and it also reveals a bevy of possibilities of what you can do with it.&lt;/p&gt;
-
-&lt;p&gt;Perhaps the best part? There are barely any compromises one has to make to utilize it. Swift, in its infancy, felt like a zero sum game. For all of its marvels, productivity could’ve been marred by compile times or the lack of ABI stability. SwiftUI, in its early lifespan, feels miles ahead of where it should be (some common complaints mostly related to declarative UI programming notwithstanding).&lt;/p&gt;
-
-&lt;p&gt;So it is - code, build, run, navigate almost feels archaic now. I, for one, welcome our Xcode Preview and SwiftUI overlords to my development workflow.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="SwiftUI" /><summary type="html">When I created my first SwiftUI project, so much was foreign. I needed to understand how any of this was possible. There was so much that was new, so much that was different - I couldn’t stand spinning up a project without knowing how the beast came to be.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Did you know that the version of Spend Stack I released a few short months ago is actually… not the first version?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -32,7 +32,7 @@ So, I'm doing the best that I can. And some days, it's nearly nothing. On those 
 
 And, in between these moments, I find time to write code. And someday (who knows when) I'll have time to write more of it.
 
-But right now, Xcode is getting a breather more often than not. And while it does, I'm going to take my own deep breath, be a great Dad and husband - and give me company all I can, when I can. Some days that's not a lot, some days it's a little bit more than yesterday and very rarely it's quite a bit.
+But right now, Xcode is getting a breather more often than not. And while it does, I'm going to take my own deep breath, be a great Dad and husband - and my employer all I can, when I can. Some days that's not a lot, some days it's a little bit more than yesterday and very rarely it's quite a bit.
 
 So if your productivity is  taking a hit, and you're a little stressed about it - please know that there are many of us feeling that burn along with you. Spend Stack can wait, blog posts can wait, learning new things can wait - it all can wait. Your employer will hopefully know that some work will have to wait, too. But taking care of myself, my kids and wife cannot.
 

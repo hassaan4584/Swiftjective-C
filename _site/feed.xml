@@ -1,5 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-10T10:57:16-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">It’s Okay to Do Nothing</title><link href="http://localhost:4000/Its-Okay-To-Do-Nothing/" rel="alternate" type="text/html" title="It's Okay to Do Nothing" /><published>2020-04-10T00:00:00-05:00</published><updated>2020-04-10T00:00:00-05:00</updated><id>http://localhost:4000/Its-Okay-To-Do-Nothing</id><content type="html" xml:base="http://localhost:4000/Its-Okay-To-Do-Nothing/">&lt;p&gt;If there is one thing I don’t like doing - it’s nothing.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-17T15:49:48-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">Exploring Futures over Closures</title><link href="http://localhost:4000/Exploring-Closures-With-Futures/" rel="alternate" type="text/html" title="Exploring Futures over Closures" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>http://localhost:4000/Exploring-Closures-With-Futures</id><content type="html" xml:base="http://localhost:4000/Exploring-Closures-With-Futures/">&lt;p&gt;One of the challenges I have faced with Combine is simply not knowing what all the framework can do, and when it should be doing it. The nascent vocabulary of its pieces combined (sorry) with my few dalliances with reactive programming has led to a steep learning curve. Even so, I’ve replaced &lt;code class=&quot;highlighter-rouge&quot;&gt;NotificationCenter&lt;/code&gt; code with its built in Combine publisher, and I’ve enjoyed the experience quite a lot. Operators are more concise, and clarity at the point of definition is a good way to foster a readable codebase.&lt;/p&gt;
+
+&lt;p&gt;And yet.&lt;/p&gt;
+
+&lt;p&gt;What more am I missing with Combine? I’ve yet to author my own Publisher type, or know when the situation would call for one. I still struggle to maintain the mental model a passthrough subject affords, other than that it acts as both publisher and receiver.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, Apple pumped out a number of freshly minted Combine documentation, one of which led me to utilizing futures in place of closures and delegates. Personally, the benefit for me is that we harness Combine’s Swiss army knife operators in lieu of boilerplate code usually found within closures and delegate patterns.&lt;/p&gt;
+
+&lt;p&gt;While working on &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1250532684641775623?s=20&quot;&gt;Apple Card import&lt;/a&gt; for Spend Stack, I had the following code:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AppleCardImportViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SSBaseViewController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;onImport&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:(([&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;AppleCardLineItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Void&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))?&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;importItems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;weak&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; 
+            &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;handler&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onImport&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isEmpty&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+                &lt;span class=&quot;nf&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; 
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;purchases&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;translatedTags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;purchases&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Other&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                                 &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SSListTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fromAppleTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;listItems&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;purchases&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SSListItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fromAppleCardItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;listItems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forEach&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+                &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;translatedTag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translatedTags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translatedTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;saveAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;nf&quot;&gt;handler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Later on...&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;importController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AppleCardImportViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;appleCardStatement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;importController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onImport&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;SSListItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; 
+    &lt;span class=&quot;c1&quot;&gt;// Apply to table view and local data models&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;While it certainly works, and I don’t typically advocate rewriting what is stable - this bit of code is unreleased, so I gave myself a pass. Obviously, I’ve learned nothing from Spend Stack’s five year development cycle 🤠.&lt;/p&gt;
+
+&lt;p&gt;Here’s what I came up with using a Future:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AppleCardImportViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SSBaseViewController&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;performImport&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;AppleCardItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Never&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;promise&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+            &lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// From the caller&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;importVC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;AppleCardImportViewController&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;withCSV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;csvData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;importCancellable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;importVC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;performImport&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payment&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sink&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;purchases&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; 
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;translatedTags&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;purchases&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;category&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Other&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SSListTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fromAppleTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;listItems&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;purchases&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;SSListItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;fromAppleCardItem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;listItems&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;forEach&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+                &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;translatedTag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translatedTags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;attach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;translatedTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+                &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;saveAsync&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// Apply to table view&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;A few things were reconsidered, namely that I might want all Apple Card items in the future so I removed the payment versus purchase filtering. I also opted for a less strict importing function, and it does much less. Another implementation point I waffled on was how many operators to utilize. For example, the &lt;code class=&quot;highlighter-rouge&quot;&gt;sink&lt;/code&gt; above could do nothing more than apply things to a table view, allowing for the &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; operator to do more of the heavy lifting. I’m not sure which I’d prefer.&lt;/p&gt;
+
+&lt;p&gt;More than anything, this was a learning exercise. I’m not quite sure how I feel about supplying the publisher via a function call, which is then chained off of. Maybe it’s my old Objective-C “get off my lawn” ways, I’m just not sure if that’s widely accepted or not. Patterns will emerge, though, and I’m apt to take Apple at their word and sample code.&lt;/p&gt;
+
+&lt;p&gt;If you’d like some weekend reading, be sure to check the aforementioned sample documentation here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/combine/using_combine_for_your_app_s_asynchronous_code&quot;&gt;Using Combine for Your App’s Asynchronous Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/combine/routing_notifications_to_combine_subscribers&quot;&gt;Routing Notifications to Combine Subscribers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;Replacing Foundation Timers with Timer Publishers&quot;&gt;Replacing Foundation Timers with Timer Publishers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/documentation/combine/performing_key-value_observing_with_combine&quot;&gt;Performing Key-Value Observing with Combine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Tech Notes" /><summary type="html">One of the challenges I have faced with Combine is simply not knowing what all the framework can do, and when it should be doing it. The nascent vocabulary of its pieces combined (sorry) with my few dalliances with reactive programming has led to a steep learning curve. Even so, I’ve replaced NotificationCenter code with its built in Combine publisher, and I’ve enjoyed the experience quite a lot. Operators are more concise, and clarity at the point of definition is a good way to foster a readable codebase.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">It’s Okay to Do Nothing</title><link href="http://localhost:4000/Its-Okay-To-Do-Nothing/" rel="alternate" type="text/html" title="It's Okay to Do Nothing" /><published>2020-04-10T00:00:00-05:00</published><updated>2020-04-10T00:00:00-05:00</updated><id>http://localhost:4000/Its-Okay-To-Do-Nothing</id><content type="html" xml:base="http://localhost:4000/Its-Okay-To-Do-Nothing/">&lt;p&gt;If there is one thing I don’t like doing - it’s nothing.&lt;/p&gt;
 
 &lt;p&gt;I’ve never been good at it. While I’m miles away from the “hustle porn” ways that are unfortunately pervasive within the tech industry, I’ve always had a natural work ethic and a desire to do more. My near-anathema towards inaction, no goals being set forth or something to solve has served me well in my career.&lt;/p&gt;
 
@@ -23,7 +120,7 @@
 
 &lt;p&gt;And, in between these moments, I find time to write code. And someday (who knows when) I’ll have time to write more of it.&lt;/p&gt;
 
-&lt;p&gt;But right now, Xcode is getting a breather more often than not. And while it does, I’m going to take my own deep breath, be a great Dad and husband - and give me company all I can, when I can. Some days that’s not a lot, some days it’s a little bit more than yesterday and very rarely it’s quite a bit.&lt;/p&gt;
+&lt;p&gt;But right now, Xcode is getting a breather more often than not. And while it does, I’m going to take my own deep breath, be a great Dad and husband - and give my employer all I can, when I can. Some days that’s not a lot, some days it’s a little bit more than yesterday and very rarely it’s quite a bit.&lt;/p&gt;
 
 &lt;p&gt;So if your productivity is  taking a hit, and you’re a little stressed about it - please know that there are many of us feeling that burn along with you. Spend Stack can wait, blog posts can wait, learning new things can wait - it all can wait. Your employer will hopefully know that some work will have to wait, too. But taking care of myself, my kids and wife cannot.&lt;/p&gt;
 
@@ -1229,312 +1326,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;In the end, that’s all my little system does. 1% wins help me learn from the past, produce in the present and prepare for the future. If my goal is to write a book, I don’t write that down as the thing I want to do. Instead, I need to figure out what to do to become a writer. May you have an amazing 2020 in accomplishing all of your aspirations, and heres to better habits 🍻!&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Ah, the New Year 🎉!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Can You Learn Design?</title><link href="http://localhost:4000/Can-You-Learn-Design/" rel="alternate" type="text/html" title="Can You Learn Design?" /><published>2019-12-07T00:00:00-06:00</published><updated>2019-12-07T00:00:00-06:00</updated><id>http://localhost:4000/Can-You-Learn-Design</id><content type="html" xml:base="http://localhost:4000/Can-You-Learn-Design/">&lt;p&gt;Did you know that the version of Spend Stack I released a few short months ago is actually… &lt;em&gt;not&lt;/em&gt; the first version?&lt;/p&gt;
-
-&lt;p&gt;It’s true that I did take &lt;a href=&quot;http://localhost:4000/Introducing-Spend-Stack&quot; target=&quot;_blank&quot;&gt;many years to design and develop it&lt;/a&gt;, and it’s also true that was due to a variety of reasons (having three kids, married, job - life stuff). But another important reason was that I was teaching myself design. If I had to guess, that’s where more than half of those years went.&lt;/p&gt;
-
-&lt;p&gt;Why?&lt;/p&gt;
-
-&lt;p&gt;Well, because &lt;em&gt;this thing&lt;/em&gt; is how the first version of Spend Stack looked:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/fugly.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/fugly.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;For real - I’m dead serious! I even had a good friend whip up a promo trailer for it:&lt;/p&gt;
-
-&lt;style&gt;
-.embed-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.embed-container iframe,
-.embed-container object,
-.embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-&lt;/style&gt;
-
-&lt;div class=&quot;embed-container&quot;&gt;
-	&lt;iframe src=&quot;https://player.vimeo.com/video/101882671&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;This might strike you as quite surprising if you’ve ever used or have seen Spend Stack, because this is how it looks today:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/headerSS.jpeg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/headerSS.jpeg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Given that, the obvious question becomes:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;How did I go from something that was objectively bad design, to making the design become a strength of the app?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Today, I’m going to lay out eight core lessons I learned over the years which helped me appreciate design. They each will help answer the question of “How can indie devs learn about design?”   While I still wouldn’t consider myself a designer, I’d submit to you that it’s nearly undeniable how much better Spend Stack looks, works and functions today in comparison to what it did five years ago.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;A small sidebar before we continue - what follows below lays squarely in the “this is my opinion” category. Simply put, these are the things that helped me out. Design has objective truths, but can also have many subjective opinions. My goal here is to shed light on some design practices for those indie devs out there who might be stuck with it as I was. Let me tell you, I have not figured out design. I still see a million things wrong in Spend Stack today, but I’m getting there.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That said, without further ado here are the lessons I’ve learned, and the order in which I learned them:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#syci&quot;&gt;1. Something You Can’t Ignore&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#swams&quot;&gt;2. Start with a Mission Statement&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#wif&quot;&gt;3. Who’s It For?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#nswt&quot;&gt;4. Never Start with Technology&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#fnsa&quot;&gt;5. Find North Star Apps&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#aay&quot;&gt;6. Always Ask Yourself&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#hdadt&quot;&gt;7. How Does Apple Do This?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#dcm&quot;&gt;8. Design Centric Materials&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;syci&quot;&gt;Lesson 1: Something You Can’t Ignore&lt;/h3&gt;
-&lt;p&gt;The first thing I realized about Spend Stack of yore was that the idea of the app was validated, but the design made your eyes bleed. As such, the app’s idea or functionality (which are intrinsically tied to its design) didn’t matter much.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In this lesson, when I say “design” I’m more pertaining to the “smell test”/judge-a-book-by-its-cover bits of design. Design is a function of many things - how it works, what it does and how it does it, not just how it looks. But in this lesson, it’s all about the looks.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It could solve a problem, it could save you money. Nay, it could just &lt;em&gt;print&lt;/em&gt; money. It could cure diseases!&lt;/p&gt;
-
-&lt;p&gt;But if the design sucks, nobody will care. Because this is the App Store, and not really a B.2.B. market where a terminal U.I. can still win contracts. Realizing this, I had a little saying that was in my Notion workspace for all things Spend Stack, and it simply said the following:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Design isn’t everything, but it is the only thing that matters.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;And you can debate it however you want.&lt;/p&gt;
-
-&lt;p&gt;Functionality and user experience are paramount. But to me, those are a byproduct of good design. Marketing, validating your idea, having an incredible app that does one thing well - all of those things matter. But if the app doesn’t look and feel right, people won’t give it a chance.&lt;/p&gt;
-
-&lt;p&gt;Of course, nothing I am saying here is gospel. There are exceptions to every rule. But playing the averages, the numbers say that an ugly app that does a thing well will probably sell far less than a beautiful app that’s not really giving you much.&lt;/p&gt;
-
-&lt;p&gt;You have to take design seriously, you have to learn things about it and you have to be critical of your own apps and figure out why or why not its design works.&lt;/p&gt;
-
-&lt;p&gt;To make this abstract idea and make it more concrete, consider this view in the first Spend Stack that was used to create a list:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/fuglier.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/fuglier.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Why do I consider it poor design? Here are a few reasons:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; The hints at the top are already an issue. As they say, user interfaces are like a joke in that if you have to explain them, they aren’t funny (i.e. functional). &lt;br /&gt;
-&lt;strong&gt;2)&lt;/strong&gt; Those hints are there because to create the new list, you had to swipe down. The gesture was hidden. &lt;br /&gt;
-&lt;strong&gt;3)&lt;/strong&gt; Because of that, this view hides its main functionality - which is creating a new list. A button should have been used here. &lt;br /&gt;
-&lt;strong&gt;4)&lt;/strong&gt; The colors. &lt;br /&gt;
-&lt;strong&gt;5)&lt;/strong&gt; To input data for each option (such as the name, tax rate and more) you had to swipe within the middle box area. A list would easily convey the view’s affordances. &lt;br /&gt;
-&lt;strong&gt;6)&lt;/strong&gt; I firmly believe being a &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot; target=&quot;_blank&quot;&gt;best in class app&lt;/a&gt; is part of design on iOS. Given that, this view ignores accessibility fonts, dark mode and much more.&lt;/p&gt;
-
-&lt;p&gt;To contrast that view, here is what it looks like today:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/newList.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/newList.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Much better. The process of redesigning Spend Stack made me appreciate how important design is. You’ve no other recourse but to consider it as much as we do software architecture or whether to use SwiftUI versus UIKit. I realized that design is something you can’t ignore. You have to think of it constantly, and users will know it when they see it.&lt;/p&gt;
-
-&lt;p&gt;So as you go about your indie dev days, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson one: Design is something you can’t ignore.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;swams&quot;&gt;Lesson 2: Start with a Mission Statement&lt;/h3&gt;
-&lt;p&gt;Much like a ship wouldn’t leave port without a destination in mind, so too should indie developers define what their app will do before putting code to compiler.&lt;/p&gt;
-
-&lt;p&gt;And this is hard to grasp for a lot of us because all apps technically start with an idea. But an idea is dangerous! Why? Because an idea is an amorphous blob of several themes, problems, aspirations, and jobs - almost all of which should be shed in the beginning phases of your app’s inception. Conversely, a mission statement proudly proclaims in one sentence what your app will do and what problem it solves.&lt;/p&gt;
-
-&lt;p&gt;For example, let’s say you had an idea to create a podcast player. Most of us will crack open Xcode and rock and roll. Months later, we might release something that isn’t differentiated in any meaningful way, does the same thing as most other podcast players and leaves no lasting reason for why anyone should let go of other established players such as Overcast, Castro or Apple’s built-in solution.&lt;/p&gt;
-
-&lt;p&gt;To help mitigate such an outcome - I’ve found that it often helps to bottle that excitement stemming from your idea up, and hone it down into something tangible and zeroed in. Ask yourself a few questions to develop your idea into a mission statement. Following our podcasting example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Why do I want to make a podcast player?&lt;/li&gt;
-  &lt;li&gt;Can mine offer things that other podcast players do not? Even if it’s a better, or different, design that people would want?&lt;/li&gt;
-  &lt;li&gt;If the answer is “not much”, what shortcomings do the current solutions have that I could make up for?&lt;/li&gt;
-  &lt;li&gt;And if I can do either of these things, is it worth it to me to put the time in to see it through?&lt;/li&gt;
-  &lt;li&gt;If it is, will it be a pet project or something I want to sell?&lt;/li&gt;
-  &lt;li&gt;Given this information - can I make a mission statement for this app?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A mission statement is powerful - it could literally save (or make you!) thousands of dollars while preventing wasted hours along with heartache and disappointment. If you’ve got a mission statement, you know what to make, what to cut and where to go next. Plus, users will have a much better idea of what they are buying - because they’ll simply &lt;em&gt;know what it is and the problem it will solve&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I think Dale Carnegie put it best:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“And if salespeople can show us how their services or merchandise will help us solve our problems, they won’t need to sell us. We’ll buy. And customers like to feel that they are buying—not being sold.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;On a marketing document I often visit, I have my mission statement front and center to remind me to consider all of my upcoming decisions against it:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/statement.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/statement.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s helped me cut features, know when to add features and so much more. You simply can’t leave home without it. Tonight, as you map out your next app or consider adding to your current one - remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson two: Well designed apps stem from a focused mission statement.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;wif&quot;&gt;Lesson 3: Who’s It For?&lt;/h3&gt;
-&lt;p&gt;If you’ve got a mission statement, you can hunt down a persona for the app. Personas are awesome. Straight up. I’ll be the first to admit I found them a bit cheesy, only suitable for corporate board room exercises. But I just didn’t see their value, and now that I have it’s hard to think about skipping out on them.&lt;/p&gt;
-
-&lt;p&gt;Developing a persona for your app is simply the process of mapping who your user might be. And if you know who your use might be, you can surmise all sorts of important things:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; What do you they value? &lt;br /&gt;
-&lt;strong&gt;2)&lt;/strong&gt; Where do they hang out, and what do they do? &lt;br /&gt;
-&lt;strong&gt;3)&lt;/strong&gt; Most importantly, does my mission statement solve problems that they currently have? &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;If you’ve got a target customer with a problem you can solve, that’s a huge first step. Considering it, you can consider if they might pay for your solution.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This lesson comes with an asterisk. Maybe you don’t care about making money on your app. If that’s the case, skip on to the next lesson. But even if you don’t, it’s still important to figure out who you’re making the app for - if only for people like yourself.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This phase is especially difficult because iOS apps tend to have broad appeal. Given that, they often solve  “vitamin” problems. In his book &lt;a href=&quot;https://www.goodreads.com/en/book/show/27250038-marketing-for-developers&quot;&gt;Marketing for Developers&lt;/a&gt; Justin Jackson laid out a way to consider whether or not your target customer might be willing to buy your product. He did so with a pain tolerance concept, and I don’t remember it word for word but the gist of it really resonated with me.&lt;/p&gt;
-
-&lt;p&gt;Is the problem you’re solving a major, game-changing issue your target customers are facing? It’s a life or death problem - they’ll be willing to pay handsomely for something to take this problem off of their hands. Or, maybe it’s a bone-breaking problem. It hurts pretty bad, but they’ve made due. Maybe there is a temporary stint they’ve applied to the problem, so they want it addressed and would likely pay for it to go away.&lt;/p&gt;
-
-&lt;p&gt;The idea keeps going down until you reach a “vitamin” level problem. These are problems that are minor nuisances, and if a person simply takes their vitamins they go away. They will likely only pay for a solution to the problem if it really speaks to them, or it solves the issue extremely well and for a small price.&lt;/p&gt;
-
-&lt;p&gt;In addition to knowing if your target customer might pay for it, knowing who they are defines a lot of other things, too. Every app has a voice, and your target customer helps define it. If a networking error occurs, you’ll know if they would enjoy copy in the error messaging U.I. that’s funny, or if they’d prefer a more formal tone. This concept flows throughout each part of your design.&lt;/p&gt;
-
-&lt;p&gt;Before you crack open Sketch or tab over to Figma, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson three: To design well, you’ve got to have an idea of who you’re designing for.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;nswt&quot;&gt;Lesson 4: Never Start with Technology&lt;/h3&gt;
-&lt;p&gt;And now we arrive at my most painful tendency as an indie dev. I’m talking, of course, about using a particular technology because it’s either new, fun or we just want to learn it.&lt;/p&gt;
-
-&lt;p&gt;In the first version of Spend Stack, I had swipe to delete:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/swipeDelete.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/swipeDelete.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;And do you know why?&lt;/p&gt;
-
-&lt;p&gt;Because six or seven years ago (before this UX was common and built right into iOS) I found a Github project that did it. And I thought it was cool. So, I jammed it into my app.&lt;/p&gt;
-
-&lt;p&gt;I didn’t ask any other questions or stop to think about why I was doing what I was doing. That’s a sign-in of itself. You can see where I’m going with this, but I’ve made this mistake so many times and lost so many hours because of it - I might as well be writing a diary entry right now. And it would say only this:&lt;/p&gt;
-
-&lt;p&gt;“Define the problems first, and work your way back with the technology that solves them. Don’t start with the technology, and look for problems to solve.”&lt;/p&gt;
-
-&lt;p&gt;The famous Steve Job &lt;a href=&quot;https://www.youtube.com/watch?v=FF-tKLISfPE&quot;&gt;rebuttle to some public criticism&lt;/a&gt; demonstrated this point succinctly. In it, he said:&lt;/p&gt;
-
-&lt;p&gt;“One of the things I’ve always found is that you’ve got to start with the customer experience and work backward to the technology, you can’t start with the technology and figure out where you’re going to try and sell it.”&lt;/p&gt;
-
-&lt;p&gt;It’s so hard to do, too! As developers, we are naturally drawn to new APIs and frameworks. In fact, this very reason is why W.W.D.C. is my favorite time of year. Mountains of new API! I’d even argue that it’s a very healthy sign that you love doing what you do - learning new things and picking up new ways to solve architectural issues gives us a buzz. But don’t let it cloud the design part of your brain.&lt;/p&gt;
-
-&lt;p&gt;To everyone else it’s obvious, for developers it’s difficult - but never start with the technology, start with what the user needs and work your way back towards the tech. Because if you don’t, you’ll end up with little edges of your app that don’t fit a central theme or support the mission statement. You’ll have things that feel out of place or the user experience may feel a bit scattered.&lt;/p&gt;
-
-&lt;p&gt;Next time you feel the urge to add one more line to your podfile, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson four: Starting with technologies and looking for problems to solve in your app could hinder its design.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;fnsa&quot;&gt;Lesson 5: Find North Star Apps&lt;/h3&gt;
-&lt;p&gt;You’ve likely heard the phrase, “Good artists copy, great artists steal” and it holds true in design. Much like I alluded to in my post about &lt;a href=&quot;http://localhost:4000/On-Launching-Your-Indie-App&quot;&gt;releasing your indie app&lt;/a&gt;, the concept of finding people you aspire to be like flows directly down into design and iOS apps.&lt;/p&gt;
-
-&lt;p&gt;Find the apps that you love using, and then write down why you love them. It sounds obvious, but I hadn’t done this in the past. I had apps I loved using, but actually putting pen to paper and writing down at least three reasons why uncovered a lot of helpful direction I could use for Spend Stack.&lt;/p&gt;
-
-&lt;p&gt;Beyond that - find the apps that Apple has given its seal of approval to. I have each Apple Design Award Winner bookmarked in Safari, and every now and then I poke around their apps just to see how they (deservedly so) got that ultimate award.&lt;/p&gt;
-
-&lt;p&gt;Remember, it’s beyond just the looks here. A lot of apps may look good, but even less feel good. Further still, not many look &lt;em&gt;and&lt;/em&gt; feel good. Here are some starter questions you might ask yourself about apps you enjoy:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1)&lt;/strong&gt; Why does this app &lt;em&gt;feel&lt;/em&gt; good to use? &lt;br /&gt;
-&lt;strong&gt;2)&lt;/strong&gt; If I wrote this app’s mission statement, what would it be and why does the app support it? &lt;br /&gt;
-&lt;strong&gt;3)&lt;/strong&gt; What have other people, whose opinion I respect, said about the app and why they do or do not like it? &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;For another example directly related to Spend Stack, I made it a point to often look at &lt;a href=&quot;https://twitter.com/viticci&quot;&gt;Federico Viticci’s&lt;/a&gt; feedback on iPad apps he enjoys. Since he knows the marketplace very well, and is a power user of the platform - he’s in a good position to uncover little things that apps do well to separate them from the rest of the pack.&lt;/p&gt;
-
-&lt;p&gt;Recently, he made mention of how he could navigate an iPad app (I believe it was Things 3 maybe?) almost entirely from the keyboard, which inspired me to make that a bar I will eventually hit for Spend Stack. It sounds like a fairly “well yeah!” observation, but with a million things happening while developing Spend Stack, I sure didn’t think of it.&lt;/p&gt;
-
-&lt;p&gt;Next time you’re short on inspiration, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson five: Reference apps that you enjoy using and figure out why you, and others, enjoy using them.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;aay&quot;&gt;Lesson 6: Always Ask Yourself&lt;/h3&gt;
-&lt;p&gt;Much like having iOS apps that you aspire to be like, it also helps to have certain rules, or an ethos, to ascribe by as you develop indie apps. A north star framework, if you will. I’ve found that I often forget the simple things, and so I wrote them down and put them in a place where I’m sure to see them often.&lt;/p&gt;
-
-&lt;p&gt;I call these little things “always ask yourself” tips. Almost all of the ones I have written down have to do with design. To me, design is like math. It doesn’t come naturally to me, but I &lt;em&gt;can&lt;/em&gt; do it - I just really need to focus a bit harder on it. So plopped right in my app delegate file are these little tips that help me frame my mind for the work I’m about to do:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/aaySnips.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/aaySnips.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s a little silly, and certainly not for everyone - but they’ve done wonders for me. It simply reminds me to focus on design, and before I chase a random thread that might lead down some rabbit hole, I should stop and consider if what I’m doing is worth it. Does X or Y help promote a cohesive design, or am I straying off the path a little?&lt;/p&gt;
-
-&lt;p&gt;Expanding on this idea a little more, I also have fully formed documents that hold thoughts, ideas or things that I want my apps to be known for. In fact, the one I have in my Notion workspace is what my &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot;&gt;best in class iOS app post&lt;/a&gt; came from:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/aayLarge.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/aayLarge.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This idea is the same reason college stadiums have inspirational quotes sitting right outside of locker rooms, or offices have pictures with motivational quotes hanging on the walls. It’s because they offer a simple proposition: reminding us what we’re about, what we want to do or where we want to go.&lt;/p&gt;
-
-&lt;p&gt;As you go about writing your Swift or Objective-C today, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson six: Always ask yourself if the work you are doing is enforcing a solid design and direction that’s been laid down for your app.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;hdadt&quot;&gt;Lesson 7: How Does Apple Do This?&lt;/h3&gt;
-&lt;p&gt;This is my secret weapon hiding in plain sight. Whether you fall into the “Apple is amazing at design on iOS” or the “They lost their way on iOS 7” - I only know one thing: they are the ones who hand out A.D.A.’s, who have more context or data than anyone else, spend all day on the platform and are the subject matter experts.&lt;/p&gt;
-
-&lt;p&gt;So look to their work when you are stuck, need inspiration or aren’t quite sure what to do. I’ve got two tips in this area:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tip 1&lt;/strong&gt; - Have their apps on your home screen. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tip 2&lt;/strong&gt; - Recreate scenarios you’re stuck on in their apps. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tip 1 is fairly self-explanatory, but I’d love to toss out an example of where tip 2 came into mind for Spend Stack. As I was developing its sharing functionality, I was struggling with coming up with copy for this scenario:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A user has shared a list of theirs with someone.&lt;/li&gt;
-  &lt;li&gt;The owner deletes this list, but doing so will also delete it from the other share participant’s devices.&lt;/li&gt;
-  &lt;li&gt;As such - how do I alert them of this?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As I want back and forth, I realized that Notes on iOS could also have this same scenario. So, I grabbed a test device and my iPad and recreated it. Their copy had perfect messaging, and so I ended up with much of the same thing for Spend Stack. The only change I made was tweaking “ok” to a destructive “delete” (per Apple’s advice, I may add):&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/leaveShare.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/leaveShare.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Borrowing liberally from Apple is a good thing, and I’ll tell you why; Aside from being experts of the platform, the biggest advantage is that users are already comfortable with the flows, copy and designs that they’ve established. As such, if a user has used Notes before, shared a note and then later deleted it - that user will know what to expect when they do the same thing in Spend Stack. It won’t make them think.&lt;/p&gt;
-
-&lt;p&gt;As you question some assumptions today and aren’t quite sure what to do, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson seven: See how Apple has solved similar problems, designs or copy within their apps and consider using them yourself.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;dcm&quot;&gt;Lesson 8: Design Centric Materials&lt;/h3&gt;
-&lt;p&gt;A common theme has hopefully emerged from the previous seven lessons, which is that these things are much less about how to use colors correctly, when to consider a certain font or what margin to use - it’s about cultivating a design mindset. By far and away, this has helped me the most.&lt;/p&gt;
-
-&lt;p&gt;But, at the end of the day, you most certainly do need to learn about the more concrete truths and practices of design. For that purpose, I’ve found a few things that I reference quite often to develop those skills.&lt;/p&gt;
-
-&lt;p&gt;First, the most important one. Consider it your design bible for Apple. I’m talking, of course, about the &lt;a href=&quot;https://developer.apple.com/design/human-interface-guidelines/&quot;&gt;human interface guidelines&lt;/a&gt;. If you haven’t done so yet, stop everything now and read the H.I.G. from beginning to end. Some of it, I admit, can be dry by nature - but the upside is too important to ignore.&lt;/p&gt;
-
-&lt;p&gt;Following the H.I.G. simply means you’ll know what a great app looks and feels like, the technology available to you to make them possible and when to follow their advice to the letter and when to add a little personal spin on things. It’s simply the first and most important step to improving your iOS design skills&lt;/p&gt;
-
-&lt;p&gt;Why does Spend Stack’s &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1156618254447722499?s=20&quot;&gt;onboarding experience&lt;/a&gt; offer three main advantages to the app, is quick to dismiss and doesn’t ask for inessential setup or configuration data upfront? Because I took cues from the H.I.G. on the matter:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/higOnboard.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/higOnboard.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Further, here are the design resources I often visit to learn more:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://refactoringui.com&quot;&gt;Refactoring UI&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://designcode.io&quot;&gt;Design+Code&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These may or may not help you, but find the resources that do and study them often. So before you wireframe your next view, remember:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson eight: Keep design resources close by to learn from, and keep the H.I.G. at the top of the pile.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;recap-or-tldr&quot;&gt;Recap or TL;DR&lt;/h3&gt;
-&lt;p&gt;Here’s each lesson mapped out for your reference:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lesson one:&lt;/strong&gt; Design is something you can’t ignore.&lt;br /&gt;
-&lt;strong&gt;Lesson two:&lt;/strong&gt; Well designed apps stem from a focused mission statement.&lt;br /&gt;
-&lt;strong&gt;Lesson three:&lt;/strong&gt; To design well, you’ve got to have an idea of who you’re designing for.&lt;br /&gt;
-&lt;strong&gt;Lesson four:&lt;/strong&gt; Starting with technologies and looking for problems to solve in your app could hinder its design.&lt;br /&gt;
-&lt;strong&gt;Lesson five:&lt;/strong&gt; Reference apps that you enjoy using and figure out why you, and others, enjoy using them.&lt;br /&gt;
-&lt;strong&gt;Lesson six:&lt;/strong&gt; Always ask yourself if the work you are doing is enforcing a solid design and direction that’s been laid down for your app.&lt;br /&gt;
-&lt;strong&gt;Lesson seven:&lt;/strong&gt; See how Apple has solved similar problems, designs or copy within their apps and consider using them yourself.&lt;br /&gt;
-&lt;strong&gt;Lesson eight:&lt;/strong&gt; Keep design resources close by to learn from, and keep the H.I.G. at the top of the pile.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;As indie developers, we’re forced to wear many hats. And the one of design might be the most important of them all. But years ago, I foolishly resigned to the notion that I had boxed myself into being purely a developer, a code junkie - someone who could implement the good looking thing, but who would never design it.&lt;/p&gt;
-
-&lt;p&gt;Being at the other end of the tunnel now, I think Spend Stack is a living testament that &lt;em&gt;anyone&lt;/em&gt; can learn design to some degree. Sure, many are just “born with it”, institutions can teach it and millions of other talented people have their careers built off of mastering it - but what about &lt;em&gt;us&lt;/em&gt;? The common indie dev who learned all about retain cycles and pointers instead of color theory and typography? Can we?&lt;/p&gt;
-
-&lt;p&gt;The answer, is of course, yes.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Did you know that the version of Spend Stack I released a few short months ago is actually… not the first version?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Ah, the New Year 🎉!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

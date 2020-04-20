@@ -104,7 +104,7 @@ If you'd like some weekend reading, be sure to check the aforementioned sample d
 
 - [Using Combine for Your App’s Asynchronous Code](https://developer.apple.com/documentation/combine/using_combine_for_your_app_s_asynchronous_code)
 - [Routing Notifications to Combine Subscribers](https://developer.apple.com/documentation/combine/routing_notifications_to_combine_subscribers)
-- [Replacing Foundation Timers with Timer Publishers](Replacing Foundation Timers with Timer Publishers)
+- [Replacing Foundation Timers with Timer Publishers](https://developer.apple.com/documentation/combine/replacing_foundation_timers_with_timer_publishers)
 - [Performing Key-Value Observing with Combine](https://developer.apple.com/documentation/combine/performing_key-value_observing_with_combine)
 
 

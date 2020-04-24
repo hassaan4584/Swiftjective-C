@@ -38,8 +38,8 @@ class AppleCardImportViewController: SSBaseViewController {
             let listItems = purchases.map { SSListItem(fromAppleCardItem: $0) }
             listItems.forEach { 
                 let translatedTag = translatedTags.first { $0.name == $0.tag.name }
-                if let match {
-                    $0.attach(tag: translatedTag)
+                if let match = translatedTag {
+                    $0.attach(tag: match)
                 }
 
                 $0.saveAsync()

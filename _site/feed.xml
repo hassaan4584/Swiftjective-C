@@ -1,5 +1,191 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-07T08:43:00-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">Exploring Futures over Closures</title><link href="http://localhost:4000/Exploring-Closures-With-Futures/" rel="alternate" type="text/html" title="Exploring Futures over Closures" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>http://localhost:4000/Exploring-Closures-With-Futures</id><content type="html" xml:base="http://localhost:4000/Exploring-Closures-With-Futures/">&lt;p&gt;One of the challenges I have faced with Combine is simply not knowing what all the framework can do, and when it should be doing it. The nascent vocabulary of its pieces combined (sorry) with my few dalliances with reactive programming has led to a steep learning curve. Even so, I’ve replaced &lt;code class=&quot;highlighter-rouge&quot;&gt;NotificationCenter&lt;/code&gt; code with its built in Combine publisher, and I’ve enjoyed the experience quite a lot. Operators are more concise, and clarity at the point of definition is a good way to foster a readable codebase.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-19T10:25:22-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">How a Feature Ships</title><link href="http://localhost:4000/How-a-Feature-Ships/" rel="alternate" type="text/html" title="How a Feature Ships" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>http://localhost:4000/How-a-Feature-Ships</id><content type="html" xml:base="http://localhost:4000/How-a-Feature-Ships/">&lt;p&gt;Ah yes, the feature.&lt;/p&gt;
+
+&lt;p&gt;A core tenet of both software development and startup life, their existence commands as much mental processing as it does actual coding and manpower. While we each claim to follow our own heuristics that lead us to the ever moving target of being “feature complete”, I’ve come to appreciate the process and I thought I’d document what it looks like for me from a recent example.&lt;/p&gt;
+
+&lt;p&gt;The feature in question for Spend Stack? The tent pole “nice to have”, and incredibly fun, feature in any iOS app: &lt;strong&gt;custom icons&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;What follows is a mental scribble of how the process takes place for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-validation&quot;&gt;The Validation&lt;/h3&gt;
+&lt;p&gt;The first lesson I’ve learned in terms of product development is this: Ask some validation questions early and often.&lt;/p&gt;
+
+&lt;p&gt;Do you really need to do this? Does it help you achieve a better product, higher quality app or a more entertaining game?&lt;/p&gt;
+
+&lt;p&gt;And custom icons is a great example. Why? Because a gillion great, high quality apps exist that don’t leverage the feature at all. But, what custom icons does bring to the table, it brings very well. It’s something that many apps overlook or are simply ignorant to - and that is the simple act of bringing about joy in our software.&lt;/p&gt;
+
+&lt;p&gt;That’s right, it’s about to get all Marie Kondo up in here.&lt;/p&gt;
+
+&lt;p&gt;But unlike the undisputed organizational people’s champ, here we bring joy by simply being &lt;em&gt;fun&lt;/em&gt;. And no matter what your app’s voice is (another blog post in of itself), it can pay to tactfully elicit joy. And that mental thread is what gave me the “go ahead” to spend time creating such a feature.&lt;/p&gt;
+
+&lt;p&gt;So, we validated the thing we want to add. What’s next?&lt;/p&gt;
+
+&lt;h3 id=&quot;thedesign&quot;&gt;The…Design?&lt;/h3&gt;
+&lt;p&gt;Arguably the most challenging part of the entire process isn’t writing the code or arguing your stance to make the thing, it’s without question designing said thing. Here is where most of us find ourselves getting lost, losing motivation or simply berating our own work to the point of leaving it behind altogether.&lt;/p&gt;
+
+&lt;p&gt;Put simply, we start with a pile of junk. Let’s call it like it is, our first drafts usually suck. I know that’s true for me, and probably for most of you reading this. As I mentioned in another &lt;a href=&quot;http://localhost:4000/Can-You-Learn-Design&quot;&gt;post&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;…The common indie dev learned all about retain cycles and pointers instead of color theory and typography…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Put simply, design isn’t natural for a lot of us. So, here’s what I’ve come to do:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find Apple’s, or other apps you respect, who’ve made what you’re trying to make.&lt;/li&gt;
+  &lt;li&gt;Write down why you enjoy the example you’ve found.&lt;/li&gt;
+  &lt;li&gt;If there is no example, question if you’re really making something that’s needed.
+    &lt;ul&gt;
+      &lt;li&gt;3a: If you are - great! You’re charting new territory, perhaps you’re onto a new innovation in your field and you’ll be the first.&lt;/li&gt;
+      &lt;li&gt;3b: Plus, even if your design totally bombs, it’ll be the only design that exists - so at the same time it will also be the best- win, win!&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sketch things out in a way you can move quickly using notes from step 2.&lt;/li&gt;
+  &lt;li&gt;Iterate, but don’t dwell.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This list is fairly easy to grok, but I’ll say a few words about points four and five.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sketching Things Out&lt;/strong&gt;&lt;br /&gt;
+I’ve found a ton of value in just getting some ideas out quickly. Sketch or Figma are usually what seasoned designers crack open, and that makes sense for them. It’s their wheelhouse, their Xcode. But for me, I still stumble around in those apps for a bit until I get where I need to be.&lt;/p&gt;
+
+&lt;p&gt;So, to that end - I just simply draw. And, half the time, I never even open a high fidelity program to map things out more. Heck, I usually turn to SwiftUI before I do that (both a massive compliment and damning condemnation since I don’t end up shipping with that work). These days, I’m using a wonderful to-the-point infinite canvas app, aptly named &lt;a href=&quot;https://www.scratch-paper.app&quot;&gt;Scratch Paper&lt;/a&gt; to do the job:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/crappyDrawing.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/crappyDrawing.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yes, my drawings truly are that terrible. But what they do is help me discover problems early. And here, that dreadful display of my artistic capabilities uncovered the following truths:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Room for text would be tricky in a grid UI.&lt;/li&gt;
+  &lt;li&gt;A grid does allow for more display density, but at a cost.&lt;/li&gt;
+  &lt;li&gt;If lines of text didn’t line up column per column, the varying heights would bother me. A list of row won’t really have this quirk.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Iterating versus Dwelling&lt;/strong&gt;&lt;br /&gt;
+Maybe it’s just me, but if I stick on a feature too long I begin to convince myself it’s straight trash. This is doubly true if you’ve already shipped, because as the features mount you’re forced to stretch not only your design muscles, but your UX thought process as well. Tough stuff.&lt;/p&gt;
+
+&lt;p&gt;So it is, at this point I try not to overthink it. I tend to make it as “dumb” and as simple as it could possibly be. For me, this typically looks like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Removing some gratuitous animations. &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Taking a flow from three taps to one or two. &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Or, even adding taps if the current flow requires too much preconceived “know how” bias I might’ve baked in. For example, other devs on Twitter would know to double tap here, or long press there - but my mom wouldn’t. So, maybe one extra tap and a label explaining what an element does is worth it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It pays to remember that at this point, the entire planet pretty much uses an iPhone. Your barber, your doctor, your old college professor, your grandparents - it’s much more than just “us”. So, if your flow is new or people have a chance of getting lost - dial it back. No need to put hot sauce on a jalapeno.&lt;/p&gt;
+
+&lt;p&gt;A good design connotes simplicity - nearly 100% of the time. Over the years I’ve come up with a complex flow chart to help remind me of this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/superDiagram.jpeg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/superDiagram.jpeg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-the-base-mvp&quot;&gt;Creating the Base MVP&lt;/h3&gt;
+&lt;p&gt;This is one of my favorite parts, because for me - I just feel like I can freakin’ build anything, you know? And I bet you can too! Most of the indie developers I interact with (as I alluded to above) are programmers by trade. So, once we’ve done the part that comes &lt;em&gt;least&lt;/em&gt; naturally to us, it’s time to do the part that comes &lt;em&gt;most&lt;/em&gt; naturally to us: the coding!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sidebar: Reading this post back, I could see how this ordering might seem counterintuitive. You need to know a set of requirements before you can design anything. So, here I’m assuming you’ve done that - this section speaks to defining a “shippable MVP” that you’re ready to develop. A set of requirements has to be laid down already before you’d even know what to design.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Before we do, though - let’s lay down what an MVP for this looks like. This is a permutation of the feature that maybe doesn’t have all that you wanted or envisioned, but it could ship if it had to.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For Spend Stack, this was Siri Shortcuts. It hurt not to launch with them, it hurts more they still aren’t there. But these are the choices we have to make as indies (for the record, hell or high water, shortcuts are coming).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For this feature, my MVP looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The MVP&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assets for, well - new icons.&lt;/li&gt;
+  &lt;li&gt;A new view to display icons.&lt;/li&gt;
+  &lt;li&gt;A reconfigured settings view to make room for this new option, and a table row to take users there.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And if I shipped with those things, it still would’ve been a success for me and probably would have looked like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/basicB.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/basicB.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ah, but lest we stop there.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-sauce&quot;&gt;The Sauce&lt;/h2&gt;
+&lt;p&gt;At this point, I could’ve shipped if I had to. But I had more time.&lt;/p&gt;
+
+&lt;p&gt;As such, now we get to some of the good stuff. What makes your app stand out? I try to ask myself that critically all the time, and it’s no different even for something like custom icons. To that end, here’s what I wanted to really make the experience great:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A toggle for dark and light icons.&lt;/li&gt;
+  &lt;li&gt;An “HD” preview of the icons, with a custom controller transition.&lt;/li&gt;
+  &lt;li&gt;A link to the designer’s Twitter account.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As you can see, when you mix this with the MVP it’s clear that all of these things are what are commonly referred to as “nice to haves”. But, these are also little bits that users will notice and likely help foster goodwill among your community.&lt;/p&gt;
+
+&lt;p&gt;If you’ve used the Spend Stack beta, there’s not much to say here because it shipped with these features mentioned above:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/iconsDone.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/iconsDone.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-best-in-class-additions&quot;&gt;The Best in Class Additions&lt;/h3&gt;
+&lt;p&gt;Lastly, we have to give a feature the fit and finish it truly deserves. This is very different from “the sauce” above. The sauce (by the way, I feel so weird typing “the sauce” over and over but I’ll solider on) is what makes your app stand out, be fun or have competitive advantages.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, Best in Class Additions are what make an app feel great, show what the platform can be or what software on it should feel like. These are things I believe &lt;em&gt;every&lt;/em&gt; app should be doing, or at least aspire to be like.&lt;/p&gt;
+
+&lt;p&gt;For custom icons, here was my list:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Don’t use &lt;code class=&quot;highlighter-rouge&quot;&gt;reloadData&lt;/code&gt; on the icon table view, batch reload it.&lt;/li&gt;
+  &lt;li&gt;Use a slide out animation for the notice table row, but a fade animation for batch reloads (the slides were much too busy looking).&lt;/li&gt;
+  &lt;li&gt;iPadOS Cursor Support.&lt;/li&gt;
+  &lt;li&gt;Full accessibility and voice over support.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a quick example of the kind of impacts these things have, consider dismissing this little “hint” using a full reload:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/bad.gif&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/bad.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Versus a smooth batching animation:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/good.gif&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/good.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And, here’s showing an icon with a standard presentation flow which feels a little off:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/noFun.gif&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/noFun.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And, here’s with the custom transition. You can’t really tell due to the .gif quality, but the icon’s corner radius also animates to its original value alongside the interactive drag dismiss:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/fun.gif&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/fun.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These are the things that add up over time, and if you don’t address them your app starts to feel just a little off.&lt;/p&gt;
+
+&lt;p&gt;Also, here are the things I consider best in class but I wasn’t able to get in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Full keyboard support (I’m currently rewriting all of this logic, so it made sense to wait).&lt;/li&gt;
+  &lt;li&gt;Some fun drag and drop options (i.e. drag an icon as an &lt;code class=&quot;highlighter-rouge&quot;&gt;UIImage&lt;/code&gt; payload).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point, custom icons was finished and ready to be tested on the beta. The response was great, and I was happy to get it out. To recap, when I make a feature I tend to follow this flow:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Validate I should actually make the feature.&lt;/li&gt;
+  &lt;li&gt;Get a list of what the feature is, roughly sketch it out.&lt;/li&gt;
+  &lt;li&gt;From that list and sketch, define a “shippable MVP”.&lt;/li&gt;
+  &lt;li&gt;Time permitting - add in sprinkles of awesome.&lt;/li&gt;
+  &lt;li&gt;Put in “Best in Class” additions.&lt;/li&gt;
+  &lt;li&gt;Ship it and be proud of yourself.&lt;/li&gt;
+  &lt;li&gt;Learn from user feedback, tweak it continually.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;On, and don’t forget step 8 - it’s always a good thing to tell others about your work!&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Went overboard with adding icons to &lt;a href=&quot;https://twitter.com/SpendStackApp?ref_src=twsrc%5Etfw&quot;&gt;@SpendStackApp&lt;/a&gt; 😎&lt;br /&gt;&lt;br /&gt;🌓Toggle between dark or regular icons &lt;br /&gt;🎨Check out the talented designers on Twitter &lt;br /&gt;📸 These icons have some stellar details - so tap on one to view it in HD &lt;br /&gt;&lt;br /&gt;Rolling out ~today ~on the beta 👉 &lt;a href=&quot;https://t.co/3CZBLXiE5S&quot;&gt;https://t.co/3CZBLXiE5S&lt;/a&gt; &lt;a href=&quot;https://t.co/xcUQeRW5LO&quot;&gt;pic.twitter.com/xcUQeRW5LO&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1260670081048199168?ref_src=twsrc%5Etfw&quot;&gt;May 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;And that’s how it happens! When creating a feature for your own app, try to find the flows that help you do the most important thing: ship. There’s a middle ground between everything I’ve listed here and where the reality of actually shipping things lies.&lt;/p&gt;
+
+&lt;p&gt;For example, I want to ship every single feature with my ideal flow as I was able to this time: get the MVP done, add in “the sauce” and make sure you’ve considered any best in class additions. But it doesn’t always work that way, and what doesn’t ship today can always ship tomorrow. Thus, my unofficial tour of how Spend Stack becomes the proud parent of a new feature concludes!&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Ah yes, the feature.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Exploring Futures over Closures</title><link href="http://localhost:4000/Exploring-Closures-With-Futures/" rel="alternate" type="text/html" title="Exploring Futures over Closures" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>http://localhost:4000/Exploring-Closures-With-Futures</id><content type="html" xml:base="http://localhost:4000/Exploring-Closures-With-Futures/">&lt;p&gt;One of the challenges I have faced with Combine is simply not knowing what all the framework can do, and when it should be doing it. The nascent vocabulary of its pieces combined (sorry) with my few dalliances with reactive programming has led to a steep learning curve. Even so, I’ve replaced &lt;code class=&quot;highlighter-rouge&quot;&gt;NotificationCenter&lt;/code&gt; code with its built in Combine publisher, and I’ve enjoyed the experience quite a lot. Operators are more concise, and clarity at the point of definition is a good way to foster a readable codebase.&lt;/p&gt;
 
 &lt;p&gt;And yet.&lt;/p&gt;
 
@@ -1218,114 +1404,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;But the time investment is minuscule in comparison to the time you save. We can lament about how they fail to refresh every now and then, toss up a painfully ambiguous error or what have you but remember - almost all of those things take less time to fix than it does for more most mature projects to build. So, harness your favorite previewing workflows (or steal the ones I’ve mentioned) and profit.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="SwiftUI" /><summary type="html">For years, web developers have lamented how some of their workflows required them to hit two keys on macOS:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">On Forming Habits</title><link href="http://localhost:4000/On-Forming-Habits/" rel="alternate" type="text/html" title="On Forming Habits" /><published>2020-01-01T00:00:00-06:00</published><updated>2020-01-01T00:00:00-06:00</updated><id>http://localhost:4000/On-Forming-Habits</id><content type="html" xml:base="http://localhost:4000/On-Forming-Habits/">&lt;p&gt;Ah, the New Year 🎉!&lt;/p&gt;
-
-&lt;p&gt;I think &lt;a href=&quot;https://www.youtube.com/watch?v=2MwhxdGAnic&quot;&gt;Death Cab for Cutie&lt;/a&gt; put it best:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;So this is the New Year / And I don’t feel any different.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I’ve danced with the whole “new year, new you!” concept more times than I care to count. Now, at age 31, I feel like I’ve finally arrived at a point where I can actually reflect on my year and make changes to get things done that I want to accomplish.&lt;/p&gt;
-
-&lt;p&gt;This is big as an indie dev, because without a system in place &lt;a href=&quot;http://localhost:4000/Introducing-Spend-Stack&quot;&gt;Spend Stack&lt;/a&gt; simply would not exist. Why? Because I have three kids under six, am married, have a full time job, an indie app, a blog and, well, my own hobbies. I used to think time was too short, or there simply wasn’t enough of it. However, with some tweaks, I truly believe there is enough time in the day to live the lives that we want if we have the right habits to support it.&lt;/p&gt;
-
-&lt;p&gt;After many mistakes, I know that if my day doesn’t have structure produced by some recurring habits, it gets lost in life’s many responsibilities. Today, I’ll share the system I have in place, and the apps that help support it, that have helped me form good habits.&lt;/p&gt;
-
-&lt;h3 id=&quot;forgetting-goals&quot;&gt;Forgetting Goals&lt;/h3&gt;
-&lt;p&gt;Years ago, if someone had told me to forget setting goals in the name of productivity, I’d call them mad. But I’ve since changed my thinking on them. As evidenced by books such as &lt;a href=&quot;https://www.amazon.com/Irresistible-Addictive-Technology-Business-Keeping/dp/1594206643&quot;&gt;Irresistible&lt;/a&gt;, &lt;a href=&quot;https://www.amazon.com/Make-Time-Focus-Matters-Every/dp/0525572422&quot;&gt;Make Time&lt;/a&gt; and &lt;a href=&quot;https://jamesclear.com/atomic-habits&quot;&gt;Atomic Habits&lt;/a&gt;, the problem I’ve found with goals is that you stay on the hamster wheel.&lt;/p&gt;
-
-&lt;p&gt;Accomplish one, then another immediately follows.&lt;/p&gt;
-
-&lt;p&gt;For me, I need a smooth, constant feeling of accomplishment, and goals give me peaks and valleys. I’ve certainly found I admire goals much more than I enjoy them, so I’ve taken their good aspects and tossed out the rest instead of following another hackneyed goal system I might come up with.&lt;/p&gt;
-
-&lt;p&gt;These days, I’m all about forming a system in my life to become the person who would accomplish the goals I want to.&lt;/p&gt;
-
-&lt;p&gt;👨🏻‍💻 Is shipping Spend Stack a goal? Then become an indie dev.&lt;br /&gt;
-🏃🏻‍♂️ Is getting in shape a goal? Then become athletic.&lt;br /&gt;
-📖 Is delivering conference talks a goal? Become a speaker.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;And so on.&lt;/p&gt;
-
-&lt;p&gt;But in 2020, talk is still cheap. I need concrete methods to carry out a plan because hearing it and doing it are two different things. To that end, I’ve found that if I discover who I want to be and what major themes I want to accomplish - I can then formulate smaller goals from that information.&lt;/p&gt;
-
-&lt;p&gt;At that point, I mostly disregard them and come up with a system to help me become the person who would be likely to routinely do those things.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The TL;DR - For me it’s less about setting goals, and more about working backward from those goals to become the kind of person who would do those things by getting “1%” better as often as I can.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s how it works for me.&lt;/p&gt;
-
-&lt;h3 id=&quot;the-journal-aspect&quot;&gt;The Journal Aspect&lt;/h3&gt;
-&lt;p&gt;The first step is laying the foundation. Who am I, what am I about? What’s important to me, and what do I want to be known for? To help answer those kinds of things, I have an evergreen journal entry in Day One that I read each morning to set my frame of reference:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/dayone.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/dayone.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The information in the rest of that entry simply states things I’d like to do at a more finite level. The key is that I may or may not do some of these things, as I’ve written a generous amount of tasks down. So, the idea here is that having them front and center will help me remember the person I’m trying to be. This way, I avoid only thinking in terms of arbitrary boxes I’m trying to tick off in 2020 which would only lead to yet another set of boxes to check off.&lt;/p&gt;
-
-&lt;p&gt;To get to this quickly, I’ve set up a trivial Shortcut that opens its respective URL:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/dayoneURL.jpeg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/dayoneURL.jpeg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If I read a simple document written by myself to give me that North Star (a concept I’ve talked a lot &lt;a href=&quot;http://localhost:4000/Can-You-Learn-Design&quot;&gt;about&lt;/a&gt;) for my life, I feel centered and my mind is a bit less cluttered.&lt;/p&gt;
-
-&lt;p&gt;Once I’ve read the “big idea” though, it’s time to shift my focus to the day to day things.&lt;/p&gt;
-
-&lt;h3 id=&quot;foundational-habits&quot;&gt;Foundational Habits&lt;/h3&gt;
-&lt;p&gt;Things I need to do every single day are what I call foundational habits. This is the part where it becomes easy to make things far too ambiguous, so I’ve sectioned off foundational habits on an app by app basis, each one representing different domains of my life.&lt;/p&gt;
-
-&lt;p&gt;Streaks is what I use to remind myself to do certain things each day of my life. I even order them in the same way I typically go about my day:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/streaksFH.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/streaksFH.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There’s a reason this has snagged one of the coveted Apple Design Awards - it’s simple to use, engaging and does one thing well. So I lean into it and try not to make it anything other than what it’s trying to do. An app that helps me do six things daily.&lt;/p&gt;
-
-&lt;p&gt;So, ask yourself, based on the “big ideas” you have for your life - what things should you be doing, or want to do, daily?&lt;/p&gt;
-
-&lt;h3 id=&quot;highlight-tasks&quot;&gt;Highlight Tasks&lt;/h3&gt;
-&lt;p&gt;However, daily tasks are stringent by nature. We all have those moon shot goals in mind. Or, we simply have a bigger highlight (a term coined by the aforementioned Make Time book) that we want to tackle over one or more days.&lt;/p&gt;
-
-&lt;p&gt;For this, I turn to Things 3. Here are some examples of things I’ve recently put in Things (zing!):&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/things.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/things.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Clean out the entry closet, take items to Good Will or shoot hoops with my son - these are all great things that support who I want to be but aren’t likely to repetitive daily items. So, that kind of item goes here.&lt;/p&gt;
-
-&lt;p&gt;With daily tasks and highlights accounted for, we now get into the menial tasks.&lt;/p&gt;
-
-&lt;h3 id=&quot;familylifehusbanddadindie-tasks&quot;&gt;Family/Life/Husband/Dad/Indie Tasks&lt;/h3&gt;
-&lt;p&gt;Life has so many responsibilities, and for the “remember to take out the trash” or “pay my personal property tax by December 31st” kind of things I use Reminders. The key here is that these kinds of entries are either family-related or just plain “adulting” tasks:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/reminders.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/reminders.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since its iOS 13 overhaul, I’ve found Reminders to be even more component. I’ve always been a fan, but with its new features (such as grouped tasks) I’ve been able to lean on it even more.&lt;/p&gt;
-
-&lt;p&gt;Further, this is the &lt;em&gt;only&lt;/em&gt; tool I use for side project or Spend Stack action items.&lt;/p&gt;
-
-&lt;p&gt;Why?&lt;/p&gt;
-
-&lt;p&gt;Because it’s beautifully limiting. With so much happening in life, I found that if I opened up super tools (such as Github Issues, Asana or something similar) I would write a novel and likely not ever return to read it again. But Reminders is short and unforgivably terse.&lt;/p&gt;
-
-&lt;p&gt;This is a perfect set of restrictions for me, and I’d imagine it’s the same reason a lot of creative folks produce breakthroughs under a certain level of rigidity or constraints. It forces only important ideas out. For the higher-level stuff, I use Notion. For the Do X and Y stuff, I use Reminders and love it.&lt;/p&gt;
-
-&lt;h3 id=&quot;app-recap&quot;&gt;App Recap&lt;/h3&gt;
-&lt;p&gt;For reference, here’s a recap of the apps I’ve mentioned:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://dayoneapp.com&quot;&gt;Day One&lt;/a&gt;: Journaling and “big picture” stuff.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://streaksapp.com&quot;&gt;Streaks&lt;/a&gt;: Foundational, every single day things.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://culturedcode.com/things/&quot;&gt;Things 3&lt;/a&gt;: “Highlight”-esque tasks.&lt;/li&gt;
-  &lt;li&gt;Reminders in iOS: Family, adulting or Spend Stack centric tasks.&lt;/li&gt;
-  &lt;li&gt;Shortcuts: To quickly open Day One entries.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.notion.so&quot;&gt;Notion&lt;/a&gt;: For big picture ideas and documents related to Spend Stack.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Depending on your personality type, my system may sound like the most stressful thing since taking the ACT. That’s ok, my wife fits into this category. She’s a more of a “go with the flow” gal, and she balances me out in many ways.&lt;/p&gt;
-
-&lt;p&gt;But, if you’re laughably Type-A like yours truly, having everything in its place and place for everything is simply invigorating and habit forming. While this may appear on the surface as too many tools to use - they each are serving a simple purpose. And that removes any ambiguity from my head, which helps me form the habits I want to.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;Over the years, I’ve discovered one truth when it comes to habits and the likelihood that I’ll achieve them - it’s about the 1% wins. As James Clear noted, the same way that investing in your 20s leads to riches through the magic of compound interest, so to do 1% habits in your day to day lead to compounded results over time.&lt;/p&gt;
-
-&lt;p&gt;In the end, that’s all my little system does. 1% wins help me learn from the past, produce in the present and prepare for the future. If my goal is to write a book, I don’t write that down as the thing I want to do. Instead, I need to figure out what to do to become a writer. May you have an amazing 2020 in accomplishing all of your aspirations, and heres to better habits 🍻!&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Ah, the New Year 🎉!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="SwiftUI" /><summary type="html">For years, web developers have lamented how some of their workflows required them to hit two keys on macOS:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

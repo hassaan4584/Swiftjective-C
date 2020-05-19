@@ -141,7 +141,7 @@ And, here's with the custom transition. You can't really tell due to the .gif qu
 
 {% include lazyLoadImage.html image="../assets/images/fun.gif" %}
 
-These are the things that add up over time, and if you don't address them your app starts to feel just a little off.
+These are the things that add up over time, and make your app feel "[iOS-y][3]"
 
 Also, here are the things I consider best in class but I wasn't able to get in:
 
@@ -171,3 +171,4 @@ Until next time ✌️.
 
 [1]: {{ site.url | append:"/Can-You-Learn-Design"}}
 [2]: https://www.scratch-paper.app
+[3]: https://daringfireball.net/linked/2020/03/20/nnw-5-ios

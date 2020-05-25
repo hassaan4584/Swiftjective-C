@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-19T10:25:22-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-25T07:56:13-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
 </subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">How a Feature Ships</title><link href="http://localhost:4000/How-a-Feature-Ships/" rel="alternate" type="text/html" title="How a Feature Ships" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>http://localhost:4000/How-a-Feature-Ships</id><content type="html" xml:base="http://localhost:4000/How-a-Feature-Ships/">&lt;p&gt;Ah yes, the feature.&lt;/p&gt;
 
 &lt;p&gt;A core tenet of both software development and startup life, their existence commands as much mental processing as it does actual coding and manpower. While we each claim to follow our own heuristics that lead us to the ever moving target of being “feature complete”, I’ve come to appreciate the process and I thought I’d document what it looks like for me from a recent example.&lt;/p&gt;
@@ -153,7 +153,7 @@ Maybe it’s just me, but if I stick on a feature too long I begin to convince m
 
 &lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/fun.gif&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/fun.gif&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;These are the things that add up over time, and if you don’t address them your app starts to feel just a little off.&lt;/p&gt;
+&lt;p&gt;These are the things that add up over time, and make your app feel “&lt;a href=&quot;https://daringfireball.net/linked/2020/03/20/nnw-5-ios&quot;&gt;iOS-y&lt;/a&gt;”&lt;/p&gt;
 
 &lt;p&gt;Also, here are the things I consider best in class but I wasn’t able to get in:&lt;/p&gt;
 

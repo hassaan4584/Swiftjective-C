@@ -81,9 +81,11 @@ The five sections it covers are:
 - Multiple spaces and scene support for iPadOS.
 - Home screen quick action support.
 - If you offer a sign in, Sing in with Apple is included.
-    + If you don't, offer [password autofill][21]
+    + If you don't, offer [password autofill][22]
 - Spotlight search and indexing support.
 - You have custom `UIPointerInteraction` support if your app needs it, and your interface supports cursor support correctly.
+    + You don't force any interaction paradigmn over another (i.e. touch is as viable as pointer or keyboard, and vice-versa).
+    + You use the correct content effects consistently (highlight, lift and hover).
 - Effective energy management (i.e. supports low power mode and reacts to it)
 - Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard.
 - It supports handoff on Mac (if applicable).
@@ -145,10 +147,15 @@ The five sections it covers are:
     + Additionally, ensure the system-wide double tap gesture doesn't modify any content if it's been customized by your app.
 - Navigation is clear and foolproof:
     - Modality is used sparingly, and clearly brings them back to where they were when dismissed.
+- Your design also considers text and your app's voice or messaging as part of the design and experience, and it stays consistent.
+    + You don't mix playful error messages juxatposed with serious ones.
+    + iOS technology, or any other technical term, is made for anyone to understand (i.e. you'd use 'Scan the tag' instead of 'Activate NFC reading Session' or similar.).
 
 ## The Design Drips with Polish
 - Correct system margins are used throughout the app, and no hard coded ones are used (i.e. layoutMarginsGuide, safeAreaLayoutGuide, etc.)
 - Haptic feedback is used throughout the system to complement user interactions, and they are not overdone.
+    + The right haptics are used at the right time. For example, you use `.selection` for only selection changes instead of something like `.rigid`.
+    + For example, they often accompany visual and auditory feedback.
 - You utilize SF Symbols for common iOS glyphs and the dedicate ones for system APIs (i.e. the gylphs exclusively for iCloud usage).
 - Controller transitions feel natural and fluid. Great examples are Calendar and Photos.
 - You opt for vector assets to combat the differing resolutions and avoid any blurry assets.

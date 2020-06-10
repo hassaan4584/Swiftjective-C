@@ -66,7 +66,7 @@ Essentially the flow was something like this:
 - Get development done.
 - Get blog posts and marketing assets finished.
 - Announce a beta.
-- Reach out to the press (as mentioned above.).
+- Reach out to the press (as mentioned above).
 - Experiment with some form of paid advertising.
 
 In the end it worked out as good as it could've. [MacStories][3], [Unwind][4], [9to5 Mac][2], [MacRumors][5] and a few others  covered it. Then, Thursday came around Apple featured it (where it still is today):
@@ -131,7 +131,7 @@ So, we can’t look for advice in the same exact ways, but we can take some of t
 ### Invaluable Insight
 The amount I've learned about what people think Spend Stack is, what they use it for and what they _want_ to use it for has been the best part of this. If I want to take it to the next level, I've got a lot of validated data points that light the path I would need to take.
 
-We make these apps to solve our own problems, and when we sell them it's easy to forget that you are not being paid to solve everyone else's, too. That's not to say you should follow each thread you get and run with it - but you should definitely listen.
+We make these apps to solve our own problems, and when we sell them it's easy to forget that you are now being paid to solve everyone else's, too. That's not to say you should follow each thread you get and run with it - but you should definitely listen.
 
 Learning about how to do the product thing is new to me, but I'm starting to get the ropes. Spend Stack is a budgeting and expense tracking app, and I'll be leaning into that more and more. 
 
@@ -141,7 +141,7 @@ The biggest thing for me right now is to make it clear about the value propositi
 To round things out, here's some other random thoughts:
 
 - Praise be, Apple finally used my promo art! #TookAlmostAYear
-- Visibility/ASO wins, crappy apps can and will still blow you out of the water sales wise if they've been out for years and rank high.
+- Visibility/ASO wins, crappy apps can and will blow you out of the water sales wise if they've been out for years and rank high.
 - It takes time - this is truly a marathon.
 - If you're not building relationships with the press, you should have started yesterday.
 - And if you do reach out, give them plenty of time. They need to use your app, form thoughts and then write over it. It takes a lot, and they were already doing a lot when you emailed them.

@@ -1,5 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-25T07:56:13-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">How a Feature Ships</title><link href="http://localhost:4000/How-a-Feature-Ships/" rel="alternate" type="text/html" title="How a Feature Ships" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>http://localhost:4000/How-a-Feature-Ships</id><content type="html" xml:base="http://localhost:4000/How-a-Feature-Ships/">&lt;p&gt;Ah yes, the feature.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-10T15:42:47-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">The Big Update</title><link href="http://localhost:4000/The-Big-Update/" rel="alternate" type="text/html" title="The Big Update" /><published>2020-06-10T00:00:00-05:00</published><updated>2020-06-10T00:00:00-05:00</updated><id>http://localhost:4000/The-Big-Update</id><content type="html" xml:base="http://localhost:4000/The-Big-Update/">&lt;p&gt;Part of living life as the proud owner of a P.U.F. (paid up front) app is the reality of the bell curve. You’ve seen this if you’ve looked at anyone’s numbers who makes these kinds of apps. It’s a product cycle of ups and downs.&lt;/p&gt;
+
+&lt;p&gt;Regardless of your pricing scheme, you likely live life on a bell curve too. But with P.U.F. apps, that cycle is somewhat exacerbated. As such, you live &lt;strong&gt;with&lt;/strong&gt; the dog days of trickle-in downloads and live &lt;strong&gt;for&lt;/strong&gt; the big breaks that come when sales sky rocket.&lt;/p&gt;
+
+&lt;p&gt;A lot was riding on Spend Stack’s 1.2 update. Thankfully, it went well and topped the charts in several countries in the Finance category. Let’s dig in!&lt;/p&gt;
+
+&lt;h3 id=&quot;the-result&quot;&gt;The Result&lt;/h3&gt;
+&lt;p&gt;If you follow me on Twitter, you already have an idea of how things went sales wise:&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Here&amp;#39;s coming in close to year 1. I wanted to write about this *a lot* more in-depth but I&amp;#39;m in the middle of building a house and my writing time is very minimal.&lt;br /&gt;&lt;br /&gt;Takeways:&lt;br /&gt;&lt;br /&gt;1) I believe you *can* make a living on the App Store.&lt;br /&gt;2) I&amp;#39;ve learned a ton about product+marketing &lt;a href=&quot;https://t.co/oVrgt4vcR3&quot;&gt;https://t.co/oVrgt4vcR3&lt;/a&gt; &lt;a href=&quot;https://t.co/MEtFblkhla&quot;&gt;pic.twitter.com/MEtFblkhla&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1269629494052237316?ref_src=twsrc%5Etfw&quot;&gt;June 7, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I have acquired a large chunk of my revenue from this update alone. It’s like a launch in several ways, in that you get the initial spike and then ride the wave down. The thing I was most interested in, though, was what kind of numbers I’d need for this to happen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/chartIpad.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/chartIpad.png&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Also recall that charting on the iPad and iPhone are different. It also charted #1 on the iPhone in several countries (U.S. included) but the landscape screenshot of the iPad looked nicer ✨.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ve long wondered what kind of numbers I’d need to chart #1 in Finance, and I seemingly got my answer around mid-afternoon on May 25th. It was just a bit short of a 1,000 downloads. Though, the next day I saw almost half of those numbers at 500 and change and still remained atop the list. By the third day I bumped down, oscillating between #3-#7 at 300ish downloads.&lt;/p&gt;
+
+&lt;p&gt;So, what did it? Was it solely the update?&lt;/p&gt;
+
+&lt;p&gt;No - it was absolutely all because of the press. I finally have corrected the biggest mistake I pointed out regarding my &lt;a href=&quot;http://localhost:4000/On-Launching-Your-Indie-App&quot;&gt;launch&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;timeline&quot;&gt;Timeline&lt;/h3&gt;
+&lt;p&gt;I kind of happened upon this big update. I started by rewriting some of the core parts of the app in Swift. Beforehand, Spend Stack was previously all Objective-C, a symptom of starting it so many years ago when Swift was still the wild west and changed how it split strings every other Tuesday.&lt;/p&gt;
+
+&lt;p&gt;Then, Apple announced the support for exporting Apple Card statements. So I hopped on that. Meanwhile, I was already adding multiple currencies. So I’m doing this - and then I check my inbox and see another pile of emails asking for recurring pricing. “Screw it”, I say, “You’re already in neck deep - what’s another feature at this point?”&lt;/p&gt;
+
+&lt;p&gt;This is what the thinkpieces on Medium tell you &lt;em&gt;not&lt;/em&gt; to do.&lt;/p&gt;
+
+&lt;p&gt;Luckily, I never read those. And mostly because I can’t due to the 48 modals they show as soon as you load an article. But I’m glad I took my time, because moving to Swift has paid off in many ways. I’ve tweeted here and there about some of the things it opened up:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;SwiftUI for modal popups&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Got most of Spend Stack&amp;#39;s cursor support done last night ✨ The context menu&amp;#39;s originating from the cursor coordinates is so so 😍😍😍 Apple did such a great job with the execution. &lt;a href=&quot;https://t.co/RSooDdyRnH&quot;&gt;pic.twitter.com/RSooDdyRnH&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1252292541720014848?ref_src=twsrc%5Etfw&quot;&gt;April 20, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Combine for, like, everything&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;In other news....&lt;br /&gt;&lt;br /&gt;Combine + Diffable Data Source = 😍 &lt;br /&gt;&lt;br /&gt;Multiple window support is waaaaay easier now! &lt;a href=&quot;https://t.co/M3klj0IqPN&quot;&gt;pic.twitter.com/M3klj0IqPN&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1220514774880071680?ref_src=twsrc%5Etfw&quot;&gt;January 24, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;But putting the tech discussion aside, I eventually came up with a plan for all of the work I was doing. I figured since I was already investing a lot of time into this update, I should shoot for my ideal press timeline. The magic number for me and large updates?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Six weeks&lt;/strong&gt;, just like Apple asks for.&lt;/p&gt;
+
+&lt;p&gt;Once the beta was feature completed, I decided that I would at the same time:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open a public beta and,&lt;/li&gt;
+  &lt;li&gt;Reach out to the press and Apple on that same day.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I used Things 3 to keep it all on track:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/thingsUpdate.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/thingsUpdate.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Essentially the flow was something like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get development done.&lt;/li&gt;
+  &lt;li&gt;Get blog posts and marketing assets finished.&lt;/li&gt;
+  &lt;li&gt;Announce a beta.&lt;/li&gt;
+  &lt;li&gt;Reach out to the press (as mentioned above.).&lt;/li&gt;
+  &lt;li&gt;Experiment with some form of paid advertising.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the end it worked out as good as it could’ve. &lt;a href=&quot;https://www.macstories.net/reviews/spend-stack-adds-apple-card-import-recurring-costs-per-list-currencies-ipad-improvements-and-more/&quot;&gt;MacStories&lt;/a&gt;, &lt;a href=&quot;https://podcasts.apple.com/us/podcast/macstories-perspective-icons-big-spend-stack-update/id1510451759?i=1000476190744&quot;&gt;Unwind&lt;/a&gt;, &lt;a href=&quot;https://9to5mac.com/2020/05/25/spend-stack-apple-card-more/&quot;&gt;9to5 Mac&lt;/a&gt;, &lt;a href=&quot;https://forums.macrumors.com/threads/app-recap-magnet-parcel-unfold-and-major-app-updates.2239187/&quot;&gt;MacRumors&lt;/a&gt; and a few others  covered it. Then, Thursday came around Apple featured it (where it still is today):&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/featureIphone.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/featureIphone.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That last point about experimenting with paid advertising is another blog post, and an important one as I think a lot indies simply overlook it. But I’ll sum up what I’ve experienced so far:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Twitter: Boosting posts is worthless.&lt;/li&gt;
+  &lt;li&gt;Twitter: Setting up a real campaign had a good R.O.I.&lt;/li&gt;
+  &lt;li&gt;Reddit: Extremely hit and miss.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But this all firms up what I’ve always known: If you want the numbers, you need the press. The man at the top of the mountain didn’t fall there, he had press that rocket launched him to the top.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The other sales bump I had this year was when Andy made Spend Stack his Pick of the Week on &lt;a href=&quot;https://twit.tv/shows/macbreak-weekly/episodes/702?autostart=false&quot;&gt;Macbreak&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You might think this bit of the post is entirely frustrating. I get it, of course press helps. You don’t need an MBA to figure that out.&lt;/p&gt;
+
+&lt;p&gt;But know this - I’ve launched things with zero press, zero returned emails, zero retweets or likes and zero downloads. It takes time and relationship building. In a way, I feel like I’m in a good spot to talk about it because I’ve lived on both sides of the fence. It’s quite a topic, and I may or may not be writing a book on the side dealing with things like this 🤫.&lt;/p&gt;
+
+&lt;h3 id=&quot;beta&quot;&gt;Beta&lt;/h3&gt;
+&lt;p&gt;Running a beta was such a great experience, it only made me feel remorse that I hadn’t done it in the first place. If anything, this release gave me a case of the what-ifs:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What &lt;em&gt;if&lt;/em&gt; I had reached the press correctly on my initial launch?&lt;/li&gt;
+  &lt;li&gt;What &lt;em&gt;if&lt;/em&gt; I had done a public beta first before launching?&lt;/li&gt;
+  &lt;li&gt;What &lt;em&gt;if&lt;/em&gt; I experimented with advertising long ago?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ah, but hindsight bats 1.000. After all, experience is what you need long after you finally have it. But I’ve got lessons to take forward from here.&lt;/p&gt;
+
+&lt;p&gt;All told, the beta capped at 615 users. My goal was 500, and for a three week period, that was something I was happy with. I learned a lot about how people think about the app and how they use it. The conversations I had with users is directing where I’m taking things next.&lt;/p&gt;
+
+&lt;p&gt;I think for whenever I make another app, the process will look like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Work on the app, define a lean MVP.&lt;/li&gt;
+  &lt;li&gt;Update everyone in a thread (S.T.S. did this masterfully with &lt;a href=&quot;https://twitter.com/stroughtonsmith/status/1270405385816625152?s=20&quot;&gt;Pastel&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Beta it when it’s beta-able.&lt;/li&gt;
+  &lt;li&gt;Follow my 6 week timeline again.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;backwards-momentum&quot;&gt;Backwards Momentum&lt;/h3&gt;
+&lt;p&gt;Perhaps you’re already aware of Spend Stack’s history. Or, maybe you just stumbled in here. As I hinted at above, events leading up to chart toppin’ was a very long, winding, complicated and grating road.&lt;/p&gt;
+
+&lt;p&gt;It took five years to get here!&lt;/p&gt;
+
+&lt;p&gt;I’ve worked on Spend Stack for a long time. In fact, I had previously released a version of it in 2012 which flopped gloriously:&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Here&amp;#39;s an important thing to remember if you&amp;#39;re just following along: This thing was the 1st version of Spend Stack, &amp;amp; it was downloaded *18* times. It was a complete failure.&lt;br /&gt;&lt;br /&gt;I&amp;#39;m proud that I&amp;#39;ve hit #1 paid for Finance, but it didn&amp;#39;t start that way at all. Just kept iterating! &lt;a href=&quot;https://t.co/w0UYD88Ppg&quot;&gt;pic.twitter.com/w0UYD88Ppg&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1265663472425205762?ref_src=twsrc%5Etfw&quot;&gt;May 27, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Look, I’m not out in the streets in a Lamborghini wearing rock star shades bumping my beats while the money pours in wearing a shirt that says “I MAD$ IT”. But, I’m also &lt;em&gt;not&lt;/em&gt; putting out something that gets no traction and that’s not by accident.&lt;/p&gt;
+
+&lt;p&gt;What we do often overlook is that success takes time. People want to be some incarnation of an indie, but rarely face the reality of having to work on your product for five years before you hit momentum.&lt;/p&gt;
+
+&lt;p&gt;This goes against almost all of the product advice you hear on the Internet. If your thing doesn’t work, you need to give up on the thing, right?&lt;/p&gt;
+
+&lt;p&gt;But why?&lt;/p&gt;
+
+&lt;p&gt;Well, I think it’s because almost all of those texts deal with software as a service, and most of the time our projects in the indie space don’t fit into that mold. We don’t have V.C.’s to report to, a board wanting results or really any stakeholders needing returns. We get to do our own thing, and that’s what’s so thrilling about the App Store to me.&lt;/p&gt;
+
+&lt;p&gt;We’re quick to say the gold rush is over, and that may be true - but the fun of it all sure isn’t.&lt;/p&gt;
+
+&lt;p&gt;So, we can’t look for advice in the same exact ways, but we can take some of the good bits of their thoughts and apply it. The App Store economics are not the same as other storefronts. It’s really a matter of building something quality and tweaking it as you go. After all, Spend Stack started out as a grocery list app. It &lt;em&gt;can&lt;/em&gt; be used for that still, but that’s no longer its identity. Also, it has a lot less pink 🙈.&lt;/p&gt;
+
+&lt;h3 id=&quot;invaluable-insight&quot;&gt;Invaluable Insight&lt;/h3&gt;
+&lt;p&gt;The amount I’ve learned about what people think Spend Stack is, what they use it for and what they &lt;em&gt;want&lt;/em&gt; to use it for has been the best part of this. If I want to take it to the next level, I’ve got a lot of validated data points that light the path I would need to take.&lt;/p&gt;
+
+&lt;p&gt;We make these apps to solve our own problems, and when we sell them it’s easy to forget that you are not being paid to solve everyone else’s, too. That’s not to say you should follow each thread you get and run with it - but you should definitely listen.&lt;/p&gt;
+
+&lt;p&gt;Learning about how to do the product thing is new to me, but I’m starting to get the ropes. Spend Stack is a budgeting and expense tracking app, and I’ll be leaning into that more and more.&lt;/p&gt;
+
+&lt;p&gt;The biggest thing for me right now is to make it clear about the value proposition Spend Stack brings, show people how to use it and make sure I cut down on misplaced expectations.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-random-takeaways&quot;&gt;Some Random Takeaways&lt;/h3&gt;
+&lt;p&gt;To round things out, here’s some other random thoughts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Praise be, Apple finally used my promo art! #TookAlmostAYear&lt;/li&gt;
+  &lt;li&gt;Visibility/ASO wins, crappy apps can and will still blow you out of the water sales wise if they’ve been out for years and rank high.&lt;/li&gt;
+  &lt;li&gt;It takes time - this is truly a marathon.&lt;/li&gt;
+  &lt;li&gt;If you’re not building relationships with the press, you should have started yesterday.&lt;/li&gt;
+  &lt;li&gt;And if you do reach out, give them plenty of time. They need to use your app, form thoughts and then write over it. It takes a lot, and they were already doing a lot when you emailed them.&lt;/li&gt;
+  &lt;li&gt;Am I happy going P.U.F.? I think so, but there’s no question Spend Stack would be a few orders of magnitude larger if I hadn’t. But so would the time commitment, and I quite like my day job that sends me to WWDC and around the world for free, has flexible hours, fun problems and good pay. So, if I can do both - then why not?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lastly, as mentioned in the lead, livin’ that P.U.F. life takes you a bell curve product cycle. I also noted a few of the “ups” that I’ve had so far in the first ten months:&lt;/p&gt;
+
+&lt;div class=&quot;jekyll-twitter-plugin&quot;&gt;&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;In my first 10 months &amp;gt;&lt;br /&gt;&lt;br /&gt;1) Initial launch &lt;br /&gt;2) Retail demo&lt;br /&gt;3) App Store preview video; search ads went from 1-10 week to 75&lt;br /&gt;4) 1.2 Update (~30% of my total numbers) &lt;a href=&quot;https://t.co/7XczP8TU8l&quot;&gt;https://t.co/7XczP8TU8l&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jordan Morgan (@JordanMorgan10) &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1269647593614827525?ref_src=twsrc%5Etfw&quot;&gt;June 7, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
+&lt;p&gt;I’ve been lucky to have some exciting releases and features with Spend Stack so far in its first 10 months on the  market. There’s been so much learning taking place. The App Store is a fickle beast, ever changing its inner workings on how features work, the search algorithm ranks or apps are shown on a whim. Selling on such a store front is a bit like building a house whose core ideas remain the same, but the foundation keeps changing out from under you half way through construction.&lt;/p&gt;
+
+&lt;p&gt;No matter - I hope more than anything this just demonstrates that success on the App Store is factor of a few core things that you absolutely can work towards as mentioned above. You truly get to make your own luck. One day you make enough to cover a latte, the next week you make enough to buy everyone a steak dinner. Woot woot!&lt;/p&gt;
+
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Part of living life as the proud owner of a P.U.F. (paid up front) app is the reality of the bell curve. You’ve seen this if you’ve looked at anyone’s numbers who makes these kinds of apps. It’s a product cycle of ups and downs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How a Feature Ships</title><link href="http://localhost:4000/How-a-Feature-Ships/" rel="alternate" type="text/html" title="How a Feature Ships" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>http://localhost:4000/How-a-Feature-Ships</id><content type="html" xml:base="http://localhost:4000/How-a-Feature-Ships/">&lt;p&gt;Ah yes, the feature.&lt;/p&gt;
 
 &lt;p&gt;A core tenet of both software development and startup life, their existence commands as much mental processing as it does actual coding and manpower. While we each claim to follow our own heuristics that lead us to the ever moving target of being “feature complete”, I’ve come to appreciate the process and I thought I’d document what it looks like for me from a recent example.&lt;/p&gt;
 
@@ -1210,198 +1384,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;Here’s to creating quality software, and this list being completely checked off sooner rather than later!&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Previously, I’ve written about this notion of what it looks like to be a best in class iOS app. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Xcode Preview Snips</title><link href="http://localhost:4000/Xcode-Preview-Snips/" rel="alternate" type="text/html" title="Xcode Preview Snips" /><published>2020-01-08T00:00:00-06:00</published><updated>2020-01-08T00:00:00-06:00</updated><id>http://localhost:4000/Xcode-Preview-Snips</id><content type="html" xml:base="http://localhost:4000/Xcode-Preview-Snips/">&lt;p&gt;For years, web developers have lamented how some of their workflows required them to hit two keys on macOS:&lt;/p&gt;
-
-&lt;p&gt;Command + R&lt;/p&gt;
-
-&lt;p&gt;And that was the only inconvenience in their path to see what the fruits of their labor would yield. Over on mobile, we’ve longed for such a minor roadblock to be the only thing in our path to refreshing our U.I. The pain was staggering - change one constraint in your layout code and then:&lt;/p&gt;
-
-&lt;p&gt;1) Build &lt;br /&gt;
-2) Run &lt;br /&gt;
-3) Xcode says that your device is locked (it’s probably not) &lt;br /&gt;
-4) Clean the project &lt;br /&gt;
-5) You change the constant of the layout anchor, and Source Kit crashes &lt;br /&gt;
-6) Throw your mac out the window &lt;br /&gt;
-7) Pick your mac back up, apologize to it and start back at 1 &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Look, you know where I’m going with this. If you’ve adopted SwiftUI (or even if you haven’t - view controllers apply here too) then you know Xcode Previews are more than a time saver. They are a fork in the road. There’s no going back once you get hooked on that instant feedback.&lt;/p&gt;
-
-&lt;p&gt;Today, I’ll share a few quick snips of my go-to previews. Some of these are already well known, tweeted and blogged about - but my topic for this post is &lt;em&gt;my favorite&lt;/em&gt; things to use with &lt;code class=&quot;highlighter-rouge&quot;&gt;PreviewProvider&lt;/code&gt;, so I’ve included them anyways for posterity’s sake. Let’s take a look.&lt;/p&gt;
-
-&lt;h3 id=&quot;previewlayout&quot;&gt;PreviewLayout&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;What does it do?&lt;/b&gt; Force a size on the given container.&lt;br /&gt;
-&lt;b&gt;What’s it good for?&lt;/b&gt; Making your preview mimic a certain size that’s realistic for your view, such as in a List scenario (i.e. cells in &lt;code class=&quot;highlighter-rouge&quot;&gt;UIKit&lt;/code&gt; parlance). &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;For example, suppose we were crafting a cell type of &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; for our app. SwiftUI will post it up on the selected device by default (a sensible choice for the majority of development) but we can leverage &lt;code class=&quot;highlighter-rouge&quot;&gt;PreviewLayout&lt;/code&gt; to put it into a more reasonable canvas size. Notice the left versus right:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/pl1.jpg&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/pl1.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Further, one can impose a fixed size in addition to &lt;code class=&quot;highlighter-rouge&quot;&gt;.sizeThatFits&lt;/code&gt;, or just take the device. But since Xcode Previews is drunk with power, why not show them all?&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;Group&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeThatFits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewDisplayName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.sizeThatFits&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;320&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;44&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewDisplayName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.fixed(width: 320, height: 44)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;device&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-                &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewDisplayName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.device&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/pl2.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/pl2.png&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Why &lt;code class=&quot;highlighter-rouge&quot;&gt;Group&lt;/code&gt; here? &lt;code class=&quot;highlighter-rouge&quot;&gt;PreviewLayout&lt;/code&gt; doesn’t conform to &lt;code class=&quot;highlighter-rouge&quot;&gt;CaseIterable&lt;/code&gt; currently, which, as we’ll see, lends itself perfectly to &lt;code class=&quot;highlighter-rouge&quot;&gt;ForEach&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Next, let’s hit on some pertinent environment values to preview against.&lt;/p&gt;
-
-&lt;h3 id=&quot;contentsizecategory&quot;&gt;ContentSizeCategory&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;What does it do?&lt;/b&gt; Specifies a content size for the preview, which drives the system’s font sizes among other things. &lt;br /&gt;
-&lt;b&gt;What’s it good for?&lt;/b&gt; Ensuring your app shines with dynamic type settings. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dynamic type, at this point, shouldn’t be a “nice to have” - I truly feel it’s a “need to have”. A cornerstone of an exceptional accessibility experience, testing for it used to be a chore - no more:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ContentSizeCategory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allCases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contentSize&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeThatFits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewDisplayName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;contentSize&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeCategory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contentSize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/cs1.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/cs1.png&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Previews going a bit slow? Make sure you aren’t going crazy in &lt;code class=&quot;highlighter-rouge&quot;&gt;didFinishLaunchingWithOptions&lt;/code&gt; since Xcode will indeed invoke this when firing up Xcode Previews and kicking off the dynamic replacement dance.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I haven’t found an elegant way to do this yet, but you can also ensure flipping from an &lt;code class=&quot;highlighter-rouge&quot;&gt;HStack&lt;/code&gt; to a &lt;code class=&quot;highlighter-rouge&quot;&gt;VStack&lt;/code&gt; in an accessibility setting (in terms of font size) looks fine, too:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@Environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeCategory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;sizeCat&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//📏🐈 amirite?&lt;/span&gt;
-    
-&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeCat&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;contains&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;accessibility&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// VStack&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// HStack&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;colorscheme&quot;&gt;ColorScheme&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;What does it do?&lt;/b&gt; Reports the current system color scheme, or the overridden value. &lt;br /&gt;
-&lt;b&gt;What’s it good for?&lt;/b&gt; Your app either Dark Modes or it doesn’t Dark Mode, this is an easy way to confirm it. &lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;ColorScheme&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allCases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeThatFits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewDisplayName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colorScheme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/cscheme1.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/cscheme1.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;layoutdirection&quot;&gt;LayoutDirection&lt;/h3&gt;
-&lt;p&gt;&lt;b&gt;What does it do?&lt;/b&gt; Reports the system layout direction. &lt;br /&gt;
-&lt;b&gt;What’s it good for?&lt;/b&gt; Does your app act a fool in right-to-left languages? Find out by piping this environment value into a preview.&lt;br /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;LayoutDirection&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allCases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeThatFits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewDisplayName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layoutDirection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/ld1.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/ld1.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Luckily, this one is trivial to get right if your app is mostly architected with SwiftUI. But, most aren’t. So it is in 2020, some of us forgot to constrain labels to their leading and trailing edges instead of their right or left sides.&lt;/p&gt;
-
-&lt;p&gt;Being able to inject environment variables can claim back a mountain of previously lost productivity. This truly is a feedback loop that heretofore took one to many build and runs. So, in the name of Xcode, why not inject whatever outlandish requirement that might come your way.&lt;/p&gt;
-
-&lt;p&gt;Need to know if your app works in Sri Lanka, with dark mode on and accessibility bold text enabled? In the stone age we’d take a few trip to Settings.app but in our new age of enlightenment it’s just a few quick lines of code:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeThatFits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;identifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;si_LK&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;legibilityWeight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;environment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colorScheme&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Some accessibility traits can’t be overriden within previews as far as I know. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;public var accessibilityInvertColors: Bool { get }&lt;/code&gt; can’t be a writable key path due to its read only nature.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;view-models&quot;&gt;View Models&lt;/h3&gt;
-&lt;p&gt;View models can boost your workflow for all sorts of reasons. Separations of concerns, easier unit testing and in our case, an easy way to mock real data. We’ve all been bitten by our pixel perfect designs in Sketch that get trounced by the diversity in our user base once it’s out in the wild, so let Xcode Previews be a shield against it.&lt;/p&gt;
-
-&lt;p&gt;Simply throw together a simple view model to reflect your actual data:&lt;/p&gt;
-
-&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;MorganFamViewModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Identifiable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Hashable&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;twitterHandle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;assetName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;
-    
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;TestData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;MorganFamViewModel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/*View Model array from .plist, json, etc*/&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;ContentView_Previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;PreviewProvider&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;previews&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kt&quot;&gt;ForEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;MorganFamViewModel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;TestData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;morgan&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;ContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;morgan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;previewLayout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sizeThatFits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img class=&quot;lozad rounded center-img&quot; data-src=&quot;../assets/images/morgansxc.png&quot; role=&quot;presentation&quot; srcset=&quot;../assets/images/morgansxc.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;bonus-round&quot;&gt;Bonus Round&lt;/h3&gt;
-&lt;p&gt;Here are a few other possibilities that didn’t quite make it in, but are helpful in their own right:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Testing selection states.&lt;/li&gt;
-  &lt;li&gt;Toggling edit mode.&lt;/li&gt;
-  &lt;li&gt;Popping in your vanilla &lt;code class=&quot;highlighter-rouge&quot;&gt;UIKit&lt;/code&gt; views or controllers. (Mattt wrote an excellent &lt;a href=&quot;https://nshipster.com/swiftui-previews/&quot;&gt;entry&lt;/a&gt; on this.)&lt;/li&gt;
-  &lt;li&gt;Or simply remembering that you can run the app itself within previews.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also, while perhaps tangentially related, remember that you can fire up &lt;a href=&quot;https://twitter.com/JordanMorgan10/status/1185565237510070272?s=20&quot;&gt;SwiftUI within Playgrounds on your iPad&lt;/a&gt;. The perfect cure for those late night spurts of creativity which used to require a trip to your mac.&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;If Xcode Previews were a car, it would be a Tesla Roadster. Blazingly efficient, fast and once you experience it you don’t want anything else. I mean, this the &lt;em&gt;the car&lt;/em&gt;. But like any vehicle or tool, you learn the ins. You learn the outs. The quirks, the hacks.&lt;/p&gt;
-
-&lt;p&gt;And Xcode Previews has all of those things.&lt;/p&gt;
-
-&lt;p&gt;But the time investment is minuscule in comparison to the time you save. We can lament about how they fail to refresh every now and then, toss up a painfully ambiguous error or what have you but remember - almost all of those things take less time to fix than it does for more most mature projects to build. So, harness your favorite previewing workflows (or steal the ones I’ve mentioned) and profit.&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="SwiftUI" /><summary type="html">For years, web developers have lamented how some of their workflows required them to hit two keys on macOS:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Previously, I’ve written about this notion of what it looks like to be a best in class iOS app. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -116,7 +116,7 @@ I've worked on Spend Stack for a long time. In fact, I had previously released a
 
 Look, I'm not out in the streets in a Lamborghini wearing rock star shades bumping my beats while the money pours in wearing a shirt that says "I MAD$ IT". But, I'm also _not_ putting out something that gets no traction and that's not by accident.
 
-What we do often overlook is that success takes time. People want to be some incarnation of an indie, but rarely face the reality of having to work on your product for five years before you hit momentum. 
+What we do often overlook is that any form of success takes time. People want to be some incarnation of an indie, but rarely face the reality of having to work on your product for five years before you hit momentum. 
 
 This goes against almost all of the product advice you hear on the Internet. If your thing doesn't work, you need to give up on the thing, right?
 
@@ -155,7 +155,7 @@ Lastly, as mentioned in the lead, livin' that P.U.F. life takes you a bell curve
 ### Final Thoughts
 I've been lucky to have some exciting releases and features with Spend Stack so far in its first 10 months on the  market. There's been so much learning taking place. The App Store is a fickle beast, ever changing its inner workings on how features work, the search algorithm ranks or apps are shown on a whim. Selling on such a store front is a bit like building a house whose core ideas remain the same, but the foundation keeps changing out from under you half way through construction.
 
-No matter - I hope more than anything this just demonstrates that success on the App Store is factor of a few core things that you absolutely can work towards as mentioned above. You truly get to make your own luck. One day you make enough to cover a latte, the next week you make enough to buy everyone a steak dinner. Woot woot!
+No matter - I hope more than anything this just demonstrates that getting downloads on the App Store is factor of a few core things that you absolutely can work towards as mentioned above. You truly get to make your own luck. One day you make enough to cover a latte, the next week you make enough to buy everyone a steak dinner. Woot woot!
 
 Until next time ✌️.
 

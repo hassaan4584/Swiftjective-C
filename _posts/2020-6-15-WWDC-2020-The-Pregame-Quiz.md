@@ -55,7 +55,7 @@ One of SwiftUI's main draws is the live previewing canvas, ever updating as we t
 When it does, it injects the new implementation back into the running application using what Swift language feature?
 
 **Question 2:**  
-At first glance, one might assume SwiftUI's `View` type accepts variadic generics within its `VeiwBuilder` implementation:
+At first glance, one might assume SwiftUI's `View` type accepts variadic generics within its `Viewuilder` implementation:
 
 ```swift
 var body: some View {

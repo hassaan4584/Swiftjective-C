@@ -177,7 +177,7 @@ I was happy to learn more about this, because the roads would eventually lead ba
 
 Xcode knows what we're editing, and here it's our default `ContentView` file. So why not just do delta updates? 
 
-And, in fact, that's kinda what happens. As we can edits, Xcode compiles `ContentView` exclusively from the rest of the project. When it does, it injects the new implementation back into the running application via dynamic replacement.
+And, in fact, that's kinda what happens. As we make edits, Xcode compiles `ContentView` exclusively from the rest of the project. When it does, it injects the new implementation back into the running application via dynamic replacement.
 
 While we make edits, what our code really looks like that's being executed is closer to this:
 

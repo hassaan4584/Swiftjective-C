@@ -1,5 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-10T15:42:47-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
-</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">The Big Update</title><link href="http://localhost:4000/The-Big-Update/" rel="alternate" type="text/html" title="The Big Update" /><published>2020-06-10T00:00:00-05:00</published><updated>2020-06-10T00:00:00-05:00</updated><id>http://localhost:4000/The-Big-Update</id><content type="html" xml:base="http://localhost:4000/The-Big-Update/">&lt;p&gt;Part of living life as the proud owner of a P.U.F. (paid up front) app is the reality of the bell curve. You’ve seen this if you’ve looked at anyone’s numbers who makes these kinds of apps. It’s a product cycle of ups and downs.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-15T10:23:11-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Swiftjective-C</title><subtitle>Swiftjective-C is a periodical over modern iOS software engineering. It houses tactful discussions over Swift, Objective-C and developing high quality apps while peering into various frameworks to see what makes them tick.
+</subtitle><author><name>Jordan Morgan</name></author><entry><title type="html">WWDC 2020: The Pregame Quiz</title><link href="http://localhost:4000/WWDC-2020-The-Pregame-Quiz/" rel="alternate" type="text/html" title="WWDC 2020: The Pregame Quiz" /><published>2020-06-11T00:00:00-05:00</published><updated>2020-06-11T00:00:00-05:00</updated><id>http://localhost:4000/WWDC-2020-The-Pregame-Quiz</id><content type="html" xml:base="http://localhost:4000/WWDC-2020-The-Pregame-Quiz/">&lt;p&gt;The very first virtual dub dub is coming in hot one week from today! Will we get a juiced up version of Catalyst, a shot of stability to SwiftUI or will UIKit dark horse the whole show and get a mountain of new goodies?&lt;/p&gt;
+
+&lt;p&gt;We’ll know soon in seven days, but until then let’s gear up with the sixth annual Swiftjective-C WWDC Pregame Quiz!&lt;/p&gt;
+
+&lt;p&gt;If you’d like a quick primer on how this all works or how it got started, check out the first five quizzes from &lt;a href=&quot;http://localhost:4000/WWDC-2015-The-Pregame-Quiz&quot;&gt;2015&lt;/a&gt; ,&lt;a href=&quot;http://localhost:4000/WWDC-2016-The-Pregame-Quiz&quot;&gt;2016&lt;/a&gt;, &lt;a href=&quot;http://localhost:4000/WWDC-2017-The-Pregame-Quiz&quot;&gt;2017&lt;/a&gt; ,&lt;a href=&quot;http://localhost:4000/WWDC-2018-The-Pregame-Quiz&quot;&gt;2018&lt;/a&gt; and &lt;a href=&quot;http://localhost:4000/WWDC-2019-The-Pregame-Quiz&quot;&gt;2019&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;Now&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kt&quot;&gt;Lets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ground-rules&quot;&gt;Ground Rules&lt;/h3&gt;
+
+&lt;p&gt;There are three rounds, and the point break down is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Round 1&lt;/strong&gt; – 1 point each answer&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Round 2&lt;/strong&gt; - 2 points each answer&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Round 3&lt;/strong&gt; - 3 points each answer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last question of each round is an optional wildcard question. Get it right, and your team gets &lt;strong&gt;4&lt;/strong&gt; &lt;strong&gt;points&lt;/strong&gt;, &lt;em&gt;but&lt;/em&gt; miss it and the team will be &lt;strong&gt;deducted 2 points&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;round-1xcode-xtras&quot;&gt;Round 1 — Xcode Xtras&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
+Our defacto I.D.E. for Apple development shipped its 1.0 release in fall 2003. What previous I.D.E. was it initially based on, developed by NeXT?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
+We all savor the utility of Xcode’s debugging back end, LLDB - but we didn’t always have it. Starting with Xcode 5.0, LLDB took over as the primary debugging back end over which previous technology?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
+Believe it or not, Xcode used to be a paid download. It wasn’t until after 4.1 it was made free - what was its last sticker price before doing so?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
+Let’s go more recent. Which major version of Xcode was the first to be released with support for Swift - 4, 5, 6 or 7?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
+Swift Playgrounds was initially launched integrated into Xcode, but later took on its own life on iPadOS. Aimed at teaching newcomers code through fun, colorful tutorials based around controlling playful monsters on an island - what were the names of the three monsters included in the initial lessons?&lt;/p&gt;
+
+&lt;h3 id=&quot;round-2swiftui-stumpers&quot;&gt;Round 2 — SwiftUI Stumpers&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
+One of SwiftUI’s main draws is the live previewing canvas, ever updating as we type. As we make edits, Xcode compiles the SwiftUI &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; exclusively from the rest of the project.&lt;/p&gt;
+
+&lt;p&gt;When it does, it injects the new implementation back into the running application using what Swift language feature?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
+At first glance, one might assume SwiftUI’s &lt;code class=&quot;highlighter-rouge&quot;&gt;View&lt;/code&gt; type accepts variadic generics within its &lt;code class=&quot;highlighter-rouge&quot;&gt;VeiwBuilder&lt;/code&gt; implementation:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;HStack&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;VStack&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sup&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Yo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But it’s actually powered via extensions, with how many different &lt;code class=&quot;highlighter-rouge&quot;&gt;buildBlock&lt;/code&gt; implementations allowing up to X views to be included?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
+SwiftUI was said to be called Amber internally at Apple, but to obfuscate it within the O.S. they put it under a framework named what?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
+SwiftUI simply wouldn’t be possible without Swift 5.1’s feature set. What four core pieces of API added in that release make SwiftUI syntax like this possible?&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;some&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
+SwiftUI uses bindings and state property wrappers liberally to control tree diffs and UI updates. A common data type to represent progress is either a Double or Float.&lt;/p&gt;
+
+&lt;p&gt;If you were to write:&lt;/p&gt;
+
+&lt;div class=&quot;language-swift highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;@State&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;progress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What the Swift compiler default this type to - a Double or a Float?&lt;/p&gt;
+
+&lt;h3 id=&quot;round-3dub-dub-venues-and-history&quot;&gt;Round 3 — Dub Dub Venues and History&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 1:&lt;/strong&gt;&lt;br /&gt;
+The first WWDC took place in Santa Clara in what year?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 2:&lt;/strong&gt;&lt;br /&gt;
+Dub Dub has been officially held in three different locations, all starting with “San” - can you name them all?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 3:&lt;/strong&gt;&lt;br /&gt;
+Which of these bands &lt;em&gt;hasn’t&lt;/em&gt; performed at a WWDC bash?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; The Barenaked Ladies&lt;br /&gt;
+&lt;strong&gt;B:&lt;/strong&gt; Good Charlotte&lt;br /&gt;
+&lt;strong&gt;C:&lt;/strong&gt; Fall Out Boy&lt;br /&gt;
+&lt;strong&gt;D:&lt;/strong&gt; Paramore&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question 4:&lt;/strong&gt; &lt;br /&gt;
+At WWDC 2008, what product was announced that has since been labeled by Yahoo! News as “one of the biggest PR disasters in Apple history” and was officially discontinued in 2012?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Wildcard:&lt;/strong&gt;&lt;br /&gt;
+Paper badges were the norm for WWDC badges for much of its history. Can you name the year they finally made the switch to plastic badges for the first time?&lt;/p&gt;
+
+&lt;h3 id=&quot;answer-key&quot;&gt;Answer Key&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Round 1:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Project_Builder&quot;&gt;Project Builder, or PBX&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GNU_Debugger&quot;&gt;The GNU Debugger, or GDB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://appleinsider.com/articles/11/07/20/apple_makes_xcode_free_to_all_with_release_of_4_1_on_mac_app_store.html&quot;&gt;$4.99. Not bad for an entire development suite.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;6.0&lt;/li&gt;
+  &lt;li&gt;Wildcard: Byte, Blue and Hopper!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Round 2:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forums.swift.org/t/how-does-the-hot-reloading-work-in-xcode11/25312/5&quot;&gt;Dynamic Method Replacement&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/rockbruno_/status/1194225536949792769?s=20&quot;&gt;10&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/_inside/status/1141758374285103111?s=20&quot;&gt;TimerSupport&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Function Builders, Opaque Return Types, Implicit Return Statements and Property Wrappers. I wrote about this &lt;a href=&quot;https://www.swiftjectivec.com/swiftui-what-just-happened/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Wildcard: A Double.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Round 3:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;1987, making dub dub a good 33 years old.&lt;/li&gt;
+  &lt;li&gt;Santa Clara, San Francisco and San Jose.&lt;/li&gt;
+  &lt;li&gt;D, Paramore.&lt;/li&gt;
+  &lt;li&gt;MobileMe&lt;/li&gt;
+  &lt;li&gt;Wildcard: 2009&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jordan Morgan</name></author><category term="Trivia" /><summary type="html">The very first virtual dub dub is coming in hot one week from today! Will we get a juiced up version of Catalyst, a shot of stability to SwiftUI or will UIKit dark horse the whole show and get a mountain of new goodies?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Big Update</title><link href="http://localhost:4000/The-Big-Update/" rel="alternate" type="text/html" title="The Big Update" /><published>2020-06-10T00:00:00-05:00</published><updated>2020-06-10T00:00:00-05:00</updated><id>http://localhost:4000/The-Big-Update</id><content type="html" xml:base="http://localhost:4000/The-Big-Update/">&lt;p&gt;Part of living life as the proud owner of a P.U.F. (paid up front) app is the reality of the bell curve. You’ve seen this if you’ve looked at anyone’s numbers who makes these kinds of apps. It’s a product cycle of ups and downs.&lt;/p&gt;
 
 &lt;p&gt;Regardless of your pricing scheme, you likely live life on a bell curve too. But with P.U.F. apps, that cycle is somewhat exacerbated. As such, you live &lt;strong&gt;with&lt;/strong&gt; the dog days of trickle-in downloads and live &lt;strong&gt;for&lt;/strong&gt; the big breaks that come when sales sky rocket.&lt;/p&gt;
 
@@ -68,7 +206,7 @@
   &lt;li&gt;Get development done.&lt;/li&gt;
   &lt;li&gt;Get blog posts and marketing assets finished.&lt;/li&gt;
   &lt;li&gt;Announce a beta.&lt;/li&gt;
-  &lt;li&gt;Reach out to the press (as mentioned above.).&lt;/li&gt;
+  &lt;li&gt;Reach out to the press (as mentioned above).&lt;/li&gt;
   &lt;li&gt;Experiment with some form of paid advertising.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -129,7 +267,7 @@
 
 &lt;p&gt;Look, I’m not out in the streets in a Lamborghini wearing rock star shades bumping my beats while the money pours in wearing a shirt that says “I MAD$ IT”. But, I’m also &lt;em&gt;not&lt;/em&gt; putting out something that gets no traction and that’s not by accident.&lt;/p&gt;
 
-&lt;p&gt;What we do often overlook is that success takes time. People want to be some incarnation of an indie, but rarely face the reality of having to work on your product for five years before you hit momentum.&lt;/p&gt;
+&lt;p&gt;What we do often overlook is that any form of success takes time. People want to be some incarnation of an indie, but rarely face the reality of having to work on your product for five years before you hit momentum.&lt;/p&gt;
 
 &lt;p&gt;This goes against almost all of the product advice you hear on the Internet. If your thing doesn’t work, you need to give up on the thing, right?&lt;/p&gt;
 
@@ -144,7 +282,7 @@
 &lt;h3 id=&quot;invaluable-insight&quot;&gt;Invaluable Insight&lt;/h3&gt;
 &lt;p&gt;The amount I’ve learned about what people think Spend Stack is, what they use it for and what they &lt;em&gt;want&lt;/em&gt; to use it for has been the best part of this. If I want to take it to the next level, I’ve got a lot of validated data points that light the path I would need to take.&lt;/p&gt;
 
-&lt;p&gt;We make these apps to solve our own problems, and when we sell them it’s easy to forget that you are not being paid to solve everyone else’s, too. That’s not to say you should follow each thread you get and run with it - but you should definitely listen.&lt;/p&gt;
+&lt;p&gt;We make these apps to solve our own problems, and when we sell them it’s easy to forget that you are now being paid to solve everyone else’s, too. That’s not to say you should follow each thread you get and run with it - but you should definitely listen.&lt;/p&gt;
 
 &lt;p&gt;Learning about how to do the product thing is new to me, but I’m starting to get the ropes. Spend Stack is a budgeting and expense tracking app, and I’ll be leaning into that more and more.&lt;/p&gt;
 
@@ -155,7 +293,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;Praise be, Apple finally used my promo art! #TookAlmostAYear&lt;/li&gt;
-  &lt;li&gt;Visibility/ASO wins, crappy apps can and will still blow you out of the water sales wise if they’ve been out for years and rank high.&lt;/li&gt;
+  &lt;li&gt;Visibility/ASO wins, crappy apps can and will blow you out of the water sales wise if they’ve been out for years and rank high.&lt;/li&gt;
   &lt;li&gt;It takes time - this is truly a marathon.&lt;/li&gt;
   &lt;li&gt;If you’re not building relationships with the press, you should have started yesterday.&lt;/li&gt;
   &lt;li&gt;And if you do reach out, give them plenty of time. They need to use your app, form thoughts and then write over it. It takes a lot, and they were already doing a lot when you emailed them.&lt;/li&gt;
@@ -171,7 +309,7 @@
 &lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
 &lt;p&gt;I’ve been lucky to have some exciting releases and features with Spend Stack so far in its first 10 months on the  market. There’s been so much learning taking place. The App Store is a fickle beast, ever changing its inner workings on how features work, the search algorithm ranks or apps are shown on a whim. Selling on such a store front is a bit like building a house whose core ideas remain the same, but the foundation keeps changing out from under you half way through construction.&lt;/p&gt;
 
-&lt;p&gt;No matter - I hope more than anything this just demonstrates that success on the App Store is factor of a few core things that you absolutely can work towards as mentioned above. You truly get to make your own luck. One day you make enough to cover a latte, the next week you make enough to buy everyone a steak dinner. Woot woot!&lt;/p&gt;
+&lt;p&gt;No matter - I hope more than anything this just demonstrates that getting downloads on the App Store is factor of a few core things that you absolutely can work towards as mentioned above. You truly get to make your own luck. One day you make enough to cover a latte, the next week you make enough to buy everyone a steak dinner. Woot woot!&lt;/p&gt;
 
 &lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Part of living life as the proud owner of a P.U.F. (paid up front) app is the reality of the bell curve. You’ve seen this if you’ve looked at anyone’s numbers who makes these kinds of apps. It’s a product cycle of ups and downs.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How a Feature Ships</title><link href="http://localhost:4000/How-a-Feature-Ships/" rel="alternate" type="text/html" title="How a Feature Ships" /><published>2020-05-19T00:00:00-05:00</published><updated>2020-05-19T00:00:00-05:00</updated><id>http://localhost:4000/How-a-Feature-Ships</id><content type="html" xml:base="http://localhost:4000/How-a-Feature-Ships/">&lt;p&gt;Ah yes, the feature.&lt;/p&gt;
 
@@ -1236,152 +1374,4 @@ Another way to give your interface a dash of that &lt;em&gt;je ne sais quoi&lt;/
 
 &lt;p&gt;I’ll follow up on Twitter with where I end up.&lt;/p&gt;
 
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Tech Notes" /><summary type="html">Among my favorite APIs introduced at W.W.D.C. is without a doubt the new diffable data source for both table and collection views. Replacing a decade old protocol, it brings about a robust way of expressing what should show when, where the truth is and, finally, a way to forgo the death trap that is batch updates.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">A Best In Class App: Spend Stack Checkup</title><link href="http://localhost:4000/Spend-Stack-Best-In-Class/" rel="alternate" type="text/html" title="A Best In Class App: Spend Stack Checkup" /><published>2020-01-15T00:00:00-06:00</published><updated>2020-01-15T00:00:00-06:00</updated><id>http://localhost:4000/Spend-Stack-Best-In-Class</id><content type="html" xml:base="http://localhost:4000/Spend-Stack-Best-In-Class/">&lt;p&gt;Previously, I’ve written about this notion of what it looks like to be a &lt;a href=&quot;http://localhost:4000/A-Best-in-Class-App&quot; target=&quot;_blank&quot;&gt;best in class iOS app&lt;/a&gt;. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.&lt;/p&gt;
-
-&lt;p&gt;Now, months later - how am I doing by my own definition? Let’s take a look at where I stand. The grades below have been pulled from the Best in Class post, but some have been altered, added or left out to only include items that can be answered with a yes or no answer as it pertains to Spend Stack.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;With each subsequent release, I’ll be updating my progress.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;infoContainer&quot;&gt;
-    &lt;small&gt;So far, Spend Stack is...&lt;/small&gt;
-    &lt;b style=&quot;font-size: calc(36px + 1.5vw);&quot;&gt;55%&lt;/b&gt;
-    &lt;small&gt;...of the way towards a best in class app (48/87).&lt;/small&gt;
-    &lt;div class=&quot;centerFlex&quot;&gt;
-        &lt;div class=&quot;smallInfoContainer&quot;&gt;
-            &lt;b&gt;Accessibility&lt;/b&gt;
-            &lt;small&gt;47% (9/19)&lt;/small&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;smallInfoContainer&quot;&gt;
-            &lt;b&gt;Platform&lt;/b&gt;
-            &lt;small&gt;39% (11/28)&lt;/small&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;smallInfoContainer&quot;&gt;
-            &lt;b&gt;U.X.&lt;/b&gt;
-            &lt;small&gt;80% (16/20)&lt;/small&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;smallInfoContainer&quot;&gt;
-            &lt;b&gt;Design&lt;/b&gt;
-            &lt;small&gt;77% (10/13)&lt;/small&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;smallInfoContainer&quot;&gt;
-            &lt;b&gt;App Store&lt;/b&gt;
-            &lt;small&gt;50% (2/4)&lt;/small&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;accessibility&quot;&gt;Accessibility&lt;/h3&gt;
-&lt;p&gt;◎ Voice Over fully supported. &lt;br /&gt;
-◎ Voice Control fully supported. &lt;br /&gt;
-◎ Voice Over Gestures supported where needed (Magic tap, escape, etc.) &lt;br /&gt;
-◎ &lt;code class=&quot;highlighter-rouge&quot;&gt;accessibilityIgnoresInvertColors&lt;/code&gt; where needed. &lt;br /&gt;
-◉ Respects reduced motion and blurring where needed. &lt;br /&gt;
-◉ Adaptive to all content sizes (i.e. dynamic type). &lt;br /&gt;
-◉ Uses &lt;code class=&quot;highlighter-rouge&quot;&gt;readableContentGuide&lt;/code&gt; for view that are predominantly text based. &lt;br /&gt;
-◎ Color contrast is 7:1 or better. &lt;br /&gt;
-◉ Supported smart color inversion elegantly. &lt;br /&gt;
-◉ Bar button items supply a crisp landscape and large content size image. &lt;br /&gt;
-◉ Glyphs have their &lt;code class=&quot;highlighter-rouge&quot;&gt;adjustsImageSizeForAccessibilityContentSizeCategory&lt;/code&gt; set. &lt;br /&gt;
-◉ Includes closed captions and audio descriptions, all images and icons have alternative text set. &lt;br /&gt;
-◎ Leading and trailing margins are used for constraints to support left to right languages.  &lt;br /&gt;
-◎ The User Interface appears flawlessly when tested using Double Length Pseudo-languages.  &lt;br /&gt;
-◉ Using &lt;code class=&quot;highlighter-rouge&quot;&gt;NSShowNonLocalizedStrings&lt;/code&gt; yields no results.  &lt;br /&gt;
-◎ If you support drag and drop, &lt;code class=&quot;highlighter-rouge&quot;&gt;UIAccessibilityLocationDescriptors&lt;/code&gt; are all set.  &lt;br /&gt;
-◎ Magic taps are supported for the app’s most common functionality.  &lt;br /&gt;
-◉ It uses &lt;code class=&quot;highlighter-rouge&quot;&gt;CFBundleSpokenName&lt;/code&gt; if the app’s name could potentially be mispronounced by the system (i..e CoolApp23 would be “CoolApp Twenty Three”).  &lt;br /&gt;
-◎ Lastly, running the entire app through Accessibility Inspector produced no warnings and turning on Screen Curtain to navigate the app works flawlessly.  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Accessibility: 9/19 - 47%&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;platform-technology&quot;&gt;Platform Technology&lt;/h3&gt;
-&lt;p&gt;◉ Contextual interactions supported (Control previews, home shortcuts, quick actions and interaction delegate for unique experiences). &lt;br /&gt;
-◎ Spotlight search and indexing support. &lt;br /&gt;
-◉ Effective energy management (i.e. supports low power mode and reacts to it) &lt;br /&gt;
-◎ Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard. &lt;br /&gt;
-◎ It supports handoff on Mac (if applicable). &lt;br /&gt;
-◎ Meaningful extensions are included with the app, whether it’s via a share extension, action extension, etc.&lt;br /&gt;
-◎ Callback urls are supplied and documented so other apps may integrate with it (x-callback-url)/. &lt;br /&gt;
-◎ Siri Intent support, when plausible: &lt;br /&gt;
-◎ Siri Shortcuts also include intent phrases to help coach users &lt;br /&gt;
-◎ Alternate app names are included when appropriate &lt;br /&gt;
-◎ Watchface support &lt;br /&gt;
-◎ If it makes sense, document sharing is supported via the file provider. &lt;br /&gt;
-◉ Drag and drop has first class support: &lt;br /&gt;
-    ◎ A fully fleshed out NSItemProvider exists for custom objects. &lt;br /&gt;
-    ◉ Purposeful external and internal app drag support. &lt;br /&gt;
-    ◉ This is used for reordering, should the app support it. &lt;br /&gt;
-◎ If it makes sense, data can be shared via AirDrop. &lt;br /&gt;
-◉ All tab bar images are vector .pdf images or have each corresponding size included to ensure they adapt correctly and are vended to accessibility modals properly. &lt;br /&gt;
-◎ Any displayed Live Photo will animate when force touched and utilize PHLivePhotoImageView for playback. &lt;br /&gt;
-    ◎ Each image also shows their system badge if available (i.e. live photo badges). &lt;br /&gt;
-◉ Supports printing via &lt;code class=&quot;highlighter-rouge&quot;&gt;UIPrintInteractionController&lt;/code&gt;. &lt;br /&gt;
-◎ Has Siri Shortcuts supported or donated. &lt;br /&gt;
-    ◎ Rich Siri Shortcuts support with parameters.
-◎ Running the Analyze function in Xcode yields no errors, warnings or suggestions. &lt;br /&gt;
-◉ There are no calls to&lt;code class=&quot;highlighter-rouge&quot;&gt; UIGraphicsBeginImageContextWithOptions&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;UIGraphicsImageRenderer&lt;/code&gt; is used instead. &lt;br /&gt;
-◎ Universal Links are supported, especially if your app’s content is available online. &lt;br /&gt;
-◉ Modern multitasking is supported (slide over, split view and PiP). &lt;br /&gt;
-◉ Multiple windows is supported on iPadOS. &lt;br /&gt;
-◉ If it can be dragged, it can make a new window. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Platform Technology: 11/28 - 39%&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;user-experience&quot;&gt;User Experience&lt;/h3&gt;
-&lt;p&gt;◉ Supports native “undo” and “redo” actions, typically from shaking or from the iOS 13 gestures. &lt;br /&gt;
-◉ The content type of all text views and text fields is included, and the correct keyboard type is used for the current context. 
-◉ The keyboard’s language identifier is integrated correctly. &lt;br /&gt;
-◎  Handles the keyboard being undocked on the iPad, if views are constrained to it via an inputAccessoryView. &lt;br /&gt;
-◉ It’s localized and internationalized for all territories it’s released in. &lt;br /&gt;
-◉ Text tends to not truncate and it never clips but rather it’s always readable. &lt;br /&gt;
-◉ All tappable interface elements are at least 44 by 44 points. &lt;br /&gt;
-◉ The entire app binary is under 30 megabytes. (No source here, this is based off a multitude of data points.) &lt;br /&gt;
-◉ Delete actions always are followed by a confirmation prompt. &lt;br /&gt;
-◎ If your app stores rich information files like a Keynote presentation, it uses the Quick Look API to preview it. &lt;br /&gt;
-◎ State restoration is implemented via &lt;code class=&quot;highlighter-rouge&quot;&gt;NSUserActivity&lt;/code&gt; APIs for scenes. &lt;br /&gt;
-◉ It uses the correct audio settings, if audio can be played at all within it. &lt;br /&gt;
-◉ Custom edit options are supported when text or an image is selected, if appropriate. &lt;br /&gt;
-◉ The user is provided ample time to form an opinion about your app before you request a rating for it. &lt;br /&gt;
-◉ The launch screen is branding free and closely resembles the first screen of the app. &lt;br /&gt;
-◎ Before opening a link that could lead to another app in a web view or &lt;code class=&quot;highlighter-rouge&quot;&gt;SFSafariViewController&lt;/code&gt;, try calling &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplication’s openURL:&lt;/code&gt; with the &lt;code class=&quot;highlighter-rouge&quot;&gt;UIApplicationOpenURLOptionUniversalLinksOnlyoption&lt;/code&gt; first. &lt;br /&gt;
-◉ Table views deselect selected rows in &lt;code class=&quot;highlighter-rouge&quot;&gt;viewDidAppear&lt;/code&gt; when popping back to them.&lt;br /&gt;
-◎ &lt;code class=&quot;highlighter-rouge&quot;&gt;UITextInputAssistantItem&lt;/code&gt; items are used to support common tasks on iPad that are at home within the shortcuts bar. &lt;br /&gt;
-◉ When performing CRUD operations on a table or collection view, you opt to use &lt;code class=&quot;highlighter-rouge&quot;&gt;performBatchUpdates:&lt;/code&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; instead of &lt;/code&gt;reloadData`. &lt;br /&gt;
-◉ Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone. &lt;br /&gt;
-◉ Navigation is clear and foolproof: 
-    - Modality is used sparingly, and clearly brings them back to where they were when dismissed.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;User Experience: 16/20 - 74%&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;design&quot;&gt;Design&lt;/h3&gt;
-&lt;p&gt;◉ Correct system margins are used throughout the app, and no hard coded ones are used (i.e. layoutMarginsGuide, safeAreaLayoutGuide, etc.)  &lt;br /&gt;
-◉ Haptic feedback is used throughout the system to complement user interactions, and they are not overdone.  &lt;br /&gt;
-◉ Controller transitions feel natural and fluid. Great examples are Calendar and Photos.  &lt;br /&gt;
-◉ You opt for vector assets to combat the differing resolutions and avoid any blurry assets.  &lt;br /&gt;
-◉ Your content is always the focus, and you constantly challenge if that’s true throughout the development cycles.  &lt;br /&gt;
-◉ No segment controls are used in toolbars.  &lt;br /&gt;
-◉ There are no toolbars and tab bars in the same screen.  &lt;br /&gt;
-◉ Destructive actions are the last choice in action sheets.  &lt;br /&gt;
-◉ Alerts, if used, ideally have to two choices and titles have no punctuation.  &lt;br /&gt;
-◎ Alerts avoid using Yes and No as choices.  &lt;br /&gt;
-◉ Switches are exclusively used within a table row.  &lt;br /&gt;
-◎ You aspire to ship on all of Apple’s platforms (iOS iPhone + iPad, watchOS, tvOS and macOS).  &lt;br /&gt;
-◎ Lastly, your app is “jank” free. You know what this means for you.  &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Design: 10/13 - 77%&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;app-store-presence&quot;&gt;App Store Presence&lt;/h3&gt;
-&lt;p&gt;◎ An App Store preview video is used. &lt;br /&gt;
-◎ Its keywords and category were carefully researched. &lt;br /&gt;
-◉ The app icon follows the golden grid. &lt;br /&gt;
-◉ The icon follows your brand’s primary color as well. &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;App Store Presence: 2/4 - 50%&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
-&lt;p&gt;No app is perfect, and no app can check off all of the boxes you want. But it’s motivating to have a goal to shoot for, and this list is mine. When it’s all done, I’ll feel extremely proud to have my name behind Spend Stack.&lt;/p&gt;
-
-&lt;p&gt;Here’s to creating quality software, and this list being completely checked off sooner rather than later!&lt;/p&gt;
-
-&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="The Indie Dev Diaries" /><summary type="html">Previously, I’ve written about this notion of what it looks like to be a best in class iOS app. I wanted a tangible, written down list that I could reference to gauge whether or not I was being a good platform citizen with my own apps.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;p&gt;Until next time ✌️.&lt;/p&gt;</content><author><name>Jordan Morgan</name></author><category term="Tech Notes" /><summary type="html">Among my favorite APIs introduced at W.W.D.C. is without a doubt the new diffable data source for both table and collection views. Replacing a decade old protocol, it brings about a robust way of expressing what should show when, where the truth is and, finally, a way to forgo the death trap that is batch updates.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/logo.png" /><media:content medium="image" url="http://localhost:4000/assets/images/logo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

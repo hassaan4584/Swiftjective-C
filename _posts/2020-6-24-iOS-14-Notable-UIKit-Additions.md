@@ -8,6 +8,10 @@ description: "Though UIKit wasn't the star of the show, its number of improvemen
 image: /assets/images/logo.png
 ---
 
+If you want to catch up on this series first, view the [iOS 11][1], [iOS 12][2]and [iOS 13][3] versions of this article.
+
+For now, let's chat UIKit and iOS 14 nicities!
+
 ### Final Thoughts
 
 Until next time ✌️.

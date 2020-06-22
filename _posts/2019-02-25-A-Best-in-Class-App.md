@@ -119,6 +119,7 @@ The five sections it covers are:
 - Supports [native][12] "undo" and "redo" actions, typically from shaking.
 - The content type of all text views and text fields is included, and the correct keyboard type is used for the current context. The keyboard's language identifier is integrated correctly.
 - You support [two finger drag to edit gestures][18] in table and collection views.
+- If you've customized the back button image for navigation controller, you've also set a `backIndicatorTransitionMaskImage`.[25]
 - If you have searching capabilities, it [supports field tokens][19].
 - Handles the keyboard being undocked on the iPad, if views are constrained to it via an `inputAccessoryView`.
 - If data is quantifiable while data transfer is occurring, a progress indicator is used over an activity indicator.
@@ -211,4 +212,5 @@ Until next time ✌️.
 [22]: https://developer.apple.com/documentation/security/password_autofill/
 [23]: https://developer.apple.com/documentation/localauthentication/labiometrytype
 [24]: https://developer.apple.com/documentation/uikit/uiviewcontroller/2887512-preferredscreenedgesdeferringsys
+[25]: https://sarunw.com/posts/what-is-backindicatortransitionmaskimage/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=web&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B460
 

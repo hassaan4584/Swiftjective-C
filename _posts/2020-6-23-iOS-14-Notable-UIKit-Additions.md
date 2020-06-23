@@ -49,7 +49,7 @@ Regardless, if you've got the `.inline` display, the picker will still do this c
 
 {% include lazyLoadImage.html image="../assets/images/iOS14_toggleDatePicker.gif" %}
 
-The pretty package comes with some house keeping, though. If you were using a date picker before, you were likely doing some under the assumption that it would show as the wheel style. If that's the case, it's gonna look all kinds of crazy right now - so go check it out in your own apps and either tweak the style or the way you're showing it.
+The pretty package comes with some house keeping, though. If you were using a date picker before, you were likely doing so under the assumption that it would show as the wheel style. If that's the case, it's gonna look all kinds of crazy right now - so go check it out in your own apps and either tweak the style or the way you're showing it.
 
 For example, I was using the wheel style in Spend Stack, which you can see in the picture above in this article. However, building against iOS 14 nets me this result (with the nice, fully fleshed out version showing when a user taps on it):
 
@@ -140,7 +140,7 @@ Which is a good thing, because that type of thing seems to be pushed in favor of
 ```swift
 let menu = UIMenu(title: "", children: [UIAction(title: "Trash It") { handler in print("Sup")}])
  
- let button = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 44))
+let button = UIButton(frame: CGRect(x: 50, y: 100, width: 100, height: 44))
 button.setImage(UIImage(systemName: "trash"), for: .normal)
 button.role = .normal
 button.menu = menu
@@ -151,7 +151,7 @@ button.showsMenuAsPrimaryAction = true
 view.addSubview(button)
 ```
 
-Now, the button will toss up the on' menu:
+Now, the button will toss up the ol' menu:
 
 {% include lazyLoadImage.html image="../assets/images/iOS14_buttonMenu.gif" %}
 
@@ -186,9 +186,9 @@ Look, `UISplitViewController` went absolutely nuts in this release. Just look at
 
 One reason why? Due to the new `.sidebar` stuff which allows for a three column layout. You see this all over in iOS 14 - for example Mail and Notes. And now, we've also got the whole new list thing going on in collection view. That's used heavily in the sidebar world.
 
-But how do we handle all of this collapsing and such? Won't _that_ be a nightmare, even with diffable datasource?
+But how do we handle all of that collapsing tomfoolery? Won't _that_ be a nightmare, even with diffable datasource?
 
-No, of course it won't:
+No, of course it won't. You can diff things section by section now:
 {% include lazyLoadImage.html image="../assets/images/iOS14_diffDiff.png" %}
 
 You put it all together, and collection view with split view controller just became a go-to choice for many app's UX. 
@@ -236,9 +236,9 @@ setNeedsUpdateOfPrefersPointerLocked()
 - There's a list layout for collection view now!
 
 ### Final Thoughts
-UIKit got some serious juice in this release. I suspect it will for a long time, as SwiftUI is simply putting these things under its own wings in a declarative way without even needing a representable instance for a lot of these things.
+UIKit got some serious juice in this release. I suspect it will for a long time, as SwiftUI is simply putting similar controls under its own wings in a declarative way without even needing a representable instance for a lot of these things.
 
-Plus - my wish came true. Catalyst apps built on UIKit look better already no macOS by virtue of Apple's new design language that bring the two closely together. I'm down! As always, it's been my pleasure diving into UIKit's diffs on an annual basis. There's a lot to love here.
+Plus - my wish came true. Catalyst apps built on UIKit look better already on macOS by virtue of Apple's new design language that bring the two closely together. I'm down! As always, it's been my pleasure diving into UIKit's diffs on an annual basis. There's a lot to love here.
 
 Until next time ✌️.
 

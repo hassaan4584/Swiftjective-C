@@ -81,7 +81,7 @@ Which nets you this:
 But hey - the selected color is also `.KVO` compliant, so why not mesh the old with the new and Combine it instead of using a lame delegate, amirite?
 
 ```swift
-cancellable = datePicker.publisher(for: \.selectedColor)
+cancellable = colorPicker.publisher(for: \.selectedColor)
 .sink() { [weak self] color in
     self?.view.backgroundColor = color
 }

@@ -32,6 +32,13 @@ As an indie, I design and develop [Spend Stack]({{ site.spendStackURL }}), a lis
   {% endfor %}
 </ul>
 
+#### Interviews
+<ul>
+  {% for item in site.data.myWork.interviews %}
+    <li><a href="{{ item.link }}" target="_blank">{{ item.title }}</a></li>
+  {% endfor %}
+</ul>
+
 #### Talks and Slides 
 <ul>
   {% for item in site.data.myWork.talks %}

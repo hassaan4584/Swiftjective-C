@@ -53,7 +53,7 @@ The five sections it covers are:
         * `func accessibilityIncrement()`
     + **[Decrement][7]**: A one-finger swipe down that decrements a value in an element.
         * `func accessibilityDecrement()`
-- [Voice Control][1] is also supported, and apprpriate [`accessibilityUderInputLabels`][30] are set if needed.
+- [Voice Control][1] is also supported, and appropriate [`accessibilityUserInputLabels`][30] are set if needed.
 - Your app respects the following settings:
     + Including Bold Text.
     + High Contrast Cursors.
@@ -135,7 +135,7 @@ The five sections it covers are:
     + You leverage the idea of a primary window versus an auxiliary window. One provides access to your full feature set, while the other helps users complete a focused, singular task and is usually closed afterwards.
 - Full multitasking suport.
 - Home screen quick action support.
-- If you offer a sign in, Sing in with Apple is included.
+- If you offer a sign in, Sign in with Apple is included.
     + If you don't, offer [password autofill][22].
 - Spotlight search and indexing support.
 - You have custom `UIPointerInteraction` support if your app needs it, and your interface supports cursor support correctly.

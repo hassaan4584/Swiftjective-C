@@ -42,7 +42,7 @@ The five sections it covers are:
 
 ### Accessibility is First Class
 - Voice Over is fully supported and the [rotor][29] control is implemented by including the relevant headings. Using Screen Curtain yields an experience that's not only usable, but up to par with the regular app using only Voice Over.
-- [Voice Over gestures][2] are overriden where necessary:
+- [Voice Over gestures][2] are overridden where necessary:
     + **[Escape][3]**: A two-finger Z-shaped gesture that dismisses a modal dialog, or goes back one level in a navigation hierarchy.
         * `func accessibilityPerformEscape() -> Bool`
     + **[Magic Tap][4]**: A two-finger double-tap that performs the most-intended action.
@@ -53,7 +53,7 @@ The five sections it covers are:
         * `func accessibilityIncrement()`
     + **[Decrement][7]**: A one-finger swipe down that decrements a value in an element.
         * `func accessibilityDecrement()`
-- [Voice Control][1] is also supported, and apprpriate [`accessibilityUderInputLabels`][30] are set if needed.
+- [Voice Control][1] is also supported, and appropriate [`accessibilityUserInputLabels`][30] are set if needed.
 - Your app respects the following settings:
     + Including Bold Text.
     + High Contrast Cursors.
@@ -63,7 +63,7 @@ The five sections it covers are:
 - When presenting new controllers, you set the Voice Over Cursor to an [appropriate element][8] if the top-most left element doesn't make sense:
     `UIAccessibilityPostNotification(.screenChangedNotification, myHeading);`
 - Context considering, you use `accessibilityIgnoresInvertColors` for images and video.
-- If puncation should be spoken in your accessibility text, you use an attributed string to set `accessibilitySpeechPunctuation` to `true`.
+- If punctuation should be spoken in your accessibility text, you use an attributed string to set `accessibilitySpeechPunctuation` to `true`.
 - You group content logically using accessibility containers for efficient navigation.
 - Adaptive and supports all devices and multitasking scenarios elegantly.
 - Fully supports dynamic type.
@@ -128,28 +128,28 @@ The five sections it covers are:
 - You opt for pull down style menus over action sheets, and use them to reduce modality throughout your app to keep the focus squarely on the content.
     + Action sheets are still used to confirm a destructive action. It provides enough friction to ensure the user really wants to perform the deletion.
     + You also don't include a cancel menu item. Canceling is an implicit action the system provides by tapping outside of the menu bounds.
-    + You use menus for disambigution, navigation, selection or showing more options
+    + You use menus for disambiguation, navigation, selection or showing more options
     + You offer a menu to present more "power user" functionality when long pressing on bar buttons if necessary, in addition to providing the standard action for tapping them.
 - It fully supports dark mode.
 - Multiple spaces and scene support for iPadOS.
     + You leverage the idea of a primary window versus an auxiliary window. One provides access to your full feature set, while the other helps users complete a focused, singular task and is usually closed afterwards.
-- Full multitasking suport.
+- Full multitasking support.
 - Home screen quick action support.
 - If you offer a sign in, Sing in with Apple is included.
     + If you don't, offer [password autofill][22].
 - Spotlight search and indexing support.
 - You have custom `UIPointerInteraction` support if your app needs it, and your interface supports cursor support correctly.
-    + You don't force any interaction paradigmn over another (i.e. touch is as viable as pointer or keyboard, and vice-versa).
+    + You don't force any interaction paradigm over another (i.e. touch is as viable as pointer or keyboard, and vice-versa).
     + You use the correct content effects consistently (highlight, lift and hover).
 - Effective energy management (i.e. supports low power mode and reacts to it)
 - Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard.
     + Modifier keys along with mouse or pointer clicks are supported.
 - It supports handoff on Mac (if applicable).
 - Meaningful extensions are included with the app, whether it's via a share extension, action extension, file providers, sticker pack, custom keyboard, etc.
-    + Those extensions are carefully thought out. For example, a wdiget isn't a mini app but strives to provide glanceable, actionable information.
+    + Those extensions are carefully thought out. For example, a widget isn't a mini app but strives to provide glanceable, actionable information.
 - For table and collection view cells that make sense to focus, [`selectionFollowsFocus`][32] is set.
 - Callback urls are supplied and documented so other apps may integrate with it (x-callback-url)/.
-- `UIMenuController` support if neccesaary via overriding `UIResponderStandardEditActions`.
+- `UIMenuController` support if necessary via overriding `UIResponderStandardEditActions`.
 - You supply custom icons to enhance a user's personal connection to your app if they want it.
 - If you display links, consider using [LPLinkView][10]
 - Deep Siri Intent support:
@@ -203,7 +203,7 @@ The five sections it covers are:
     + Drag and drop for creating new windows
     + Core spotlight
     + Donating to Siri for `INIntent`
-- It uses the correct audio settings and responds to audio interupption gracefully, if audio can be played at all within it.
+- It uses the correct audio settings and responds to audio interruption gracefully, if audio can be played at all within it.
 - Custom edit options are supported when text or an image is selected, if appropriate.
 - The user is provided ample time to form an opinion about your app before you request a rating, and you opt for the built-in `SKStoreReviewController` to ask for it.
 - The launch screen is branding free and closely resembles the first screen of the app.
@@ -216,12 +216,12 @@ The five sections it covers are:
     + You supply a detail view to expand on the context of the notification. If a user can accomplish the task within the notification without having to open the app, that's a good thing.
     + You also let users edit their notification preferences within your own app.
 - `UITextInputAssistantItem` items are used to support common tasks on iPad that are at home within the shortcuts bar.
-- When performing CRUD operations on a table or collection view, you opt to aniamte these changes using a diffable datasource instead of `reloadData`.
+- When performing CRUD operations on a table or collection view, you opt to animate these changes using a diffable datasource instead of `reloadData`.
 - Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone.
 - If you have long running tasks, you keep the UI free and up to date by using [background tasks][17].
 - When using system materials, you accompany the content contained within them with a matching vibrancy effect (i.e. you don't mix and match different semantic effects)
-- You tend to use the system's semtantic colors instead of hard coding your own. If you do have custom colors, they adapt to both light and dark mode, increased contrast and transparency reduction scenarios.
-    + You also use semantic colors in a consisntent way, and don't redefine their meaning (i.e. use Link for a label color).
+- You tend to use the system's semantic colors instead of hard coding your own. If you do have custom colors, they adapt to both light and dark mode, increased contrast and transparency reduction scenarios.
+    + You also use semantic colors in a consistent way, and don't redefine their meaning (i.e. use Link for a label color).
 - You defer from providing custom gestures towards the edge of the screen. If it's appropriate (such as for viewing media), you override [`preferredScreenEdgesDeferringSystemGestures`][24] as needed.
 - If you have user interface elements constrained by the keyboard's frame, you handle situations where it may be undocked, floating or split.
 - If you support `PencilKit`, include your own undo and redo buttons in a [compact environment][21].
@@ -231,7 +231,7 @@ The five sections it covers are:
     + If you use a tab bar, aim for 3-5 items. If you need the "More" tab, you're likely going in the wrong direction.
 - Modality is used sparingly, and clearly brings them back to where they were when dismissed.
 - Your design also considers text and your app's voice or messaging as part of the design and experience, and it stays consistent.
-    + You don't mix playful error messages juxatposed with serious ones.
+    + You don't mix playful error messages juxtaposed with serious ones.
     + iOS technology, or any other technical term, is made for anyone to understand (i.e. you'd use 'Scan the tag' instead of 'Activate NFC reading Session' or similar.).
 
 ## The Design Drips with Polish
@@ -260,7 +260,7 @@ The five sections it covers are:
 - You aspire to ship on all of Apple's platforms (iOS iPhone + iPad, watchOS, tvOS and macOS).
 - Animations are tasteful and reinforce, or introduce, actions. They aren't confusing and likely mimic real physical laws.
 - In general, you reduce modality where possible to keep the focus on the content.
-- You supply all high-resolution assets for imags (@1/2/3x).
+- You supply all high-resolution assets for images (@1/2/3x).
 - You use the right asset format for a given scenario:
     + PNG for icons and bitmap/raster artwork.
     + JPEG for photos.
@@ -273,7 +273,7 @@ The five sections it covers are:
 - Colors are used to denote value and purpose and don't provide mixed signals. For example, enabled and disabled controls aren't colored the same or a red triangle conveys a problem but only if red isn't used everywhere else in your app.
 - If you create rich media apps or apps primarily used for reading and watching, you provide a sensible value for [`UIWhitePointAdaptivityStyle`][26] to adjust along with True Tone.
 - You handle color management well, and ensure any P3 colors display fine on sRGB devices.
-- Your app has a voice, and you use it consistently. For example, if your app strikes a formal tone, you wouldn't display an error message with text that's overtly out of place or humurous. 
+- Your app has a voice, and you use it consistently. For example, if your app strikes a formal tone, you wouldn't display an error message with text that's overtly out of place or humorous. 
 - You opt to lean on system fonts to better support all sizes, improve legibility and consistency. If you have a custom font, it provides value and has a direct purpose for being used over system fonts. They also work with all weights and dynamic type sizes.
 - Lastly, your app is "jank" free. You know what this means for you.
 
@@ -304,10 +304,10 @@ Until next time ✌️.
 [6]: https://developer.apple.com/documentation/objectivec/nsobject/1615076-accessibilityincrement
 [7]: https://developer.apple.com/documentation/objectivec/nsobject/1615169-accessibilitydecrement
 [8]: https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/SupportingAccessibility.html#//apple_ref/doc/uid/TP40007457-CH12-SW1
-[9]: (https://developer.apple.com/videos/play/wwdc2018/241/)
-[10]: (https://developer.apple.com/documentation/linkpresentation/lplinkview)
-[11]: (https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/WebContent.html#//apple_ref/doc/uid/TP40016308-CH8-SW1)
-[12]: (https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UndoArchitecture/UndoArchitecture.html)
+[9]: https://developer.apple.com/videos/play/wwdc2018/241/
+[10]: https://developer.apple.com/documentation/linkpresentation/lplinkview
+[11]: https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/WebContent.html#//apple_ref/doc/uid/TP40016308-CH8-SW1
+[12]: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UndoArchitecture/UndoArchitecture.html
 [13]: https://developer.apple.com/documentation/uikit/uiviewcontroller/restoring_your_app_s_state
 [14]: https://recoursive.com/2019/02/22/preflight_universal_links/
 [15]: https://gist.github.com/smileyborg/ec4812c146f575cd006d98d681108ba8

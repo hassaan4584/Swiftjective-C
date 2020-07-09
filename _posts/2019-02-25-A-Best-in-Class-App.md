@@ -36,9 +36,9 @@ The five sections it covers are:
 
 1. **Accessibility:** Designing for everyone is the right thing to do, and the best apps do it and they do it exceptionally well.
 2. **Platform Technology:** Apple loves it when apps utilize their new APIs to great effect, you should too. It's not about shoehorning features, it's about looking at your product and seeing how to utilize iOS around it.
-3. **User Experience:** Don't make people think. Your app should have a core function that acts a thesis to a paper - and your UX is the body that supports it.
+3. **User Experience:** Don't make people think. Your app should have a core function that acts as a thesis to a paper - and your UX is the body that supports it.
 4. **Design:** Explaining design is hard, but you know a good one when you see it. This section lists some things those apps which are thoughtfully created do.
-5. **App Store Presence** This is by far the most nascent category I've been tracking, so its list is short. It includes best practices for the App Store.
+5. **App Store Presence:** This is by far the most nascent category I've been tracking, so its list is short. It includes best practices for the App Store.
 
 ### Accessibility is First Class
 - Voice Over is fully supported and the [rotor][29] control is implemented by including the relevant headings. Using Screen Curtain yields an experience that's not only usable, but up to par with the regular app using only Voice Over.
@@ -97,7 +97,7 @@ The five sections it covers are:
     + Guided access
     + Typing feedback
     + Full keyboard access
-    + Assisstive Touch
+    + Assistive Touch
     + Reduce Motion
     + Voice Control
     + Reachability
@@ -128,20 +128,20 @@ The five sections it covers are:
 - You opt for pull down style menus over action sheets, and use them to reduce modality throughout your app to keep the focus squarely on the content.
     + Action sheets are still used to confirm a destructive action. It provides enough friction to ensure the user really wants to perform the deletion.
     + You also don't include a cancel menu item. Canceling is an implicit action the system provides by tapping outside of the menu bounds.
-    + You use menus for disambiguation, navigation, selection or showing more options
+    + You use menus for disambiguation, navigation, selection or showing more options.
     + You offer a menu to present more "power user" functionality when long pressing on bar buttons if necessary, in addition to providing the standard action for tapping them.
 - It fully supports dark mode.
 - Multiple spaces and scene support for iPadOS.
     + You leverage the idea of a primary window versus an auxiliary window. One provides access to your full feature set, while the other helps users complete a focused, singular task and is usually closed afterwards.
 - Full multitasking support.
 - Home screen quick action support.
-- If you offer a sign in, Sing in with Apple is included.
+- If you offer a sign in, Sign in with Apple is included.
     + If you don't, offer [password autofill][22].
 - Spotlight search and indexing support.
 - You have custom `UIPointerInteraction` support if your app needs it, and your interface supports cursor support correctly.
     + You don't force any interaction paradigm over another (i.e. touch is as viable as pointer or keyboard, and vice-versa).
     + You use the correct content effects consistently (highlight, lift and hover).
-- Effective energy management (i.e. supports low power mode and reacts to it)
+- Effective energy management (i.e. supports low power mode and reacts to it).
 - Keyboard shortcuts have been added. The app could be used almost, or completely, with solely the use of a keyboard.
     + Modifier keys along with mouse or pointer clicks are supported.
 - It supports handoff on Mac (if applicable).
@@ -151,7 +151,7 @@ The five sections it covers are:
 - Callback urls are supplied and documented so other apps may integrate with it (x-callback-url)/.
 - `UIMenuController` support if necessary via overriding `UIResponderStandardEditActions`.
 - You supply custom icons to enhance a user's personal connection to your app if they want it.
-- If you display links, consider using [LPLinkView][10]
+- If you display links, consider using [LPLinkView][10].
 - Deep Siri Intent support:
     + You donate shortcut actions that the user has already taken.
     + You suggest shortcuts for the user's "Shortcuts from your Apps" section in the Shortcuts app by suggesting them to `INVoiceShortcutCenter`.
@@ -219,7 +219,7 @@ The five sections it covers are:
 - When performing CRUD operations on a table or collection view, you opt to animate these changes using a diffable datasource instead of `reloadData`.
 - Testing for leaks and freed memory is part of your workflow, as consuming an unnecessary amount of memory and power hampers everyone.
 - If you have long running tasks, you keep the UI free and up to date by using [background tasks][17].
-- When using system materials, you accompany the content contained within them with a matching vibrancy effect (i.e. you don't mix and match different semantic effects)
+- When using system materials, you accompany the content contained within them with a matching vibrancy effect (i.e. you don't mix and match different semantic effects).
 - You tend to use the system's semantic colors instead of hard coding your own. If you do have custom colors, they adapt to both light and dark mode, increased contrast and transparency reduction scenarios.
     + You also use semantic colors in a consistent way, and don't redefine their meaning (i.e. use Link for a label color).
 - You defer from providing custom gestures towards the edge of the screen. If it's appropriate (such as for viewing media), you override [`preferredScreenEdgesDeferringSystemGestures`][24] as needed.
@@ -239,7 +239,7 @@ The five sections it covers are:
 - Haptic feedback is used throughout the system to complement user interactions, and they are not overdone.
     + The right haptics are used at the right time. For example, you use `.selection` for only selection changes instead of something like `.rigid`.
     + For example, they often accompany visual and auditory feedback.
-- You utilize SF Symbols for common iOS glyphs on apps running iOS 13 and later. You show the dedicated ones for system APIs (i.e. the gylphs exclusively for iCloud usage). 
+- You utilize SF Symbols for common iOS glyphs on apps running iOS 13 and later. You show the dedicated ones for system APIs (i.e. the glyphs exclusively for iCloud usage). 
     + If you use custom ones or custom glyphs, they adapt well to all environments.
 - Controller transitions feel natural and fluid. Great examples are Calendar and Photos.
 - You opt for vector assets to combat the differing resolutions and avoid any blurry assets.
